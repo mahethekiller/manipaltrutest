@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'iconsmind-Arrow-View';
+  src: url('fonts/Arrow-View.ttf') format('truetype'),
+       url('fonts/Arrow-View.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Arrow-View[class^="iconsmind-"], .iconsmind-Arrow-View[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Arrow-View' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Arrow-Around:before { content: "\e900"!important; }
+.iconsmind-Arrow-Barrier:before { content: "\e901"!important; }
+.iconsmind-Arrow-Circle:before { content: "\e902"!important; }
+.iconsmind-Arrow-Cross:before { content: "\e903"!important; }
+.iconsmind-Arrow-Fork:before { content: "\e904"!important; }
+.iconsmind-Arrow-From:before { content: "\e905"!important; }
+.iconsmind-Arrow-Inside:before { content: "\e906"!important; }
+.iconsmind-Arrow-Inside45:before { content: "\e907"!important; }
+.iconsmind-Arrow-InsideGap:before { content: "\e908"!important; }
+.iconsmind-Arrow-InsideGap45:before { content: "\e909"!important; }
+.iconsmind-Arrow-Into:before { content: "\e90a"!important; }
+.iconsmind-Arrow-Join:before { content: "\e90b"!important; }
+.iconsmind-Arrow-Junction:before { content: "\e90c"!important; }
+.iconsmind-Arrow-Loop:before { content: "\e90d"!important; }
+.iconsmind-Arrow-Merge:before { content: "\e90e"!important; }
+.iconsmind-Arrow-Mix:before { content: "\e90f"!important; }
+.iconsmind-Arrow-OutLeft:before { content: "\e910"!important; }
+.iconsmind-Arrow-OutRight:before { content: "\e911"!important; }
+.iconsmind-Arrow-Outside:before { content: "\e912"!important; }
+.iconsmind-Arrow-Outside45:before { content: "\e913"!important; }
+.iconsmind-Arrow-OutsideGap:before { content: "\e914"!important; }
+.iconsmind-Arrow-OutsideGap45:before { content: "\e915"!important; }
+.iconsmind-Arrow-Over:before { content: "\e916"!important; }
+.iconsmind-Arrow-Shuffle:before { content: "\e917"!important; }
+.iconsmind-Arrow-Squiggly:before { content: "\e918"!important; }
+.iconsmind-Arrow-Through:before { content: "\e919"!important; }
+.iconsmind-Arrow-To:before { content: "\e91a"!important; }
+.iconsmind-Double-Circle:before { content: "\e91b"!important; }
+.iconsmind-Full-View:before { content: "\e91c"!important; }
+.iconsmind-Full-View2:before { content: "\e91d"!important; }
+.iconsmind-Maximize:before { content: "\e91e"!important; }
+.iconsmind-Minimize:before { content: "\e91f"!important; }
+.iconsmind-Resize:before { content: "\e920"!important; }
+.iconsmind-Three-ArrowFork:before { content: "\e921"!important; }
+.iconsmind-View-Height:before { content: "\e922"!important; }
+.iconsmind-View-Width:before { content: "\e923"!important; }

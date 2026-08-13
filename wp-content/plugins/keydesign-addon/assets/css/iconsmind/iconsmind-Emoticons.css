@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'iconsmind-Emoticons';
+  src: url('fonts/Emoticons.ttf') format('truetype'),
+       url('fonts/Emoticons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Emoticons[class^="iconsmind-"], .iconsmind-Emoticons[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Emoticons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Angel-Smiley:before { content: "\e900"!important; }
+.iconsmind-Angry:before { content: "\e901"!important; }
+.iconsmind-Cap:before { content: "\e902"!important; }
+.iconsmind-Clown:before { content: "\e903"!important; }
+.iconsmind-Confused:before { content: "\e904"!important; }
+.iconsmind-Cool:before { content: "\e905"!important; }
+.iconsmind-Crying:before { content: "\e906"!important; }
+.iconsmind-Depression:before { content: "\e907"!important; }
+.iconsmind-Eyeglasses-Smiley:before { content: "\e908"!important; }
+.iconsmind-Eyeglasses-Smiley2:before { content: "\e909"!important; }
+.iconsmind-Fashion:before { content: "\e90a"!important; }
+.iconsmind-Gay:before { content: "\e90b"!important; }
+.iconsmind-Geek:before { content: "\e90c"!important; }
+.iconsmind-Happy:before { content: "\e90d"!important; }
+.iconsmind-Hello:before { content: "\e90e"!important; }
+.iconsmind-Humor:before { content: "\e90f"!important; }
+.iconsmind-Internet-Smiley:before { content: "\e910"!important; }
+.iconsmind-Kiss:before { content: "\e911"!important; }
+.iconsmind-Laughing:before { content: "\e912"!important; }
+.iconsmind-Love:before { content: "\e913"!important; }
+.iconsmind-Money:before { content: "\e914"!important; }
+.iconsmind-Moustache-Smiley:before { content: "\e915"!important; }
+.iconsmind-Punk:before { content: "\e916"!important; }
+.iconsmind-Robot:before { content: "\e917"!important; }
+.iconsmind-Security-Smiley:before { content: "\e918"!important; }
+.iconsmind-Sleeping:before { content: "\e919"!important; }
+.iconsmind-Smart:before { content: "\e91a"!important; }
+.iconsmind-Smile:before { content: "\e91b"!important; }
+.iconsmind-Sunglasses-Smiley:before { content: "\e91c"!important; }
+.iconsmind-Sunglasses-Smiley2:before { content: "\e91d"!important; }
+.iconsmind-Surprise:before { content: "\e91e"!important; }
+.iconsmind-Thumbs-DownSmiley:before { content: "\e91f"!important; }
+.iconsmind-Thumbs-UpSmiley:before { content: "\e920"!important; }
+.iconsmind-Tongue:before { content: "\e921"!important; }
+.iconsmind-Wink:before { content: "\e922"!important; }

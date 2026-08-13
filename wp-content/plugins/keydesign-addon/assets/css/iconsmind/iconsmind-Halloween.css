@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'iconsmind-Halloween';
+  src: url('fonts/Halloween.ttf') format('truetype'),
+       url('fonts/Halloween.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Halloween[class^="iconsmind-"], .iconsmind-Halloween[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Halloween' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Bat:before { content: "\e900"!important; }
+.iconsmind-Black-Cat:before { content: "\e901"!important; }
+.iconsmind-Blood:before { content: "\e902"!important; }
+.iconsmind-Bone:before { content: "\e903"!important; }
+.iconsmind-Broom:before { content: "\e904"!important; }
+.iconsmind-Candle:before { content: "\e905"!important; }
+.iconsmind-Candy:before { content: "\e906"!important; }
+.iconsmind-Cauldron:before { content: "\e907"!important; }
+.iconsmind-Coffin:before { content: "\e908"!important; }
+.iconsmind-Costume:before { content: "\e909"!important; }
+.iconsmind-Cranium:before { content: "\e90a"!important; }
+.iconsmind-Death:before { content: "\e90b"!important; }
+.iconsmind-Evil:before { content: "\e90c"!important; }
+.iconsmind-Frankenstein:before { content: "\e90d"!important; }
+.iconsmind-Grave:before { content: "\e90e"!important; }
+.iconsmind-Graveyard:before { content: "\e90f"!important; }
+.iconsmind-Halloween-HalfMoon:before { content: "\e910"!important; }
+.iconsmind-Halloween-Moon:before { content: "\e911"!important; }
+.iconsmind-Haunted-House:before { content: "\e912"!important; }
+.iconsmind-Horror:before { content: "\e913"!important; }
+.iconsmind-Host:before { content: "\e914"!important; }
+.iconsmind-Lantern:before { content: "\e915"!important; }
+.iconsmind-Monster:before { content: "\e916"!important; }
+.iconsmind-Owl:before { content: "\e917"!important; }
+.iconsmind-Pumpkin:before { content: "\e918"!important; }
+.iconsmind-Skeleton:before { content: "\e919"!important; }
+.iconsmind-Skull:before { content: "\e91a"!important; }
+.iconsmind-Spiderweb:before { content: "\e91b"!important; }
+.iconsmind-Spoder:before { content: "\e91c"!important; }
+.iconsmind-Tree:before { content: "\e91d"!important; }
+.iconsmind-Tree-2:before { content: "\e91e"!important; }
+.iconsmind-Witch:before { content: "\e91f"!important; }
+.iconsmind-Witch-Hat:before { content: "\e920"!important; }
+.iconsmind-Wizard:before { content: "\e921"!important; }
+.iconsmind-Zombie:before { content: "\e922"!important; }

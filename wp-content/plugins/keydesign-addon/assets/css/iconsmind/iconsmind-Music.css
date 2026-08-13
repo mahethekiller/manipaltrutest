@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'iconsmind-Music';
+  src: url('fonts/Music.ttf') format('truetype'),
+       url('fonts/Music.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Music[class^="iconsmind-"], .iconsmind-Music[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Music' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Audio:before { content: "\e900"!important; }
+.iconsmind-Back-Music:before { content: "\e901"!important; }
+.iconsmind-Bell:before { content: "\e902"!important; }
+.iconsmind-Casette-Tape:before { content: "\e903"!important; }
+.iconsmind-CD-2:before { content: "\e904"!important; }
+.iconsmind-CD-Cover:before { content: "\e905"!important; }
+.iconsmind-Cello:before { content: "\e906"!important; }
+.iconsmind-Clef:before { content: "\e907"!important; }
+.iconsmind-Drum:before { content: "\e908"!important; }
+.iconsmind-Earphones:before { content: "\e909"!important; }
+.iconsmind-Earphones-2:before { content: "\e90a"!important; }
+.iconsmind-Electric-Guitar:before { content: "\e90b"!important; }
+.iconsmind-Equalizer:before { content: "\e90c"!important; }
+.iconsmind-First:before { content: "\e90d"!important; }
+.iconsmind-Guitar:before { content: "\e90e"!important; }
+.iconsmind-Headphones:before { content: "\e90f"!important; }
+.iconsmind-Keyboard3:before { content: "\e910"!important; }
+.iconsmind-Last:before { content: "\e911"!important; }
+.iconsmind-Loud:before { content: "\e912"!important; }
+.iconsmind-Loudspeaker:before { content: "\e913"!important; }
+.iconsmind-Mic:before { content: "\e914"!important; }
+.iconsmind-Microphone:before { content: "\e915"!important; }
+.iconsmind-Microphone-2:before { content: "\e916"!important; }
+.iconsmind-Microphone-3:before { content: "\e917"!important; }
+.iconsmind-Microphone-4:before { content: "\e918"!important; }
+.iconsmind-Microphone-5:before { content: "\e919"!important; }
+.iconsmind-Microphone-6:before { content: "\e91a"!important; }
+.iconsmind-Microphone-7:before { content: "\e91b"!important; }
+.iconsmind-Mixer:before { content: "\e91c"!important; }
+.iconsmind-Mp3-File:before { content: "\e91d"!important; }
+.iconsmind-Music-Note:before { content: "\e91e"!important; }
+.iconsmind-Music-Note2:before { content: "\e91f"!important; }
+.iconsmind-Music-Note3:before { content: "\e920"!important; }
+.iconsmind-Music-Note4:before { content: "\e921"!important; }
+.iconsmind-Music-Player:before { content: "\e922"!important; }
+.iconsmind-Mute:before { content: "\e923"!important; }
+.iconsmind-Next-Music:before { content: "\e924"!important; }
+.iconsmind-Old-Radio:before { content: "\e925"!important; }
+.iconsmind-On-Air:before { content: "\e926"!important; }
+.iconsmind-Piano:before { content: "\e927"!important; }
+.iconsmind-Play-Music:before { content: "\e928"!important; }
+.iconsmind-Radio:before { content: "\e929"!important; }
+.iconsmind-Record:before { content: "\e92a"!important; }
+.iconsmind-Record-Music:before { content: "\e92b"!important; }
+.iconsmind-Rock-andRoll:before { content: "\e92c"!important; }
+.iconsmind-Saxophone:before { content: "\e92d"!important; }
+.iconsmind-Sound:before { content: "\e92e"!important; }
+.iconsmind-Sound-Wave:before { content: "\e92f"!important; }
+.iconsmind-Speaker:before { content: "\e930"!important; }
+.iconsmind-Stop-Music:before { content: "\e931"!important; }
+.iconsmind-Trumpet:before { content: "\e932"!important; }
+.iconsmind-Voice:before { content: "\e933"!important; }
+.iconsmind-Volume-Down:before { content: "\e934"!important; }
+.iconsmind-Volume-Up:before { content: "\e935"!important; }

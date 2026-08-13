@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'iconsmind-Animals';
+  src: url('fonts/Animals.ttf') format('truetype'),
+       url('fonts/Animals.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Animals[class^="iconsmind-"], .iconsmind-Animals[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Animals' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Aligator:before { content: "\e900"!important; }
+.iconsmind-Bat:before { content: "\e901"!important; }
+.iconsmind-Bear:before { content: "\e902"!important; }
+.iconsmind-Bee:before { content: "\e903"!important; }
+.iconsmind-Bird:before { content: "\e904"!important; }
+.iconsmind-Bug:before { content: "\e905"!important; }
+.iconsmind-Butterfly:before { content: "\e906"!important; }
+.iconsmind-Camel:before { content: "\e907"!important; }
+.iconsmind-Cat:before { content: "\e908"!important; }
+.iconsmind-Cheetah:before { content: "\e909"!important; }
+.iconsmind-Chicken:before { content: "\e90a"!important; }
+.iconsmind-Cow:before { content: "\e90b"!important; }
+.iconsmind-Dinosaur:before { content: "\e90c"!important; }
+.iconsmind-Dog:before { content: "\e90d"!important; }
+.iconsmind-Dolphin:before { content: "\e90e"!important; }
+.iconsmind-Dove:before { content: "\e90f"!important; }
+.iconsmind-Duck:before { content: "\e910"!important; }
+.iconsmind-Eagle:before { content: "\e911"!important; }
+.iconsmind-Elephant:before { content: "\e912"!important; }
+.iconsmind-Fish:before { content: "\e913"!important; }
+.iconsmind-Flamingo:before { content: "\e914"!important; }
+.iconsmind-Fox:before { content: "\e915"!important; }
+.iconsmind-Frog:before { content: "\e916"!important; }
+.iconsmind-Giraffe:before { content: "\e917"!important; }
+.iconsmind-Gorilla:before { content: "\e918"!important; }
+.iconsmind-Hipo:before { content: "\e919"!important; }
+.iconsmind-Horse:before { content: "\e91a"!important; }
+.iconsmind-Kangoroo:before { content: "\e91b"!important; }
+.iconsmind-Koala:before { content: "\e91c"!important; }
+.iconsmind-Leopard:before { content: "\e91d"!important; }
+.iconsmind-Lion:before { content: "\e91e"!important; }
+.iconsmind-Monkey:before { content: "\e91f"!important; }
+.iconsmind-Mouse:before { content: "\e920"!important; }
+.iconsmind-Panda:before { content: "\e921"!important; }
+.iconsmind-Parrot:before { content: "\e922"!important; }
+.iconsmind-Penguin:before { content: "\e923"!important; }
+.iconsmind-Sea-Dog:before { content: "\e924"!important; }
+.iconsmind-Shark:before { content: "\e925"!important; }
+.iconsmind-Sheep:before { content: "\e926"!important; }
+.iconsmind-Snake:before { content: "\e927"!important; }
+.iconsmind-Spider:before { content: "\e928"!important; }
+.iconsmind-Squirrel:before { content: "\e929"!important; }
+.iconsmind-Starfish:before { content: "\e92a"!important; }
+.iconsmind-Tiger:before { content: "\e92b"!important; }
+.iconsmind-Turtle:before { content: "\e92c"!important; }
+.iconsmind-Wolf:before { content: "\e92d"!important; }
+.iconsmind-Zebra:before { content: "\e92e"!important; }

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'iconsmind-Alignment-Paragraph';
+  src: url('fonts/Alignment-Paragraph.ttf') format('truetype'),
+       url('fonts/Alignment-Paragraph.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Alignment-Paragraph[class^="iconsmind-"], .iconsmind-Alignment-Paragraph[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Alignment-Paragraph' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Add-SpaceAfterParagraph:before { content: "\e900"!important; }
+.iconsmind-Add-SpaceBeforeParagraph:before { content: "\e901"!important; }
+.iconsmind-Align-Center:before { content: "\e902"!important; }
+.iconsmind-Align-JustifyAll:before { content: "\e903"!important; }
+.iconsmind-Align-JustifyCenter:before { content: "\e904"!important; }
+.iconsmind-Align-JustifyLeft:before { content: "\e905"!important; }
+.iconsmind-Align-JustifyRight:before { content: "\e906"!important; }
+.iconsmind-Align-Left:before { content: "\e907"!important; }
+.iconsmind-Align-Right:before { content: "\e908"!important; }
+.iconsmind-Decrase-Inedit:before { content: "\e909"!important; }
+.iconsmind-Increase-Inedit:before { content: "\e90a"!important; }
+.iconsmind-Indent-FirstLine:before { content: "\e90b"!important; }
+.iconsmind-Indent-LeftMargin:before { content: "\e90c"!important; }
+.iconsmind-Indent-RightMargin:before { content: "\e90d"!important; }
+.iconsmind-Line-Spacing:before { content: "\e90e"!important; }

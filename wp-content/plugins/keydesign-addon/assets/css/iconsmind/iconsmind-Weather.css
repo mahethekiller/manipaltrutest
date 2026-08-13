@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'iconsmind-Weather';
+  src: url('fonts/Weather.ttf') format('truetype'),
+       url('fonts/Weather.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Weather[class^="iconsmind-"], .iconsmind-Weather[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Weather' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Autumn:before { content: "\e900"!important; }
+.iconsmind-Celsius:before { content: "\e901"!important; }
+.iconsmind-Cloud-Hail:before { content: "\e902"!important; }
+.iconsmind-Cloud-Moon:before { content: "\e903"!important; }
+.iconsmind-Cloud-Rain:before { content: "\e904"!important; }
+.iconsmind-Cloud-Snow:before { content: "\e905"!important; }
+.iconsmind-Cloud-Sun:before { content: "\e906"!important; }
+.iconsmind-Clouds-Weather:before { content: "\e907"!important; }
+.iconsmind-Cloud-Weather:before { content: "\e908"!important; }
+.iconsmind-Drop:before { content: "\e909"!important; }
+.iconsmind-Dry:before { content: "\e90a"!important; }
+.iconsmind-Fahrenheit:before { content: "\e90b"!important; }
+.iconsmind-Fog-Day:before { content: "\e90c"!important; }
+.iconsmind-Fog-Night:before { content: "\e90d"!important; }
+.iconsmind-Full-Moon:before { content: "\e90e"!important; }
+.iconsmind-Half-Moon:before { content: "\e90f"!important; }
+.iconsmind-No-Drop:before { content: "\e910"!important; }
+.iconsmind-Rainbow:before { content: "\e911"!important; }
+.iconsmind-Rainbow-2:before { content: "\e912"!important; }
+.iconsmind-Rain-Drop:before { content: "\e913"!important; }
+.iconsmind-Sleet:before { content: "\e914"!important; }
+.iconsmind-Snow:before { content: "\e915"!important; }
+.iconsmind-Snowflake:before { content: "\e916"!important; }
+.iconsmind-Snowflake-2:before { content: "\e917"!important; }
+.iconsmind-Snowflake-3:before { content: "\e918"!important; }
+.iconsmind-Snow-Storm:before { content: "\e919"!important; }
+.iconsmind-Spring:before { content: "\e91a"!important; }
+.iconsmind-Storm:before { content: "\e91b"!important; }
+.iconsmind-Summer:before { content: "\e91c"!important; }
+.iconsmind-Sun:before { content: "\e91d"!important; }
+.iconsmind-Sun-CloudyRain:before { content: "\e91e"!important; }
+.iconsmind-Sunrise:before { content: "\e91f"!important; }
+.iconsmind-Sunset:before { content: "\e920"!important; }
+.iconsmind-Temperature:before { content: "\e921"!important; }
+.iconsmind-Temperature-2:before { content: "\e922"!important; }
+.iconsmind-Thunder:before { content: "\e923"!important; }
+.iconsmind-Thunderstorm:before { content: "\e924"!important; }
+.iconsmind-Twister:before { content: "\e925"!important; }
+.iconsmind-Umbrella-2:before { content: "\e926"!important; }
+.iconsmind-Umbrella-3:before { content: "\e927"!important; }
+.iconsmind-Wave:before { content: "\e928"!important; }
+.iconsmind-Wave-2:before { content: "\e929"!important; }
+.iconsmind-Windsock:before { content: "\e92a"!important; }
+.iconsmind-Wind-Turbine:before { content: "\e92b"!important; }
+.iconsmind-Windy:before { content: "\e92c"!important; }
+.iconsmind-Winter:before { content: "\e92d"!important; }
+.iconsmind-Winter-2:before { content: "\e92e"!important; }

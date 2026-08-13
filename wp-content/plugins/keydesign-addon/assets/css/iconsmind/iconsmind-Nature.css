@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'iconsmind-Nature';
+  src: url('fonts/Nature.ttf') format('truetype'),
+       url('fonts/Nature.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Nature[class^="iconsmind-"], .iconsmind-Nature[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Nature' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Conservation:before { content: "\e900"!important; }
+.iconsmind-Eci-Icon:before { content: "\e901"!important; }
+.iconsmind-Environmental:before { content: "\e902"!important; }
+.iconsmind-Environmental-2:before { content: "\e903"!important; }
+.iconsmind-Environmental-3:before { content: "\e904"!important; }
+.iconsmind-Fire-Flame:before { content: "\e905"!important; }
+.iconsmind-Fire-Flame2:before { content: "\e906"!important; }
+.iconsmind-Flowerpot:before { content: "\e907"!important; }
+.iconsmind-Forest:before { content: "\e908"!important; }
+.iconsmind-Green-Energy:before { content: "\e909"!important; }
+.iconsmind-Green-House:before { content: "\e90a"!important; }
+.iconsmind-Landscape:before { content: "\e90b"!important; }
+.iconsmind-Leafs:before { content: "\e90c"!important; }
+.iconsmind-Leafs-2:before { content: "\e90d"!important; }
+.iconsmind-Light-BulbLeaf:before { content: "\e90e"!important; }
+.iconsmind-Palm-Tree:before { content: "\e90f"!important; }
+.iconsmind-Plant:before { content: "\e910"!important; }
+.iconsmind-Recycling:before { content: "\e911"!important; }
+.iconsmind-Recycling-2:before { content: "\e912"!important; }
+.iconsmind-Seed:before { content: "\e913"!important; }
+.iconsmind-Trash-withMen:before { content: "\e914"!important; }
+.iconsmind-Tree:before { content: "\e915"!important; }
+.iconsmind-Tree-2:before { content: "\e916"!important; }
+.iconsmind-Tree-3:before { content: "\e917"!important; }

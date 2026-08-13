@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'iconsmind-Desktop-apps';
+  src: url('fonts/Desktop-apps.ttf') format('truetype'),
+       url('fonts/Desktop-apps.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Desktop-apps[class^="iconsmind-"], .iconsmind-Desktop-apps[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Desktop-apps' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Computer:before { content: "\e900"!important; }
+.iconsmind-Computer-2:before { content: "\e901"!important; }
+.iconsmind-Computer-3:before { content: "\e902"!important; }
+.iconsmind-Laptop:before { content: "\e903"!important; }
+.iconsmind-Laptop-2:before { content: "\e904"!important; }
+.iconsmind-Laptop-3:before { content: "\e905"!important; }
+.iconsmind-Laptop-Phone:before { content: "\e906"!important; }
+.iconsmind-Laptop-Tablet:before { content: "\e907"!important; }
+.iconsmind-Monitor:before { content: "\e908"!important; }
+.iconsmind-Monitor-2:before { content: "\e909"!important; }
+.iconsmind-Monitor-3:before { content: "\e90a"!important; }
+.iconsmind-Monitor-4:before { content: "\e90b"!important; }
+.iconsmind-Monitor-5:before { content: "\e90c"!important; }
+.iconsmind-Monitor-Laptop:before { content: "\e90d"!important; }
+.iconsmind-Monitor-phone:before { content: "\e90e"!important; }
+.iconsmind-Monitor-Tablet:before { content: "\e90f"!important; }
+.iconsmind-Monitor-Vertical:before { content: "\e910"!important; }
+.iconsmind-Orientation:before { content: "\e911"!important; }
+.iconsmind-Orientation-2:before { content: "\e912"!important; }
+.iconsmind-Phone:before { content: "\e913"!important; }
+.iconsmind-Phone-2:before { content: "\e914"!important; }
+.iconsmind-Phone-3:before { content: "\e915"!important; }
+.iconsmind-Phone-3G:before { content: "\e916"!important; }
+.iconsmind-Phone-4G:before { content: "\e917"!important; }
+.iconsmind-Phone-SMS:before { content: "\e918"!important; }
+.iconsmind-Phone-Wifi:before { content: "\e919"!important; }
+.iconsmind-Smartphone:before { content: "\e91a"!important; }
+.iconsmind-Smartphone-2:before { content: "\e91b"!important; }
+.iconsmind-Smartphone-3:before { content: "\e91c"!important; }
+.iconsmind-Smartphone-4:before { content: "\e91d"!important; }
+.iconsmind-Tablet:before { content: "\e91e"!important; }
+.iconsmind-Tablet-2:before { content: "\e91f"!important; }
+.iconsmind-Tablet-3:before { content: "\e920"!important; }
+.iconsmind-Tablet-Orientation:before { content: "\e921"!important; }
+.iconsmind-Tablet-Phone:before { content: "\e922"!important; }
+.iconsmind-Tablet-Vertical:before { content: "\e923"!important; }
+.iconsmind-Wacom-Tablet:before { content: "\e924"!important; }

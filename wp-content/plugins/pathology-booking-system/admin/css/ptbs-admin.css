@@ -1,0 +1,57 @@
+.ptbs-admin-wrap {
+    margin-top: 20px;
+}
+.ptbs-admin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+.ptbs-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.ptbs-card h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.ptbs-card-full {
+    grid-column: 1 / -1;
+}
+.ptbs-doc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+.ptbs-doc-grid ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+.ptbs-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.ptbs-badge-type {
+    background: #e7f3ff;
+    color: #0066cc;
+}
+.ptbs-status-badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.ptbs-status-pending { background: #fff8e5; color: #b25900; }
+.ptbs-status-confirmed { background: #e6f6ff; color: #0066b2; }
+.ptbs-status-sample_collected { background: #f0e6ff; color: #5900b2; }
+.ptbs-status-completed { background: #e6fffa; color: #008060; }
+.ptbs-status-cancelled { background: #ffe6e6; color: #b20000; }

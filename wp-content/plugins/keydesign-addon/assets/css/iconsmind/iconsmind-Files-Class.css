@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'iconsmind-Files-Class';
+  src: url('fonts/Files.ttf') format('truetype'),
+       url('fonts/Files.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Files-Class[class^="iconsmind-"], .iconsmind-Files-Class[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Files-Class' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Add-File:before { content: "\e900"!important; }
+.iconsmind-Delete-File:before { content: "\e901"!important; }
+.iconsmind-File:before { content: "\e902"!important; }
+.iconsmind-File-Block:before { content: "\e903"!important; }
+.iconsmind-File-Bookmark:before { content: "\e904"!important; }
+.iconsmind-File-Chart:before { content: "\e905"!important; }
+.iconsmind-File-Clipboard:before { content: "\e906"!important; }
+.iconsmind-File-ClipboardFileText:before { content: "\e907"!important; }
+.iconsmind-File-ClipboardTextImage:before { content: "\e908"!important; }
+.iconsmind-File-Cloud:before { content: "\e909"!important; }
+.iconsmind-File-Copy:before { content: "\e90a"!important; }
+.iconsmind-File-Copy2:before { content: "\e90b"!important; }
+.iconsmind-File-CSV:before { content: "\e90c"!important; }
+.iconsmind-File-Download:before { content: "\e90d"!important; }
+.iconsmind-File-Edit:before { content: "\e90e"!important; }
+.iconsmind-File-Excel:before { content: "\e90f"!important; }
+.iconsmind-File-Favorite:before { content: "\e910"!important; }
+.iconsmind-File-Fire:before { content: "\e911"!important; }
+.iconsmind-File-Graph:before { content: "\e912"!important; }
+.iconsmind-File-Hide:before { content: "\e913"!important; }
+.iconsmind-File-Horizontal:before { content: "\e914"!important; }
+.iconsmind-File-HorizontalText:before { content: "\e915"!important; }
+.iconsmind-File-HTML:before { content: "\e916"!important; }
+.iconsmind-File-JPG:before { content: "\e917"!important; }
+.iconsmind-File-Link:before { content: "\e918"!important; }
+.iconsmind-File-Loading:before { content: "\e919"!important; }
+.iconsmind-File-Lock:before { content: "\e91a"!important; }
+.iconsmind-File-Love:before { content: "\e91b"!important; }
+.iconsmind-File-Music:before { content: "\e91c"!important; }
+.iconsmind-File-Network:before { content: "\e91d"!important; }
+.iconsmind-File-Pictures:before { content: "\e91e"!important; }
+.iconsmind-File-Pie:before { content: "\e91f"!important; }
+.iconsmind-File-Presentation:before { content: "\e920"!important; }
+.iconsmind-File-Refresh:before { content: "\e921"!important; }
+.iconsmind-Files:before { content: "\e922"!important; }
+.iconsmind-File-Search:before { content: "\e923"!important; }
+.iconsmind-File-Settings:before { content: "\e924"!important; }
+.iconsmind-File-Share:before { content: "\e925"!important; }
+.iconsmind-File-TextImage:before { content: "\e926"!important; }
+.iconsmind-File-Trash:before { content: "\e927"!important; }
+.iconsmind-File-TXT:before { content: "\e928"!important; }
+.iconsmind-File-Upload:before { content: "\e929"!important; }
+.iconsmind-File-Video:before { content: "\e92a"!important; }
+.iconsmind-File-Word:before { content: "\e92b"!important; }
+.iconsmind-File-Zip:before { content: "\e92c"!important; }
+.iconsmind-Remove-File:before { content: "\e92d"!important; }

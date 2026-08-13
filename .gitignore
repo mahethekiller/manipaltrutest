@@ -1,0 +1,20 @@
+# WordPress core ignore
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+
+# Operating system & Editor files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+.env
+.idea/
+.vscode/
+
+# Temporary scratch & agent cache files
+scratch/

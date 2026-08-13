@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'iconsmind-Christmas-Class';
+  src: url('fonts/Christmas.ttf') format('truetype'),
+       url('fonts/Christmas.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Christmas-Class[class^="iconsmind-"], .iconsmind-Christmas-Class[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Christmas-Class' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Angel:before { content: "\e900"!important; }
+.iconsmind-Bow:before { content: "\e901"!important; }
+.iconsmind-Candy-Cane:before { content: "\e902"!important; }
+.iconsmind-Christmas:before { content: "\e903"!important; }
+.iconsmind-Christmas-Ball:before { content: "\e904"!important; }
+.iconsmind-Christmas-Bell:before { content: "\e905"!important; }
+.iconsmind-Christmas-Candle:before { content: "\e906"!important; }
+.iconsmind-Christmas-Hat:before { content: "\e907"!important; }
+.iconsmind-Christmas-Sleigh:before { content: "\e908"!important; }
+.iconsmind-Christmas-Snowman:before { content: "\e909"!important; }
+.iconsmind-Christmas-Sock:before { content: "\e90a"!important; }
+.iconsmind-Christmas-Tree:before { content: "\e90b"!important; }
+.iconsmind-Cookie-Man:before { content: "\e90c"!important; }
+.iconsmind-Dec:before { content: "\e90d"!important; }
+.iconsmind-Deer:before { content: "\e90e"!important; }
+.iconsmind-Deer-2:before { content: "\e90f"!important; }
+.iconsmind-Holly:before { content: "\e910"!important; }
+.iconsmind-Lollipop:before { content: "\e911"!important; }
+.iconsmind-Ornament:before { content: "\e912"!important; }
+.iconsmind-Present:before { content: "\e913"!important; }
+.iconsmind-Presents:before { content: "\e914"!important; }
+.iconsmind-Santa-Claus:before { content: "\e915"!important; }
+.iconsmind-Santa-Claus2:before { content: "\e916"!important; }
+.iconsmind-Santa-onSled:before { content: "\e917"!important; }
+.iconsmind-Sled:before { content: "\e918"!important; }
+.iconsmind-Sled-withGifts:before { content: "\e919"!important; }
+.iconsmind-Snow-Dome:before { content: "\e91a"!important; }
+.iconsmind-Snowflake:before { content: "\e91b"!important; }
+.iconsmind-Snowman:before { content: "\e91c"!important; }
+.iconsmind-Star:before { content: "\e91d"!important; }
+.iconsmind-Wreath:before { content: "\e91e"!important; }

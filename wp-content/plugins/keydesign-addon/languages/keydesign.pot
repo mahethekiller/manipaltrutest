@@ -1,0 +1,5860 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ekko\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-02 11:50+0300\n"
+"PO-Revision-Date: 2016-08-31 22:26+0300\n"
+"Last-Translator: Bogdan Costescu <costescu.bogdan@yahoo.com>\n"
+"Language-Team: KeyDesign <support@keydesign-themes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;_n:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;"
+"_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.2.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../custom-post-type.php:17
+msgid "Add New Portfolio Item"
+msgstr ""
+
+#: ../custom-post-type.php:18
+msgid "New Portfolio Item"
+msgstr ""
+
+#: ../custom-post-type.php:19
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: ../custom-post-type.php:20
+msgid "View Portfolio Item"
+msgstr ""
+
+#: ../custom-post-type.php:21
+msgid "All Portfolio Items"
+msgstr ""
+
+#: ../custom-post-type.php:22
+msgid "Search Portfolio Items"
+msgstr ""
+
+#: ../custom-post-type.php:23
+msgid "Parent Portfolios:"
+msgstr ""
+
+#: ../custom-post-type.php:24
+msgid "No portfolio items found."
+msgstr ""
+
+#: ../custom-post-type.php:25
+msgid "No portfolio items found in Trash."
+msgstr ""
+
+#: ../custom-post-type.php:32
+msgid "Description."
+msgstr ""
+
+#: ../custom-post-type.php:68
+msgid "Categories"
+msgstr ""
+
+#: ../elements/alertbox_elem.php:17
+msgid "Alert box"
+msgstr ""
+
+#: ../elements/alertbox_elem.php:18
+msgid "Easily display warning, error, info and success messages."
+msgstr ""
+
+#: ../elements/alertbox_elem.php:22 ../elements/appgallery_elem.php:34
+#: ../elements/bookpreview_elem.php:22 ../elements/button_elem.php:18
+#: ../elements/calltoaction_elem.php:22 ../elements/clients_elem.php:31
+#: ../elements/color_switch_elem.php:31 ../elements/contentbox_elem.php:22
+#: ../elements/countdown_elem.php:19 ../elements/counter_elem.php:23
+#: ../elements/divider_elem.php:22 ../elements/eventsession_elem.php:22
+#: ../elements/extendedtabs_elem.php:34 ../elements/iconbox_elem.php:22
+#: ../elements/loginform_elem.php:22 ../elements/map.php:20
+#: ../elements/masonrygallery_elem.php:32 ../elements/photobox_elem.php:22
+#: ../elements/photocarousel_elem.php:31
+#: ../elements/photogallery_elem.php:29 ../elements/piechart_elem.php:22
+#: ../elements/priceblock_elem.php:22 ../elements/pricingtable_elem.php:19
+#: ../elements/process_elem.php:31 ../elements/progressbar_elem.php:23
+#: ../elements/reviewcarousel_elem.php:31 ../elements/reviews_elem.php:23
+#: ../elements/sectiontitle_elem.php:22 ../elements/shape_elem.php:22
+#: ../elements/slidingbox_elem.php:35 ../elements/socialicons_elem.php:22
+#: ../elements/stickynavsections_elem.php:30 ../elements/team_elem.php:21
+#: ../elements/teamcarousel_elem.php:31
+#: ../elements/testimonialcards_elem.php:31
+#: ../elements/textrotator_elem.php:22
+#: ../elements/vendors/vendor-contact-form-7.php:32
+#: ../elements/video_elem.php:18
+msgid "KeyDesign Elements"
+msgstr ""
+
+#: ../elements/alertbox_elem.php:27
+msgid "Box type"
+msgstr ""
+
+#: ../elements/alertbox_elem.php:36
+msgid "Select box type."
+msgstr ""
+
+#: ../elements/alertbox_elem.php:41
+msgid "Box message"
+msgstr ""
+
+#: ../elements/alertbox_elem.php:45
+msgid "Enter box message here."
+msgstr ""
+
+#: ../elements/alertbox_elem.php:50 ../elements/appgallery_elem.php:161
+#: ../elements/bookpreview_elem.php:100 ../elements/button_elem.php:180
+#: ../elements/calltoaction_elem.php:204 ../elements/clients_elem.php:169
+#: ../elements/color_switch_elem.php:131
+#: ../elements/contentbox_elem.php:237 ../elements/countdown_elem.php:167
+#: ../elements/counter_elem.php:237 ../elements/eventsession_elem.php:204
+#: ../elements/extendedtabs_elem.php:106 ../elements/iconbox_elem.php:407
+#: ../elements/masonrygallery_elem.php:78 ../elements/photobox_elem.php:239
+#: ../elements/photocarousel_elem.php:145
+#: ../elements/photocarousel_elem.php:375
+#: ../elements/photogallery_elem.php:128 ../elements/piechart_elem.php:249
+#: ../elements/priceblock_elem.php:196
+#: ../elements/pricingtable_elem.php:365 ../elements/process_elem.php:60
+#: ../elements/process_elem.php:346 ../elements/progressbar_elem.php:236
+#: ../elements/reviewcarousel_elem.php:118
+#: ../elements/reviewcarousel_elem.php:341 ../elements/reviews_elem.php:234
+#: ../elements/sectiontitle_elem.php:279 ../elements/shape_elem.php:153
+#: ../elements/slidingbox_elem.php:41 ../elements/slidingbox_elem.php:313
+#: ../elements/socialicons_elem.php:141
+#: ../elements/stickynavsections_elem.php:38
+#: ../elements/stickynavsections_elem.php:841 ../elements/team_elem.php:257
+#: ../elements/teamcarousel_elem.php:129
+#: ../elements/teamcarousel_elem.php:370
+#: ../elements/testimonialcards_elem.php:134
+#: ../elements/testimonialcards_elem.php:310
+#: ../elements/testimonials_elem.php:176
+#: ../elements/testimonials_elem.php:289
+#: ../elements/textrotator_elem.php:90
+#: ../elements/vendors/vendor-contact-form-7.php:128
+#: ../elements/video_elem.php:235
+msgid "Extra class name"
+msgstr ""
+
+#: ../elements/alertbox_elem.php:53 ../elements/appgallery_elem.php:164
+#: ../elements/bookpreview_elem.php:103 ../elements/button_elem.php:183
+#: ../elements/calltoaction_elem.php:207 ../elements/clients_elem.php:172
+#: ../elements/color_switch_elem.php:134
+#: ../elements/contentbox_elem.php:240 ../elements/countdown_elem.php:170
+#: ../elements/counter_elem.php:240 ../elements/eventsession_elem.php:207
+#: ../elements/extendedtabs_elem.php:109 ../elements/iconbox_elem.php:410
+#: ../elements/masonrygallery_elem.php:81 ../elements/photobox_elem.php:242
+#: ../elements/photocarousel_elem.php:148
+#: ../elements/photocarousel_elem.php:378 ../elements/piechart_elem.php:252
+#: ../elements/priceblock_elem.php:199
+#: ../elements/pricingtable_elem.php:368 ../elements/process_elem.php:63
+#: ../elements/process_elem.php:349 ../elements/progressbar_elem.php:239
+#: ../elements/reviewcarousel_elem.php:121
+#: ../elements/reviewcarousel_elem.php:344 ../elements/reviews_elem.php:237
+#: ../elements/sectiontitle_elem.php:282 ../elements/shape_elem.php:156
+#: ../elements/slidingbox_elem.php:44 ../elements/slidingbox_elem.php:316
+#: ../elements/stickynavsections_elem.php:41 ../elements/team_elem.php:260
+#: ../elements/teamcarousel_elem.php:132
+#: ../elements/teamcarousel_elem.php:373
+#: ../elements/testimonialcards_elem.php:313
+#: ../elements/testimonials_elem.php:179
+#: ../elements/testimonials_elem.php:292
+#: ../elements/textrotator_elem.php:93
+#: ../elements/vendors/vendor-contact-form-7.php:131
+#: ../elements/video_elem.php:238
+msgid ""
+"If you wish to style particular content element differently, then use "
+"this field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:26
+msgid "App gallery"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:27
+msgid "Mobile app screenshots carousel."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:40 ../elements/sectiontitle_elem.php:17
+msgid "Section title"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:43
+msgid "Enter section title here."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:49
+msgid "Section description"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:52
+msgid "Enter section description here."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:58 ../elements/bookpreview_elem.php:40
+msgid "Mockup image source"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:64 ../elements/appgallery_elem.php:187
+#: ../elements/bookpreview_elem.php:46 ../elements/clients_elem.php:194
+#: ../elements/color_switch_elem.php:156
+#: ../elements/contentbox_elem.php:121 ../elements/eventsession_elem.php:77
+#: ../elements/extendedtabs_elem.php:174 ../elements/iconbox_elem.php:173
+#: ../elements/map.php:98 ../elements/masonrygallery_elem.php:102
+#: ../elements/photobox_elem.php:79 ../elements/photocarousel_elem.php:215
+#: ../elements/photogallery_elem.php:160 ../elements/priceblock_elem.php:67
+#: ../elements/reviewcarousel_elem.php:179 ../elements/reviews_elem.php:72
+#: ../elements/slidingbox_elem.php:129
+#: ../elements/stickynavsections_elem.php:358
+#: ../elements/stickynavsections_elem.php:507 ../elements/team_elem.php:98
+#: ../elements/teamcarousel_elem.php:205
+#: ../elements/testimonialcards_elem.php:195
+#: ../elements/testimonials_elem.php:246
+msgid "Select image source."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:70
+msgid "Upload mockup"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:72 ../elements/bookpreview_elem.php:56
+msgid "Upload container mockup."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:82 ../elements/appgallery_elem.php:204
+#: ../elements/stickynavsections_elem.php:719
+#: ../elements/video_elem.php:135
+msgid "Image external link"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:85 ../elements/appgallery_elem.php:207
+#: ../elements/clients_elem.php:215 ../elements/color_switch_elem.php:176
+#: ../elements/contentbox_elem.php:144 ../elements/eventsession_elem.php:98
+#: ../elements/extendedtabs_elem.php:196 ../elements/iconbox_elem.php:197
+#: ../elements/masonrygallery_elem.php:123
+#: ../elements/photobox_elem.php:100 ../elements/photocarousel_elem.php:236
+#: ../elements/photogallery_elem.php:181 ../elements/priceblock_elem.php:88
+#: ../elements/pricingtable_elem.php:171
+#: ../elements/reviewcarousel_elem.php:202 ../elements/reviews_elem.php:95
+#: ../elements/slidingbox_elem.php:152
+#: ../elements/stickynavsections_elem.php:387
+#: ../elements/stickynavsections_elem.php:722 ../elements/team_elem.php:117
+#: ../elements/teamcarousel_elem.php:226
+#: ../elements/testimonialcards_elem.php:218
+#: ../elements/testimonials_elem.php:267 ../elements/video_elem.php:138
+msgid "Enter image external link."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:95 ../elements/appgallery_elem.php:216
+#: ../elements/clients_elem.php:224 ../elements/color_switch_elem.php:185
+#: ../elements/extendedtabs_elem.php:206 ../elements/iconbox_elem.php:207
+#: ../elements/masonrygallery_elem.php:133
+#: ../elements/photobox_elem.php:109 ../elements/photocarousel_elem.php:245
+#: ../elements/photogallery_elem.php:191
+#: ../elements/slidingbox_elem.php:161
+#: ../elements/stickynavsections_elem.php:547
+#: ../elements/stickynavsections_elem.php:732
+#: ../elements/testimonialcards_elem.php:227
+#: ../elements/testimonials_elem.php:276 ../elements/video_elem.php:147
+msgid "Image size"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:98
+msgid "Enter image size in pixels. Example: 325x660 (Width x Height)."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:108 ../elements/clients_elem.php:101
+#: ../elements/color_switch_elem.php:37
+#: ../elements/photocarousel_elem.php:92
+#: ../elements/photogallery_elem.php:49
+#: ../elements/reviewcarousel_elem.php:65
+#: ../elements/stickynavsections_elem.php:597
+#: ../elements/teamcarousel_elem.php:76
+#: ../elements/testimonialcards_elem.php:81
+#: ../elements/testimonials_elem.php:80
+msgid "Enable autoplay"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:115 ../elements/clients_elem.php:108
+#: ../elements/color_switch_elem.php:44
+#: ../elements/photocarousel_elem.php:99
+#: ../elements/photogallery_elem.php:56
+#: ../elements/reviewcarousel_elem.php:72
+#: ../elements/stickynavsections_elem.php:608
+#: ../elements/teamcarousel_elem.php:83
+#: ../elements/testimonialcards_elem.php:88
+#: ../elements/testimonials_elem.php:87
+msgid "Carousel autoplay settings."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:121 ../elements/clients_elem.php:114
+#: ../elements/color_switch_elem.php:50
+#: ../elements/photocarousel_elem.php:105
+#: ../elements/photogallery_elem.php:62
+#: ../elements/reviewcarousel_elem.php:78
+#: ../elements/stickynavsections_elem.php:615
+#: ../elements/teamcarousel_elem.php:89
+#: ../elements/testimonialcards_elem.php:94
+#: ../elements/testimonials_elem.php:93
+msgid "Autoplay speed"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:138 ../elements/clients_elem.php:131
+#: ../elements/color_switch_elem.php:67
+#: ../elements/photocarousel_elem.php:122
+#: ../elements/reviewcarousel_elem.php:95
+#: ../elements/stickynavsections_elem.php:632
+#: ../elements/teamcarousel_elem.php:106
+#: ../elements/testimonialcards_elem.php:111
+#: ../elements/testimonials_elem.php:110
+msgid "Carousel autoplay speed."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:144 ../elements/clients_elem.php:137
+#: ../elements/color_switch_elem.php:73
+#: ../elements/photocarousel_elem.php:128
+#: ../elements/photogallery_elem.php:85
+#: ../elements/reviewcarousel_elem.php:101
+#: ../elements/stickynavsections_elem.php:639
+#: ../elements/teamcarousel_elem.php:112
+#: ../elements/testimonialcards_elem.php:117
+#: ../elements/testimonials_elem.php:116
+msgid "Stop on hover"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:155 ../elements/clients_elem.php:148
+#: ../elements/color_switch_elem.php:84
+#: ../elements/photocarousel_elem.php:139
+#: ../elements/reviewcarousel_elem.php:112
+#: ../elements/stickynavsections_elem.php:650
+#: ../elements/teamcarousel_elem.php:123
+#: ../elements/testimonialcards_elem.php:128
+#: ../elements/testimonials_elem.php:127
+msgid "Stop sliding carousel on mouse over."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:165 ../elements/bookpreview_elem.php:104
+#: ../elements/button_elem.php:153 ../elements/button_elem.php:175
+#: ../elements/button_elem.php:184 ../elements/calltoaction_elem.php:180
+#: ../elements/calltoaction_elem.php:199
+#: ../elements/calltoaction_elem.php:208 ../elements/clients_elem.php:173
+#: ../elements/clients_elem.php:286 ../elements/clients_elem.php:308
+#: ../elements/color_switch_elem.php:103
+#: ../elements/color_switch_elem.php:126
+#: ../elements/color_switch_elem.php:135
+#: ../elements/contentbox_elem.php:208 ../elements/contentbox_elem.php:231
+#: ../elements/contentbox_elem.php:241 ../elements/countdown_elem.php:138
+#: ../elements/countdown_elem.php:161 ../elements/countdown_elem.php:171
+#: ../elements/counter_elem.php:209 ../elements/counter_elem.php:231
+#: ../elements/counter_elem.php:241 ../elements/eventsession_elem.php:176
+#: ../elements/eventsession_elem.php:199
+#: ../elements/eventsession_elem.php:208
+#: ../elements/extendedtabs_elem.php:78
+#: ../elements/extendedtabs_elem.php:101
+#: ../elements/extendedtabs_elem.php:110 ../elements/iconbox_elem.php:378
+#: ../elements/iconbox_elem.php:401 ../elements/iconbox_elem.php:411
+#: ../elements/photobox_elem.php:212 ../elements/photobox_elem.php:234
+#: ../elements/photobox_elem.php:243 ../elements/photocarousel_elem.php:149
+#: ../elements/photocarousel_elem.php:348
+#: ../elements/photocarousel_elem.php:370
+#: ../elements/photocarousel_elem.php:379
+#: ../elements/photogallery_elem.php:132 ../elements/piechart_elem.php:224
+#: ../elements/piechart_elem.php:244 ../elements/piechart_elem.php:253
+#: ../elements/priceblock_elem.php:169 ../elements/priceblock_elem.php:191
+#: ../elements/priceblock_elem.php:200
+#: ../elements/pricingtable_elem.php:336
+#: ../elements/pricingtable_elem.php:359
+#: ../elements/pricingtable_elem.php:369 ../elements/process_elem.php:320
+#: ../elements/process_elem.php:341 ../elements/process_elem.php:350
+#: ../elements/progressbar_elem.php:209
+#: ../elements/progressbar_elem.php:230
+#: ../elements/progressbar_elem.php:240
+#: ../elements/reviewcarousel_elem.php:312
+#: ../elements/reviewcarousel_elem.php:335
+#: ../elements/reviewcarousel_elem.php:345 ../elements/reviews_elem.php:205
+#: ../elements/reviews_elem.php:228 ../elements/reviews_elem.php:238
+#: ../elements/sectiontitle_elem.php:253
+#: ../elements/sectiontitle_elem.php:274
+#: ../elements/sectiontitle_elem.php:283 ../elements/shape_elem.php:125
+#: ../elements/shape_elem.php:147 ../elements/shape_elem.php:157
+#: ../elements/slidingbox_elem.php:284 ../elements/slidingbox_elem.php:307
+#: ../elements/slidingbox_elem.php:317 ../elements/socialicons_elem.php:116
+#: ../elements/socialicons_elem.php:136
+#: ../elements/socialicons_elem.php:145
+#: ../elements/stickynavsections_elem.php:815
+#: ../elements/stickynavsections_elem.php:835
+#: ../elements/stickynavsections_elem.php:845 ../elements/team_elem.php:230
+#: ../elements/team_elem.php:252 ../elements/team_elem.php:261
+#: ../elements/teamcarousel_elem.php:341
+#: ../elements/teamcarousel_elem.php:364
+#: ../elements/teamcarousel_elem.php:374
+#: ../elements/testimonialcards_elem.php:281
+#: ../elements/testimonialcards_elem.php:304
+#: ../elements/testimonialcards_elem.php:314
+#: ../elements/testimonials_elem.php:147
+#: ../elements/testimonials_elem.php:170
+#: ../elements/testimonials_elem.php:180
+#: ../elements/testimonials_elem.php:293
+#: ../elements/textrotator_elem.php:94
+#: ../elements/vendors/vendor-contact-form-7.php:99
+#: ../elements/vendors/vendor-contact-form-7.php:122
+#: ../elements/vendors/vendor-contact-form-7.php:132
+#: ../elements/video_elem.php:208 ../elements/video_elem.php:230
+#: ../elements/video_elem.php:239
+msgid "Extras"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:172
+msgid "App screenshot"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:181 ../elements/clients_elem.php:188
+#: ../elements/color_switch_elem.php:150
+#: ../elements/extendedtabs_elem.php:168
+#: ../elements/masonrygallery_elem.php:96 ../elements/photobox_elem.php:73
+#: ../elements/photocarousel_elem.php:209
+#: ../elements/photogallery_elem.php:154
+#: ../elements/slidingbox_elem.php:123
+#: ../elements/stickynavsections_elem.php:352
+msgid "Image source"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:192 ../elements/clients_elem.php:200
+#: ../elements/color_switch_elem.php:161
+#: ../elements/extendedtabs_elem.php:180 ../elements/iconbox_elem.php:180
+#: ../elements/masonrygallery_elem.php:108 ../elements/photobox_elem.php:85
+#: ../elements/photocarousel_elem.php:221
+#: ../elements/photogallery_elem.php:166
+#: ../elements/slidingbox_elem.php:136 ../elements/video_elem.php:124
+msgid "Image"
+msgstr ""
+
+#: ../elements/appgallery_elem.php:195
+msgid "Upload mobile app screenshot."
+msgstr ""
+
+#: ../elements/appgallery_elem.php:219
+msgid "Enter image size in pixels. Example: 280x500 (Width x Height)."
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:17
+msgid "Book Preview"
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:18
+msgid "Book chapter preview in a device mockup."
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:27
+msgid "Enable content scrolling"
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:34
+msgid ""
+"When active the content in the book mockup area will smoothly scroll "
+"down."
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:53
+msgid "Upload device mockup"
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:66
+msgid "Mockup image external source"
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:69
+msgid "Enter mockup image external link."
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:78
+msgid "Mockup Image size"
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:81
+msgid "Enter image size in pixels. Example: 590x700 (Width x Height)."
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:91
+msgid "Book text"
+msgstr ""
+
+#: ../elements/bookpreview_elem.php:94
+msgid "Enter a short presentation of the book. HTML tags are allowed."
+msgstr ""
+
+#: ../elements/button_elem.php:13
+msgid "Button"
+msgstr ""
+
+#: ../elements/button_elem.php:14
+msgid "Call to action button with extensive settings."
+msgstr ""
+
+#: ../elements/button_elem.php:24 ../elements/calltoaction_elem.php:134
+#: ../elements/photobox_elem.php:146 ../elements/photocarousel_elem.php:282
+#: ../elements/pricingtable_elem.php:214 ../elements/process_elem.php:253
+#: ../elements/slidingbox_elem.php:199
+msgid "Button text"
+msgstr ""
+
+#: ../elements/button_elem.php:28
+msgid "Enter button text."
+msgstr ""
+
+#: ../elements/button_elem.php:33 ../elements/calltoaction_elem.php:142
+#: ../elements/photobox_elem.php:158 ../elements/photocarousel_elem.php:294
+#: ../elements/process_elem.php:277 ../elements/slidingbox_elem.php:211
+msgid "Button style"
+msgstr ""
+
+#: ../elements/button_elem.php:40 ../elements/calltoaction_elem.php:149
+#: ../elements/photocarousel_elem.php:305
+msgid "Select button style"
+msgstr ""
+
+#: ../elements/button_elem.php:45 ../elements/calltoaction_elem.php:154
+#: ../elements/photobox_elem.php:174 ../elements/photocarousel_elem.php:310
+#: ../elements/process_elem.php:292 ../elements/slidingbox_elem.php:228
+#: ../elements/stickynavsections_elem.php:251
+msgid "Button color scheme"
+msgstr ""
+
+#: ../elements/button_elem.php:52 ../elements/calltoaction_elem.php:161
+#: ../elements/photobox_elem.php:185 ../elements/photocarousel_elem.php:321
+#: ../elements/process_elem.php:302 ../elements/slidingbox_elem.php:234
+#: ../elements/stickynavsections_elem.php:262
+msgid "Select button predefined color scheme."
+msgstr ""
+
+#: ../elements/button_elem.php:57
+msgid "Button hover state"
+msgstr ""
+
+#: ../elements/button_elem.php:67
+msgid "Select button hover state style."
+msgstr ""
+
+#: ../elements/button_elem.php:72 ../elements/pricingtable_elem.php:242
+msgid "Button icon settings"
+msgstr ""
+
+#: ../elements/button_elem.php:79
+msgid "Choose to display icon or not."
+msgstr ""
+
+#: ../elements/button_elem.php:84 ../elements/pricingtable_elem.php:254
+msgid "Icon database"
+msgstr ""
+
+#: ../elements/button_elem.php:90 ../elements/pricingtable_elem.php:260
+msgid "Select your icon."
+msgstr ""
+
+#: ../elements/button_elem.php:95 ../elements/counter_elem.php:97
+#: ../elements/pricingtable_elem.php:266
+msgid "Icon position"
+msgstr ""
+
+#: ../elements/button_elem.php:106 ../elements/pricingtable_elem.php:277
+msgid "Select icon position."
+msgstr ""
+
+#: ../elements/button_elem.php:111 ../elements/color_switch_elem.php:217
+#: ../elements/eventsession_elem.php:131 ../elements/iconbox_elem.php:256
+#: ../elements/photobox_elem.php:134 ../elements/photocarousel_elem.php:270
+#: ../elements/piechart_elem.php:188 ../elements/process_elem.php:265
+#: ../elements/stickynavsections_elem.php:219
+msgid "Link settings"
+msgstr ""
+
+#: ../elements/button_elem.php:114
+msgid "Set link address and target."
+msgstr ""
+
+#: ../elements/button_elem.php:119
+msgid "Button width"
+msgstr ""
+
+#: ../elements/button_elem.php:122
+msgid "Button width in pixels"
+msgstr ""
+
+#: ../elements/button_elem.php:127
+msgid "Button position"
+msgstr ""
+
+#: ../elements/button_elem.php:135
+msgid "Choose button position inside the content area."
+msgstr ""
+
+#: ../elements/button_elem.php:140 ../elements/clients_elem.php:272
+#: ../elements/contentbox_elem.php:194
+#: ../elements/masonrygallery_elem.php:38 ../elements/photobox_elem.php:198
+#: ../elements/piechart_elem.php:212 ../elements/process_elem.php:307
+#: ../elements/progressbar_elem.php:197
+#: ../elements/reviewcarousel_elem.php:298 ../elements/reviews_elem.php:191
+#: ../elements/sectiontitle_elem.php:240 ../elements/shape_elem.php:111
+#: ../elements/slidingbox_elem.php:270 ../elements/socialicons_elem.php:104
+#: ../elements/team_elem.php:216 ../elements/teamcarousel_elem.php:327
+#: ../elements/testimonialcards_elem.php:267
+#: ../elements/testimonials_elem.php:133
+#: ../elements/vendors/vendor-contact-form-7.php:85
+msgid "CSS Animation"
+msgstr ""
+
+#: ../elements/button_elem.php:152 ../elements/calltoaction_elem.php:179
+#: ../elements/calltoaction_elem.php:198 ../elements/clients_elem.php:285
+#: ../elements/color_switch_elem.php:102
+#: ../elements/contentbox_elem.php:207 ../elements/countdown_elem.php:137
+#: ../elements/counter_elem.php:208 ../elements/eventsession_elem.php:175
+#: ../elements/extendedtabs_elem.php:77 ../elements/iconbox_elem.php:377
+#: ../elements/masonrygallery_elem.php:51 ../elements/photobox_elem.php:211
+#: ../elements/photocarousel_elem.php:347 ../elements/piechart_elem.php:223
+#: ../elements/priceblock_elem.php:168
+#: ../elements/pricingtable_elem.php:335 ../elements/process_elem.php:318
+#: ../elements/progressbar_elem.php:208
+#: ../elements/reviewcarousel_elem.php:311 ../elements/reviews_elem.php:204
+#: ../elements/sectiontitle_elem.php:251 ../elements/shape_elem.php:124
+#: ../elements/slidingbox_elem.php:283 ../elements/socialicons_elem.php:115
+#: ../elements/stickynavsections_elem.php:814
+#: ../elements/stickynavsections_elem.php:834 ../elements/team_elem.php:229
+#: ../elements/teamcarousel_elem.php:340
+#: ../elements/testimonialcards_elem.php:280
+#: ../elements/testimonials_elem.php:146
+#: ../elements/vendors/vendor-contact-form-7.php:98
+#: ../elements/video_elem.php:207
+msgid ""
+"Select type of animation for element to be animated when it enters the "
+"browsers viewport (Note: works only in modern browsers)."
+msgstr ""
+
+#: ../elements/button_elem.php:159 ../elements/color_switch_elem.php:109
+#: ../elements/countdown_elem.php:144 ../elements/counter_elem.php:215
+#: ../elements/eventsession_elem.php:182
+#: ../elements/extendedtabs_elem.php:84 ../elements/iconbox_elem.php:384
+#: ../elements/masonrygallery_elem.php:57
+#: ../elements/photocarousel_elem.php:353
+#: ../elements/priceblock_elem.php:174
+#: ../elements/pricingtable_elem.php:342
+#: ../elements/reviewcarousel_elem.php:318
+#: ../elements/sectiontitle_elem.php:258 ../elements/shape_elem.php:130
+#: ../elements/slidingbox_elem.php:290
+#: ../elements/testimonials_elem.php:153
+#: ../elements/vendors/vendor-contact-form-7.php:105
+#: ../elements/video_elem.php:213
+msgid "Animation delay"
+msgstr ""
+
+#: ../elements/button_elem.php:174 ../elements/contentbox_elem.php:230
+#: ../elements/counter_elem.php:230 ../elements/photobox_elem.php:233
+#: ../elements/photocarousel_elem.php:369 ../elements/piechart_elem.php:243
+#: ../elements/priceblock_elem.php:190 ../elements/process_elem.php:339
+#: ../elements/progressbar_elem.php:229
+#: ../elements/reviewcarousel_elem.php:334
+#: ../elements/sectiontitle_elem.php:272
+#: ../elements/socialicons_elem.php:135 ../elements/team_elem.php:251
+#: ../elements/teamcarousel_elem.php:363
+#: ../elements/testimonialcards_elem.php:303 ../elements/video_elem.php:229
+msgid "Enter animation delay in ms"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:17
+msgid "Call to action"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:18
+msgid "Call to action section with button."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:27 ../elements/contentbox_elem.php:56
+#: ../elements/counter_elem.php:29 ../elements/iconbox_elem.php:108
+#: ../elements/process_elem.php:146 ../elements/progressbar_elem.php:55
+#: ../elements/stickynavsections_elem.php:132
+msgid "Display icon"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:35 ../elements/counter_elem.php:37
+#: ../elements/extendedtabs_elem.php:139 ../elements/iconbox_elem.php:116
+#: ../elements/pricingtable_elem.php:103 ../elements/process_elem.php:154
+msgid "Select icon source."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:40 ../elements/contentbox_elem.php:69
+#: ../elements/counter_elem.php:42 ../elements/iconbox_elem.php:121
+#: ../elements/piechart_elem.php:121 ../elements/pricingtable_elem.php:109
+#: ../elements/process_elem.php:158 ../elements/progressbar_elem.php:72
+#: ../elements/stickynavsections_elem.php:146
+msgid "Icon"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:50 ../elements/contentbox_elem.php:79
+#: ../elements/counter_elem.php:52 ../elements/extendedtabs_elem.php:154
+#: ../elements/iconbox_elem.php:131 ../elements/piechart_elem.php:131
+#: ../elements/pricingtable_elem.php:119 ../elements/process_elem.php:168
+#: ../elements/progressbar_elem.php:82
+#: ../elements/stickynavsections_elem.php:156
+#: ../elements/stickynavsections_elem.php:303
+msgid "Select icon from library."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:56 ../elements/contentbox_elem.php:85
+#: ../elements/counter_elem.php:58 ../elements/iconbox_elem.php:137
+#: ../elements/piechart_elem.php:137 ../elements/pricingtable_elem.php:126
+#: ../elements/process_elem.php:173 ../elements/progressbar_elem.php:88
+#: ../elements/socialicons_elem.php:46
+#: ../elements/stickynavsections_elem.php:163
+msgid "Icon color"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:63 ../elements/contentbox_elem.php:92
+#: ../elements/counter_elem.php:65 ../elements/iconbox_elem.php:144
+#: ../elements/piechart_elem.php:144 ../elements/pricingtable_elem.php:133
+#: ../elements/process_elem.php:180 ../elements/progressbar_elem.php:95
+msgid ""
+"Choose icon color. If none selected, the default theme color will be "
+"used."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:69 ../elements/contentbox_elem.php:98
+#: ../elements/counter_elem.php:71 ../elements/iconbox_elem.php:150
+#: ../elements/piechart_elem.php:150 ../elements/pricingtable_elem.php:140
+#: ../elements/process_elem.php:185 ../elements/progressbar_elem.php:101
+#: ../elements/stickynavsections_elem.php:177
+msgid "Icon size"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:76 ../elements/contentbox_elem.php:105
+#: ../elements/counter_elem.php:78 ../elements/iconbox_elem.php:157
+#: ../elements/piechart_elem.php:157 ../elements/process_elem.php:192
+#: ../elements/progressbar_elem.php:108
+#: ../elements/stickynavsections_elem.php:184
+msgid "Enter icon size. (eg. 10px, 1em, 1rem)"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:82
+#: ../elements/pricingtable_elem.php:154
+msgid "Upload custom image"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:85 ../elements/counter_elem.php:87
+#: ../elements/piechart_elem.php:166 ../elements/pricingtable_elem.php:157
+#: ../elements/process_elem.php:200 ../elements/progressbar_elem.php:121
+#: ../elements/stickynavsections_elem.php:194
+#: ../elements/stickynavsections_elem.php:345
+msgid "Upload your own custom image."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:94
+msgid "Call to action title"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:97
+msgid "Enter call to action title here."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:102
+msgid "Call to action subtitle"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:105
+msgid "This text will be displayed under the title."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:110 ../elements/countdown_elem.php:115
+#: ../elements/pricingtable_elem.php:312
+#: ../elements/testimonials_elem.php:222
+#: ../elements/textrotator_elem.php:58
+msgid "Text color"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:113
+msgid "Choose text color."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:118
+msgid "Box color"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:121
+msgid "Choose box color."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:126 ../elements/photobox_elem.php:125
+#: ../elements/photocarousel_elem.php:261
+#: ../elements/pricingtable_elem.php:223 ../elements/process_elem.php:245
+#: ../elements/slidingbox_elem.php:187
+msgid "Button link"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:129
+#: ../elements/color_switch_elem.php:220
+#: ../elements/eventsession_elem.php:134 ../elements/photobox_elem.php:137
+#: ../elements/photocarousel_elem.php:273 ../elements/piechart_elem.php:191
+#: ../elements/process_elem.php:268 ../elements/slidingbox_elem.php:190
+#: ../elements/stickynavsections_elem.php:222
+msgid "You can add or remove the existing link from here."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:137 ../elements/photobox_elem.php:149
+#: ../elements/photocarousel_elem.php:285
+#: ../elements/slidingbox_elem.php:202
+msgid "Write the text displayed on the button."
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:166
+msgid "Text CSS animation"
+msgstr ""
+
+#: ../elements/calltoaction_elem.php:185
+msgid "Button CSS animation"
+msgstr ""
+
+#: ../elements/clients_elem.php:23
+msgid "Logo carousel"
+msgstr ""
+
+#: ../elements/clients_elem.php:24
+msgid "Carousel with images."
+msgstr ""
+
+#: ../elements/clients_elem.php:37
+#: ../elements/stickynavsections_elem.php:273
+#: ../elements/stickynavsections_elem.php:288
+#: ../elements/stickynavsections_elem.php:304
+#: ../elements/stickynavsections_elem.php:318
+#: ../elements/stickynavsections_elem.php:332
+#: ../elements/stickynavsections_elem.php:346
+msgid "Navigation"
+msgstr ""
+
+#: ../elements/clients_elem.php:44
+msgid "Enable to display navigation arrows."
+msgstr ""
+
+#: ../elements/clients_elem.php:50 ../elements/testimonialcards_elem.php:68
+msgid "Navigation arrows color"
+msgstr ""
+
+#: ../elements/clients_elem.php:61
+msgid "Select the navigation arrows color."
+msgstr ""
+
+#: ../elements/clients_elem.php:67 ../elements/photocarousel_elem.php:37
+#: ../elements/teamcarousel_elem.php:50
+msgid "Elements per row"
+msgstr ""
+
+#: ../elements/clients_elem.php:82 ../elements/photocarousel_elem.php:46
+#: ../elements/teamcarousel_elem.php:57
+msgid "Amount of items displayed at a time with the widest browser width."
+msgstr ""
+
+#: ../elements/clients_elem.php:88 ../elements/photocarousel_elem.php:79
+#: ../elements/photogallery_elem.php:102
+#: ../elements/stickynavsections_elem.php:579
+msgid "Enable loop"
+msgstr ""
+
+#: ../elements/clients_elem.php:95 ../elements/photocarousel_elem.php:86
+#: ../elements/photogallery_elem.php:109
+#: ../elements/stickynavsections_elem.php:590
+msgid "Infinity loop. Duplicate last and first items to get loop illusion."
+msgstr ""
+
+#: ../elements/clients_elem.php:154
+msgid "Image hover animation"
+msgstr ""
+
+#: ../elements/clients_elem.php:157 ../elements/iconbox_elem.php:327
+#: ../elements/slidingbox_elem.php:247
+msgid "None"
+msgstr ""
+
+#: ../elements/clients_elem.php:158 ../elements/shape_elem.php:95
+msgid "Opacity"
+msgstr ""
+
+#: ../elements/clients_elem.php:159
+msgid "Gray scale"
+msgstr ""
+
+#: ../elements/clients_elem.php:160
+msgid "Float"
+msgstr ""
+
+#: ../elements/clients_elem.php:163
+msgid "Choose image animation on mouse over."
+msgstr ""
+
+#: ../elements/clients_elem.php:179 ../elements/photogallery_elem.php:145
+msgid "Child image"
+msgstr ""
+
+#: ../elements/clients_elem.php:203
+msgid "Select logo image from media library."
+msgstr ""
+
+#: ../elements/clients_elem.php:212 ../elements/color_switch_elem.php:173
+#: ../elements/contentbox_elem.php:141
+#: ../elements/extendedtabs_elem.php:193 ../elements/iconbox_elem.php:194
+#: ../elements/masonrygallery_elem.php:120 ../elements/photobox_elem.php:97
+#: ../elements/photocarousel_elem.php:233
+#: ../elements/photogallery_elem.php:178
+#: ../elements/pricingtable_elem.php:168
+#: ../elements/slidingbox_elem.php:149
+#: ../elements/stickynavsections_elem.php:384
+#: ../elements/testimonialcards_elem.php:215
+#: ../elements/testimonials_elem.php:264
+msgid "Image external source"
+msgstr ""
+
+#: ../elements/clients_elem.php:227
+msgid "Enter image size in pixels. Example: 140x40 (Width x Height)."
+msgstr ""
+
+#: ../elements/clients_elem.php:236
+msgid "Enable link?"
+msgstr ""
+
+#: ../elements/clients_elem.php:247 ../elements/photogallery_elem.php:218
+#: ../elements/stickynavsections_elem.php:472
+msgid "Image link"
+msgstr ""
+
+#: ../elements/clients_elem.php:250
+msgid "Enter URL if you want this image to have a link."
+msgstr ""
+
+#: ../elements/clients_elem.php:258 ../elements/contentbox_elem.php:179
+#: ../elements/iconbox_elem.php:309 ../elements/pricingtable_elem.php:231
+msgid "Link target"
+msgstr ""
+
+#: ../elements/clients_elem.php:261 ../elements/contentbox_elem.php:182
+#: ../elements/iconbox_elem.php:312 ../elements/photogallery_elem.php:233
+#: ../elements/pricingtable_elem.php:234
+#: ../elements/stickynavsections_elem.php:488
+msgid "Same window"
+msgstr ""
+
+#: ../elements/clients_elem.php:262 ../elements/contentbox_elem.php:183
+#: ../elements/iconbox_elem.php:313 ../elements/photogallery_elem.php:234
+#: ../elements/pricingtable_elem.php:235
+#: ../elements/stickynavsections_elem.php:489
+msgid "New window"
+msgstr ""
+
+#: ../elements/clients_elem.php:291 ../elements/contentbox_elem.php:214
+#: ../elements/photobox_elem.php:217 ../elements/process_elem.php:325
+#: ../elements/reviews_elem.php:211 ../elements/socialicons_elem.php:121
+#: ../elements/team_elem.php:235 ../elements/teamcarousel_elem.php:347
+#: ../elements/testimonialcards_elem.php:287
+msgid "Animation Delay"
+msgstr ""
+
+#: ../elements/clients_elem.php:307 ../elements/color_switch_elem.php:125
+#: ../elements/countdown_elem.php:160 ../elements/eventsession_elem.php:198
+#: ../elements/extendedtabs_elem.php:100 ../elements/iconbox_elem.php:400
+#: ../elements/masonrygallery_elem.php:73
+#: ../elements/pricingtable_elem.php:358 ../elements/reviews_elem.php:227
+#: ../elements/shape_elem.php:146 ../elements/slidingbox_elem.php:306
+#: ../elements/testimonials_elem.php:169
+#: ../elements/vendors/vendor-contact-form-7.php:121
+msgid "Enter animation delay in ms."
+msgstr ""
+
+#: ../elements/color_switch_elem.php:23
+msgid "Color switcher"
+msgstr ""
+
+#: ../elements/color_switch_elem.php:24
+msgid "Carousel color picker"
+msgstr ""
+
+#: ../elements/color_switch_elem.php:89 ../elements/countdown_elem.php:124
+#: ../elements/counter_elem.php:195 ../elements/eventsession_elem.php:162
+#: ../elements/extendedtabs_elem.php:64 ../elements/iconbox_elem.php:364
+#: ../elements/photocarousel_elem.php:334
+#: ../elements/priceblock_elem.php:155
+#: ../elements/pricingtable_elem.php:322 ../elements/video_elem.php:194
+msgid "CSS animation"
+msgstr ""
+
+#: ../elements/color_switch_elem.php:141
+msgid "Child Image"
+msgstr ""
+
+#: ../elements/color_switch_elem.php:164
+msgid "Select or upload image from media library."
+msgstr ""
+
+#: ../elements/color_switch_elem.php:188
+msgid "Enter image size in pixels. Example: 600x350 (Width x Height)."
+msgstr ""
+
+#: ../elements/color_switch_elem.php:197
+msgid "Element Color"
+msgstr ""
+
+#: ../elements/color_switch_elem.php:200
+msgid "Choose color."
+msgstr ""
+
+#: ../elements/color_switch_elem.php:205
+#: ../elements/eventsession_elem.php:107 ../elements/piechart_elem.php:176
+#: ../elements/process_elem.php:241 ../elements/slidingbox_elem.php:174
+msgid "Link type"
+msgstr ""
+
+#: ../elements/color_switch_elem.php:208
+#: ../elements/contentbox_elem.php:157
+#: ../elements/eventsession_elem.php:110 ../elements/iconbox_elem.php:259
+#: ../elements/photobox_elem.php:124 ../elements/photocarousel_elem.php:260
+#: ../elements/piechart_elem.php:179 ../elements/process_elem.php:244
+#: ../elements/slidingbox_elem.php:177
+#: ../elements/stickynavsections_elem.php:208
+msgid "No link"
+msgstr ""
+
+#: ../elements/color_switch_elem.php:209
+#: ../elements/eventsession_elem.php:111
+#: ../elements/slidingbox_elem.php:178
+#: ../elements/stickynavsections_elem.php:209
+msgid "Add a custom link"
+msgstr ""
+
+#: ../elements/color_switch_elem.php:212
+#: ../elements/eventsession_elem.php:114 ../elements/iconbox_elem.php:265
+#: ../elements/process_elem.php:248 ../elements/slidingbox_elem.php:181
+#: ../elements/stickynavsections_elem.php:212
+msgid "You can add/remove custom link"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:17
+msgid "Content box"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:18
+msgid "Content box with icon or custom image."
+msgstr ""
+
+#: ../elements/contentbox_elem.php:28 ../elements/iconbox_elem.php:28
+#: ../elements/photobox_elem.php:28 ../elements/photocarousel_elem.php:164
+#: ../elements/slidingbox_elem.php:73
+msgid "Box title"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:32
+msgid "Enter a box title text."
+msgstr ""
+
+#: ../elements/contentbox_elem.php:38
+msgid "Box subtitle"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:41
+msgid "Enter a box subtitle text."
+msgstr ""
+
+#: ../elements/contentbox_elem.php:47
+msgid "Box content text"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:50 ../elements/iconbox_elem.php:76
+#: ../elements/iconbox_elem.php:89 ../elements/photobox_elem.php:48
+#: ../elements/photocarousel_elem.php:184
+msgid "Enter box content text here."
+msgstr ""
+
+#: ../elements/contentbox_elem.php:64
+msgid "Select icon/image source."
+msgstr ""
+
+#: ../elements/contentbox_elem.php:111 ../elements/iconbox_elem.php:163
+msgid "Custom image source"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:128 ../elements/counter_elem.php:84
+#: ../elements/piechart_elem.php:163 ../elements/progressbar_elem.php:114
+msgid "Upload image icon"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:131 ../elements/iconbox_elem.php:183
+msgid "Upload custom image."
+msgstr ""
+
+#: ../elements/contentbox_elem.php:154 ../elements/photobox_elem.php:121
+#: ../elements/photocarousel_elem.php:257
+msgid "Box link type"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:158 ../elements/photobox_elem.php:126
+#: ../elements/photocarousel_elem.php:262
+msgid "Full box link"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:161 ../elements/photobox_elem.php:129
+#: ../elements/photocarousel_elem.php:265 ../elements/piechart_elem.php:183
+msgid "You can add or remove the custom link."
+msgstr ""
+
+#: ../elements/contentbox_elem.php:167 ../elements/iconbox_elem.php:297
+#: ../extensions/social_profiles/social_profiles/field_social_profiles.php:191
+msgid "Link URL"
+msgstr ""
+
+#: ../elements/contentbox_elem.php:170 ../elements/iconbox_elem.php:300
+msgid "Enter URL (Note: parameters like \"mailto:\" are also accepted)."
+msgstr ""
+
+#: ../elements/countdown_elem.php:14 ../elements/countdown_elem.php:15
+msgid "Countdown"
+msgstr ""
+
+#: ../elements/countdown_elem.php:25
+msgid "Starting Year"
+msgstr ""
+
+#: ../elements/countdown_elem.php:28
+msgid "Enter event starting year"
+msgstr ""
+
+#: ../elements/countdown_elem.php:34
+msgid "Starting Month"
+msgstr ""
+
+#: ../elements/countdown_elem.php:51
+msgid "Enter event starting month."
+msgstr ""
+
+#: ../elements/countdown_elem.php:57
+msgid "Starting Day"
+msgstr ""
+
+#: ../elements/countdown_elem.php:60
+msgid "Enter event starting day."
+msgstr ""
+
+#: ../elements/countdown_elem.php:66
+msgid "DAYS Counter Text"
+msgstr ""
+
+#: ../elements/countdown_elem.php:69
+msgid "Use this field to translate DAYS text."
+msgstr ""
+
+#: ../elements/countdown_elem.php:75
+msgid "HOURS Counter Text"
+msgstr ""
+
+#: ../elements/countdown_elem.php:78
+msgid "Use this field to translate HOURS text."
+msgstr ""
+
+#: ../elements/countdown_elem.php:84
+msgid "MINUTES Counter Text"
+msgstr ""
+
+#: ../elements/countdown_elem.php:87
+msgid "Use this field to translate MINUTES text."
+msgstr ""
+
+#: ../elements/countdown_elem.php:93
+msgid "SECONDS Counter Text"
+msgstr ""
+
+#: ../elements/countdown_elem.php:96
+msgid "Use this field to translate SECONDS text."
+msgstr ""
+
+#: ../elements/countdown_elem.php:102 ../elements/counter_elem.php:183
+msgid "Text alignment"
+msgstr ""
+
+#: ../elements/countdown_elem.php:109
+msgid "Select text alignment."
+msgstr ""
+
+#: ../elements/countdown_elem.php:118
+msgid ""
+"Select countdown text color color. If none selected, the default color "
+"( white ) will be used."
+msgstr ""
+
+#: ../elements/counter_elem.php:18
+msgid "Counter"
+msgstr ""
+
+#: ../elements/counter_elem.php:19
+msgid "Animated counter."
+msgstr ""
+
+#: ../elements/counter_elem.php:108
+msgid "Select icon position relative to the content."
+msgstr ""
+
+#: ../elements/counter_elem.php:114
+msgid "Counter Size"
+msgstr ""
+
+#: ../elements/counter_elem.php:120
+msgid "Select counter size"
+msgstr ""
+
+#: ../elements/counter_elem.php:127
+msgid "Counter number"
+msgstr ""
+
+#: ../elements/counter_elem.php:131
+msgid "Only numerical values allowed."
+msgstr ""
+
+#: ../elements/counter_elem.php:137
+msgid "Counter number color"
+msgstr ""
+
+#: ../elements/counter_elem.php:140
+msgid ""
+"Choose counter number color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/counter_elem.php:146
+msgid "Counter units"
+msgstr ""
+
+#: ../elements/counter_elem.php:150
+msgid "Ex: coffee drinks, projects, clients."
+msgstr ""
+
+#: ../elements/counter_elem.php:156
+msgid "Counter units color"
+msgstr ""
+
+#: ../elements/counter_elem.php:159
+msgid ""
+"Choose counter units color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/counter_elem.php:165
+msgid "Counter description"
+msgstr ""
+
+#: ../elements/counter_elem.php:168
+msgid "This additional text will be displayed below the counter."
+msgstr ""
+
+#: ../elements/counter_elem.php:174
+msgid "Counter description color"
+msgstr ""
+
+#: ../elements/counter_elem.php:177
+msgid ""
+"Choose counter description color. If none selected, the default theme "
+"color will be used."
+msgstr ""
+
+#: ../elements/counter_elem.php:189
+msgid "Select element alignment in container."
+msgstr ""
+
+#: ../elements/divider_elem.php:17
+msgid "Section divider"
+msgstr ""
+
+#: ../elements/divider_elem.php:18
+msgid "Different divider styles to separate your content."
+msgstr ""
+
+#: ../elements/divider_elem.php:27
+msgid "Divider shape"
+msgstr ""
+
+#: ../elements/divider_elem.php:39
+msgid "Select divider type."
+msgstr ""
+
+#: ../elements/divider_elem.php:44
+msgid "Line width"
+msgstr ""
+
+#: ../elements/divider_elem.php:52 ../elements/divider_elem.php:69
+msgid "Select divider width."
+msgstr ""
+
+#: ../elements/divider_elem.php:57
+msgid "Line thickness"
+msgstr ""
+
+#: ../elements/divider_elem.php:74
+msgid "Line Color"
+msgstr ""
+
+#: ../elements/divider_elem.php:81
+msgid "Choose divider color."
+msgstr ""
+
+#: ../elements/eventsession_elem.php:17
+msgid "Event session"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:18
+msgid "Event schedule session."
+msgstr ""
+
+#: ../elements/eventsession_elem.php:28
+msgid "Session time"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:32
+msgid "Add a session time."
+msgstr ""
+
+#: ../elements/eventsession_elem.php:37
+msgid "Session title"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:41
+msgid "Add a session title."
+msgstr ""
+
+#: ../elements/eventsession_elem.php:46
+msgid "Session summary"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:49
+msgid "Add a session summary."
+msgstr ""
+
+#: ../elements/eventsession_elem.php:54
+msgid "Person name"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:58
+msgid "Name of the person in charge for this session."
+msgstr ""
+
+#: ../elements/eventsession_elem.php:63
+msgid "Person job"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:66
+msgid "Write the person job title."
+msgstr ""
+
+#: ../elements/eventsession_elem.php:71 ../elements/team_elem.php:92
+#: ../elements/teamcarousel_elem.php:199
+msgid "Person image source"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:83 ../elements/team_elem.php:103
+#: ../elements/teamcarousel_elem.php:211
+msgid "Person image"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:86
+#: ../elements/extendedtabs_elem.php:183 ../elements/photobox_elem.php:88
+#: ../elements/photocarousel_elem.php:224
+#: ../elements/priceblock_elem.php:76 ../elements/slidingbox_elem.php:139
+#: ../elements/team_elem.php:105 ../elements/teamcarousel_elem.php:213
+msgid "Select or upload your image using the media library."
+msgstr ""
+
+#: ../elements/eventsession_elem.php:95
+msgid "Person external image"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:119 ../elements/iconbox_elem.php:271
+#: ../elements/piechart_elem.php:200
+msgid "Link text"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:122 ../elements/iconbox_elem.php:274
+#: ../elements/piechart_elem.php:203
+msgid "Enter link text here."
+msgstr ""
+
+#: ../elements/eventsession_elem.php:143
+msgid "Expand element"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:154 ../elements/photobox_elem.php:190
+#: ../elements/photocarousel_elem.php:326
+#: ../elements/priceblock_elem.php:147
+#: ../elements/reviewcarousel_elem.php:289 ../elements/reviews_elem.php:182
+#: ../elements/team_elem.php:160 ../elements/teamcarousel_elem.php:264
+#: ../elements/testimonials_elem.php:231
+msgid "Box background color"
+msgstr ""
+
+#: ../elements/eventsession_elem.php:157
+#: ../elements/priceblock_elem.php:150
+msgid ""
+"Select box background color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:26
+msgid "Extended tabs"
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:27
+msgid "Vertical tabs with extended features."
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:40
+msgid "Tabs alignment"
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:47
+#: ../elements/extendedtabs_elem.php:59
+msgid "Select tabs image alignment."
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:52
+msgid "Image layout"
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:115
+msgid "Tab"
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:123
+msgid "Tab title"
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:127
+msgid "Add the tab title here."
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:132
+msgid "Display tab icon"
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:144
+msgid "Tab Icon"
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:159
+msgid "Tab content"
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:162
+msgid "Add the tab description here. This field accepts HTML tags."
+msgstr ""
+
+#: ../elements/extendedtabs_elem.php:209
+msgid "Enter image size in pixels. Example: 750x500 (Width x Height)."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:17
+msgid "Icon box"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:18
+msgid "Simple text box with icon."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:32 ../elements/photobox_elem.php:32
+#: ../elements/photocarousel_elem.php:168
+msgid "Enter box title here."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:38 ../elements/slidingbox_elem.php:92
+msgid "Title size"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:45 ../elements/slidingbox_elem.php:99
+msgid "Select title size."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:51 ../elements/photobox_elem.php:37
+#: ../elements/photocarousel_elem.php:173 ../elements/piechart_elem.php:38
+#: ../elements/priceblock_elem.php:37 ../elements/process_elem.php:87
+#: ../elements/sectiontitle_elem.php:73 ../elements/slidingbox_elem.php:83
+#: ../elements/stickynavsections_elem.php:102
+msgid "Title color"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:54 ../elements/photobox_elem.php:40
+#: ../elements/photocarousel_elem.php:176 ../elements/piechart_elem.php:41
+#: ../elements/process_elem.php:90 ../elements/slidingbox_elem.php:86
+msgid ""
+"Choose title color. If none selected, the default theme color will be "
+"used."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:60
+msgid "Box content type"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:67
+msgid "Select box content type."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:73
+msgid "Box description - simple text"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:86
+msgid "Box description - HTML content"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:99
+#: ../elements/stickynavsections_elem.php:122
+msgid "Content text color"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:102
+msgid ""
+"Choose content text color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:219
+msgid "Select image size."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:225
+msgid "Icon/image position"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:236
+msgid "Select icon/image position relative to the content."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:242
+msgid "Content alignment"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:250
+msgid "Choose content alignment."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:260
+msgid "Text link"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:261
+msgid "Box link"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:262
+msgid "Icon/image link"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:284
+msgid "Link color"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:287
+msgid ""
+"Choose link color. If none selected, the default theme color will be "
+"used."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:324 ../elements/process_elem.php:209
+#: ../elements/slidingbox_elem.php:244
+msgid "Box background type"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:328 ../elements/slidingbox_elem.php:248
+msgid "Select color"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:331 ../elements/process_elem.php:216
+#: ../elements/slidingbox_elem.php:251
+msgid "Select box background type."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:337 ../elements/process_elem.php:221
+#: ../elements/shape_elem.php:103 ../elements/slidingbox_elem.php:257
+#: ../elements/socialicons_elem.php:71
+msgid "Background color"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:344 ../elements/photobox_elem.php:193
+#: ../elements/photocarousel_elem.php:329
+#: ../elements/slidingbox_elem.php:264
+msgid "Choose box background color."
+msgstr ""
+
+#: ../elements/iconbox_elem.php:350 ../elements/socialicons_elem.php:91
+msgid "Hover effect"
+msgstr ""
+
+#: ../elements/iconbox_elem.php:358
+msgid "Select box hover effect."
+msgstr ""
+
+#: ../elements/loginform_elem.php:17
+msgid "Login form"
+msgstr ""
+
+#: ../elements/loginform_elem.php:18
+msgid "Simple login form for use anywhere within WordPress."
+msgstr ""
+
+#: ../elements/map.php:15
+msgid "Google map"
+msgstr ""
+
+#: ../elements/map.php:16
+msgid "Custom Google Map"
+msgstr ""
+
+#: ../elements/map.php:31
+msgid "Map name"
+msgstr ""
+
+#: ../elements/map.php:34
+msgid "Insert a unique map name."
+msgstr ""
+
+#: ../elements/map.php:41
+msgid "Location latitude"
+msgstr ""
+
+#: ../elements/map.php:44
+msgid "Enter location latitude."
+msgstr ""
+
+#: ../elements/map.php:50
+msgid "Location longitude"
+msgstr ""
+
+#: ../elements/map.php:53
+msgid "Enter location longitude."
+msgstr ""
+
+#: ../elements/map.php:59
+msgid "Map zoom"
+msgstr ""
+
+#: ../elements/map.php:74
+msgid "Enter map zoom (default 14)."
+msgstr ""
+
+#: ../elements/map.php:79
+msgid "Map style"
+msgstr ""
+
+#: ../elements/map.php:82
+msgid "Grayscale"
+msgstr ""
+
+#: ../elements/map.php:83
+msgid "Google preset colors"
+msgstr ""
+
+#: ../elements/map.php:85
+msgid "Choose map style."
+msgstr ""
+
+#: ../elements/map.php:92
+msgid "Marker icon source"
+msgstr ""
+
+#: ../elements/map.php:104
+msgid "Map marker image"
+msgstr ""
+
+#: ../elements/map.php:106
+msgid ""
+"Upload map marker icon. Recommended image size: 50x50 (Width x Height)."
+msgstr ""
+
+#: ../elements/map.php:116
+msgid "Marker image external source"
+msgstr ""
+
+#: ../elements/map.php:119
+msgid ""
+"Enter image external link. Recommended image size: 50x50 (Width x "
+"Height)."
+msgstr ""
+
+#: ../elements/map.php:129
+msgid "Map height"
+msgstr ""
+
+#: ../elements/map.php:132
+msgid "Enter map height in pixels. Default is 400px."
+msgstr ""
+
+#: ../elements/map.php:138
+msgid "Map info panel settings"
+msgstr ""
+
+#: ../elements/map.php:140 ../elements/map.php:155 ../elements/map.php:169
+#: ../elements/map.php:183 ../elements/map.php:197 ../elements/map.php:211
+#: ../elements/map.php:230
+msgid "Business info"
+msgstr ""
+
+#: ../elements/map.php:142
+msgid "Hide business info panel"
+msgstr ""
+
+#: ../elements/map.php:143 ../elements/photobox_elem.php:64
+#: ../elements/photocarousel_elem.php:200
+msgid "Left aligned"
+msgstr ""
+
+#: ../elements/map.php:144
+msgid "Right aligned"
+msgstr ""
+
+#: ../elements/map.php:152
+msgid "Panel title"
+msgstr ""
+
+#: ../elements/map.php:156
+msgid "Enter panel title."
+msgstr ""
+
+#: ../elements/map.php:166
+msgid "Address"
+msgstr ""
+
+#: ../elements/map.php:170
+msgid "Enter business address."
+msgstr ""
+
+#: ../elements/map.php:180
+msgid "Email"
+msgstr ""
+
+#: ../elements/map.php:184
+msgid "Enter business email."
+msgstr ""
+
+#: ../elements/map.php:194
+msgid "Phone"
+msgstr ""
+
+#: ../elements/map.php:198
+msgid "Enter business phone."
+msgstr ""
+
+#: ../elements/map.php:208
+msgid "Opening hours title"
+msgstr ""
+
+#: ../elements/map.php:212
+msgid "Enter opening hours title text."
+msgstr ""
+
+#: ../elements/map.php:222
+msgid "Opening hours schedule"
+msgstr ""
+
+#: ../elements/map.php:238
+msgid "Day name"
+msgstr ""
+
+#: ../elements/map.php:245
+msgid "Day opening/closing hours"
+msgstr ""
+
+#: ../elements/masonrygallery_elem.php:24
+msgid "Masonry gallery"
+msgstr ""
+
+#: ../elements/masonrygallery_elem.php:25
+msgid "Display a gallery with masonry effect."
+msgstr ""
+
+#: ../elements/masonrygallery_elem.php:87
+msgid "Gallery single image"
+msgstr ""
+
+#: ../elements/masonrygallery_elem.php:111
+#: ../elements/photogallery_elem.php:169
+msgid "Select or upload a image using the media library."
+msgstr ""
+
+#: ../elements/masonrygallery_elem.php:136
+msgid ""
+"Enter image size (Example: \"thumbnail\", \"medium\", \"large\", \"full"
+"\" or other sizes defined by theme). Alternatively enter size in pixels "
+"(Example: 800x800 (Width x Height))."
+msgstr ""
+
+#: ../elements/masonrygallery_elem.php:146
+msgid "Image masonry style"
+msgstr ""
+
+#: ../elements/photobox_elem.php:17
+msgid "Photo box"
+msgstr ""
+
+#: ../elements/photobox_elem.php:18
+msgid "Simple photo box with link."
+msgstr ""
+
+#: ../elements/photobox_elem.php:45 ../elements/photocarousel_elem.php:181
+#: ../elements/slidingbox_elem.php:105
+msgid "Box description"
+msgstr ""
+
+#: ../elements/photobox_elem.php:53 ../elements/photocarousel_elem.php:189
+#: ../elements/piechart_elem.php:56 ../elements/priceblock_elem.php:53
+#: ../elements/process_elem.php:103 ../elements/slidingbox_elem.php:114
+msgid "Description color"
+msgstr ""
+
+#: ../elements/photobox_elem.php:56 ../elements/photocarousel_elem.php:192
+#: ../elements/piechart_elem.php:59 ../elements/process_elem.php:106
+msgid ""
+"Choose description color. If none selected, the default theme color will "
+"be used."
+msgstr ""
+
+#: ../elements/photobox_elem.php:61 ../elements/photocarousel_elem.php:197
+msgid "Box text align"
+msgstr ""
+
+#: ../elements/photobox_elem.php:65 ../elements/photocarousel_elem.php:201
+msgid "Center aligned"
+msgstr ""
+
+#: ../elements/photobox_elem.php:68 ../elements/photocarousel_elem.php:204
+msgid "Text alignment in box."
+msgstr ""
+
+#: ../elements/photobox_elem.php:112 ../elements/photocarousel_elem.php:248
+msgid "Enter image size in pixels. Example: 400x250 (Width x Height)."
+msgstr ""
+
+#: ../elements/photobox_elem.php:169 ../elements/process_elem.php:287
+#: ../elements/slidingbox_elem.php:217
+msgid "Select button style."
+msgstr ""
+
+#: ../elements/photocarousel_elem.php:23
+msgid "Photo box carousel"
+msgstr ""
+
+#: ../elements/photocarousel_elem.php:24
+msgid "List photo boxes in a carousel."
+msgstr ""
+
+#: ../elements/photocarousel_elem.php:52
+#: ../elements/photogallery_elem.php:35
+#: ../elements/reviewcarousel_elem.php:38
+#: ../elements/testimonialcards_elem.php:55
+#: ../elements/testimonials_elem.php:53
+msgid "Navigation style"
+msgstr ""
+
+#: ../elements/photocarousel_elem.php:60
+#: ../elements/photogallery_elem.php:43
+#: ../elements/reviewcarousel_elem.php:46
+#: ../elements/testimonialcards_elem.php:62
+#: ../elements/testimonials_elem.php:61
+msgid "Select navigation style."
+msgstr ""
+
+#: ../elements/photocarousel_elem.php:66
+#: ../elements/reviewcarousel_elem.php:52
+#: ../elements/teamcarousel_elem.php:63
+#: ../elements/testimonials_elem.php:67
+msgid "Navigation color"
+msgstr ""
+
+#: ../elements/photocarousel_elem.php:73
+msgid "Choose the navigation arrows and dots color."
+msgstr ""
+
+#: ../elements/photocarousel_elem.php:155
+msgid "Photo Box"
+msgstr ""
+
+#: ../elements/photogallery_elem.php:21
+#: ../elements/stickynavsections_elem.php:519
+msgid "Photo gallery"
+msgstr ""
+
+#: ../elements/photogallery_elem.php:22
+msgid "Responsive image gallery."
+msgstr ""
+
+#: ../elements/photogallery_elem.php:79
+msgid "Select autoplay speed."
+msgstr ""
+
+#: ../elements/photogallery_elem.php:96
+msgid "Stop sliding on mouse over."
+msgstr ""
+
+#: ../elements/photogallery_elem.php:115
+msgid "Transparent inactive items"
+msgstr ""
+
+#: ../elements/photogallery_elem.php:122
+msgid "Set a transparency layer to inactive carousel items."
+msgstr ""
+
+#: ../elements/photogallery_elem.php:131
+#: ../elements/stickynavsections_elem.php:844
+msgid ""
+"If you wish to style this particular content element differently, then "
+"use this field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: ../elements/photogallery_elem.php:137
+#: ../elements/sectiontitle_elem.php:233
+msgid "Css"
+msgstr ""
+
+#: ../elements/photogallery_elem.php:139
+#: ../elements/pricingtable_elem.php:292
+#: ../elements/pricingtable_elem.php:306
+#: ../elements/pricingtable_elem.php:316
+#: ../elements/sectiontitle_elem.php:235
+msgid "Design options"
+msgstr ""
+
+#: ../elements/photogallery_elem.php:194
+#: ../elements/stickynavsections_elem.php:550
+#: ../elements/stickynavsections_elem.php:735
+msgid "Enter image size in pixels. Example: 650x450 (Width x Height)."
+msgstr ""
+
+#: ../elements/photogallery_elem.php:204
+#: ../elements/stickynavsections_elem.php:457
+msgid "On click action"
+msgstr ""
+
+#: ../elements/photogallery_elem.php:211
+#: ../elements/stickynavsections_elem.php:464
+msgid "Select action for click action."
+msgstr ""
+
+#: ../elements/photogallery_elem.php:221
+#: ../elements/stickynavsections_elem.php:475
+msgid ""
+"Enter URL if you want this image to have a link (Note: parameters like "
+"\"mailto:\" are also accepted)."
+msgstr ""
+
+#: ../elements/photogallery_elem.php:230
+#: ../elements/stickynavsections_elem.php:485
+msgid "Link Target"
+msgstr ""
+
+#: ../elements/piechart_elem.php:17
+msgid "Pie chart"
+msgstr ""
+
+#: ../elements/piechart_elem.php:18
+msgid "Animated pie chart."
+msgstr ""
+
+#: ../elements/piechart_elem.php:28 ../elements/process_elem.php:78
+#: ../elements/progressbar_elem.php:41 ../elements/sectiontitle_elem.php:27
+#: ../elements/stickynavsections_elem.php:56
+#: ../extensions/social_profiles/social_profiles/inc/widget.php:118
+msgid "Title"
+msgstr ""
+
+#: ../elements/piechart_elem.php:32
+msgid "Enter pie chart title here."
+msgstr ""
+
+#: ../elements/piechart_elem.php:47 ../elements/process_elem.php:95
+#: ../elements/progressbar_elem.php:165
+msgid "Description"
+msgstr ""
+
+#: ../elements/piechart_elem.php:50
+msgid "Enter pie chart description here."
+msgstr ""
+
+#: ../elements/piechart_elem.php:65
+msgid "Bar thickness"
+msgstr ""
+
+#: ../elements/piechart_elem.php:73
+msgid "Select pie chart bar width."
+msgstr ""
+
+#: ../elements/piechart_elem.php:79
+msgid "Percent"
+msgstr ""
+
+#: ../elements/piechart_elem.php:82
+msgid "Pie chart percent value %. Only 1-100 values accepted."
+msgstr ""
+
+#: ../elements/piechart_elem.php:89
+msgid "Filling bar color"
+msgstr ""
+
+#: ../elements/piechart_elem.php:92
+msgid ""
+"Choose filling bar color. If none selected, the default theme color will "
+"be used."
+msgstr ""
+
+#: ../elements/piechart_elem.php:98
+msgid "Track color"
+msgstr ""
+
+#: ../elements/piechart_elem.php:101
+msgid ""
+"Choose track color. If none selected, the default theme color will be "
+"used."
+msgstr ""
+
+#: ../elements/piechart_elem.php:107
+msgid "Pie content"
+msgstr ""
+
+#: ../elements/piechart_elem.php:116
+msgid "Select pie chart center content."
+msgstr ""
+
+#: ../elements/piechart_elem.php:180
+msgid "Add custom link"
+msgstr ""
+
+#: ../elements/piechart_elem.php:229 ../elements/progressbar_elem.php:215
+msgid "Animation Delay:"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:17
+msgid "Price block"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:18
+msgid "Price block with thumb image."
+msgstr ""
+
+#: ../elements/priceblock_elem.php:28
+msgid "Block title"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:32
+msgid "Price block title."
+msgstr ""
+
+#: ../elements/priceblock_elem.php:40
+#: ../elements/stickynavsections_elem.php:105
+#: ../elements/testimonialcards_elem.php:49
+msgid ""
+"Select title color. If none selected, the default theme color will be "
+"used."
+msgstr ""
+
+#: ../elements/priceblock_elem.php:45
+msgid "Block description"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:48
+msgid "Price block description."
+msgstr ""
+
+#: ../elements/priceblock_elem.php:56
+msgid ""
+"Select description color. If none selected, the default theme color will "
+"be used."
+msgstr ""
+
+#: ../elements/priceblock_elem.php:61
+msgid "Block image source"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:73
+msgid "Block image"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:85
+msgid "Block external image"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:97
+msgid "Price"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:101
+msgid "Enter product price."
+msgstr ""
+
+#: ../elements/priceblock_elem.php:106
+msgid "Price currency"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:114
+msgid "Select price currency."
+msgstr ""
+
+#: ../elements/priceblock_elem.php:119 ../elements/pricingtable_elem.php:71
+msgid "Other currency"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:122
+msgid "Pricing block custom currency."
+msgstr ""
+
+#: ../elements/priceblock_elem.php:127
+msgid "Currency symbol position"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:134
+msgid "Select price block currency symbol position."
+msgstr ""
+
+#: ../elements/priceblock_elem.php:139
+msgid "Price color"
+msgstr ""
+
+#: ../elements/priceblock_elem.php:142
+msgid ""
+"Select pret color. If none selected, the default theme color will be "
+"used."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:14
+msgid "Pricing table"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:15
+msgid "Pricing table with extended settings."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:25
+msgid "Plan title"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:29
+msgid "Enter your pricing plan title."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:30
+#: ../elements/pricingtable_elem.php:40
+#: ../elements/pricingtable_elem.php:50
+#: ../elements/pricingtable_elem.php:65
+#: ../elements/pricingtable_elem.php:75
+#: ../elements/pricingtable_elem.php:89
+#: ../elements/pricingtable_elem.php:104
+#: ../elements/pricingtable_elem.php:120
+#: ../elements/pricingtable_elem.php:134
+#: ../elements/pricingtable_elem.php:148
+#: ../elements/pricingtable_elem.php:162
+#: ../elements/pricingtable_elem.php:176
+#: ../elements/pricingtable_elem.php:190
+#: ../elements/pricingtable_elem.php:208
+#: ../elements/stickynavsections_elem.php:61
+#: ../elements/stickynavsections_elem.php:71
+#: ../elements/stickynavsections_elem.php:77
+#: ../elements/stickynavsections_elem.php:81
+#: ../elements/stickynavsections_elem.php:95
+#: ../elements/stickynavsections_elem.php:106
+#: ../elements/stickynavsections_elem.php:116
+#: ../elements/stickynavsections_elem.php:126
+#: ../elements/stickynavsections_elem.php:141
+#: ../elements/stickynavsections_elem.php:157
+#: ../elements/stickynavsections_elem.php:171
+#: ../elements/stickynavsections_elem.php:185
+#: ../elements/stickynavsections_elem.php:199
+#: ../elements/stickynavsections_elem.php:213
+#: ../elements/stickynavsections_elem.php:227
+#: ../elements/stickynavsections_elem.php:246
+#: ../elements/stickynavsections_elem.php:263
+msgid "Content"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:36
+msgid "Plan value"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:39
+msgid "Enter price for this plan."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:46
+msgid "Plan period"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:49
+msgid "Enter your pricing plan period (ex. /month)"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:56
+msgid "Plan currency"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:64
+#: ../elements/pricingtable_elem.php:88
+msgid "Select pricing plan currency."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:74
+msgid "Pricing plan custom currency."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:81
+msgid "Currency position"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:94
+msgid "Display icon/image"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:147
+msgid "Enter icon size."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:182
+msgid "External image size"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:185
+msgid "Enter image size in pixels. Example: 300x160 (Width x Height)."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:196
+msgid "Pricing option"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:202
+msgid "Option value"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:217
+msgid "Pricing table button text."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:218
+#: ../elements/pricingtable_elem.php:227
+#: ../elements/pricingtable_elem.php:237
+#: ../elements/pricingtable_elem.php:249
+#: ../elements/pricingtable_elem.php:261
+#: ../elements/pricingtable_elem.php:278
+msgid "Button settings"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:226
+msgid "Add link to button."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:284
+msgid "Pricing table style"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:291
+msgid "Select pricing plan template style."
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:298
+msgid "Highlight plan"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:305
+msgid "Select if pricing plan is highlighted"
+msgstr ""
+
+#: ../elements/pricingtable_elem.php:315
+#: ../elements/testimonials_elem.php:225
+msgid "Select text color."
+msgstr ""
+
+#: ../elements/process_elem.php:23
+msgid "Process steps"
+msgstr ""
+
+#: ../elements/process_elem.php:24
+msgid "Process steps builder."
+msgstr ""
+
+#: ../elements/process_elem.php:37
+msgid "Template style"
+msgstr ""
+
+#: ../elements/process_elem.php:40
+msgid "Process flowchart"
+msgstr ""
+
+#: ../elements/process_elem.php:41
+msgid "Process boxes"
+msgstr ""
+
+#: ../elements/process_elem.php:48
+msgid "Number of elements"
+msgstr ""
+
+#: ../elements/process_elem.php:55
+msgid "Select number of elements in this process."
+msgstr ""
+
+#: ../elements/process_elem.php:69
+msgid "Single process step"
+msgstr ""
+
+#: ../elements/process_elem.php:82
+msgid "Enter step title."
+msgstr ""
+
+#: ../elements/process_elem.php:98
+msgid "Enter step description."
+msgstr ""
+
+#: ../elements/process_elem.php:111
+msgid "Display step number"
+msgstr ""
+
+#: ../elements/process_elem.php:114
+msgid "Yes"
+msgstr ""
+
+#: ../elements/process_elem.php:115
+msgid "No"
+msgstr ""
+
+#: ../elements/process_elem.php:122
+msgid "Step number"
+msgstr ""
+
+#: ../elements/process_elem.php:129
+msgid "Enter the step number."
+msgstr ""
+
+#: ../elements/process_elem.php:134
+msgid "Step number color"
+msgstr ""
+
+#: ../elements/process_elem.php:141
+msgid "Select step number color."
+msgstr ""
+
+#: ../elements/process_elem.php:197
+msgid "Upload image"
+msgstr ""
+
+#: ../elements/process_elem.php:212
+msgid "Default"
+msgstr ""
+
+#: ../elements/process_elem.php:213
+msgid "Custom color"
+msgstr ""
+
+#: ../elements/process_elem.php:228 ../elements/testimonials_elem.php:234
+msgid "Select box background color."
+msgstr ""
+
+#: ../elements/process_elem.php:233
+msgid "Border color"
+msgstr ""
+
+#: ../elements/process_elem.php:236
+msgid "Choose box border color."
+msgstr ""
+
+#: ../elements/process_elem.php:256
+msgid "Enter button text here."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:18
+msgid "Progress bar"
+msgstr ""
+
+#: ../elements/progressbar_elem.php:19
+msgid "Animated progress bar with counter."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:28
+msgid "Bar heading"
+msgstr ""
+
+#: ../elements/progressbar_elem.php:35
+msgid "Select your progress bar heading."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:45
+msgid "Enter progress bar title."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:63
+msgid "Icon will be displayed in front of title."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:127
+msgid "Show value marker"
+msgstr ""
+
+#: ../elements/progressbar_elem.php:138
+msgid "Value marker for your progress bar."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:144
+msgid "Progress bar value"
+msgstr ""
+
+#: ../elements/progressbar_elem.php:148
+msgid "Progress bar filling value %. Only 1-100 values accepted."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:155
+msgid "Progress bar filling time"
+msgstr ""
+
+#: ../elements/progressbar_elem.php:158
+msgid "Filling duration measured in seconds."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:168
+msgid "Displayed under the progress bar."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:174
+msgid "Bar line thickness"
+msgstr ""
+
+#: ../elements/progressbar_elem.php:182
+msgid "Select bar thickness."
+msgstr ""
+
+#: ../elements/progressbar_elem.php:188
+msgid "Element color"
+msgstr ""
+
+#: ../elements/progressbar_elem.php:191
+msgid "Overwrite default title and active progress bar color."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:23
+msgid "Reviews carousel"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:24
+msgid "List all your client reviews in a carousel."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:59
+#: ../elements/testimonials_elem.php:74
+msgid "Select the navigation color."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:127
+msgid "Review item"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:136 ../elements/reviews_elem.php:29
+#: ../elements/testimonialcards_elem.php:152
+#: ../elements/testimonials_elem.php:206
+msgid "Author name"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:140 ../elements/reviews_elem.php:33
+msgid "Write the review author name."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:146 ../elements/reviews_elem.php:39
+#: ../elements/testimonialcards_elem.php:162
+msgid "Author name text color"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:149 ../elements/reviews_elem.php:42
+#: ../elements/testimonialcards_elem.php:165
+msgid ""
+"Choose author name text color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:155 ../elements/reviews_elem.php:48
+#: ../elements/testimonials_elem.php:214
+msgid "Author description"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:158 ../elements/reviews_elem.php:51
+msgid "Write the review author description."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:164 ../elements/reviews_elem.php:57
+msgid "Author description text color"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:167 ../elements/reviews_elem.php:60
+msgid ""
+"Choose author description text color. If none selected, the default "
+"theme color will be used."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:173 ../elements/reviews_elem.php:66
+#: ../elements/testimonialcards_elem.php:189
+#: ../elements/testimonials_elem.php:240
+msgid "Author image source"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:186
+#: ../elements/testimonialcards_elem.php:202
+msgid "Author profile image"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:189
+#: ../elements/testimonialcards_elem.php:205
+msgid "Upload author profile image."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:199 ../elements/reviews_elem.php:92
+msgid "Author image external source"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:212 ../elements/reviews_elem.php:105
+msgid "Author image size"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:215 ../elements/reviews_elem.php:108
+msgid "Enter image size in pixels. Example: 230x400 (Width x Height)."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:225 ../elements/reviews_elem.php:118
+msgid "Review message"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:228 ../elements/reviews_elem.php:121
+msgid "Write the review message."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:234 ../elements/reviews_elem.php:127
+msgid "Review message text color"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:237 ../elements/reviews_elem.php:130
+msgid ""
+"Choose review message text color. If none selected, the default theme "
+"color will be used."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:243 ../elements/reviews_elem.php:136
+msgid "Show star rating"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:250 ../elements/reviews_elem.php:143
+msgid "Display stars rating."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:256 ../elements/reviews_elem.php:149
+msgid "Review rating"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:270 ../elements/reviews_elem.php:163
+msgid "Select review rating."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:276 ../elements/reviews_elem.php:169
+msgid "Star color"
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:283 ../elements/reviews_elem.php:176
+msgid "Choose star color."
+msgstr ""
+
+#: ../elements/reviewcarousel_elem.php:292 ../elements/reviews_elem.php:185
+msgid ""
+"Choose review box background color. If none selected, the default theme "
+"color will be used."
+msgstr ""
+
+#: ../elements/reviews_elem.php:18
+msgid "Review box"
+msgstr ""
+
+#: ../elements/reviews_elem.php:19
+msgid "Display reviews with ratings."
+msgstr ""
+
+#: ../elements/reviews_elem.php:79 ../elements/testimonials_elem.php:252
+msgid "Author image"
+msgstr ""
+
+#: ../elements/reviews_elem.php:82
+msgid "Select or upload author profile image using the media library."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:18
+msgid "Custom title, separator and subtitle."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:31
+msgid "Add your section title here."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:36
+msgid "Title tag"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:48
+msgid "Select title tag."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:53
+#: ../elements/stickynavsections_elem.php:67
+msgid "Subtitle"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:56
+msgid "Add your section subtitle here."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:61
+msgid "Subtitle text decoration"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:68
+msgid "Select to enable subtitle decoration."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:76
+msgid "Select title color."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:81
+#: ../elements/stickynavsections_elem.php:112
+msgid "Subtitle color"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:84
+msgid "Select subtitle color."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:89
+msgid "Title font size"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:92
+msgid "Enter title font size."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:97
+msgid "Title line height"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:100
+msgid "Enter title line height."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:105
+msgid "Subtitle font size"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:108
+msgid "Enter subtitle font size."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:113
+msgid "Use separator"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:120
+msgid "Enable to add a separator."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:125
+msgid "Separator position"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:137
+msgid "Select separator position."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:142
+msgid "Separator color"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:149
+msgid "Select color of separator."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:154
+msgid "Separator style"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:166
+msgid "Select separator style."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:171
+msgid "Separator border width"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:190
+msgid "Select border width (pixels)."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:195
+msgid "Separator length"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:202
+msgid "Enter separator length (pixels)."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:207
+#: ../elements/textrotator_elem.php:44
+msgid "Text align"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:215
+msgid "Select element alignment."
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:220
+msgid "Section width"
+msgstr ""
+
+#: ../elements/sectiontitle_elem.php:229
+msgid "Select element width."
+msgstr ""
+
+#: ../elements/shape_elem.php:17
+msgid "Shape"
+msgstr ""
+
+#: ../elements/shape_elem.php:18
+msgid "Display basic geometric shapes."
+msgstr ""
+
+#: ../elements/shape_elem.php:27 ../elements/stickynavsections_elem.php:87
+msgid "Template"
+msgstr ""
+
+#: ../elements/shape_elem.php:40
+msgid "Select shape template."
+msgstr ""
+
+#: ../elements/shape_elem.php:46
+msgid "Horizontal position"
+msgstr ""
+
+#: ../elements/shape_elem.php:55
+msgid "Select shape position."
+msgstr ""
+
+#: ../elements/shape_elem.php:61
+msgid "Top position"
+msgstr ""
+
+#: ../elements/shape_elem.php:64 ../elements/shape_elem.php:73
+msgid "Accepts values in px, em, rem or auto."
+msgstr ""
+
+#: ../elements/shape_elem.php:70
+msgid "Bottom position"
+msgstr ""
+
+#: ../elements/shape_elem.php:79
+msgid "Width"
+msgstr ""
+
+#: ../elements/shape_elem.php:82
+msgid "Enter shape width."
+msgstr ""
+
+#: ../elements/shape_elem.php:87 ../keydesign-addon.php:207
+#: ../keydesign-addon.php:271
+msgid "Height"
+msgstr ""
+
+#: ../elements/shape_elem.php:90
+msgid "Enter shape height."
+msgstr ""
+
+#: ../elements/shape_elem.php:98
+msgid "Enter shape opacity. Only values between 0.1 and 1 accepted."
+msgstr ""
+
+#: ../elements/shape_elem.php:106
+msgid "Select shape background color."
+msgstr ""
+
+#: ../elements/slidingbox_elem.php:27
+msgid "Sliding box"
+msgstr ""
+
+#: ../elements/slidingbox_elem.php:28
+msgid "Sliding boxes with smooth animations."
+msgstr ""
+
+#: ../elements/slidingbox_elem.php:51
+msgid "Sliding box item"
+msgstr ""
+
+#: ../elements/slidingbox_elem.php:60
+msgid "Active element"
+msgstr ""
+
+#: ../elements/slidingbox_elem.php:68
+msgid "Note: only one child sliding box element must be set as active."
+msgstr ""
+
+#: ../elements/slidingbox_elem.php:77
+msgid "Enter item title here."
+msgstr ""
+
+#: ../elements/slidingbox_elem.php:108
+msgid "Enter item description here."
+msgstr ""
+
+#: ../elements/slidingbox_elem.php:117
+msgid ""
+"Choose description text color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/slidingbox_elem.php:164
+msgid "Enter image size in pixels. Example: 300x300 (Width x Height)."
+msgstr ""
+
+#: ../elements/socialicons_elem.php:17
+msgid "Social icons"
+msgstr ""
+
+#: ../elements/socialicons_elem.php:18
+msgid "Connect your social media profiles to your website."
+msgstr ""
+
+#: ../elements/socialicons_elem.php:33
+msgid "Icon alignment"
+msgstr ""
+
+#: ../elements/socialicons_elem.php:41
+msgid "Select icon alignment."
+msgstr ""
+
+#: ../elements/socialicons_elem.php:49
+msgid "Select icon color."
+msgstr ""
+
+#: ../elements/socialicons_elem.php:54
+msgid "Background shape"
+msgstr ""
+
+#: ../elements/socialicons_elem.php:66
+msgid "Select background shape and style for icon."
+msgstr ""
+
+#: ../elements/socialicons_elem.php:78
+msgid "Select background color for icon."
+msgstr ""
+
+#: ../elements/socialicons_elem.php:83
+msgid "Icon font size"
+msgstr ""
+
+#: ../elements/socialicons_elem.php:86
+msgid "Enter icon font size."
+msgstr ""
+
+#: ../elements/socialicons_elem.php:99
+msgid "Select hover effect."
+msgstr ""
+
+#: ../elements/socialicons_elem.php:144
+msgid ""
+"Style particular content element differently - add a class name and "
+"refer to it in custom CSS."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:23
+msgid "Sticky navbar sections"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:24
+msgid "Simple sections with sticky navigation."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:47
+msgid "Single section"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:59
+msgid "Enter section title."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:70
+msgid "Enter section subtitle."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:80
+msgid "Enter section content text here."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:90
+msgid "Single image"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:91
+msgid "Gallery"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:92
+msgid "Video"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:96
+msgid "Select the section general style."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:115
+msgid ""
+"Select subtitle color. If none selected, the default theme color will be "
+"used."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:125
+msgid ""
+"Select content text color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:140
+msgid "Icon will be placed above the section title."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:170
+msgid ""
+"Select icon color. If none selected, the default theme color will be "
+"used."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:191
+msgid "Upload custom icon"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:205
+msgid "Add link"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:233
+msgid "Link style"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:245
+msgid "Select link style."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:269
+msgid "Navigation label (*required)"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:272
+msgid "Enter navigation label for this section."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:279
+msgid "Display navigation icon"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:287
+msgid "Select navigation icon source."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:293
+msgid "Navigation icon"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:310
+msgid "Navigation icon color"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:317
+msgid ""
+"Choose navigation icon color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:324
+msgid "Navigation icon size"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:331
+msgid "Enter navigation icon size. (eg. 10px, 1em, 1rem)"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:338
+msgid "Navigation image icon"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:364
+#: ../elements/stickynavsections_elem.php:378
+#: ../elements/stickynavsections_elem.php:392
+#: ../elements/stickynavsections_elem.php:410
+#: ../elements/stickynavsections_elem.php:433
+#: ../elements/stickynavsections_elem.php:451
+#: ../elements/stickynavsections_elem.php:466
+#: ../elements/stickynavsections_elem.php:480
+#: ../elements/stickynavsections_elem.php:495
+msgid "Image settings"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:370
+msgid "Featured image"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:373
+msgid ""
+"Upload your own custom image. Recommended image size: 650x450 (Width x "
+"Height)."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:398
+msgid "Image align"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:409
+msgid "Select image alignment relative to the content."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:416
+msgid "Image style"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:432
+msgid "Select image style. The round styles work best with square images."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:439
+msgid "Image shadow"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:450
+#: ../elements/stickynavsections_elem.php:572
+#: ../elements/stickynavsections_elem.php:757
+msgid "Add shadow to image."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:501
+msgid "Image gallery source"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:513
+#: ../elements/stickynavsections_elem.php:528
+#: ../elements/stickynavsections_elem.php:542
+#: ../elements/stickynavsections_elem.php:555
+#: ../elements/stickynavsections_elem.php:573
+#: ../elements/stickynavsections_elem.php:591
+#: ../elements/stickynavsections_elem.php:609
+#: ../elements/stickynavsections_elem.php:633
+#: ../elements/stickynavsections_elem.php:651
+#: ../elements/stickynavsections_elem.php:669
+msgid "Gallery settings"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:522
+msgid "Select images from media library."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:534
+msgid "Image external links"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:537
+msgid ""
+"Enter external link for each gallery image (Note: divide links with "
+"linebreaks (Enter))."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:561
+msgid "Gallery shadow"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:657
+msgid "Gallery align"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:668
+msgid "Select image gallery alignment relative to the content."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:675
+msgid "YouTube URL"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:678
+msgid "Paste the YouTube url here."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:683
+#: ../elements/stickynavsections_elem.php:701
+#: ../elements/stickynavsections_elem.php:713
+#: ../elements/stickynavsections_elem.php:727
+#: ../elements/stickynavsections_elem.php:740
+#: ../elements/stickynavsections_elem.php:758
+#: ../elements/stickynavsections_elem.php:777
+#: ../elements/stickynavsections_elem.php:795
+msgid "Video settings"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:689
+msgid "Video image source"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:695
+msgid "Select video cover image source."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:706
+msgid "Video cover image"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:708
+msgid ""
+"Upload video cover image. Recommended image size: 650x450 (Width x "
+"Height)."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:746
+msgid "Video shadow"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:764
+#: ../elements/video_elem.php:159
+msgid "Play button style"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:776
+#: ../elements/video_elem.php:167
+msgid "Select play button color scheme."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:783
+msgid "Video align"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:794
+msgid "Select video alignment relative to the content."
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:801
+msgid "Content CSS Animation"
+msgstr ""
+
+#: ../elements/stickynavsections_elem.php:821
+msgid "Image CSS Animation"
+msgstr ""
+
+#: ../elements/team_elem.php:16 ../elements/teamcarousel_elem.php:138
+msgid "Team member"
+msgstr ""
+
+#: ../elements/team_elem.php:17
+msgid "Team member element"
+msgstr ""
+
+#: ../elements/team_elem.php:26
+msgid "Select design style"
+msgstr ""
+
+#: ../elements/team_elem.php:29 ../elements/teamcarousel_elem.php:40
+msgid "Classic"
+msgstr ""
+
+#: ../elements/team_elem.php:30 ../elements/teamcarousel_elem.php:41
+msgid "Creative"
+msgstr ""
+
+#: ../elements/team_elem.php:33 ../elements/teamcarousel_elem.php:44
+msgid "Select Team Member box design."
+msgstr ""
+
+#: ../elements/team_elem.php:38 ../elements/teamcarousel_elem.php:147
+msgid "Team member name"
+msgstr ""
+
+#: ../elements/team_elem.php:46 ../elements/teamcarousel_elem.php:156
+msgid "Name text color"
+msgstr ""
+
+#: ../elements/team_elem.php:49 ../elements/teamcarousel_elem.php:159
+msgid ""
+"Choose team member name color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/team_elem.php:54 ../elements/teamcarousel_elem.php:165
+msgid "Team member job"
+msgstr ""
+
+#: ../elements/team_elem.php:61 ../elements/teamcarousel_elem.php:173
+msgid "Job text color"
+msgstr ""
+
+#: ../elements/team_elem.php:64 ../elements/teamcarousel_elem.php:176
+msgid ""
+"Choose team member job color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/team_elem.php:69 ../elements/teamcarousel_elem.php:182
+msgid "Team member description"
+msgstr ""
+
+#: ../elements/team_elem.php:80 ../elements/teamcarousel_elem.php:190
+msgid "Description text color"
+msgstr ""
+
+#: ../elements/team_elem.php:87 ../elements/teamcarousel_elem.php:193
+msgid ""
+"Choose team member description color. If none selected, the default "
+"theme color will be used."
+msgstr ""
+
+#: ../elements/team_elem.php:114 ../elements/teamcarousel_elem.php:223
+msgid "Person image external source"
+msgstr ""
+
+#: ../elements/team_elem.php:126 ../elements/teamcarousel_elem.php:235
+msgid "Person image size"
+msgstr ""
+
+#: ../elements/team_elem.php:129 ../elements/teamcarousel_elem.php:238
+msgid "Enter image size in pixels. Example: 400x450 (Width x Height)."
+msgstr ""
+
+#: ../elements/team_elem.php:138 ../elements/teamcarousel_elem.php:248
+msgid "Team member phone"
+msgstr ""
+
+#: ../elements/team_elem.php:149 ../elements/teamcarousel_elem.php:256
+msgid "Team member email"
+msgstr ""
+
+#: ../elements/team_elem.php:163 ../elements/teamcarousel_elem.php:267
+msgid ""
+"Choose box background color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/team_elem.php:168 ../elements/teamcarousel_elem.php:273
+msgid "Facebook Link"
+msgstr ""
+
+#: ../elements/team_elem.php:171
+msgid "Set Facebook link."
+msgstr ""
+
+#: ../elements/team_elem.php:176 ../elements/teamcarousel_elem.php:282
+msgid "Instagram Link"
+msgstr ""
+
+#: ../elements/team_elem.php:179 ../elements/teamcarousel_elem.php:285
+msgid "Set Instagram link."
+msgstr ""
+
+#: ../elements/team_elem.php:184 ../elements/teamcarousel_elem.php:291
+msgid "Twitter Link"
+msgstr ""
+
+#: ../elements/team_elem.php:187
+msgid "Set Twitter link."
+msgstr ""
+
+#: ../elements/team_elem.php:192 ../elements/teamcarousel_elem.php:300
+msgid "Google Link"
+msgstr ""
+
+#: ../elements/team_elem.php:195
+msgid "Set Google Plus link."
+msgstr ""
+
+#: ../elements/team_elem.php:200 ../elements/teamcarousel_elem.php:309
+msgid "Linkedin Link"
+msgstr ""
+
+#: ../elements/team_elem.php:203
+msgid "Set Linkedin link."
+msgstr ""
+
+#: ../elements/team_elem.php:208 ../elements/teamcarousel_elem.php:318
+msgid "Social icons color"
+msgstr ""
+
+#: ../elements/team_elem.php:211 ../elements/teamcarousel_elem.php:321
+msgid ""
+"Choose social icons color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/teamcarousel_elem.php:23
+msgid "Team carousel"
+msgstr ""
+
+#: ../elements/teamcarousel_elem.php:24
+msgid "List all your team members in a carousel."
+msgstr ""
+
+#: ../elements/teamcarousel_elem.php:37
+msgid "Design style"
+msgstr ""
+
+#: ../elements/teamcarousel_elem.php:70
+#: ../elements/testimonialcards_elem.php:75
+msgid "Choose the navigation arrows color."
+msgstr ""
+
+#: ../elements/teamcarousel_elem.php:276
+msgid "Set Facebook address and target."
+msgstr ""
+
+#: ../elements/teamcarousel_elem.php:294
+msgid "Set Twitter address and target."
+msgstr ""
+
+#: ../elements/teamcarousel_elem.php:303
+msgid "Set Google Plus address and target."
+msgstr ""
+
+#: ../elements/teamcarousel_elem.php:312
+msgid "Set Linkedin address and target."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:23
+msgid "Testimonial cards"
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:24
+msgid "List all your client testimonials in a carousel."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:37
+msgid "Title section"
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:40
+msgid "Add testimonials section title here."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:46
+msgid "Title section color"
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:137
+msgid ""
+"If you wish to style a particular content element differently, then use "
+"this field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:143
+msgid "Testimonial card"
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:156
+msgid "Write the testimonial author name."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:171
+msgid "Author job"
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:174
+msgid "Write the testimonial author job."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:180
+msgid "Author job text color"
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:183
+msgid ""
+"Choose author job text color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:230
+msgid "Enter image size in pixels. Example: 100x100 (Width x Height)."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:240
+#: ../elements/testimonials_elem.php:199
+msgid "Testimonial text"
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:243
+msgid "Write the testimonial message here."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:249
+msgid "Testimonial text color"
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:252
+msgid ""
+"Choose testimonial text color. If none selected, the default theme color "
+"will be used."
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:258
+msgid "Testimonial box background color"
+msgstr ""
+
+#: ../elements/testimonialcards_elem.php:261
+msgid ""
+"Choose testimonial box background color. If none selected, the default "
+"theme color will be used."
+msgstr ""
+
+#: ../elements/testimonials_elem.php:27
+msgid "Testimonial slider"
+msgstr ""
+
+#: ../elements/testimonials_elem.php:28
+msgid "Sliding testimonials with author image."
+msgstr ""
+
+#: ../elements/testimonials_elem.php:40
+msgid "Testimonials layout"
+msgstr ""
+
+#: ../elements/testimonials_elem.php:47
+msgid "Select layout - with or without image."
+msgstr ""
+
+#: ../elements/testimonials_elem.php:190
+msgid "Testimonial slide"
+msgstr ""
+
+#: ../elements/testimonials_elem.php:201
+msgid "Testimonial author quote."
+msgstr ""
+
+#: ../elements/testimonials_elem.php:209
+msgid "Testimonial author name."
+msgstr ""
+
+#: ../elements/testimonials_elem.php:216
+msgid "Testimonial author description."
+msgstr ""
+
+#: ../elements/testimonials_elem.php:254
+msgid "Display testimonial author image."
+msgstr ""
+
+#: ../elements/testimonials_elem.php:279
+msgid "Enter image size in pixels. Example: 1000x500 (Width x Height)."
+msgstr ""
+
+#: ../elements/textrotator_elem.php:17
+msgid "Text rotator"
+msgstr ""
+
+#: ../elements/textrotator_elem.php:18
+msgid "Simple shortcode to rotate your texts."
+msgstr ""
+
+#: ../elements/textrotator_elem.php:27
+msgid "Text fields"
+msgstr ""
+
+#: ../elements/textrotator_elem.php:33
+msgid "Single item"
+msgstr ""
+
+#: ../elements/textrotator_elem.php:52
+msgid "Select text align."
+msgstr ""
+
+#: ../elements/textrotator_elem.php:61
+msgid ""
+"Select text color. If none selected, the default theme color will be "
+"used."
+msgstr ""
+
+#: ../elements/textrotator_elem.php:67
+msgid "Font size"
+msgstr ""
+
+#: ../elements/textrotator_elem.php:70
+msgid "Enter text font size. (eg. 20px, 2em, 2rem)"
+msgstr ""
+
+#: ../elements/textrotator_elem.php:76
+msgid "Animation speed"
+msgstr ""
+
+#: ../elements/textrotator_elem.php:84
+msgid "Select animation speed."
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:24
+msgid "No contact forms found"
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:27
+msgid "Contact Form 7"
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:28
+msgid "Place Contact Form 7"
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:38
+msgid "Form name"
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:43
+msgid "Select contact form from the drop down list."
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:49
+msgid "Search title"
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:53
+msgid ""
+"Enter optional title to search if no ID selected or cannot find by ID."
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:59
+msgid "Form style"
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:66
+msgid "Select contact from style."
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:72
+msgid "Form field background"
+msgstr ""
+
+#: ../elements/vendors/vendor-contact-form-7.php:79
+msgid "Select field background color."
+msgstr ""
+
+#: ../elements/video_elem.php:13
+msgid "Video Modal"
+msgstr ""
+
+#: ../elements/video_elem.php:14
+msgid "Video modal"
+msgstr ""
+
+#: ../elements/video_elem.php:23
+msgid "Video source"
+msgstr ""
+
+#: ../elements/video_elem.php:44
+msgid "Video link"
+msgstr ""
+
+#: ../elements/video_elem.php:47
+msgid "Enter link to video."
+msgstr ""
+
+#: ../elements/video_elem.php:56
+msgid "Video title"
+msgstr ""
+
+#: ../elements/video_elem.php:59
+msgid "Enter video title."
+msgstr ""
+
+#: ../elements/video_elem.php:68
+msgid "Video URL MP4"
+msgstr ""
+
+#: ../elements/video_elem.php:79
+msgid "Video URL OGG"
+msgstr ""
+
+#: ../elements/video_elem.php:90
+msgid "Video URL WEBM"
+msgstr ""
+
+#: ../elements/video_elem.php:101
+msgid "Video height"
+msgstr ""
+
+#: ../elements/video_elem.php:104
+msgid "Enter video height. Default value is 400 pixels."
+msgstr ""
+
+#: ../elements/video_elem.php:113
+msgid "Cover image"
+msgstr ""
+
+#: ../elements/video_elem.php:119
+msgid "Select video preview image source."
+msgstr ""
+
+#: ../elements/video_elem.php:126
+msgid "Select image from media library."
+msgstr ""
+
+#: ../elements/video_elem.php:150
+msgid "Enter image size in pixels. Example: 200x100 (Width x Height)."
+msgstr ""
+
+#: ../elements/video_elem.php:172
+msgid "Play button align"
+msgstr ""
+
+#: ../elements/video_elem.php:183
+msgid "Open video in"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/field_social_profiles.php:147
+#, php-format
+msgid ""
+"Go to the <a href=\"%s\">Widgets</a> page to add the Redux Social Widget "
+"to any active widget area."
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/field_social_profiles.php:239
+msgid "Enabled"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/field_social_profiles.php:249
+msgid "Reset"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/field_social_profiles.php:255
+msgid "Text"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/field_social_profiles.php:268
+#: ../keydesign-addon.php:136 ../keydesign-addon.php:143
+#: ../keydesign-addon.php:155 ../keydesign-addon.php:196
+#: ../keydesign-addon.php:260
+msgid "Background"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:17
+msgid "ADN"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:27
+msgid "Android"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:37
+msgid "Apple"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:48
+msgid "behance"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:58
+msgid "behance square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:68
+msgid "Bitbucket"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:78
+msgid "Bitbucket square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:88
+msgid "Bitcoin"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:98
+msgid "CodePen"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:108
+msgid "CSS3"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:118
+msgid "Delicious"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:128
+msgid "Deviantart"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:138
+msgid "Digg"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:148
+msgid "Dribbble"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:158
+msgid "Dropbox"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:168
+msgid "Drupal"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:178
+msgid "Empire"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:188
+msgid "Facebook"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:198
+msgid "Facebook square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:208
+msgid "Flickr"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:218
+msgid "FourSquare"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:228
+msgid "git"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:238
+msgid "git square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:248
+msgid "github"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:258
+msgid "github alt"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:268
+msgid "github square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:278
+msgid "git tip"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:288
+msgid "Google"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:298
+msgid "Google Plus"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:308
+msgid "Google Plus square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:318
+msgid "Hacker News"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:328
+msgid "HTML5"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:338
+msgid "Instagram"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:348
+msgid "Joomla"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:358
+msgid "JS Fiddle"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:368
+msgid "LinkedIn"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:378
+msgid "LinkedIn square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:388
+msgid "Linux"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:398
+msgid "MaxCDN"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:408
+msgid "OpenID"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:418
+msgid "Page Lines"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:428
+msgid "Pied Piper"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:438
+msgid "Pied Piper alt"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:448
+msgid "Pinterest"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:458
+msgid "Pinterest square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:468
+msgid "QQ"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:478
+msgid "Rebel"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:488
+msgid "Reddit"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:498
+msgid "Reddit square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:508
+msgid "Ren Ren"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:518
+msgid "Share alt"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:528
+msgid "Share square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:538
+msgid "Skype"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:548
+msgid "Slack"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:558
+msgid "Sound Cloud"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:568
+msgid "Spotify"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:578
+msgid "Stack Exchange"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:588
+msgid "Stack Overflow"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:598
+msgid "Steam"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:608
+msgid "Steam square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:618
+msgid "Stumble Upon"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:628
+msgid "Stumble Upon circle"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:638
+msgid "Tencent Weibo"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:648
+msgid "Trello"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:658
+msgid "Twitter"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:668
+msgid "Twitter square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:678
+msgid "Vimeo square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:688
+msgid "Vine"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:698
+msgid "VK"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:708
+msgid "Weibo"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:718
+msgid "Weixin"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:728
+msgid "Windows"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:738
+msgid "WordPress"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:748
+msgid "Xing"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:758
+msgid "Xing square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:768
+msgid "Yahoo"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:778
+msgid "Yelp"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:788
+msgid "YouTube"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:798
+msgid "YouTube play"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:808
+msgid "YouTube square"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:818
+msgid "WhatsApp"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:828
+msgid "Telegram"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/defaults.php:838
+msgid "TripAdvisor"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/widget.php:48
+msgid "Display social media links"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/widget.php:111
+msgid "Social"
+msgstr ""
+
+#: ../extensions/social_profiles/social_profiles/inc/widget.php:127
+#, php-format
+msgid ""
+"Control which icons are displayed and their urls on the %ssettings page%s"
+msgstr ""
+
+#: ../keydesign-addon.php:59 ../keydesign-addon.php:69
+msgid "The"
+msgstr ""
+
+#: ../keydesign-addon.php:59 ../keydesign-addon.php:69
+msgid "plugin requires"
+msgstr ""
+
+#: ../keydesign-addon.php:59
+msgid "version 6.0.3 or greater."
+msgstr ""
+
+#: ../keydesign-addon.php:69
+msgid "Plugin installed and activated."
+msgstr ""
+
+#: ../keydesign-addon.php:133
+msgid "Fixed background"
+msgstr ""
+
+#: ../keydesign-addon.php:135
+msgid "If checked the background image stays fixed."
+msgstr ""
+
+#: ../keydesign-addon.php:140
+msgid "Image overlay"
+msgstr ""
+
+#: ../keydesign-addon.php:142
+msgid "If checked a layer will be applied over the row background image."
+msgstr ""
+
+#: ../keydesign-addon.php:148
+msgid "Overlay color"
+msgstr ""
+
+#: ../keydesign-addon.php:160
+msgid "Configure top row separator."
+msgstr ""
+
+#: ../keydesign-addon.php:162 ../keydesign-addon.php:168
+#: ../keydesign-addon.php:191 ../keydesign-addon.php:203
+#: ../keydesign-addon.php:219 ../keydesign-addon.php:226
+#: ../keydesign-addon.php:232 ../keydesign-addon.php:255
+#: ../keydesign-addon.php:267 ../keydesign-addon.php:283
+msgid "Separator"
+msgstr ""
+
+#: ../keydesign-addon.php:166
+msgid "Enable top separator"
+msgstr ""
+
+#: ../keydesign-addon.php:172 ../keydesign-addon.php:236
+msgid "Style"
+msgstr ""
+
+#: ../keydesign-addon.php:224
+msgid "Configure bottom row separator."
+msgstr ""
+
+#: ../keydesign-addon.php:230
+msgid "Enable bottom separator"
+msgstr ""
+
+#: ../templates-panel.php:30
+msgid "Ekko Templates"
+msgstr ""
+
+#: ../templates-panel.php:308
+msgid "No title"
+msgstr ""
+
+#: ../templates/templates.php:40
+msgid "Intro with contact form"
+msgstr ""
+
+#: ../templates/templates.php:53
+msgid "Intro for mobile app"
+msgstr ""
+
+#: ../templates/templates.php:65
+msgid "Intro with video & subscribe form"
+msgstr ""
+
+#: ../templates/templates.php:77
+msgid "Intro with countdown"
+msgstr ""
+
+#: ../templates/templates.php:89
+msgid "Intro with video & text boxes"
+msgstr ""
+
+#: ../templates/templates.php:102
+msgid "Intro with video & contact form"
+msgstr ""
+
+#: ../templates/templates.php:116
+msgid "Intro for mobile app 2"
+msgstr ""
+
+#: ../templates/templates.php:128
+msgid "Intro with simple form"
+msgstr ""
+
+#: ../templates/templates.php:140
+msgid "Intro with image & subscribe form"
+msgstr ""
+
+#: ../templates/templates.php:152
+msgid "Intro photo box carousel"
+msgstr ""
+
+#: ../templates/templates.php:164
+msgid "Intro with video modal"
+msgstr ""
+
+#: ../templates/templates.php:176
+msgid "Intro with content boxes"
+msgstr ""
+
+#: ../templates/templates.php:188
+msgid "Intro with video background"
+msgstr ""
+
+#: ../templates/templates.php:200
+msgid "Intro with 3 icon boxes"
+msgstr ""
+
+#: ../templates/templates.php:215
+msgid "Intro with sliding boxes"
+msgstr ""
+
+#: ../templates/templates.php:228
+msgid "Intro video & photo box carousel"
+msgstr ""
+
+#: ../templates/templates.php:240
+msgid "Intro with gallery carousel"
+msgstr ""
+
+#: ../templates/templates.php:264
+msgid "Box with text ( background )"
+msgstr ""
+
+#: ../templates/templates.php:279
+msgid "Box with text"
+msgstr ""
+
+#: ../templates/templates.php:295
+msgid "List with image ( background )"
+msgstr ""
+
+#: ../templates/templates.php:320
+msgid "List with image"
+msgstr ""
+
+#: ../templates/templates.php:345
+msgid "Text with 4 icon boxes ( background )"
+msgstr ""
+
+#: ../templates/templates.php:358
+msgid "Text with 4 icon boxes"
+msgstr ""
+
+#: ../templates/templates.php:371
+msgid "Text with left image - Fullwidth"
+msgstr ""
+
+#: ../templates/templates.php:384
+msgid "Text with right image - Fullwidth"
+msgstr ""
+
+#: ../templates/templates.php:397
+msgid "Text with large gallery"
+msgstr ""
+
+#: ../templates/templates.php:410
+msgid "Text with small gallery"
+msgstr ""
+
+#: ../templates/templates.php:423
+msgid "Text with 6 icon boxes"
+msgstr ""
+
+#: ../templates/templates.php:436
+msgid "Text with 6 icon boxes ( background )"
+msgstr ""
+
+#: ../templates/templates.php:449
+msgid "Accordions with right image"
+msgstr ""
+
+#: ../templates/templates.php:462
+msgid "Accordions with left image"
+msgstr ""
+
+#: ../templates/templates.php:475
+msgid "Process steps with form ( background )"
+msgstr ""
+
+#: ../templates/templates.php:490
+msgid "Process steps with form"
+msgstr ""
+
+#: ../templates/templates.php:505
+msgid "Single product with text rotator"
+msgstr ""
+
+#: ../templates/templates.php:518
+msgid "Icon boxes with testimonials"
+msgstr ""
+
+#: ../templates/templates.php:533
+msgid "Text with 2 icon boxes - Fullwidth"
+msgstr ""
+
+#: ../templates/templates.php:546
+msgid "Video modal with 3 icon boxes"
+msgstr ""
+
+#: ../templates/templates.php:559
+msgid "Icon boxes with left image - Style 1"
+msgstr ""
+
+#: ../templates/templates.php:572
+msgid "Icon boxes with right image - Style 1"
+msgstr ""
+
+#: ../templates/templates.php:585
+msgid "Icon boxes with left image - Style 2"
+msgstr ""
+
+#: ../templates/templates.php:598
+msgid "Icon boxes with right image - Style 2"
+msgstr ""
+
+#: ../templates/templates.php:611
+msgid "Vertical images with text ( background )"
+msgstr ""
+
+#: ../templates/templates.php:624
+msgid "Vertical images with text"
+msgstr ""
+
+#: ../templates/templates.php:637
+msgid "Sliding boxes with 6 icon boxes"
+msgstr ""
+
+#: ../templates/templates.php:652
+msgid "Counters with video modal"
+msgstr ""
+
+#: ../templates/templates.php:665
+msgid "Counters with video modal ( background )"
+msgstr ""
+
+#: ../templates/templates.php:678
+msgid "Text with 2 icon boxes - Left image"
+msgstr ""
+
+#: ../templates/templates.php:691
+msgid "Pricing plan with 4 icon boxes"
+msgstr ""
+
+#: ../templates/templates.php:706
+msgid "Content blocks with text"
+msgstr ""
+
+#: ../templates/templates.php:721
+msgid "Content blocks with text ( background )"
+msgstr ""
+
+#: ../templates/templates.php:736
+msgid "Counters with left image - Fullwidth **"
+msgstr ""
+
+#: ../templates/templates.php:749
+msgid "Counters with right image - Fullwidth"
+msgstr ""
+
+#: ../templates/templates.php:762
+msgid "Simple text block"
+msgstr ""
+
+#: ../templates/templates.php:775
+msgid "Simple text block ( background )"
+msgstr ""
+
+#: ../templates/templates.php:788
+msgid "Simple text block with icons"
+msgstr ""
+
+#: ../templates/templates.php:803
+msgid "Simple text block with icons ( background )"
+msgstr ""
+
+#: ../templates/templates.php:816
+msgid "Portfolio text block"
+msgstr ""
+
+#: ../templates/templates.php:836
+msgid "Text with video modal"
+msgstr ""
+
+#: ../templates/templates.php:849
+msgid "Icon boxes with image - Fullwidth"
+msgstr ""
+
+#: ../templates/templates.php:862
+msgid "Icon boxes with image - Fullwidth ( background )"
+msgstr ""
+
+#: ../templates/templates.php:875
+msgid "Clients with icons & video modal"
+msgstr ""
+
+#: ../templates/templates.php:888
+msgid "Clients with video modal"
+msgstr ""
+
+#: ../templates/templates.php:909
+msgid "Sticky navbar with featured sections"
+msgstr ""
+
+#: ../templates/templates.php:965
+msgid "Blog Posts – 3 Columns – Detailed Style"
+msgstr ""
+
+#: ../templates/templates.php:977
+msgid "Blog Posts – 4 Columns – Detailed Style"
+msgstr ""
+
+#: ../templates/templates.php:989
+msgid "Blog Posts – 3 Columns – Minimal Style"
+msgstr ""
+
+#: ../templates/templates.php:1001
+msgid "Blog Posts – 4 Columns – Minimal Style"
+msgstr ""
+
+#: ../templates/templates.php:1023
+msgid "Call to action box"
+msgstr ""
+
+#: ../templates/templates.php:1036
+msgid "Call to action box (background)"
+msgstr ""
+
+#: ../templates/templates.php:1049
+msgid "Call to action – title , subtitle, button"
+msgstr ""
+
+#: ../templates/templates.php:1061
+msgid "Call to action – title , subtitle, button ( background )"
+msgstr ""
+
+#: ../templates/templates.php:1073
+msgid "Call to action – title, button, link"
+msgstr ""
+
+#: ../templates/templates.php:1087
+msgid "Call to action – title , button, link ( background )"
+msgstr ""
+
+#: ../templates/templates.php:1101
+msgid "Call to action – link, title, button"
+msgstr ""
+
+#: ../templates/templates.php:1115
+msgid "Call to action – link, title, button ( background )"
+msgstr ""
+
+#: ../templates/templates.php:1129
+msgid "Call to action – text rotator"
+msgstr ""
+
+#: ../templates/templates.php:1141
+msgid "Call to action – text rotator ( background )"
+msgstr ""
+
+#: ../templates/templates.php:1160
+msgid "Cards – 3 Columns – Minimal"
+msgstr ""
+
+#: ../templates/templates.php:1172
+msgid "Cards – 3 Columns – Minimal (background)"
+msgstr ""
+
+#: ../templates/templates.php:1184
+msgid "Cards – 3 Columns – Detailed"
+msgstr ""
+
+#: ../templates/templates.php:1196
+msgid "Cards – 3 Columns – Detailed (background)"
+msgstr ""
+
+#: ../templates/templates.php:1208
+msgid "Cards – 4 Columns"
+msgstr ""
+
+#: ../templates/templates.php:1220
+msgid "Cards – 4 Columns (background)"
+msgstr ""
+
+#: ../templates/templates.php:1232
+msgid "Content box – 3 Columns"
+msgstr ""
+
+#: ../templates/templates.php:1244
+msgid "Content box – 3 Columns (background)"
+msgstr ""
+
+#: ../templates/templates.php:1256
+msgid "Content box – 4 Columns"
+msgstr ""
+
+#: ../templates/templates.php:1268
+msgid "Content box – 4 Columns (background)"
+msgstr ""
+
+#: ../templates/templates.php:1279
+msgid "Sliding box – minimal"
+msgstr ""
+
+#: ../templates/templates.php:1290
+msgid "Sliding box – minimal (background)"
+msgstr ""
+
+#: ../templates/templates.php:1301
+msgid "Sliding box – detailed"
+msgstr ""
+
+#: ../templates/templates.php:1312
+msgid "Sliding box – detailed (background)"
+msgstr ""
+
+#: ../templates/templates.php:1332
+msgid "Fullwidth progress bars"
+msgstr ""
+
+#: ../templates/templates.php:1344
+msgid "Fullwidth progress bars (background)"
+msgstr ""
+
+#: ../templates/templates.php:1356
+msgid "Progress bars with text"
+msgstr ""
+
+#: ../templates/templates.php:1368
+msgid "Progress bars with text (background)"
+msgstr ""
+
+#: ../templates/templates.php:1380
+msgid "Progress bar with left image"
+msgstr ""
+
+#: ../templates/templates.php:1392
+msgid "Progress bar with right image"
+msgstr ""
+
+#: ../templates/templates.php:1404
+msgid "Progress bar with video"
+msgstr ""
+
+#: ../templates/templates.php:1416
+msgid "Progress bar with video (background)"
+msgstr ""
+
+#: ../templates/templates.php:1428
+msgid "Pie charts with numbers"
+msgstr ""
+
+#: ../templates/templates.php:1440
+msgid "Pie charts with numbers (background)"
+msgstr ""
+
+#: ../templates/templates.php:1452
+msgid "Pie charts with icons"
+msgstr ""
+
+#: ../templates/templates.php:1464
+msgid "Pie charts with icons (background)"
+msgstr ""
+
+#: ../templates/templates.php:1476
+msgid "Pie charts with left image"
+msgstr ""
+
+#: ../templates/templates.php:1488
+msgid "Pie charts with right image"
+msgstr ""
+
+#: ../templates/templates.php:1500
+msgid "Pie charts with video"
+msgstr ""
+
+#: ../templates/templates.php:1512
+msgid "Pie charts with video (background)"
+msgstr ""
+
+#: ../templates/templates.php:1534
+msgid "Clients carousel - grayscale effect"
+msgstr ""
+
+#: ../templates/templates.php:1546
+msgid "Clients carousel - grayscale effect (background)"
+msgstr ""
+
+#: ../templates/templates.php:1558
+msgid "Clients carousel - move effect"
+msgstr ""
+
+#: ../templates/templates.php:1570
+msgid "Clients carousel - move effect (background)"
+msgstr ""
+
+#: ../templates/templates.php:1582
+msgid "Clients logo grid"
+msgstr ""
+
+#: ../templates/templates.php:1594
+msgid "Clients logo grid (background)"
+msgstr ""
+
+#: ../templates/templates.php:1615
+msgid "Simple subscribe form (white)"
+msgstr ""
+
+#: ../templates/templates.php:1627
+msgid "Simple subscribe form (grey)"
+msgstr ""
+
+#: ../templates/templates.php:1639
+msgid "Simple subscribe form (background)"
+msgstr ""
+
+#: ../templates/templates.php:1652
+msgid "Subscribe form with heading (white)"
+msgstr ""
+
+#: ../templates/templates.php:1665
+msgid "Subscribe form with heading (grey)"
+msgstr ""
+
+#: ../templates/templates.php:1678
+msgid "Subscribe form with heading (background)"
+msgstr ""
+
+#: ../templates/templates.php:1690
+msgid "Boxed form"
+msgstr ""
+
+#: ../templates/templates.php:1702
+msgid "Boxed form ( background )"
+msgstr ""
+
+#: ../templates/templates.php:1714
+msgid "Call to action form (white)"
+msgstr ""
+
+#: ../templates/templates.php:1726
+msgid "Call to action form (grey)"
+msgstr ""
+
+#: ../templates/templates.php:1738
+msgid "Call to action form (background)"
+msgstr ""
+
+#: ../templates/templates.php:1750
+msgid "Contact form with map (white)"
+msgstr ""
+
+#: ../templates/templates.php:1762
+msgid "Contact form with map (grey)"
+msgstr ""
+
+#: ../templates/templates.php:1774
+msgid "Contact form with map boxed"
+msgstr ""
+
+#: ../templates/templates.php:1786
+msgid "Contact form with map boxed (background)"
+msgstr ""
+
+#: ../templates/templates.php:1798
+msgid "Contact form with text (white)"
+msgstr ""
+
+#: ../templates/templates.php:1810
+msgid "Contact form with text (grey)"
+msgstr ""
+
+#: ../templates/templates.php:1821
+msgid "Contact form with text (background)"
+msgstr ""
+
+#: ../templates/templates.php:1832
+msgid "Contact form with video (white)"
+msgstr ""
+
+#: ../templates/templates.php:1843
+msgid "Contact form with video (grey)"
+msgstr ""
+
+#: ../templates/templates.php:1854
+msgid "Contact form with gallery (white)"
+msgstr ""
+
+#: ../templates/templates.php:1865
+msgid "Contact form with gallery (grey)"
+msgstr ""
+
+#: ../templates/templates.php:1876
+msgid "Contact form with gallery (background)"
+msgstr ""
+
+#: ../templates/templates.php:1901
+msgid "Counters with text - 3 Columns"
+msgstr ""
+
+#: ../templates/templates.php:1913
+msgid "Counters with text - 3 Columns (background)"
+msgstr ""
+
+#: ../templates/templates.php:1925
+msgid "Counters with icons - 4 columns"
+msgstr ""
+
+#: ../templates/templates.php:1937
+msgid "Counters with icons - 4 columns (background)"
+msgstr ""
+
+#: ../templates/templates.php:1949
+msgid "Large counters with icons - 3 columns"
+msgstr ""
+
+#: ../templates/templates.php:1961
+msgid "Large counters with icons - 3 columns (background)"
+msgstr ""
+
+#: ../templates/templates.php:1973
+msgid "Large counters with text - 4 columns"
+msgstr ""
+
+#: ../templates/templates.php:1985
+msgid "Large counters with text - 4 columns (background)"
+msgstr ""
+
+#: ../templates/templates.php:2007
+msgid "FAQ blocks with buttons"
+msgstr ""
+
+#: ../templates/templates.php:2018
+msgid "FAQ blocks with buttons (background)"
+msgstr ""
+
+#: ../templates/templates.php:2029
+msgid "FAQ blocks with video"
+msgstr ""
+
+#: ../templates/templates.php:2040
+msgid "FAQ blocks with video (background)"
+msgstr ""
+
+#: ../templates/templates.php:2051
+msgid "FAQ Blocks - 2 columns"
+msgstr ""
+
+#: ../templates/templates.php:2062
+msgid "FAQ Blocks - 2 columns (background)"
+msgstr ""
+
+#: ../templates/templates.php:2073
+msgid "FAQ Blocks with sidebar"
+msgstr ""
+
+#: ../templates/templates.php:2096
+msgid "Slider gallery with transparency"
+msgstr ""
+
+#: ../templates/templates.php:2108
+msgid "Slider gallery without transparency"
+msgstr ""
+
+#: ../templates/templates.php:2120
+msgid "Masonry gallery – Style 1"
+msgstr ""
+
+#: ../templates/templates.php:2132
+msgid "Masonry gallery – Style 2"
+msgstr ""
+
+#: ../templates/templates.php:2154
+msgid "4 columns - center content **"
+msgstr ""
+
+#: ../templates/templates.php:2166
+msgid "4 columns - center content (background)"
+msgstr ""
+
+#: ../templates/templates.php:2178
+msgid "3 columns - center content"
+msgstr ""
+
+#: ../templates/templates.php:2190
+msgid "3 columns - center content (background)"
+msgstr ""
+
+#: ../templates/templates.php:2202
+msgid "3 columns - no title"
+msgstr ""
+
+#: ../templates/templates.php:2214
+msgid "3 columns - no title (background)"
+msgstr ""
+
+#: ../templates/templates.php:2226
+msgid "3 columns - left content"
+msgstr ""
+
+#: ../templates/templates.php:2238
+msgid "3 columns - left content (background)"
+msgstr ""
+
+#: ../templates/templates.php:2250
+msgid "4 columns - left content"
+msgstr ""
+
+#: ../templates/templates.php:2262
+msgid "4 columns - left content (background) "
+msgstr ""
+
+#: ../templates/templates.php:2274
+msgid "3 columns - large content"
+msgstr ""
+
+#: ../templates/templates.php:2286
+msgid "3 columns - large content (background)"
+msgstr ""
+
+#: ../templates/templates.php:2298
+msgid "3 x 2 columns"
+msgstr ""
+
+#: ../templates/templates.php:2310
+msgid "3 x 2 columns (background)"
+msgstr ""
+
+#: ../templates/templates.php:2331
+msgid "Mobile app gallery **"
+msgstr ""
+
+#: ../templates/templates.php:2343
+msgid "App showcase"
+msgstr ""
+
+#: ../templates/templates.php:2355
+msgid "App showcase ( background )"
+msgstr ""
+
+#: ../templates/templates.php:2367
+msgid "Mobile app call to action"
+msgstr ""
+
+#: ../templates/templates.php:2379
+msgid "Mobile app call to action ( background )"
+msgstr ""
+
+#: ../templates/templates.php:2399
+msgid "Google map - boxed"
+msgstr ""
+
+#: ../templates/templates.php:2412
+msgid "Google map - boxed ( background )"
+msgstr ""
+
+#: ../templates/templates.php:2424
+msgid "Google map - fullwidth"
+msgstr ""
+
+#: ../templates/templates.php:2436
+msgid "Google map with contact details **"
+msgstr ""
+
+#: ../templates/templates.php:2456
+msgid "Process - 3 Columns - Flowchart"
+msgstr ""
+
+#: ../templates/templates.php:2468
+msgid "Process - 3 Columns - Flowchart ( background )"
+msgstr ""
+
+#: ../templates/templates.php:2481
+msgid "Process - 4 Columns - Flowchart"
+msgstr ""
+
+#: ../templates/templates.php:2493
+msgid "Process - 4 Columns - Flowchart ( background )"
+msgstr ""
+
+#: ../templates/templates.php:2505
+msgid "Process - 3 Columns - Boxes"
+msgstr ""
+
+#: ../templates/templates.php:2517
+msgid "Process - 3 Columns - Boxes ( background )"
+msgstr ""
+
+#: ../templates/templates.php:2529
+msgid "Process - 4 Columns - Boxes"
+msgstr ""
+
+#: ../templates/templates.php:2541
+msgid "Process - 4 Columns - Boxes ( background )"
+msgstr ""
+
+#: ../templates/templates.php:2561
+msgid "3 Columns pricing - Style 1"
+msgstr ""
+
+#: ../templates/templates.php:2573
+msgid "3 Columns pricing - Style 1 (background)"
+msgstr ""
+
+#: ../templates/templates.php:2585
+msgid "3 Columns pricing - Style 2"
+msgstr ""
+
+#: ../templates/templates.php:2597
+msgid "3 Columns pricing - Style 2 (background)"
+msgstr ""
+
+#: ../templates/templates.php:2609
+msgid "2 Columns pricing - Style 1"
+msgstr ""
+
+#: ../templates/templates.php:2621
+msgid "2 Columns pricing - Style 1 (background)"
+msgstr ""
+
+#: ../templates/templates.php:2633
+msgid "2 Columns pricing - Style 2"
+msgstr ""
+
+#: ../templates/templates.php:2645
+msgid "2 Columns pricing - Style 2 (background)"
+msgstr ""
+
+#: ../templates/templates.php:2657
+msgid "1 Column pricing - Style 2"
+msgstr ""
+
+#: ../templates/templates.php:2669
+msgid "1 Column pricing - Style 2 (background)"
+msgstr ""
+
+#: ../templates/templates.php:2681
+msgid "Pricing tabs"
+msgstr ""
+
+#: ../templates/templates.php:2701
+msgid "Detailed portfolio - 2 columns"
+msgstr ""
+
+#: ../templates/templates.php:2713
+msgid "Detailed portfolio - 3 columns"
+msgstr ""
+
+#: ../templates/templates.php:2725
+msgid "Detailed portfolio - 4 columns"
+msgstr ""
+
+#: ../templates/templates.php:2737
+msgid "Minimal portfolio - 2 columns"
+msgstr ""
+
+#: ../templates/templates.php:2749
+msgid "Minimal portfolio - 3 columns"
+msgstr ""
+
+#: ../templates/templates.php:2761
+msgid "Minimal portfolio - 4 columns"
+msgstr ""
+
+#: ../templates/templates.php:2780
+msgid "Shop – 3 Columns – Detailed Style"
+msgstr ""
+
+#: ../templates/templates.php:2792
+msgid "Shop – 4 Columns – Detailed Style"
+msgstr ""
+
+#: ../templates/templates.php:2804
+msgid "Shop – 3 Columns – Minimal Style"
+msgstr ""
+
+#: ../templates/templates.php:2816
+msgid "Shop – 4 Columns – Minimal Style"
+msgstr ""
+
+#: ../templates/templates.php:2836
+msgid "Extended tabs with right image - Contained"
+msgstr ""
+
+#: ../templates/templates.php:2866
+msgid "Extended tabs with right image - Fullwidth"
+msgstr ""
+
+#: ../templates/templates.php:2896
+msgid "Extended tabs with left image - Contained"
+msgstr ""
+
+#: ../templates/templates.php:2926
+msgid "Extended tabs with left image - Fullwidth"
+msgstr ""
+
+#: ../templates/templates.php:2956
+msgid "Tabs with images"
+msgstr ""
+
+#: ../templates/templates.php:2992
+msgid "Tabs with video modals"
+msgstr ""
+
+#: ../templates/templates.php:3022
+msgid "Tabs with accordions"
+msgstr ""
+
+#: ../templates/templates.php:3042
+msgid "Team - 3 x 2 Columns - Circle Style"
+msgstr ""
+
+#: ../templates/templates.php:3053
+msgid "Team - 4 x 2 Columns - Circle Style"
+msgstr ""
+
+#: ../templates/templates.php:3064
+msgid "Team - 3 Columns carousel - Circle Style"
+msgstr ""
+
+#: ../templates/templates.php:3075
+msgid "Team - 4 Columns carousel - Circle Style"
+msgstr ""
+
+#: ../templates/templates.php:3087
+msgid "Team - 3 Columns - Card Style"
+msgstr ""
+
+#: ../templates/templates.php:3099
+msgid "Team - 4 Columns - Card Style"
+msgstr ""
+
+#: ../templates/templates.php:3111
+msgid "Team - 3 Columns carousel - Card Style"
+msgstr ""
+
+#: ../templates/templates.php:3123
+msgid "Team - 4 Columns carousel - Card Style"
+msgstr ""
+
+#: ../templates/templates.php:3143
+msgid "Testimonials Slider"
+msgstr ""
+
+#: ../templates/templates.php:3155
+msgid "Testimonials Slider ( background )"
+msgstr ""
+
+#: ../templates/templates.php:3168
+msgid "Testimonials Slider with image"
+msgstr ""
+
+#: ../templates/templates.php:3181
+msgid "Testimonials Slider with image ( background )"
+msgstr ""
+
+#: ../templates/templates.php:3194
+msgid "Testimonials carousel"
+msgstr ""
+
+#: ../templates/templates.php:3207
+msgid "Testimonials carousel ( background )"
+msgstr ""
+
+#: ../templates/templates.php:3220
+msgid "Reviews carousel ***"
+msgstr ""
+
+#: ../templates/templates.php:3233
+msgid "Reviews carousel ( background )"
+msgstr ""
+
+#: ../templates/templates.php:3246
+msgid "Reviews grid - 3 x 2 columns"
+msgstr ""
+
+#: ../templates/templates.php:3259
+msgid "Reviews grid - 3 x 2 columns ( background )"
+msgstr ""
+
+#: ../templates/templates.php:3282
+msgid "Centered title with separator"
+msgstr ""
+
+#: ../templates/templates.php:3293
+msgid "Left sided title with separator"
+msgstr ""
+
+#: ../templates/templates.php:3304
+msgid "Simple centered title"
+msgstr ""
+
+#: ../templates/templates.php:3315
+msgid "Simple left sided title"
+msgstr ""
+
+#: ../templates/templates.php:3335
+msgid "Simple video modal"
+msgstr ""
+
+#: ../templates/templates.php:3347
+msgid "Simple video modal (background)"
+msgstr ""
+
+#: ../templates/templates.php:3359
+msgid "Simple video modal with text"
+msgstr ""
+
+#: ../templates/templates.php:3373
+msgid "Simple video modal with text (background)"
+msgstr ""
+
+#: ../templates/templates.php:3387
+msgid "Fullwidth video modal with text"
+msgstr ""
+
+#: ../templates/templates.php:3401
+msgid "Parallax with video modal"
+msgstr ""
+
+#: ../theme/admin/admin-init.php:38
+msgid "Dashboard"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:4
+msgid "Welcome to Ekko!"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:14
+msgid ""
+"Ekko is not registered! Your product must be registered to receive the "
+"theme demos."
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:21
+msgid "Ekko theme is registered."
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:27
+msgid "One Click Install"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:28
+msgid ""
+"Quickly and easily import the theme demo contents. Note: The included "
+"plugins need to be installed and activated before you install a demo."
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:29
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:131
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:132
+msgid "Import Demos"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:32
+msgid "Customization Options"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:33
+msgid ""
+"The powerful customization options & features give you flexibility to "
+"create the site you want."
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:34
+msgid "Theme Options"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:37
+msgid "Support Center"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:38
+msgid ""
+"Ekko comes with 6 months of free support for every license you purchase. "
+"Register and submit a ticket."
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:39
+msgid "Support Forums"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:50
+msgid "Getting started"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:51
+msgid ""
+"If you've just purchased the theme and you're wondering where to start "
+"check out the links below:"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:53
+msgid "How do I import the theme demos?"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:54
+msgid "How do I use the theme options?"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:55
+msgid "How do I use the page builder?"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:56
+msgid "How do I use the block builder?"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:63
+msgid "Documentation"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:64
+msgid ""
+"Helpful information about theme setup, capabilities, features and "
+"options."
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:65
+msgid "Read the docs"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:71
+msgid "Video tutorials"
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:72
+msgid "Learn how to use the theme with step by step video tutorials."
+msgstr ""
+
+#: ../theme/admin/views/keydesign-dashboard.php:73
+msgid "Check videos"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/CustomizerImporter.php:37
+#: ../theme/vendors/ocdi/inc/CustomizerImporter.php:45
+msgid "Importing customizer settings"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/CustomizerImporter.php:43
+msgid "Customizer settings import finished!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/CustomizerImporter.php:73
+#, php-format
+msgid "Error: The customizer import file is missing! File path: %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/CustomizerImporter.php:93
+msgid ""
+"Error: The customizer import file is not in a correct format. Please "
+"make sure to use the correct customizer import file."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/CustomizerImporter.php:99
+msgid ""
+"Error: The customizer import file is not suitable for current theme. You "
+"can only import customizer settings for the same theme or a child theme."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Downloader.php:58
+msgid "Missing URL for downloading a file!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Downloader.php:76
+#, php-format
+msgid ""
+"An error occurred while fetching file from: %1$s%2$s%3$s!%4$sReason: "
+"%5$s - %6$s."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:197
+#: ../theme/vendors/ocdi/inc/Helpers.php:240
+#, php-format
+msgid ""
+"An error occurred while writing file to your server! Tried to write a "
+"file to: %s%s."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:274
+#, php-format
+msgid ""
+"An error occurred while reading a file from your server! Tried reading "
+"file from path: %s%s."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:297
+#, php-format
+msgid ""
+"This WordPress page does not have %sdirect%s write file access. This "
+"plugin needs it in order to save the demo import xml file to the upload "
+"directory of your site. You can change this setting with these "
+"instructions: %s."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:308
+msgid "One Click Demo Import"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:309
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:80
+#: ../theme/vendors/ocdi/views/plugin-page.php:83
+msgid "Import Demo Data"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:321
+msgid ""
+"An error occurred while retrieving reading/writing permissions to your "
+"server (could not retrieve WP filesystem credentials)!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:329
+msgid "Your WordPress login credentials don't allow to use WP_Filesystem!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:369
+msgid "One Click Demo Import - "
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:403
+#, php-format
+msgid ""
+"%sYour user role isn't high enough. You don't have permission to import "
+"demo data.%s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:449
+#, php-format
+msgid "Content file was not uploaded. Error: %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:453
+#: ../theme/vendors/ocdi/inc/Helpers.php:470
+#: ../theme/vendors/ocdi/inc/Helpers.php:487
+#: ../theme/vendors/ocdi/inc/Helpers.php:498
+#: ../theme/vendors/ocdi/inc/Helpers.php:518
+#: ../theme/vendors/ocdi/inc/Helpers.php:526
+msgid "Upload files"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:466
+#, php-format
+msgid "Widget file was not uploaded. Error: %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:483
+#, php-format
+msgid "Customizer file was not uploaded. Error: %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:496
+msgid "Missing Redux option name! Please also enter the Redux option name!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:514
+#, php-format
+msgid "Redux file was not uploaded. Error: %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:524
+msgid "The import files were successfully uploaded!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:550
+#, php-format
+msgid "Initial max execution time = %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:554
+#, php-format
+msgid ""
+"Files info:%1$sSite URL = %2$s%1$sData file = %3$s%1$sWidget file = %4$s"
+"%1$sCustomizer file = %5$s%1$sRedux files:%1$s%6$s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Helpers.php:557
+#: ../theme/vendors/ocdi/inc/Helpers.php:558
+#: ../theme/vendors/ocdi/inc/Helpers.php:559
+#: ../theme/vendors/ocdi/inc/Helpers.php:560
+msgid "not defined!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/Importer.php:172
+msgid "New AJAX call!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:183
+msgid "No preview image defined for this import."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:184
+msgid "Are you sure?"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:185
+msgid "Cancel"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:186
+msgid "Yes, import!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:187
+msgid "Selected demo import:"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:234
+msgid "Manually uploaded files"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:247
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:258
+msgid "Downloaded files"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:254
+#, php-format
+msgid "The import files for: %s were successfully downloaded!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:263
+msgid "No import files specified!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:384
+msgid ""
+"Just used One Click Demo Import plugin and it was awesome! Thanks "
+"@ProteusThemes! #OCDI https://www.proteusthemes.com/"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:387
+#, php-format
+msgid ""
+"%1$s%6$sWasn't this a great One Click Demo Import experience?%7$s "
+"Created and maintained by %3$sProteusThemes%4$s. %2$s%5$sClick to Tweet!"
+"%4$s%8$s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:400
+#, php-format
+msgid ""
+"%1$s%3$sThat's it, all done!%4$s%2$sThe demo import has finished. Please "
+"check your page and make sure that everything has imported correctly.%5$s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/OneClickDemoImport.php:411
+#, php-format
+msgid ""
+"%1$sThe demo import has finished, but there were some import errors."
+"%2$sMore details about the errors can be found in this %3$s%5$slog file"
+"%6$s%4$s%7$s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/ReduxImporter.php:23
+msgid "The Redux plugin is not activated, so the Redux import was skipped!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/ReduxImporter.php:32
+#: ../theme/vendors/ocdi/inc/ReduxImporter.php:53
+#: ../theme/vendors/ocdi/inc/ReduxImporter.php:66
+msgid "Importing Redux settings"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/ReduxImporter.php:51
+#, php-format
+msgid "Redux settings import for: %s finished successfully!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/ReduxImporter.php:57
+#, php-format
+msgid ""
+"The Redux option name: %s, was not found in this WP site, so it was not "
+"imported!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:34
+msgid "There are no predefined demo imports for currently active theme!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:37
+msgid "Here are the predefined demo imports:"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:71
+msgid ""
+"At least one of the possible options should be set! Check them with --"
+"help"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:122
+msgid ""
+"The \"predefined\" parameter should be a number (an index of the OCDI "
+"predefined demo import)!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:128
+msgid ""
+"The supplied predefined index does not exist! Please take a look at the "
+"available predefined demo imports:"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:135
+msgid ""
+"Predefined demo import started! All other parameters will be ignored!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:140
+#, php-format
+msgid "Selected predefined demo import: %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:143
+msgid "Preparing the demo import files..."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:148
+msgid "Demo import files could not be retrieved!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:151
+msgid "Demo import files retrieved successfully!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:153
+msgid "Importing..."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:173
+msgid "Predefined import finished!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:185
+msgid "Content import file provided does not exist! Skipping this import!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:194
+msgid "Importing content (this might take a while)..."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:196
+msgid "Importing content"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:201
+msgid "Content import finished!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:204
+msgid "There were some issues while importing the content!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:223
+msgid "Widgets import file provided does not exist! Skipping this import!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:227
+msgid "Importing widgets..."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:232
+msgid "Widgets imported successfully!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:235
+msgid "There were some issues while importing widgets!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:254
+msgid ""
+"Customizer import file provided does not exist! Skipping this import!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:258
+msgid "Importing customizer settings..."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:263
+msgid "Customizer settings imported successfully!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:266
+msgid "There were some issues while importing customizer settings!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WPCLICommands.php:286
+#, php-format
+msgid "Executing action: %s ..."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:40
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:52
+msgid "Importing widgets"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:88
+msgid "Error: Widget import file could not be found."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:118
+msgid ""
+"Error: Widget import data could not be read. Please try a different file."
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:157
+msgid "Sidebar does not exist in theme (moving widget to Inactive)"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:178
+msgid "Site does not support widget"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:211
+msgid "Widget already exists"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:269
+msgid "Imported"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:273
+msgid "Imported to Inactive"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:279
+msgid "No Title"
+msgstr ""
+
+#: ../theme/vendors/ocdi/inc/WidgetImporter.php:326
+msgid "No results for widget import!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/one-click-demo-import.php:57
+#, php-format
+msgid ""
+"The %2$sOne Click Demo Import%3$s plugin requires %2$sPHP 5.3.2+%3$s to "
+"run properly. Please contact your hosting company and ask them to update "
+"the PHP version of your site to at least PHP 5.3.2.%4$s Your current "
+"version of PHP: %2$s%1$s%3$s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:131
+msgid "Could not open the file for parsing"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:167
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:283
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:356
+#, php-format
+msgid ""
+"This WXR file (version %s) is newer than the importer (version %s) and "
+"may not be supported. Please consider updating."
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:506
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:566
+msgid "Invalid author mapping"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:667
+msgid "Cannot import auto-draft posts"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:755
+#, php-format
+msgid "Failed to import \"%s\": Invalid post type %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:765
+#, php-format
+msgid "%s \"%s\" already exists."
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:843
+#, php-format
+msgid "Skipping attachment \"%s\", fetching attachments disabled"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:857
+#, php-format
+msgid "Failed to import \"%s\" (%s)"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:889
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1772
+#, php-format
+msgid "Imported \"%s\" (%s)"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:894
+#, php-format
+msgid "Post %d remapped to %d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:934
+#, php-format
+msgid "Failed to import term: %s - %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1075
+msgid "Invalid file type"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1558
+#, php-format
+msgid "Failed to import user \"%s\""
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1579
+#, php-format
+msgid "Imported user \"%s\""
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1583
+#, php-format
+msgid "User %d remapped to %d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1733
+#, php-format
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1777
+#, php-format
+msgid "Term %d remapped to %d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1835
+#, php-format
+msgid "Failed to add metakey: %s, metavalue: %s to term_id: %d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1844
+#, php-format
+msgid "Meta for term_id %d : %s => %s ; successfully added!"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1895
+#, php-format
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1917
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1923
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1948
+#, php-format
+msgid "Running post-processing for post %d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1961
+#, php-format
+msgid "Could not find the post parent for \"%s\" (post #%d)"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1966
+#, php-format
+msgid "Post %d was imported with parent %d, but could not be found"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1980
+#, php-format
+msgid "Could not find the author for \"%s\" (post #%d)"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1985
+#, php-format
+msgid "Post %d was imported with author \"%s\", but could not be found"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2011
+#, php-format
+msgid "Post %d was marked for post-processing, but none was required."
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2022
+#, php-format
+msgid "Could not update \"%s\" (post #%d) with mapped data"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2067
+#, php-format
+msgid "Could not find the menu object for \"%s\" (post #%d)"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2072
+#, php-format
+msgid ""
+"Post %d was imported with object \"%d\" of type \"%s\", but could not be "
+"found"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2094
+#, php-format
+msgid "Could not find the comment parent for comment #%d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2098
+#, php-format
+msgid "Comment %d was imported with parent %d, but could not be found"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2112
+#, php-format
+msgid "Could not find the author for comment #%d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2116
+#, php-format
+msgid "Comment %d was imported with author %d, but could not be found"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2133
+#, php-format
+msgid "Could not update comment #%d with mapped data"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2162
+#, php-format
+msgid "Faulty term_id provided in terms-to-be-remapped array %s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2172
+#, php-format
+msgid "No taxonomy provided in terms-to-be-remapped array for term #%d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2183
+#, php-format
+msgid "No parent_slug identified in remapping-array for term: %d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2191
+#, php-format
+msgid ""
+"The term(%d)\"s parent_slug (%s) is not found in the remapping-array."
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2205
+#, php-format
+msgid "No data returned by get_term_by for term_id #%d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2224
+#, php-format
+msgid "Could not update \"%s\" (term #%d) with mapped data"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2234
+#, php-format
+msgid "Term %d was successfully updated with parent %d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2269
+msgid "Starting remapping of featured images"
+msgstr ""
+
+#: ../theme/vendors/ocdi/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2278
+#, php-format
+msgid "Remapping featured image ID %d to new ID %d for post ID %d"
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:17
+#: ../theme/vendors/ocdi/views/plugin-page.php:17
+msgid "Import demos"
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:27
+#: ../theme/vendors/ocdi/views/plugin-page.php:27
+#, php-format
+msgid ""
+"%sWarning: your server is using %sPHP safe mode%s. This means that you "
+"might experience server timeout errors.%s"
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:40
+#: ../theme/vendors/ocdi/views/plugin-page.php:40
+msgid "Before you begin, make sure all the required plugins are activated."
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:53
+#: ../theme/vendors/ocdi/views/plugin-page.php:54
+msgid ""
+"Importing demo data (posts, pages, images, theme settings) is the "
+"easiest way to setup your theme."
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:54
+#: ../theme/vendors/ocdi/views/plugin-page.php:55
+msgid ""
+"It will allow you to quickly edit everything instead of creating content "
+"from scratch."
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:57
+#: ../theme/vendors/ocdi/views/plugin-page.php:58
+msgid "When you import the data, the following things might happen:"
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:60
+#: ../theme/vendors/ocdi/views/plugin-page.php:61
+msgid ""
+"No existing posts, pages, categories, images, custom post types or any "
+"other data will be deleted or modified."
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:61
+#: ../theme/vendors/ocdi/views/plugin-page.php:62
+msgid ""
+"Posts, pages, images, widgets, menus and other theme settings will get "
+"imported."
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:62
+#: ../theme/vendors/ocdi/views/plugin-page.php:63
+msgid ""
+"Please click on the Import button only once and wait, it can take a "
+"couple of minutes."
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:95
+#: ../theme/vendors/ocdi/views/plugin-page.php:98
+msgid "All"
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:102
+#: ../theme/vendors/ocdi/views/plugin-page.php:105
+msgid "Search demos..."
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:123
+#: ../theme/vendors/ocdi/views/plugin-page.php:126
+msgid "No preview image."
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:128
+#: ../theme/vendors/ocdi/views/plugin-page.php:131
+msgid "Import"
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:130
+#: ../theme/vendors/ocdi/views/plugin-page.php:133
+msgid "Preview"
+msgstr ""
+
+#: ../theme/vendors/ocdi/views/plugin-page-verify.php:143
+#: ../theme/vendors/ocdi/views/plugin-page.php:146
+msgid "Importing, please wait!"
+msgstr ""

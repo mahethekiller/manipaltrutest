@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'iconsmind-Sports';
+  src: url('fonts/Sports.ttf') format('truetype'),
+       url('fonts/Sports.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Sports[class^="iconsmind-"], .iconsmind-Sports[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Sports' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Aerobics:before { content: "\e900"!important; }
+.iconsmind-Aerobics-2:before { content: "\e901"!important; }
+.iconsmind-Aerobics-3:before { content: "\e902"!important; }
+.iconsmind-Archery:before { content: "\e903"!important; }
+.iconsmind-Archery-2:before { content: "\e904"!important; }
+.iconsmind-Ballet-Shoes:before { content: "\e905"!important; }
+.iconsmind-Baseball:before { content: "\e906"!important; }
+.iconsmind-Basket-Ball:before { content: "\e907"!important; }
+.iconsmind-Bodybuilding:before { content: "\e908"!important; }
+.iconsmind-Bowling:before { content: "\e909"!important; }
+.iconsmind-Bowling-2:before { content: "\e90a"!important; }
+.iconsmind-Box:before { content: "\e90b"!important; }
+.iconsmind-Chess-alt:before { content: "\e90c"!important; }
+.iconsmind-Cricket:before { content: "\e90d"!important; }
+.iconsmind-Dumbbell:before { content: "\e90e"!important; }
+.iconsmind-Football:before { content: "\e90f"!important; }
+.iconsmind-Football-2:before { content: "\e910"!important; }
+.iconsmind-Footprint:before { content: "\e911"!important; }
+.iconsmind-Footprint-2:before { content: "\e912"!important; }
+.iconsmind-Goggles:before { content: "\e913"!important; }
+.iconsmind-Golf:before { content: "\e914"!important; }
+.iconsmind-Golf-2:before { content: "\e915"!important; }
+.iconsmind-Gymnastics:before { content: "\e916"!important; }
+.iconsmind-Hokey:before { content: "\e917"!important; }
+.iconsmind-Jump-Rope:before { content: "\e918"!important; }
+.iconsmind-Life-Jacket:before { content: "\e919"!important; }
+.iconsmind-Medal:before { content: "\e91a"!important; }
+.iconsmind-Medal-2:before { content: "\e91b"!important; }
+.iconsmind-Medal-3:before { content: "\e91c"!important; }
+.iconsmind-Parasailing:before { content: "\e91d"!important; }
+.iconsmind-Pilates:before { content: "\e91e"!important; }
+.iconsmind-Pilates-2:before { content: "\e91f"!important; }
+.iconsmind-Pilates-3:before { content: "\e920"!important; }
+.iconsmind-Ping-Pong:before { content: "\e921"!important; }
+.iconsmind-Rafting:before { content: "\e922"!important; }
+.iconsmind-Running:before { content: "\e923"!important; }
+.iconsmind-Running-Shoes:before { content: "\e924"!important; }
+.iconsmind-Skate-Shoes:before { content: "\e925"!important; }
+.iconsmind-Ski:before { content: "\e926"!important; }
+.iconsmind-Skydiving:before { content: "\e927"!important; }
+.iconsmind-Snorkel:before { content: "\e928"!important; }
+.iconsmind-Soccer-Ball:before { content: "\e929"!important; }
+.iconsmind-Soccer-Shoes:before { content: "\e92a"!important; }
+.iconsmind-Swimming:before { content: "\e92b"!important; }
+.iconsmind-Tennis:before { content: "\e92c"!important; }
+.iconsmind-Tennis-Ball:before { content: "\e92d"!important; }
+.iconsmind-Trekking:before { content: "\e92e"!important; }
+.iconsmind-Trophy:before { content: "\e92f"!important; }
+.iconsmind-Trophy-2:before { content: "\e930"!important; }
+.iconsmind-Volleyball:before { content: "\e931"!important; }
+.iconsmind-weight-Lift:before { content: "\e932"!important; }

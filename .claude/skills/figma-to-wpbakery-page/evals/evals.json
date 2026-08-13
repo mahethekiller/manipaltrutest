@@ -1,0 +1,23 @@
+{
+  "skill_name": "figma-to-wpbakery-page",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's the homepage design my client just approved: https://www.figma.com/design/e04lQoxf1tdQdDLFNVoYbY?node-id=227-14965 — can you build this out as the actual homepage on the manipaltrutest site?",
+      "expected_output": "The 'Homepage V2' frame is translated into WPBakery shortcode content and written into an existing page's post_content via wp_helper.php (with a backup taken first), using real theme shortcodes (tek_* / vc_*) confirmed via inspect-shortcode rather than guessed attributes, images imported into the media library, and the result visually matching the Figma screenshot's section order and proportions when the page is loaded.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We need the Health Packages section live for the demo tomorrow: https://www.figma.com/design/e04lQoxf1tdQdDLFNVoYbY?node-id=178-11916 — put it on a page please.",
+      "expected_output": "The 'Health Packages' frame becomes WPBakery shortcode content on a page, with the section title using tek_sectiontitle (or equivalent) and any package/card items using an appropriate theme shortcode, images imported to the media library with real attachment IDs, and the page content actually written via wp_helper.php set-content (not just described).",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Take this one package card from Figma and turn it into a real section on the site: https://www.figma.com/design/e04lQoxf1tdQdDLFNVoYbY?node-id=178-12433",
+      "expected_output": "A single repeating 'Package Customization' card is mapped to a sensible theme shortcode (tek_pricing or tek_priceblock, chosen by comparing their actual registered params via inspect-shortcode, not assumed), with image asset imported and content written to a page.",
+      "files": []
+    }
+  ]
+}

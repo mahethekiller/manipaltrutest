@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'iconsmind-Flags';
+  src: url('fonts/Flags.ttf') format('truetype'),
+       url('fonts/Flags.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Flags[class^="iconsmind-"], .iconsmind-Flags[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Flags' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Argentina:before { content: "\e900"!important; }
+.iconsmind-Brazil:before { content: "\e901"!important; }
+.iconsmind-Canada:before { content: "\e902"!important; }
+.iconsmind-Chile:before { content: "\e903"!important; }
+.iconsmind-China:before { content: "\e904"!important; }
+.iconsmind-Colombia:before { content: "\e905"!important; }
+.iconsmind-Danemark:before { content: "\e906"!important; }
+.iconsmind-Egypt:before { content: "\e907"!important; }
+.iconsmind-Flag:before { content: "\e908"!important; }
+.iconsmind-Flag-2:before { content: "\e909"!important; }
+.iconsmind-Flag-3:before { content: "\e90a"!important; }
+.iconsmind-Flag-4:before { content: "\e90b"!important; }
+.iconsmind-Greece:before { content: "\e90c"!important; }
+.iconsmind-Hong-Kong:before { content: "\e90d"!important; }
+.iconsmind-India:before { content: "\e90e"!important; }
+.iconsmind-Israel:before { content: "\e90f"!important; }
+.iconsmind-Jamaica:before { content: "\e910"!important; }
+.iconsmind-Japan:before { content: "\e911"!important; }
+.iconsmind-Kenya:before { content: "\e912"!important; }
+.iconsmind-Korea:before { content: "\e913"!important; }
+.iconsmind-Mexico:before { content: "\e914"!important; }
+.iconsmind-Morocco:before { content: "\e915"!important; }
+.iconsmind-Nepal:before { content: "\e916"!important; }
+.iconsmind-Philipines:before { content: "\e917"!important; }
+.iconsmind-Poland:before { content: "\e918"!important; }
+.iconsmind-Portugal:before { content: "\e919"!important; }
+.iconsmind-Scotland:before { content: "\e91a"!important; }
+.iconsmind-Serbia:before { content: "\e91b"!important; }
+.iconsmind-Singapore:before { content: "\e91c"!important; }
+.iconsmind-South-Africa:before { content: "\e91d"!important; }
+.iconsmind-Spain:before { content: "\e91e"!important; }
+.iconsmind-Sweden:before { content: "\e91f"!important; }
+.iconsmind-Switzerland:before { content: "\e920"!important; }
+.iconsmind-Thailand:before { content: "\e921"!important; }
+.iconsmind-Turkey:before { content: "\e922"!important; }
+.iconsmind-Ukraine:before { content: "\e923"!important; }
+.iconsmind-United-Kingdom:before { content: "\e924"!important; }
+.iconsmind-United-States:before { content: "\e925"!important; }
+.iconsmind-Vietnam:before { content: "\e926"!important; }

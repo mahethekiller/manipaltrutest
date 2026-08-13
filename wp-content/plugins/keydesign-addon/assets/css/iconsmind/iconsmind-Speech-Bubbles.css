@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'iconsmind-Speech-Bubbles';
+  src: url('fonts/Speech-Bubbles.ttf') format('truetype'),
+       url('fonts/Speech-Bubbles.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Speech-Bubbles[class^="iconsmind-"], .iconsmind-Speech-Bubbles[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Speech-Bubbles' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Speach-Bubble:before { content: "\e900"!important; }
+.iconsmind-Speach-Bubble2:before { content: "\e901"!important; }
+.iconsmind-Speach-Bubble3:before { content: "\e902"!important; }
+.iconsmind-Speach-Bubble4:before { content: "\e903"!important; }
+.iconsmind-Speach-Bubble5:before { content: "\e904"!important; }
+.iconsmind-Speach-Bubble6:before { content: "\e905"!important; }
+.iconsmind-Speach-Bubble7:before { content: "\e906"!important; }
+.iconsmind-Speach-Bubble8:before { content: "\e907"!important; }
+.iconsmind-Speach-Bubble9:before { content: "\e908"!important; }
+.iconsmind-Speach-Bubble10:before { content: "\e909"!important; }
+.iconsmind-Speach-Bubble11:before { content: "\e90a"!important; }
+.iconsmind-Speach-Bubble12:before { content: "\e90b"!important; }
+.iconsmind-Speach-Bubble13:before { content: "\e90c"!important; }
+.iconsmind-Speach-BubbleAsking:before { content: "\e90d"!important; }
+.iconsmind-Speach-BubbleComic:before { content: "\e90e"!important; }
+.iconsmind-Speach-BubbleComic2:before { content: "\e90f"!important; }
+.iconsmind-Speach-BubbleComic3:before { content: "\e910"!important; }
+.iconsmind-Speach-BubbleComic4:before { content: "\e911"!important; }
+.iconsmind-Speach-BubbleDialog:before { content: "\e912"!important; }
+.iconsmind-Speach-Bubbles:before { content: "\e913"!important; }

@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'iconsmind-People';
+  src: url('fonts/People.ttf') format('truetype'),
+       url('fonts/People.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-People[class^="iconsmind-"], .iconsmind-People[class*=" iconsmind-"] {
+  font-family: 'iconsmind-People' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Add-User:before { content: "\e900"!important; }
+.iconsmind-Add-UserStar:before { content: "\e901"!important; }
+.iconsmind-Administrator:before { content: "\e902"!important; }
+.iconsmind-Alien:before { content: "\e903"!important; }
+.iconsmind-Alien-2:before { content: "\e904"!important; }
+.iconsmind-Assistant:before { content: "\e905"!important; }
+.iconsmind-Baby:before { content: "\e906"!important; }
+.iconsmind-Baby-Cry:before { content: "\e907"!important; }
+.iconsmind-Boy:before { content: "\e908"!important; }
+.iconsmind-Business-Man:before { content: "\e909"!important; }
+.iconsmind-Business-ManWoman:before { content: "\e90a"!important; }
+.iconsmind-Business-Mens:before { content: "\e90b"!important; }
+.iconsmind-Business-Woman:before { content: "\e90c"!important; }
+.iconsmind-Checked-User:before { content: "\e90d"!important; }
+.iconsmind-Chef:before { content: "\e90e"!important; }
+.iconsmind-Conference:before { content: "\e90f"!important; }
+.iconsmind-Cool-Guy:before { content: "\e910"!important; }
+.iconsmind-Criminal:before { content: "\e911"!important; }
+.iconsmind-Dj:before { content: "\e912"!important; }
+.iconsmind-Doctor:before { content: "\e913"!important; }
+.iconsmind-Engineering:before { content: "\e914"!important; }
+.iconsmind-Farmer:before { content: "\e915"!important; }
+.iconsmind-Female:before { content: "\e916"!important; }
+.iconsmind-Female-2:before { content: "\e917"!important; }
+.iconsmind-Find-User:before { content: "\e918"!important; }
+.iconsmind-Geek:before { content: "\e919"!important; }
+.iconsmind-Genius:before { content: "\e91a"!important; }
+.iconsmind-Girl:before { content: "\e91b"!important; }
+.iconsmind-Headphone:before { content: "\e91c"!important; }
+.iconsmind-Headset:before { content: "\e91d"!important; }
+.iconsmind-ID-2:before { content: "\e91e"!important; }
+.iconsmind-ID-3:before { content: "\e91f"!important; }
+.iconsmind-ID-Card:before { content: "\e920"!important; }
+.iconsmind-King-2:before { content: "\e921"!important; }
+.iconsmind-Lock-User:before { content: "\e922"!important; }
+.iconsmind-Love-User:before { content: "\e923"!important; }
+.iconsmind-Male:before { content: "\e924"!important; }
+.iconsmind-Male-2:before { content: "\e925"!important; }
+.iconsmind-MaleFemale:before { content: "\e926"!important; }
+.iconsmind-Man-Sign:before { content: "\e927"!important; }
+.iconsmind-Mens:before { content: "\e928"!important; }
+.iconsmind-Network:before { content: "\e929"!important; }
+.iconsmind-Nurse:before { content: "\e92a"!important; }
+.iconsmind-Pac-Man:before { content: "\e92b"!important; }
+.iconsmind-Pilot:before { content: "\e92c"!important; }
+.iconsmind-Police-Man:before { content: "\e92d"!important; }
+.iconsmind-Police-Woman:before { content: "\e92e"!important; }
+.iconsmind-Professor:before { content: "\e92f"!important; }
+.iconsmind-Punker:before { content: "\e930"!important; }
+.iconsmind-Queen-2:before { content: "\e931"!important; }
+.iconsmind-Remove-User:before { content: "\e932"!important; }
+.iconsmind-Robot:before { content: "\e933"!important; }
+.iconsmind-Speak:before { content: "\e934"!important; }
+.iconsmind-Speak-2:before { content: "\e935"!important; }
+.iconsmind-Spy:before { content: "\e936"!important; }
+.iconsmind-Student-Female:before { content: "\e937"!important; }
+.iconsmind-Student-Male:before { content: "\e938"!important; }
+.iconsmind-Student-MaleFemale:before { content: "\e939"!important; }
+.iconsmind-Students:before { content: "\e93a"!important; }
+.iconsmind-Superman:before { content: "\e93b"!important; }
+.iconsmind-Talk-Man:before { content: "\e93c"!important; }
+.iconsmind-Teacher:before { content: "\e93d"!important; }
+.iconsmind-Waiter:before { content: "\e93e"!important; }
+.iconsmind-WomanMan:before { content: "\e93f"!important; }
+.iconsmind-Woman-Sign:before { content: "\e940"!important; }
+.iconsmind-Wonder-Woman:before { content: "\e941"!important; }
+.iconsmind-Worker:before { content: "\e942"!important; }

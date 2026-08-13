@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'iconsmind-Transportation';
+  src: url('fonts/Transportation.ttf') format('truetype'),
+       url('fonts/Transportation.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Transportation[class^="iconsmind-"], .iconsmind-Transportation[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Transportation' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Air-Balloon:before { content: "\e900"!important; }
+.iconsmind-Airship:before { content: "\e901"!important; }
+.iconsmind-Bicycle:before { content: "\e902"!important; }
+.iconsmind-Bicycle-2:before { content: "\e903"!important; }
+.iconsmind-Bike-Helmet:before { content: "\e904"!important; }
+.iconsmind-Bus:before { content: "\e905"!important; }
+.iconsmind-Bus-2:before { content: "\e906"!important; }
+.iconsmind-Cable-Car:before { content: "\e907"!important; }
+.iconsmind-Car:before { content: "\e908"!important; }
+.iconsmind-Car-2:before { content: "\e909"!important; }
+.iconsmind-Car-3:before { content: "\e90a"!important; }
+.iconsmind-Car-Wheel:before { content: "\e90b"!important; }
+.iconsmind-Gaugage:before { content: "\e90c"!important; }
+.iconsmind-Gaugage-2:before { content: "\e90d"!important; }
+.iconsmind-Helicopter:before { content: "\e90e"!important; }
+.iconsmind-Helicopter-2:before { content: "\e90f"!important; }
+.iconsmind-Helmet:before { content: "\e910"!important; }
+.iconsmind-Jeep:before { content: "\e911"!important; }
+.iconsmind-Jeep-2:before { content: "\e912"!important; }
+.iconsmind-Jet:before { content: "\e913"!important; }
+.iconsmind-Motorcycle:before { content: "\e914"!important; }
+.iconsmind-Plane:before { content: "\e915"!important; }
+.iconsmind-Plane-2:before { content: "\e916"!important; }
+.iconsmind-Road:before { content: "\e917"!important; }
+.iconsmind-Road-2:before { content: "\e918"!important; }
+.iconsmind-Rocket:before { content: "\e919"!important; }
+.iconsmind-Sailing-Ship:before { content: "\e91a"!important; }
+.iconsmind-Scooter:before { content: "\e91b"!important; }
+.iconsmind-Scooter-Front:before { content: "\e91c"!important; }
+.iconsmind-Ship:before { content: "\e91d"!important; }
+.iconsmind-Ship-2:before { content: "\e91e"!important; }
+.iconsmind-Skateboard:before { content: "\e91f"!important; }
+.iconsmind-Skateboard-2:before { content: "\e920"!important; }
+.iconsmind-Taxi:before { content: "\e921"!important; }
+.iconsmind-Taxi-2:before { content: "\e922"!important; }
+.iconsmind-Taxi-Sign:before { content: "\e923"!important; }
+.iconsmind-Tractor:before { content: "\e924"!important; }
+.iconsmind-traffic-Light:before { content: "\e925"!important; }
+.iconsmind-Traffic-Light2:before { content: "\e926"!important; }
+.iconsmind-Train:before { content: "\e927"!important; }
+.iconsmind-Train-2:before { content: "\e928"!important; }
+.iconsmind-Tram:before { content: "\e929"!important; }
+.iconsmind-Truck:before { content: "\e92a"!important; }
+.iconsmind-Yacht:before { content: "\e92b"!important; }

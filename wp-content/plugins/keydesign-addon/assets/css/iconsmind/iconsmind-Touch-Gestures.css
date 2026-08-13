@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'iconsmind-Touch-Gestures';
+  src: url('fonts/Touch-Gestures.ttf') format('truetype'),
+       url('fonts/Touch-Gestures.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Touch-Gestures[class^="iconsmind-"], .iconsmind-Touch-Gestures[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Touch-Gestures' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Double-Tap:before { content: "\e900"!important; }
+.iconsmind-Drag:before { content: "\e901"!important; }
+.iconsmind-Drag-Down:before { content: "\e902"!important; }
+.iconsmind-Drag-Left:before { content: "\e903"!important; }
+.iconsmind-Drag-Right:before { content: "\e904"!important; }
+.iconsmind-Drag-Up:before { content: "\e905"!important; }
+.iconsmind-Finger-DragFourSides:before { content: "\e906"!important; }
+.iconsmind-Finger-DragTwoSides:before { content: "\e907"!important; }
+.iconsmind-Five-Fingers:before { content: "\e908"!important; }
+.iconsmind-Five-FingersDrag:before { content: "\e909"!important; }
+.iconsmind-Five-FingersDrag2:before { content: "\e90a"!important; }
+.iconsmind-Five-FingersTouch:before { content: "\e90b"!important; }
+.iconsmind-Flick:before { content: "\e90c"!important; }
+.iconsmind-Four-Fingers:before { content: "\e90d"!important; }
+.iconsmind-Four-FingersDrag:before { content: "\e90e"!important; }
+.iconsmind-Four-FingersDrag2:before { content: "\e90f"!important; }
+.iconsmind-Four-FingersTouch:before { content: "\e910"!important; }
+.iconsmind-Hand-Touch:before { content: "\e911"!important; }
+.iconsmind-Hand-Touch2:before { content: "\e912"!important; }
+.iconsmind-Hand-TouchSmartphone:before { content: "\e913"!important; }
+.iconsmind-One-Finger:before { content: "\e914"!important; }
+.iconsmind-One-FingerTouch:before { content: "\e915"!important; }
+.iconsmind-Pinch:before { content: "\e916"!important; }
+.iconsmind-Press:before { content: "\e917"!important; }
+.iconsmind-Rotate-Gesture:before { content: "\e918"!important; }
+.iconsmind-Rotate-Gesture2:before { content: "\e919"!important; }
+.iconsmind-Rotate-Gesture3:before { content: "\e91a"!important; }
+.iconsmind-Scroll:before { content: "\e91b"!important; }
+.iconsmind-Scroll-Fast:before { content: "\e91c"!important; }
+.iconsmind-Spread:before { content: "\e91d"!important; }
+.iconsmind-Star-Track:before { content: "\e91e"!important; }
+.iconsmind-Tap:before { content: "\e91f"!important; }
+.iconsmind-Three-Fingers:before { content: "\e920"!important; }
+.iconsmind-Three-FingersDrag:before { content: "\e921"!important; }
+.iconsmind-Three-FingersDrag2:before { content: "\e922"!important; }
+.iconsmind-Three-FingersTouch:before { content: "\e923"!important; }
+.iconsmind-Thumb:before { content: "\e924"!important; }
+.iconsmind-Two-Fingers:before { content: "\e925"!important; }
+.iconsmind-Two-FingersDrag:before { content: "\e926"!important; }
+.iconsmind-Two-FingersDrag2:before { content: "\e927"!important; }
+.iconsmind-Two-FingersScroll:before { content: "\e928"!important; }
+.iconsmind-Two-FingersTouch:before { content: "\e929"!important; }
+.iconsmind-Zoom-Gesture:before { content: "\e92a"!important; }

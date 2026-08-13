@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'iconsmind-Food-Drinks';
+  src: url('fonts/Food-Drinks.ttf') format('truetype'),
+       url('fonts/Food-Drinks.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Food-Drinks[class^="iconsmind-"], .iconsmind-Food-Drinks[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Food-Drinks' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Apple:before { content: "\e900"!important; }
+.iconsmind-Apple-Bite:before { content: "\e901"!important; }
+.iconsmind-Banana:before { content: "\e902"!important; }
+.iconsmind-Beer:before { content: "\e903"!important; }
+.iconsmind-Beer-Glass:before { content: "\e904"!important; }
+.iconsmind-Bilk-Bottle2:before { content: "\e905"!important; }
+.iconsmind-Birthday-Cake:before { content: "\e906"!important; }
+.iconsmind-Bread:before { content: "\e907"!important; }
+.iconsmind-Bread-2:before { content: "\e908"!important; }
+.iconsmind-Cake:before { content: "\e909"!important; }
+.iconsmind-Can:before { content: "\e90a"!important; }
+.iconsmind-Can-2:before { content: "\e90b"!important; }
+.iconsmind-Cheese:before { content: "\e90c"!important; }
+.iconsmind-Chef-Hat:before { content: "\e90d"!important; }
+.iconsmind-Chef-Hat2:before { content: "\e90e"!important; }
+.iconsmind-Chopsticks:before { content: "\e90f"!important; }
+.iconsmind-Chopsticks-2:before { content: "\e910"!important; }
+.iconsmind-Cocktail:before { content: "\e911"!important; }
+.iconsmind-Coconut:before { content: "\e912"!important; }
+.iconsmind-Coffee:before { content: "\e913"!important; }
+.iconsmind-Coffee-2:before { content: "\e914"!important; }
+.iconsmind-Coffee-Bean:before { content: "\e915"!important; }
+.iconsmind-Coffee-toGo:before { content: "\e916"!important; }
+.iconsmind-Cookies:before { content: "\e917"!important; }
+.iconsmind-Croissant:before { content: "\e918"!important; }
+.iconsmind-Cupcake:before { content: "\e919"!important; }
+.iconsmind-Doughnut:before { content: "\e91a"!important; }
+.iconsmind-Eggs:before { content: "\e91b"!important; }
+.iconsmind-Fish:before { content: "\e91c"!important; }
+.iconsmind-Fork:before { content: "\e91d"!important; }
+.iconsmind-French-Fries:before { content: "\e91e"!important; }
+.iconsmind-Fruits:before { content: "\e91f"!important; }
+.iconsmind-Glass-Water:before { content: "\e920"!important; }
+.iconsmind-Hamburger:before { content: "\e921"!important; }
+.iconsmind-Honey:before { content: "\e922"!important; }
+.iconsmind-Hot-Dog:before { content: "\e923"!important; }
+.iconsmind-Ice-Cream:before { content: "\e924"!important; }
+.iconsmind-Juice:before { content: "\e925"!important; }
+.iconsmind-Knife:before { content: "\e926"!important; }
+.iconsmind-Lemon:before { content: "\e927"!important; }
+.iconsmind-Lollipop:before { content: "\e928"!important; }
+.iconsmind-Lollipop-2:before { content: "\e929"!important; }
+.iconsmind-Martini-Glass:before { content: "\e92a"!important; }
+.iconsmind-Milk-Bottle:before { content: "\e92b"!important; }
+.iconsmind-Mushroom:before { content: "\e92c"!important; }
+.iconsmind-Open-Banana:before { content: "\e92d"!important; }
+.iconsmind-Pepper:before { content: "\e92e"!important; }
+.iconsmind-Pepper-withFire:before { content: "\e92f"!important; }
+.iconsmind-Pizza:before { content: "\e930"!important; }
+.iconsmind-Pizza-Slice:before { content: "\e931"!important; }
+.iconsmind-Plate:before { content: "\e932"!important; }
+.iconsmind-Plates:before { content: "\e933"!important; }
+.iconsmind-Soup:before { content: "\e934"!important; }
+.iconsmind-Spoon:before { content: "\e935"!important; }
+.iconsmind-Sushi:before { content: "\e936"!important; }
+.iconsmind-Teapot:before { content: "\e937"!important; }
+.iconsmind-Tee-Mug:before { content: "\e938"!important; }
+.iconsmind-Tomato:before { content: "\e939"!important; }
+.iconsmind-Wine-Bottle:before { content: "\e93a"!important; }
+.iconsmind-Wine-Glass:before { content: "\e93b"!important; }

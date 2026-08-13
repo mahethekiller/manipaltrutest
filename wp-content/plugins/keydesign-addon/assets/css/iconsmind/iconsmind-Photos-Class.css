@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'iconsmind-Photos-Class';
+  src: url('fonts/Photos.ttf') format('truetype'),
+       url('fonts/Photos.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Photos-Class[class^="iconsmind-"], .iconsmind-Photos-Class[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Photos-Class' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Auto-Flash:before { content: "\e900"!important; }
+.iconsmind-Camera:before { content: "\e901"!important; }
+.iconsmind-Camera-2:before { content: "\e902"!important; }
+.iconsmind-Camera-3:before { content: "\e903"!important; }
+.iconsmind-Camera-4:before { content: "\e904"!important; }
+.iconsmind-Camera-5:before { content: "\e905"!important; }
+.iconsmind-Camera-Back:before { content: "\e906"!important; }
+.iconsmind-Crop:before { content: "\e907"!important; }
+.iconsmind-Daylight:before { content: "\e908"!important; }
+.iconsmind-Edit:before { content: "\e909"!important; }
+.iconsmind-Eye:before { content: "\e90a"!important; }
+.iconsmind-Film:before { content: "\e90b"!important; }
+.iconsmind-Film-Cartridge:before { content: "\e90c"!important; }
+.iconsmind-Filter:before { content: "\e90d"!important; }
+.iconsmind-Flash:before { content: "\e90e"!important; }
+.iconsmind-Flash-2:before { content: "\e90f"!important; }
+.iconsmind-Fluorescent:before { content: "\e910"!important; }
+.iconsmind-Gopro:before { content: "\e911"!important; }
+.iconsmind-Landscape:before { content: "\e912"!important; }
+.iconsmind-Len:before { content: "\e913"!important; }
+.iconsmind-Len-2:before { content: "\e914"!important; }
+.iconsmind-Len-3:before { content: "\e915"!important; }
+.iconsmind-Macro:before { content: "\e916"!important; }
+.iconsmind-Memory-Card:before { content: "\e917"!important; }
+.iconsmind-Memory-Card2:before { content: "\e918"!important; }
+.iconsmind-Memory-Card3:before { content: "\e919"!important; }
+.iconsmind-No-Flash:before { content: "\e91a"!important; }
+.iconsmind-Panorama:before { content: "\e91b"!important; }
+.iconsmind-Photo:before { content: "\e91c"!important; }
+.iconsmind-Photo-2:before { content: "\e91d"!important; }
+.iconsmind-Photo-3:before { content: "\e91e"!important; }
+.iconsmind-Photo-Album:before { content: "\e91f"!important; }
+.iconsmind-Photo-Album2:before { content: "\e920"!important; }
+.iconsmind-Photo-Album3:before { content: "\e921"!important; }
+.iconsmind-Photos:before { content: "\e922"!important; }
+.iconsmind-Portrait:before { content: "\e923"!important; }
+.iconsmind-Retouching:before { content: "\e924"!important; }
+.iconsmind-Retro-Camera:before { content: "\e925"!important; }
+.iconsmind-secound:before { content: "\e926"!important; }
+.iconsmind-secound2:before { content: "\e927"!important; }
+.iconsmind-Selfie:before { content: "\e928"!important; }
+.iconsmind-Shutter:before { content: "\e929"!important; }
+.iconsmind-Signal:before { content: "\e92a"!important; }
+.iconsmind-Snow:before { content: "\e92b"!important; }
+.iconsmind-Sport-Mode:before { content: "\e92c"!important; }
+.iconsmind-Studio-Flash:before { content: "\e92d"!important; }
+.iconsmind-Studio-Lightbox:before { content: "\e92e"!important; }
+.iconsmind-Timer:before { content: "\e92f"!important; }
+.iconsmind-Tripod-2:before { content: "\e930"!important; }
+.iconsmind-Tripod-withCamera:before { content: "\e931"!important; }
+.iconsmind-Tripod-withGopro:before { content: "\e932"!important; }

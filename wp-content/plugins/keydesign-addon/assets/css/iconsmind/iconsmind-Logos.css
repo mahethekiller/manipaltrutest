@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'iconsmind-Logos';
+  src: url('fonts/Logos.ttf') format('truetype'),
+       url('fonts/Logos.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Logos[class^="iconsmind-"], .iconsmind-Logos[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Logos' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Android-Store:before { content: "\e900"!important; }
+.iconsmind-Apple-Store:before { content: "\e901"!important; }
+.iconsmind-Dropbox:before { content: "\e903"!important; }
+.iconsmind-Google-Drive:before { content: "\e904"!important; }
+.iconsmind-Google-Play:before { content: "\e905"!important; }
+.iconsmind-Paypal:before { content: "\e906"!important; }
+.iconsmind-Skrill:before { content: "\e907"!important; }
+.iconsmind-X-Box:before { content: "\e908"!important; }

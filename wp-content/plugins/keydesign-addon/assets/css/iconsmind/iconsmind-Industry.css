@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'iconsmind-Industry';
+  src: url('fonts/Industry.ttf') format('truetype'),
+       url('fonts/Industry.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Industry[class^="iconsmind-"], .iconsmind-Industry[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Industry' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Barricade:before { content: "\e900"!important; }
+.iconsmind-Crane:before { content: "\e901"!important; }
+.iconsmind-Dam:before { content: "\e902"!important; }
+.iconsmind-Drill:before { content: "\e903"!important; }
+.iconsmind-Electricity:before { content: "\e904"!important; }
+.iconsmind-Explode:before { content: "\e905"!important; }
+.iconsmind-Factory:before { content: "\e906"!important; }
+.iconsmind-Fuel:before { content: "\e907"!important; }
+.iconsmind-Helmet:before { content: "\e908"!important; }
+.iconsmind-Helmet-2:before { content: "\e909"!important; }
+.iconsmind-Laser:before { content: "\e90a"!important; }
+.iconsmind-Mine:before { content: "\e90b"!important; }
+.iconsmind-Oil:before { content: "\e90c"!important; }
+.iconsmind-Petrol:before { content: "\e90d"!important; }
+.iconsmind-Pipe:before { content: "\e90e"!important; }
+.iconsmind-Power-Station:before { content: "\e90f"!important; }
+.iconsmind-Refinery:before { content: "\e910"!important; }
+.iconsmind-Saw:before { content: "\e911"!important; }
+.iconsmind-Shovel:before { content: "\e912"!important; }
+.iconsmind-Solar:before { content: "\e913"!important; }
+.iconsmind-Wheelbarrow:before { content: "\e914"!important; }
+.iconsmind-Windmill:before { content: "\e915"!important; }

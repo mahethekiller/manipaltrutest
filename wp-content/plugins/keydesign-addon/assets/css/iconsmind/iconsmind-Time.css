@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'iconsmind-Time';
+  src: url('fonts/Time.ttf') format('truetype'),
+       url('fonts/Time.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Time[class^="iconsmind-"], .iconsmind-Time[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Time' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Alarm-Clock:before { content: "\e900"!important; }
+.iconsmind-Alarm-Clock2:before { content: "\e901"!important; }
+.iconsmind-Calendar-Clock:before { content: "\e902"!important; }
+.iconsmind-Clock:before { content: "\e903"!important; }
+.iconsmind-Clock-2:before { content: "\e904"!important; }
+.iconsmind-Clock-3:before { content: "\e905"!important; }
+.iconsmind-Clock-4:before { content: "\e906"!important; }
+.iconsmind-Clock-Back:before { content: "\e907"!important; }
+.iconsmind-Clock-Forward:before { content: "\e908"!important; }
+.iconsmind-Hour:before { content: "\e909"!important; }
+.iconsmind-Old-Clock:before { content: "\e90a"!important; }
+.iconsmind-Over-Time:before { content: "\e90b"!important; }
+.iconsmind-Over-Time2:before { content: "\e90c"!important; }
+.iconsmind-Sand-watch:before { content: "\e90d"!important; }
+.iconsmind-Sand-watch2:before { content: "\e90e"!important; }
+.iconsmind-Stopwatch:before { content: "\e90f"!important; }
+.iconsmind-Stopwatch-2:before { content: "\e910"!important; }
+.iconsmind-Time-Backup:before { content: "\e911"!important; }
+.iconsmind-Time-Fire:before { content: "\e912"!important; }
+.iconsmind-Time-Machine:before { content: "\e913"!important; }
+.iconsmind-Timer:before { content: "\e914"!important; }
+.iconsmind-Watch:before { content: "\e915"!important; }
+.iconsmind-Watch-2:before { content: "\e916"!important; }
+.iconsmind-Watch-3:before { content: "\e917"!important; }

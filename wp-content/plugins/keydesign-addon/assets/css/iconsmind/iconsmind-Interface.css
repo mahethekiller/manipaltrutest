@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'iconsmind-Interface';
+  src: url('fonts/Interface.ttf') format('truetype'),
+       url('fonts/Interface.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Interface[class^="iconsmind-"], .iconsmind-Interface[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Interface' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Add:before { content: "\e900"!important; }
+.iconsmind-Back:before { content: "\e901"!important; }
+.iconsmind-Broken-Link:before { content: "\e902"!important; }
+.iconsmind-Check:before { content: "\e903"!important; }
+.iconsmind-Check-2:before { content: "\e904"!important; }
+.iconsmind-Circular-Point:before { content: "\e905"!important; }
+.iconsmind-Close:before { content: "\e906"!important; }
+.iconsmind-Cursor:before { content: "\e907"!important; }
+.iconsmind-Cursor-Click:before { content: "\e908"!important; }
+.iconsmind-Cursor-Click2:before { content: "\e909"!important; }
+.iconsmind-Cursor-Move:before { content: "\e90a"!important; }
+.iconsmind-Cursor-Move2:before { content: "\e90b"!important; }
+.iconsmind-Cursor-Select:before { content: "\e90c"!important; }
+.iconsmind-Down:before { content: "\e90d"!important; }
+.iconsmind-Download:before { content: "\e90e"!important; }
+.iconsmind-Downward:before { content: "\e90f"!important; }
+.iconsmind-Endways:before { content: "\e910"!important; }
+.iconsmind-Forward:before { content: "\e911"!important; }
+.iconsmind-Left:before { content: "\e912"!important; }
+.iconsmind-Link:before { content: "\e913"!important; }
+.iconsmind-Next:before { content: "\e914"!important; }
+.iconsmind-Orientation:before { content: "\e915"!important; }
+.iconsmind-Pointer:before { content: "\e916"!important; }
+.iconsmind-Previous:before { content: "\e917"!important; }
+.iconsmind-Redo:before { content: "\e918"!important; }
+.iconsmind-Refresh:before { content: "\e919"!important; }
+.iconsmind-Reload:before { content: "\e91a"!important; }
+.iconsmind-Remove:before { content: "\e91b"!important; }
+.iconsmind-Repeat:before { content: "\e91c"!important; }
+.iconsmind-Reset:before { content: "\e91d"!important; }
+.iconsmind-Rewind:before { content: "\e91e"!important; }
+.iconsmind-Right:before { content: "\e91f"!important; }
+.iconsmind-Rotation:before { content: "\e920"!important; }
+.iconsmind-Rotation-390:before { content: "\e921"!important; }
+.iconsmind-Spot:before { content: "\e922"!important; }
+.iconsmind-Start-ways:before { content: "\e923"!important; }
+.iconsmind-Synchronize:before { content: "\e924"!important; }
+.iconsmind-Synchronize-2:before { content: "\e925"!important; }
+.iconsmind-Undo:before { content: "\e926"!important; }
+.iconsmind-Up:before { content: "\e927"!important; }
+.iconsmind-Upload:before { content: "\e928"!important; }
+.iconsmind-Upward:before { content: "\e929"!important; }
+.iconsmind-Yes:before { content: "\e92a"!important; }

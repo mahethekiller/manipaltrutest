@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'iconsmind-Zodiacs';
+  src: url('fonts/Zodiacs.ttf') format('truetype'),
+       url('fonts/Zodiacs.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Zodiacs[class^="iconsmind-"], .iconsmind-Zodiacs[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Zodiacs' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Aquarius:before { content: "\e900"!important; }
+.iconsmind-Aquarius-2:before { content: "\e901"!important; }
+.iconsmind-Aries:before { content: "\e902"!important; }
+.iconsmind-Aries-2:before { content: "\e903"!important; }
+.iconsmind-Cancer:before { content: "\e904"!important; }
+.iconsmind-Cancer-2:before { content: "\e905"!important; }
+.iconsmind-Capricorn:before { content: "\e906"!important; }
+.iconsmind-Capricorn-2:before { content: "\e907"!important; }
+.iconsmind-Gemini:before { content: "\e908"!important; }
+.iconsmind-Gemini-2:before { content: "\e909"!important; }
+.iconsmind-Leo:before { content: "\e90a"!important; }
+.iconsmind-Leo-2:before { content: "\e90b"!important; }
+.iconsmind-Libra:before { content: "\e90c"!important; }
+.iconsmind-Libra-2:before { content: "\e90d"!important; }
+.iconsmind-Pisces:before { content: "\e90e"!important; }
+.iconsmind-Pisces-2:before { content: "\e90f"!important; }
+.iconsmind-Sagittarus:before { content: "\e910"!important; }
+.iconsmind-Sagittarus-2:before { content: "\e911"!important; }
+.iconsmind-Scorpio:before { content: "\e912"!important; }
+.iconsmind-Scorpio-2:before { content: "\e913"!important; }
+.iconsmind-Taurus:before { content: "\e914"!important; }
+.iconsmind-Taurus-2:before { content: "\e915"!important; }
+.iconsmind-Virgo:before { content: "\e916"!important; }
+.iconsmind-Virgo-2:before { content: "\e917"!important; }

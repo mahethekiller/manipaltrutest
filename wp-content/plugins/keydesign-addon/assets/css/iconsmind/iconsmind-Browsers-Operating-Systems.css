@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'iconsmind-Browsers-Operating-Systems';
+  src: url('fonts/Browsers-Operating-Systems.ttf') format('truetype'),
+       url('fonts/Browsers-Operating-Systems.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Browsers-Operating-Systems[class^="iconsmind-"], .iconsmind-Browsers-Operating-Systems[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Browsers-Operating-Systems' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Android:before { content: "\e900"!important; }
+.iconsmind-Chrome:before { content: "\e901"!important; }
+.iconsmind-Debian:before { content: "\e902"!important; }
+.iconsmind-Firefox:before { content: "\e903"!important; }
+.iconsmind-Internet-Explorer:before { content: "\e904"!important; }
+.iconsmind-iOS-Apple:before { content: "\e905"!important; }
+.iconsmind-Linux:before { content: "\e906"!important; }
+.iconsmind-Netscape:before { content: "\e907"!important; }
+.iconsmind-Opera:before { content: "\e908"!important; }
+.iconsmind-Redhat:before { content: "\e909"!important; }
+.iconsmind-Safari:before { content: "\e90a"!important; }
+.iconsmind-Windows-Microsoft:before { content: "\e90b"!important; }

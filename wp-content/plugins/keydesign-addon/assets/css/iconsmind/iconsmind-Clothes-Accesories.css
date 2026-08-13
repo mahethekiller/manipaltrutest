@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'iconsmind-Clothes-Accesories';
+  src: url('fonts/Clothes-Accesories.ttf') format('truetype'),
+       url('fonts/Clothes-Accesories.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Clothes-Accesories[class^="iconsmind-"], .iconsmind-Clothes-Accesories[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Clothes-Accesories' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Baby-Clothes:before { content: "\e900"!important; }
+.iconsmind-Baby-Clothes2:before { content: "\e901"!important; }
+.iconsmind-Bathrobe:before { content: "\e902"!important; }
+.iconsmind-Belt:before { content: "\e903"!important; }
+.iconsmind-Belt-2:before { content: "\e904"!important; }
+.iconsmind-Belt-3:before { content: "\e905"!important; }
+.iconsmind-Bikini:before { content: "\e906"!important; }
+.iconsmind-Blouse:before { content: "\e907"!important; }
+.iconsmind-Boot:before { content: "\e908"!important; }
+.iconsmind-Boot-2:before { content: "\e909"!important; }
+.iconsmind-Bow-2:before { content: "\e90a"!important; }
+.iconsmind-Bow-3:before { content: "\e90b"!important; }
+.iconsmind-Bra:before { content: "\e90c"!important; }
+.iconsmind-Cap:before { content: "\e90d"!important; }
+.iconsmind-Cap-2:before { content: "\e90e"!important; }
+.iconsmind-Cap-3:before { content: "\e90f"!important; }
+.iconsmind-Cardigan:before { content: "\e910"!important; }
+.iconsmind-Coat:before { content: "\e911"!important; }
+.iconsmind-Dress:before { content: "\e912"!important; }
+.iconsmind-Glasses:before { content: "\e913"!important; }
+.iconsmind-Glasses-2:before { content: "\e914"!important; }
+.iconsmind-Glasses-3:before { content: "\e915"!important; }
+.iconsmind-Gloves:before { content: "\e916"!important; }
+.iconsmind-Hanger:before { content: "\e917"!important; }
+.iconsmind-Heels:before { content: "\e918"!important; }
+.iconsmind-Heels-2:before { content: "\e919"!important; }
+.iconsmind-Hoodie:before { content: "\e91a"!important; }
+.iconsmind-Jacket:before { content: "\e91b"!important; }
+.iconsmind-Jeans:before { content: "\e91c"!important; }
+.iconsmind-Mans-Underwear:before { content: "\e91d"!important; }
+.iconsmind-Mans-Underwear2:before { content: "\e91e"!important; }
+.iconsmind-Pants:before { content: "\e91f"!important; }
+.iconsmind-Polo-Shirt:before { content: "\e920"!important; }
+.iconsmind-Scarf:before { content: "\e921"!important; }
+.iconsmind-Shirt:before { content: "\e922"!important; }
+.iconsmind-Shoes:before { content: "\e923"!important; }
+.iconsmind-Short-Pants:before { content: "\e924"!important; }
+.iconsmind-Skirt:before { content: "\e925"!important; }
+.iconsmind-Slippers:before { content: "\e926"!important; }
+.iconsmind-Socks:before { content: "\e927"!important; }
+.iconsmind-Sports-Clothings1:before { content: "\e928"!important; }
+.iconsmind-Sports-Clothings2:before { content: "\e929"!important; }
+.iconsmind-Sports-Shirt:before { content: "\e92a"!important; }
+.iconsmind-Suit:before { content: "\e92b"!important; }
+.iconsmind-Sunglasses:before { content: "\e92c"!important; }
+.iconsmind-Sunglasses-2:before { content: "\e92d"!important; }
+.iconsmind-Sunglasses-3:before { content: "\e92e"!important; }
+.iconsmind-Sunglasses-W:before { content: "\e92f"!important; }
+.iconsmind-Sunglasses-W2:before { content: "\e930"!important; }
+.iconsmind-Sunglasses-W3:before { content: "\e931"!important; }
+.iconsmind-Swimming-Short:before { content: "\e932"!important; }
+.iconsmind-Swimmwear:before { content: "\e933"!important; }
+.iconsmind-Tie:before { content: "\e934"!important; }
+.iconsmind-T-Shirt:before { content: "\e935"!important; }
+.iconsmind-Tuxedo:before { content: "\e936"!important; }
+.iconsmind-Vest:before { content: "\e937"!important; }
+.iconsmind-Wallet-2:before { content: "\e938"!important; }
+.iconsmind-Womans-Underwear:before { content: "\e939"!important; }
+.iconsmind-Womans-Underwear2:before { content: "\e93a"!important; }
+.iconsmind-Worker-Clothes:before { content: "\e93b"!important; }

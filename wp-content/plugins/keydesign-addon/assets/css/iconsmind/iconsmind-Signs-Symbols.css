@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'iconsmind-Signs-Symbols';
+  src: url('fonts/Signs-Symbols.ttf') format('truetype'),
+       url('fonts/Signs-Symbols.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Signs-Symbols[class^="iconsmind-"], .iconsmind-Signs-Symbols[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Signs-Symbols' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Bisexual:before { content: "\e900"!important; }
+.iconsmind-Cancer:before { content: "\e901"!important; }
+.iconsmind-Couple-Sign:before { content: "\e902"!important; }
+.iconsmind-David-Star:before { content: "\e903"!important; }
+.iconsmind-Family-Sign:before { content: "\e904"!important; }
+.iconsmind-Female-2:before { content: "\e905"!important; }
+.iconsmind-Gey:before { content: "\e906"!important; }
+.iconsmind-Heart:before { content: "\e907"!important; }
+.iconsmind-Homosexual:before { content: "\e908"!important; }
+.iconsmind-Inifity:before { content: "\e909"!important; }
+.iconsmind-Lesbian:before { content: "\e90a"!important; }
+.iconsmind-Lesbians:before { content: "\e90b"!important; }
+.iconsmind-Love:before { content: "\e90c"!important; }
+.iconsmind-Male-2:before { content: "\e90d"!important; }
+.iconsmind-Men:before { content: "\e90e"!important; }
+.iconsmind-No-Smoking:before { content: "\e90f"!important; }
+.iconsmind-Paw:before { content: "\e910"!important; }
+.iconsmind-Quotes:before { content: "\e911"!important; }
+.iconsmind-Quotes-2:before { content: "\e912"!important; }
+.iconsmind-Redirect:before { content: "\e913"!important; }
+.iconsmind-Retweet:before { content: "\e914"!important; }
+.iconsmind-Ribbon:before { content: "\e915"!important; }
+.iconsmind-Ribbon-2:before { content: "\e916"!important; }
+.iconsmind-Ribbon-3:before { content: "\e917"!important; }
+.iconsmind-Sexual:before { content: "\e918"!important; }
+.iconsmind-Smoking-Area:before { content: "\e919"!important; }
+.iconsmind-Trace:before { content: "\e91a"!important; }
+.iconsmind-Venn-Diagram:before { content: "\e91b"!important; }
+.iconsmind-Wheelchair:before { content: "\e91c"!important; }
+.iconsmind-Women:before { content: "\e91d"!important; }
+.iconsmind-Ying-Yang:before { content: "\e91e"!important; }

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'iconsmind-Science-Medical';
+  src: url('fonts/Science-Medical.ttf') format('truetype'),
+       url('fonts/Science-Medical.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Science-Medical[class^="iconsmind-"], .iconsmind-Science-Medical[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Science-Medical' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Ambulance:before { content: "\e900"!important; }
+.iconsmind-Astronaut:before { content: "\e901"!important; }
+.iconsmind-Atom:before { content: "\e902"!important; }
+.iconsmind-Bacteria:before { content: "\e903"!important; }
+.iconsmind-Band-Aid:before { content: "\e904"!important; }
+.iconsmind-Bio-Hazard:before { content: "\e905"!important; }
+.iconsmind-Biotech:before { content: "\e906"!important; }
+.iconsmind-Brain:before { content: "\e907"!important; }
+.iconsmind-Chemical:before { content: "\e908"!important; }
+.iconsmind-Chemical-2:before { content: "\e909"!important; }
+.iconsmind-Chemical-3:before { content: "\e90a"!important; }
+.iconsmind-Chemical-4:before { content: "\e90b"!important; }
+.iconsmind-Chemical-5:before { content: "\e90c"!important; }
+.iconsmind-Clinic:before { content: "\e90d"!important; }
+.iconsmind-Cube-Molecule:before { content: "\e90e"!important; }
+.iconsmind-Cube-Molecule2:before { content: "\e90f"!important; }
+.iconsmind-Danger:before { content: "\e910"!important; }
+.iconsmind-Danger-2:before { content: "\e911"!important; }
+.iconsmind-DNA:before { content: "\e912"!important; }
+.iconsmind-DNA-2:before { content: "\e913"!important; }
+.iconsmind-DNA-Helix:before { content: "\e914"!important; }
+.iconsmind-First-Aid:before { content: "\e915"!important; }
+.iconsmind-Flask:before { content: "\e916"!important; }
+.iconsmind-Flask-2:before { content: "\e917"!important; }
+.iconsmind-Helix-2:before { content: "\e918"!important; }
+.iconsmind-Hospital:before { content: "\e919"!important; }
+.iconsmind-Hurt:before { content: "\e91a"!important; }
+.iconsmind-Medical-Sign:before { content: "\e91b"!important; }
+.iconsmind-Medicine:before { content: "\e91c"!important; }
+.iconsmind-Medicine-2:before { content: "\e91d"!important; }
+.iconsmind-Medicine-3:before { content: "\e91e"!important; }
+.iconsmind-Microscope:before { content: "\e91f"!important; }
+.iconsmind-Neutron:before { content: "\e920"!important; }
+.iconsmind-Nuclear:before { content: "\e921"!important; }
+.iconsmind-Physics:before { content: "\e922"!important; }
+.iconsmind-Plasmid:before { content: "\e923"!important; }
+.iconsmind-Plaster:before { content: "\e924"!important; }
+.iconsmind-Pulse:before { content: "\e925"!important; }
+.iconsmind-Radioactive:before { content: "\e926"!important; }
+.iconsmind-Safety-PinClose:before { content: "\e927"!important; }
+.iconsmind-Safety-PinOpen:before { content: "\e928"!important; }
+.iconsmind-Spermium:before { content: "\e929"!important; }
+.iconsmind-Stethoscope:before { content: "\e92a"!important; }
+.iconsmind-Temperature:before { content: "\e92b"!important; }
+.iconsmind-Test-Tube:before { content: "\e92c"!important; }
+.iconsmind-Test-Tube2:before { content: "\e92d"!important; }
+.iconsmind-Virus:before { content: "\e92e"!important; }
+.iconsmind-Virus-2:before { content: "\e92f"!important; }
+.iconsmind-Virus-3:before { content: "\e930"!important; }
+.iconsmind-X-ray:before { content: "\e931"!important; }

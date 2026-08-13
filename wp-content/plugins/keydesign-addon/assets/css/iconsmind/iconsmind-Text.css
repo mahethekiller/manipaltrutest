@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'iconsmind-Text';
+  src: url('fonts/Text.ttf') format('truetype'),
+       url('fonts/Text.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Text[class^="iconsmind-"], .iconsmind-Text[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Text' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-A-Z:before { content: "\e900"!important; }
+.iconsmind-Bold-Text:before { content: "\e901"!important; }
+.iconsmind-Bulleted-List:before { content: "\e902"!important; }
+.iconsmind-Font-Color:before { content: "\e903"!important; }
+.iconsmind-Font-Name:before { content: "\e904"!important; }
+.iconsmind-Font-Size:before { content: "\e905"!important; }
+.iconsmind-Font-Style:before { content: "\e906"!important; }
+.iconsmind-Font-StyleSubscript:before { content: "\e907"!important; }
+.iconsmind-Font-StyleSuperscript:before { content: "\e908"!important; }
+.iconsmind-Function:before { content: "\e909"!important; }
+.iconsmind-Italic-Text:before { content: "\e90a"!important; }
+.iconsmind-Line-SpacingText:before { content: "\e90b"!important; }
+.iconsmind-Lowercase-Text:before { content: "\e90c"!important; }
+.iconsmind-Normal-Text:before { content: "\e90d"!important; }
+.iconsmind-Numbering-List:before { content: "\e90e"!important; }
+.iconsmind-Strikethrough-Text:before { content: "\e90f"!important; }
+.iconsmind-Sum:before { content: "\e910"!important; }
+.iconsmind-Text-Box:before { content: "\e911"!important; }
+.iconsmind-Text-Effect:before { content: "\e912"!important; }
+.iconsmind-Text-HighlightColor:before { content: "\e913"!important; }
+.iconsmind-Text-Paragraph:before { content: "\e914"!important; }
+.iconsmind-Under-LineText:before { content: "\e915"!important; }
+.iconsmind-Uppercase-Text:before { content: "\e916"!important; }
+.iconsmind-Wrap-Text:before { content: "\e917"!important; }
+.iconsmind-Z-A:before { content: "\e918"!important; }

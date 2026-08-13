@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'iconsmind-Chess';
+  src: url('fonts/Chess.ttf') format('truetype'),
+       url('fonts/Chess.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconsmind-Chess[class^="iconsmind-"], .iconsmind-Chess[class*=" iconsmind-"] {
+  font-family: 'iconsmind-Chess' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.iconsmind-Bishop:before { content: "\e900"!important; }
+.iconsmind-Checkmate:before { content: "\e901"!important; }
+.iconsmind-Chess-Board:before { content: "\e902"!important; }
+.iconsmind-King:before { content: "\e903"!important; }
+.iconsmind-Knight:before { content: "\e904"!important; }
+.iconsmind-Pawn:before { content: "\e905"!important; }
+.iconsmind-Queen:before { content: "\e906"!important; }
+.iconsmind-Rook:before { content: "\e907"!important; }
+.iconsmind-Tactic:before { content: "\e908"!important; }
+.iconsmind-Time-Clock:before { content: "\e909"!important; }
