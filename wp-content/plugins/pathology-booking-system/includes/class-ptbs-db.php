@@ -89,11 +89,30 @@ class PTBS_DB {
             KEY user_id (user_id)
         ) {$charset_collate};";
 
+        // 5. Coupons Table
+        $table_coupons = $wpdb->prefix . 'ptbs_coupons';
+        $sql_coupons   = "CREATE TABLE {$table_coupons} (
+            id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+            code VARCHAR(50) NOT NULL,
+            discount_type ENUM('percentage', 'fixed') NOT NULL DEFAULT 'percentage',
+            discount_value DECIMAL(10,2) NOT NULL DEFAULT '0.00',
+            min_cart_amount DECIMAL(10,2) NOT NULL DEFAULT '0.00',
+            max_discount_amount DECIMAL(10,2) NOT NULL DEFAULT '0.00',
+            usage_limit INT(11) NOT NULL DEFAULT 0,
+            used_count INT(11) NOT NULL DEFAULT 0,
+            expiry_date DATE NULL,
+            status VARCHAR(20) NOT NULL DEFAULT 'Active',
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY (id),
+            UNIQUE KEY code (code)
+        ) {$charset_collate};";
+
         require_once ABSPATH . 'wp-admin/includes/upgrade.php';
         dbDelta( $sql_bookings );
         dbDelta( $sql_items );
         dbDelta( $sql_prices );
         dbDelta( $sql_family );
+        dbDelta( $sql_coupons );
     }
 
     /**

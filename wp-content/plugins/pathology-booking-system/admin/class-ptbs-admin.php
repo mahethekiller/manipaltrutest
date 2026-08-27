@@ -39,11 +39,29 @@ class PTBS_Admin {
 
         add_submenu_page(
             'ptbs-dashboard',
+            __( 'Diagnostic Management', 'pathology-booking-system' ),
+            __( 'Diagnostic Management', 'pathology-booking-system' ),
+            'manage_options',
+            'ptbs-diagnostic-management',
+            array( $this, 'render_diagnostic_management_page' )
+        );
+
+        add_submenu_page(
+            'ptbs-dashboard',
             __( 'Bookings Manager', 'pathology-booking-system' ),
             __( 'All Bookings', 'pathology-booking-system' ),
             'manage_options',
             'ptbs-dashboard',
             array( $this, 'render_bookings_page' )
+        );
+
+        add_submenu_page(
+            'ptbs-dashboard',
+            __( 'Coupons & Discounts', 'pathology-booking-system' ),
+            __( 'Coupons', 'pathology-booking-system' ),
+            'manage_options',
+            'ptbs-coupons',
+            array( $this, 'render_coupons_page' )
         );
 
         add_submenu_page(
@@ -74,8 +92,19 @@ class PTBS_Admin {
             return;
         }
 
-        wp_enqueue_style( 'ptbs-admin-css', PTBS_DIR_URL . 'admin/css/ptbs-admin.css', array(), PTBS_VERSION );
-        wp_enqueue_script( 'ptbs-admin-js', PTBS_DIR_URL . 'admin/js/ptbs-admin.js', array( 'jquery' ), PTBS_VERSION, true );
+        wp_enqueue_media();
+        wp_enqueue_style( 'select2', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css', array(), '4.1.0' );
+        wp_enqueue_script( 'select2', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', array( 'jquery' ), '4.1.0', true );
+        wp_enqueue_style( 'ptbs-admin-css', PTBS_DIR_URL . 'admin/css/ptbs-admin.css', array( 'select2' ), PTBS_VERSION );
+        wp_enqueue_script( 'ptbs-admin-js', PTBS_DIR_URL . 'admin/js/ptbs-admin.js', array( 'jquery', 'select2' ), PTBS_VERSION, true );
+    }
+
+    public function render_diagnostic_management_page() {
+        include PTBS_DIR_PATH . 'admin/views/diagnostic-management.php';
+    }
+
+    public function render_coupons_page() {
+        include PTBS_DIR_PATH . 'admin/views/coupons-management.php';
     }
 
     public function render_bookings_page() {

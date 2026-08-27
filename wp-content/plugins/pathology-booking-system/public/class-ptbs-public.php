@@ -622,8 +622,28 @@ class PTBS_Public {
                                 <!-- Injected by JS -->
                             </ul>
                             <div class="ptbs-summary-total">
-                                <span><?php esc_html_e( 'Total Amount:', 'pathology-booking-system' ); ?></span>
-                                <span class="price">₹<span id="ptbs-checkout-total">0.00</span></span>
+                                <span><?php esc_html_e( 'Subtotal Amount:', 'pathology-booking-system' ); ?></span>
+                                <span class="price">₹<span id="ptbs-checkout-subtotal">0.00</span></span>
+                            </div>
+
+                            <!-- PROMO COUPON CODE SECTION -->
+                            <div class="ptbs-coupon-box" style="margin-top:16px; background:#f8fafc; padding:12px; border-radius:8px; border:1px dashed #cbd5e1;">
+                                <label style="display:block; font-weight:600; font-size:13px; color:#334155; margin-bottom:6px;">🏷️ <?php esc_html_e( 'Have a Promo Coupon Code?', 'pathology-booking-system' ); ?></label>
+                                <div style="display:flex; gap:8px;">
+                                    <input type="text" id="ptbs_coupon_code_input" placeholder="<?php esc_attr_e( 'Enter Promo Code', 'pathology-booking-system' ); ?>" style="flex:1; padding:8px 12px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px; text-transform:uppercase;">
+                                    <button type="button" class="ptbs-btn ptbs-btn-primary" id="ptbs_apply_coupon_btn" style="padding:8px 16px; font-size:13px; font-weight:600;"><?php esc_html_e( 'Apply', 'pathology-booking-system' ); ?></button>
+                                </div>
+                                <div id="ptbs_coupon_msg" style="font-size:12px; font-weight:600; margin-top:6px;"></div>
+                            </div>
+
+                            <div class="ptbs-summary-discount" id="ptbs-discount-row" style="display:none; justify-content:space-between; margin-top:10px; color:#16a34a; font-weight:600; font-size:14px;">
+                                <span><?php esc_html_e( 'Coupon Discount:', 'pathology-booking-system' ); ?></span>
+                                <span>- ₹<span id="ptbs-checkout-discount">0.00</span></span>
+                            </div>
+
+                            <div class="ptbs-summary-total" style="border-top:2px solid #e2e8f0; margin-top:10px; padding-top:10px;">
+                                <span><?php esc_html_e( 'Final Payable Amount:', 'pathology-booking-system' ); ?></span>
+                                <span class="price" style="color:#0b4f8c;">₹<span id="ptbs-checkout-total">0.00</span></span>
                             </div>
 
                             <h4>4. <?php esc_html_e( 'Payment Gateway Option', 'pathology-booking-system' ); ?></h4>

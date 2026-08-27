@@ -405,6 +405,8 @@ jQuery(document).ready(function($) {
         $('#ptbs-cart-total').text(total.toFixed(2));
     }
 
+    let appliedCoupon = { code: '', discount: 0 };
+
     function updateCheckoutSummary() {
         const $list = $('#ptbs-summary-list');
         $list.empty();
@@ -417,13 +419,27 @@ jQuery(document).ready(function($) {
 
         const selectedPatients = getSelectedPatientsList();
         const patientCount = Math.max(selectedPatients.length, 1);
-        const grandTotal = subtotal * patientCount;
+        const grossSubtotal = subtotal * patientCount;
 
         if (patientCount > 1) {
             $list.append(`<li style="background:#eff6ff; font-weight:bold; color:#1d4ed8; padding:8px;">👥 Group Booking: ${patientCount} Patients (₹${subtotal.toFixed(2)} x ${patientCount})</li>`);
         }
 
-        $('#ptbs-checkout-total, #ptbs-summary-amount').text(grandTotal.toFixed(2));
+        $('#ptbs-checkout-subtotal, #ptbs-summary-amount').text(grossSubtotal.toFixed(2));
+
+        // Calculate active coupon discount against current subtotal
+        let discount = 0;
+        if (appliedCoupon.discount > 0) {
+            discount = Math.min(appliedCoupon.discount, grossSubtotal);
+            $('#ptbs-discount-row').css('display', 'flex');
+            $('#ptbs-checkout-discount').text(discount.toFixed(2));
+        } else {
+            $('#ptbs-discount-row').hide();
+            $('#ptbs-checkout-discount').text('0.00');
+        }
+
+        const finalTotal = Math.max(0, grossSubtotal - discount);
+        $('#ptbs-checkout-total').text(finalTotal.toFixed(2));
 
         // Auto default date to today if empty and trigger time slot capacity check
         const $dateInput = $('input[name="booking_date"]');
@@ -445,6 +461,51 @@ jQuery(document).ready(function($) {
             }
         });
     }
+
+    // AJAX Apply Promo Coupon Code Handler
+    $(document).on('click', '#ptbs_apply_coupon_btn', function(e) {
+        e.preventDefault();
+        const couponCode = $('#ptbs_coupon_code_input').val().trim();
+        const subtotal = parseFloat($('#ptbs-checkout-subtotal').text() || '0');
+
+        if (!couponCode) {
+            $('#ptbs_coupon_msg').css('color', '#dc2626').text('Please enter a promo code.');
+            return;
+        }
+
+        const $btn = $(this);
+        $btn.prop('disabled', true).text('Checking...');
+
+        $.ajax({
+            url: ptbs_vars.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'ptbs_apply_coupon',
+                security: ptbs_vars.public_nonce,
+                coupon_code: couponCode,
+                cart_subtotal: subtotal
+            },
+            success: function(res) {
+                $btn.prop('disabled', false).text('Apply');
+                if (res.success) {
+                    appliedCoupon = {
+                        code: res.data.coupon_code,
+                        discount: res.data.discount_amount
+                    };
+                    $('#ptbs_coupon_msg').css('color', '#16a34a').text(res.data.message);
+                    updateCheckoutSummary();
+                } else {
+                    appliedCoupon = { code: '', discount: 0 };
+                    $('#ptbs_coupon_msg').css('color', '#dc2626').text(res.data.message || 'Invalid coupon.');
+                    updateCheckoutSummary();
+                }
+            },
+            error: function() {
+                $btn.prop('disabled', false).text('Apply');
+                $('#ptbs_coupon_msg').css('color', '#dc2626').text('Server error. Please try again.');
+            }
+        });
+    });
 
     // Dynamic Time Slot Capacity Loader on Booking Date Change
     $(document).on('change', 'input[name="booking_date"]', function() {

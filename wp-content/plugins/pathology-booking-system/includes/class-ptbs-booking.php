@@ -23,6 +23,8 @@ class PTBS_Booking {
         add_action( 'wp_ajax_nopriv_ptbs_process_booking', array( $this, 'ajax_process_booking' ) );
         add_action( 'wp_ajax_ptbs_get_city_catalog', array( $this, 'ajax_get_city_catalog' ) );
         add_action( 'wp_ajax_nopriv_ptbs_get_city_catalog', array( $this, 'ajax_get_city_catalog' ) );
+        add_action( 'wp_ajax_ptbs_apply_coupon', array( $this, 'ajax_apply_coupon' ) );
+        add_action( 'wp_ajax_nopriv_ptbs_apply_coupon', array( $this, 'ajax_apply_coupon' ) );
     }
 
     /**
@@ -265,6 +267,75 @@ class PTBS_Booking {
             'total_amount'   => $total_amount,
             'gateway'        => $gateway,
             'gateway_data'   => $gateway_data,
+        ) );
+    }
+
+    /**
+     * AJAX handler to validate and apply promo coupon codes
+     */
+    public function ajax_apply_coupon() {
+        check_ajax_referer( 'ptbs_public_nonce', 'security' );
+
+        $code       = strtoupper( sanitize_text_field( wp_unslash( $_POST['coupon_code'] ?? '' ) ) );
+        $subtotal   = floatval( $_POST['cart_subtotal'] ?? 0 );
+
+        if ( empty( $code ) ) {
+            wp_send_json_error( array( 'message' => __( 'Please enter a coupon code.', 'pathology-booking-system' ) ) );
+        }
+
+        global $wpdb;
+        $table_coupons = $wpdb->prefix . 'ptbs_coupons';
+        $coupon        = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$table_coupons} WHERE code = %s", $code ) );
+
+        if ( ! $coupon ) {
+            wp_send_json_error( array( 'message' => __( 'Invalid coupon code.', 'pathology-booking-system' ) ) );
+        }
+
+        // Status check
+        if ( 'Inactive' === $coupon->status ) {
+            wp_send_json_error( array( 'message' => __( 'This coupon code is currently disabled.', 'pathology-booking-system' ) ) );
+        }
+
+        // Expiry date check
+        if ( ! empty( $coupon->expiry_date ) && strtotime( $coupon->expiry_date ) < strtotime( current_time( 'Y-m-d' ) ) ) {
+            wp_send_json_error( array( 'message' => __( 'This coupon code has expired.', 'pathology-booking-system' ) ) );
+        }
+
+        // Usage limit check
+        if ( $coupon->usage_limit > 0 && $coupon->used_count >= $coupon->usage_limit ) {
+            wp_send_json_error( array( 'message' => __( 'Coupon usage limit reached.', 'pathology-booking-system' ) ) );
+        }
+
+        // Minimum cart subtotal check
+        if ( $coupon->min_cart_amount > 0 && $subtotal < $coupon->min_cart_amount ) {
+            wp_send_json_error( array(
+                'message' => sprintf( __( 'Minimum cart order subtotal of ₹%s required for this coupon.', 'pathology-booking-system' ), number_format( $coupon->min_cart_amount, 2 ) )
+            ) );
+        }
+
+        // Calculate Discount
+        $discount = 0.00;
+        if ( 'percentage' === $coupon->discount_type ) {
+            $discount = ( $subtotal * ( floatval( $coupon->discount_value ) / 100 ) );
+            if ( $coupon->max_discount_amount > 0 && $discount > $coupon->max_discount_amount ) {
+                $discount = floatval( $coupon->max_discount_amount );
+            }
+        } else {
+            $discount = floatval( $coupon->discount_value );
+        }
+
+        if ( $discount > $subtotal ) {
+            $discount = $subtotal;
+        }
+
+        $new_total = max( 0, $subtotal - $discount );
+
+        wp_send_json_success( array(
+            'coupon_code'     => $coupon->code,
+            'discount_type'   => $coupon->discount_type,
+            'discount_amount' => round( $discount, 2 ),
+            'new_total'       => round( $new_total, 2 ),
+            'message'         => sprintf( __( 'Coupon "%s" applied! You saved ₹%s.', 'pathology-booking-system' ), $coupon->code, number_format( $discount, 2 ) ),
         ) );
     }
 }

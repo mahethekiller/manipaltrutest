@@ -11,6 +11,11 @@ get_header();
 
 $package_id      = get_the_ID();
 $price           = floatval( get_post_meta( $package_id, '_ptbs_price', true ) );
+$mrp             = floatval( get_post_meta( $package_id, '_ptbs_mrp', true ) );
+$code            = get_post_meta( $package_id, '_ptbs_code', true );
+$faqs            = get_post_meta( $package_id, '_ptbs_faqs', true );
+$discount_pct    = ( $mrp > $price && $mrp > 0 ) ? round( ( ( $mrp - $price ) / $mrp ) * 100 ) : 0;
+
 $linked_test_ids = get_post_meta( $package_id, '_ptbs_linked_test_ids', true );
 if ( ! is_array( $linked_test_ids ) ) {
     $linked_test_ids = array();
@@ -57,7 +62,9 @@ if ( ! empty( $linked_test_ids ) ) {
                 <!-- Package Hero Box -->
                 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:28px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
                     <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
-                        <span style="background:#eff6ff; color:#1d4ed8; font-weight:700; font-size:12px; padding:4px 10px; border-radius:6px;">🎁 FULL BODY HEALTH PROFILE</span>
+                        <?php if ( ! empty( $code ) ) : ?>
+                            <span style="background:#eff6ff; color:#1d4ed8; font-weight:700; font-size:12px; padding:4px 10px; border-radius:6px;">PKG CODE: <?php echo esc_html( $code ); ?></span>
+                        <?php endif; ?>
                         <?php if ( $total_parameters_count > 0 ) : ?>
                             <span style="background:#f0fdf4; color:#166534; font-weight:700; font-size:12px; padding:4px 10px; border-radius:6px;"><?php printf( esc_html__( 'INCLUDES %d PARAMETERS', 'pathology-booking-system' ), $total_parameters_count ); ?></span>
                         <?php endif; ?>
@@ -132,14 +139,28 @@ if ( ! empty( $linked_test_ids ) ) {
                         <?php the_content(); ?>
                     </div>
                 </div>
+
+                <!-- FAQs Section -->
+                <?php if ( ! empty( $faqs ) ) : ?>
+                    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:28px; margin-bottom:24px;">
+                        <h3 style="font-size:20px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:14px;">❓ Frequently Asked Questions</h3>
+                        <div style="white-space:pre-line; color:#475569; font-size:14px; line-height:1.6;">
+                            <?php echo esc_html( $faqs ); ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <!-- Sticky Booking Card Sidebar -->
             <div style="position:sticky; top:100px;">
                 <div style="background:#ffffff; border:2px solid #2563eb; border-radius:16px; padding:24px; box-shadow:0 10px 30px rgba(37,99,235,0.08);">
                     <div style="font-size:12px; font-weight:700; color:#1d4ed8; text-transform:uppercase; letter-spacing:0.5px;">HEALTH CHECKUP OFFER</div>
-                    <div style="display:flex; align-items:baseline; gap:8px; margin:8px 0 16px 0;">
+                    <div style="display:flex; align-items:baseline; gap:10px; margin:8px 0 16px 0;">
                         <span style="font-size:32px; font-weight:800; color:#16a34a;">₹<?php echo esc_html( number_format( $price, 2 ) ); ?></span>
+                        <?php if ( $mrp > $price ) : ?>
+                            <span style="text-decoration:line-through; color:#94a3b8; font-size:18px;">₹<?php echo esc_html( number_format( $mrp, 2 ) ); ?></span>
+                            <span style="background:#dcfce7; color:#15803d; font-size:12px; font-weight:700; padding:2px 8px; border-radius:12px;"><?php echo $discount_pct; ?>% OFF</span>
+                        <?php endif; ?>
                     </div>
 
                     <ul style="list-style:none; padding:0; margin:0 0 20px 0; font-size:13px; color:#475569;">

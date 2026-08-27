@@ -9,16 +9,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$test_id     = get_the_ID();
-$code        = get_post_meta( $test_id, '_ptbs_code', true );
-$price       = floatval( get_post_meta( $test_id, '_ptbs_price', true ) );
-$sample_type = get_post_meta( $test_id, '_ptbs_sample_type', true );
-$fasting_req = get_post_meta( $test_id, '_ptbs_fasting_req', true );
-$tat_hours   = get_post_meta( $test_id, '_ptbs_tat_hours', true );
-$parameters  = get_post_meta( $test_id, '_ptbs_parameters', true );
-$cities      = get_the_terms( $test_id, 'ptbs_city' );
+$test_id        = get_the_ID();
+$code           = get_post_meta( $test_id, '_ptbs_code', true );
+$price          = floatval( get_post_meta( $test_id, '_ptbs_price', true ) );
+$mrp            = floatval( get_post_meta( $test_id, '_ptbs_mrp', true ) );
+$main_test_name = get_post_meta( $test_id, '_ptbs_main_test_name', true );
+$sample_type    = get_post_meta( $test_id, '_ptbs_sample_type', true );
+$cutoff_time    = get_post_meta( $test_id, '_ptbs_cutoff_time', true );
+$method         = get_post_meta( $test_id, '_ptbs_method', true );
+$fasting_req    = get_post_meta( $test_id, '_ptbs_fasting_req', true );
+$tat_hours      = get_post_meta( $test_id, '_ptbs_tat_hours', true );
+$faqs           = get_post_meta( $test_id, '_ptbs_faqs', true );
+$parameters     = get_post_meta( $test_id, '_ptbs_parameters', true );
 
-$param_list  = ! empty( $parameters ) ? array_filter( array_map( 'trim', explode( "\n", $parameters ) ) ) : array();
+$param_list     = ! empty( $parameters ) ? array_filter( array_map( 'trim', explode( "\n", $parameters ) ) ) : array();
+$discount_pct   = ( $mrp > $price && $mrp > 0 ) ? round( ( ( $mrp - $price ) / $mrp ) * 100 ) : 0;
 ?>
 
 <div class="ptbs-single-wrapper" style="background:#f8fafc; padding: 40px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
@@ -39,7 +44,10 @@ $param_list  = ! empty( $parameters ) ? array_filter( array_map( 'trim', explode
                 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:28px; margin-bottom:24px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
                     <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
                         <?php if ( ! empty( $code ) ) : ?>
-                            <span style="background:#eff6ff; color:#1d4ed8; font-weight:700; font-size:12px; padding:4px 10px; border-radius:6px;">TEST CODE: <?php echo esc_html( $code ); ?></span>
+                            <span style="background:#eff6ff; color:#1d4ed8; font-weight:700; font-size:12px; padding:4px 10px; border-radius:6px;">CODE: <?php echo esc_html( $code ); ?></span>
+                        <?php endif; ?>
+                        <?php if ( ! empty( $main_test_name ) ) : ?>
+                            <span style="background:#f1f5f9; color:#334155; font-weight:700; font-size:12px; padding:4px 10px; border-radius:6px;"><?php echo esc_html( $main_test_name ); ?></span>
                         <?php endif; ?>
                         <span style="background:#f0fdf4; color:#166534; font-weight:700; font-size:12px; padding:4px 10px; border-radius:6px;">ISO / NABL ACCREDITED LAB</span>
                     </div>
@@ -47,17 +55,21 @@ $param_list  = ! empty( $parameters ) ? array_filter( array_map( 'trim', explode
                     <h1 style="font-size:28px; font-weight:800; color:#0f172a; margin:0 0 16px 0; line-height:1.3;"><?php the_title(); ?></h1>
 
                     <!-- Key Metric Chips Bar -->
-                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:12px; background:#f8fafc; padding:16px; border-radius:12px; border:1px solid #f1f5f9;">
+                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:12px; background:#f8fafc; padding:16px; border-radius:12px; border:1px solid #f1f5f9;">
                         <div>
-                            <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase;">🩸 Sample Required</div>
+                            <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase;">🩸 Specimen</div>
                             <div style="font-size:14px; font-weight:600; color:#0f172a; margin-top:2px;"><?php echo esc_html( ! empty( $sample_type ) ? $sample_type : 'Blood' ); ?></div>
                         </div>
                         <div>
-                            <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase;">🍽️ Fasting Rule</div>
-                            <div style="font-size:14px; font-weight:600; color:#0f172a; margin-top:2px;"><?php echo esc_html( ! empty( $fasting_req ) ? $fasting_req : 'Not Required' ); ?></div>
+                            <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase;">🔬 Method</div>
+                            <div style="font-size:14px; font-weight:600; color:#0f172a; margin-top:2px;"><?php echo esc_html( ! empty( $method ) ? $method : 'Automated Analyzer' ); ?></div>
                         </div>
                         <div>
-                            <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase;">⏳ Report Delivery</div>
+                            <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase;">⏳ Cut Off Time</div>
+                            <div style="font-size:14px; font-weight:600; color:#0f172a; margin-top:2px;"><?php echo esc_html( ! empty( $cutoff_time ) ? $cutoff_time : '05:00 PM Daily' ); ?></div>
+                        </div>
+                        <div>
+                            <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase;">📋 Report Delivery</div>
                             <div style="font-size:14px; font-weight:600; color:#0f172a; margin-top:2px;"><?php echo esc_html( ! empty( $tat_hours ) ? $tat_hours : '24 Hours' ); ?></div>
                         </div>
                     </div>
@@ -84,14 +96,28 @@ $param_list  = ! empty( $parameters ) ? array_filter( array_map( 'trim', explode
                         <?php the_content(); ?>
                     </div>
                 </div>
+
+                <!-- FAQs Section -->
+                <?php if ( ! empty( $faqs ) ) : ?>
+                    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:28px; margin-bottom:24px;">
+                        <h3 style="font-size:20px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:14px;">❓ Frequently Asked Questions</h3>
+                        <div style="white-space:pre-line; color:#475569; font-size:14px; line-height:1.6;">
+                            <?php echo esc_html( $faqs ); ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <!-- Sticky Booking Card Sidebar -->
             <div style="position:sticky; top:100px;">
                 <div style="background:#ffffff; border:2px solid #2563eb; border-radius:16px; padding:24px; box-shadow:0 10px 30px rgba(37,99,235,0.08);">
                     <div style="font-size:12px; font-weight:700; color:#1d4ed8; text-transform:uppercase; letter-spacing:0.5px;">SPECIAL DIAGNOSTIC PRICE</div>
-                    <div style="display:flex; align-items:baseline; gap:8px; margin:8px 0 16px 0;">
+                    <div style="display:flex; align-items:baseline; gap:10px; margin:8px 0 16px 0;">
                         <span style="font-size:32px; font-weight:800; color:#16a34a;">₹<?php echo esc_html( number_format( $price, 2 ) ); ?></span>
+                        <?php if ( $mrp > $price ) : ?>
+                            <span style="text-decoration:line-through; color:#94a3b8; font-size:18px;">₹<?php echo esc_html( number_format( $mrp, 2 ) ); ?></span>
+                            <span style="background:#dcfce7; color:#15803d; font-size:12px; font-weight:700; padding:2px 8px; border-radius:12px;"><?php echo $discount_pct; ?>% OFF</span>
+                        <?php endif; ?>
                     </div>
 
                     <ul style="list-style:none; padding:0; margin:0 0 20px 0; font-size:13px; color:#475569;">
