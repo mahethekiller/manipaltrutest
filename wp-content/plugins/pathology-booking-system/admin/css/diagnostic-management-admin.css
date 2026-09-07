@@ -325,6 +325,15 @@ input:checked + .ptbs-slider:before {
     transform: translateX(20px);
 }
 
+/* Select2 Dropdown in Drawer Z-Index Fix */
+.select2-container--open {
+    z-index: 999999 !important;
+}
+
+.select2-dropdown {
+    z-index: 999999 !important;
+}
+
 /* Action Buttons */
 .ptbs-action-btn {
     background: #f1f5f9;

@@ -184,7 +184,7 @@
                     placeholder: 'Search and select options...',
                     allowClear: true,
                     width: '100%',
-                    dropdownParent: $('#ptbs_drawer_overlay')
+                    dropdownParent: $('#ptbs_drawer_body')
                 });
             }
 
