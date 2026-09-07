@@ -61,12 +61,19 @@ if ( ! is_array( $selected_subcats ) ) $selected_subcats = array();
     </div>
 </div>
 
+<?php
+$selected_conds   = $post ? wp_get_post_terms( $post->ID, 'ptbs_condition', array( 'fields' => 'ids' ) ) : array();
+$selected_centers = $post ? get_post_meta( $post->ID, '_ptbs_center_location_ids', true ) : array();
+if ( ! is_array( $selected_conds ) ) $selected_conds = array();
+if ( ! is_array( $selected_centers ) ) $selected_centers = array();
+?>
+
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-bottom:20px;">
     <div>
         <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Select Conditions', 'pathology-booking-system' ); ?></label>
         <select name="condition_ids[]" class="ptbs-select2-multi" multiple="multiple" style="width:100%;">
             <?php if ( ! empty( $conditions ) && ! is_wp_error( $conditions ) ) : foreach ( $conditions as $cond ) : ?>
-                <option value="<?php echo esc_attr( $cond->term_id ); ?>"><?php echo esc_html( $cond->name ); ?></option>
+                <option value="<?php echo esc_attr( $cond->term_id ); ?>" <?php selected( in_array( $cond->term_id, $selected_conds ) ); ?>><?php echo esc_html( $cond->name ); ?></option>
             <?php endforeach; endif; ?>
         </select>
     </div>
@@ -74,10 +81,10 @@ if ( ! is_array( $selected_subcats ) ) $selected_subcats = array();
         <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Center Location', 'pathology-booking-system' ); ?></label>
         <select name="center_location_ids[]" class="ptbs-select2-multi" multiple="multiple" style="width:100%;">
             <?php if ( ! empty( $centers ) ) : foreach ( $centers as $cp ) : ?>
-                <option value="<?php echo esc_attr( $cp->ID ); ?>"><?php echo esc_html( $cp->post_title ); ?></option>
+                <option value="<?php echo esc_attr( $cp->ID ); ?>" <?php selected( in_array( $cp->ID, $selected_centers ) ); ?>><?php echo esc_html( $cp->post_title ); ?></option>
             <?php endforeach; endif; ?>
             <?php if ( ! empty( $cities ) && ! is_wp_error( $cities ) ) : foreach ( $cities as $ct ) : ?>
-                <option value="<?php echo esc_attr( $ct->term_id ); ?>"><?php echo esc_html( $ct->name ); ?></option>
+                <option value="<?php echo esc_attr( $ct->term_id ); ?>" <?php selected( in_array( $ct->term_id, $selected_centers ) ); ?>><?php echo esc_html( $ct->name ); ?></option>
             <?php endforeach; endif; ?>
         </select>
     </div>

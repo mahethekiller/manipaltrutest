@@ -386,6 +386,7 @@ class PTBS_Admin {
             $cat_ids     = isset( $_POST['category_ids'] ) && is_array( $_POST['category_ids'] ) ? array_map( 'absint', $_POST['category_ids'] ) : array();
             $subcat_ids  = isset( $_POST['subcategory_ids'] ) && is_array( $_POST['subcategory_ids'] ) ? array_map( 'absint', $_POST['subcategory_ids'] ) : array();
             $cond_ids    = isset( $_POST['condition_ids'] ) && is_array( $_POST['condition_ids'] ) ? array_map( 'absint', $_POST['condition_ids'] ) : array();
+            $center_ids  = isset( $_POST['center_location_ids'] ) && is_array( $_POST['center_location_ids'] ) ? array_map( 'absint', $_POST['center_location_ids'] ) : array();
             $status      = sanitize_text_field( wp_unslash( $_POST['status'] ?? 'Active' ) );
 
             $post_data = array(
@@ -410,6 +411,7 @@ class PTBS_Admin {
                 update_post_meta( $post_id, '_ptbs_sample_type', $specimen );
                 update_post_meta( $post_id, '_ptbs_tat_hours', $delivery );
                 update_post_meta( $post_id, '_ptbs_status', $status );
+                update_post_meta( $post_id, '_ptbs_center_location_ids', $center_ids );
 
                 wp_set_post_terms( $post_id, $cat_ids, 'ptbs_category' );
                 wp_set_post_terms( $post_id, $subcat_ids, 'ptbs_subcategory' );
@@ -434,6 +436,7 @@ class PTBS_Admin {
             $cat_ids      = isset( $_POST['category_ids'] ) && is_array( $_POST['category_ids'] ) ? array_map( 'absint', $_POST['category_ids'] ) : array();
             $subcat_ids   = isset( $_POST['subcategory_ids'] ) && is_array( $_POST['subcategory_ids'] ) ? array_map( 'absint', $_POST['subcategory_ids'] ) : array();
             $cond_ids     = isset( $_POST['condition_ids'] ) && is_array( $_POST['condition_ids'] ) ? array_map( 'absint', $_POST['condition_ids'] ) : array();
+            $center_ids   = isset( $_POST['center_location_ids'] ) && is_array( $_POST['center_location_ids'] ) ? array_map( 'absint', $_POST['center_location_ids'] ) : array();
 
             $post_data = array(
                 'post_title'   => $pkg_title,
@@ -460,6 +463,7 @@ class PTBS_Admin {
                 update_post_meta( $post_id, '_ptbs_faqs', $faq );
                 update_post_meta( $post_id, '_ptbs_status', $status );
                 update_post_meta( $post_id, '_ptbs_linked_test_ids', $linked_tests );
+                update_post_meta( $post_id, '_ptbs_center_location_ids', $center_ids );
 
                 wp_set_post_terms( $post_id, $cat_ids, 'ptbs_category' );
                 wp_set_post_terms( $post_id, $subcat_ids, 'ptbs_subcategory' );
