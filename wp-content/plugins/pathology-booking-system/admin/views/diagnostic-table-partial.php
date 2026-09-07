@@ -16,6 +16,7 @@ $total_items = 0;
 $total_pages = 1;
 ?>
 
+<?php if ( 'sync' !== $tab ) : ?>
 <div class="ptbs-toolbar">
     <div class="ptbs-search-box">
         <span class="ptbs-search-icon">🔍</span>
@@ -32,6 +33,7 @@ $total_pages = 1;
         </select>
     </div>
 </div>
+<?php endif; ?>
 
 <div class="ptbs-table-card">
     <table class="ptbs-table">
