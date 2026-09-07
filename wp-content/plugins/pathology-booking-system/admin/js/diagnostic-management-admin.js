@@ -117,10 +117,11 @@
             });
 
             // Run Catalog Sync via AJAX
-            $(document).on('submit', '#ptbs_sync_catalog_form', function(e) {
+            $(document).on('click', '#ptbs_run_sync_btn', function(e) {
                 e.preventDefault();
-                var $btn = $('#ptbs_run_sync_btn');
-                var formData = $(this).serialize();
+                var $btn = $(this);
+                var $form = $('#ptbs_sync_catalog_form');
+                var formData = $form.serialize();
                 $btn.prop('disabled', true).text('⏳ Running Sync... Please wait...');
 
                 $.ajax({
