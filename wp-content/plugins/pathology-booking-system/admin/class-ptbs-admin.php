@@ -115,6 +115,12 @@ class PTBS_Admin {
     }
 
     public function render_diagnostic_management_page() {
+        if ( isset( $_GET['clean_existing'] ) || ( isset( $_GET['tab'] ) && 'sync' === $_GET['tab'] ) ) {
+            // Trigger importer synchronously if legacy GET request is hit
+            if ( isset( $_GET['clean_existing'] ) && class_exists( 'PTBS_Importer' ) ) {
+                PTBS_Importer::run( true );
+            }
+        }
         include PTBS_DIR_PATH . 'admin/views/diagnostic-management.php';
     }
 
