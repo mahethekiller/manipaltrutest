@@ -232,7 +232,10 @@ class PTBS_Admin {
             wp_send_json_error( array( 'message' => 'Unauthorized' ) );
         }
 
-        $tab = isset( $_POST['tab'] ) ? sanitize_key( $_POST['tab'] ) : 'category';
+        $tab      = isset( $_POST['tab'] ) ? sanitize_key( $_POST['tab'] ) : 'category';
+        $paged    = isset( $_POST['paged'] ) ? max( 1, absint( $_POST['paged'] ) ) : 1;
+        $per_page = isset( $_POST['per_page'] ) ? max( 5, absint( $_POST['per_page'] ) ) : 15;
+        $search   = isset( $_POST['search'] ) ? sanitize_text_field( wp_unslash( $_POST['search'] ) ) : '';
 
         ob_start();
         include PTBS_DIR_PATH . 'admin/views/diagnostic-table-partial.php';

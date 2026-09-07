@@ -6,7 +6,10 @@
 
     var PTBS_DiagAdmin = {
         currentTab: 'category',
+        currentPage: 1,
+        perPage: 15,
         searchQuery: '',
+        searchTimer: null,
 
         init: function() {
             var self = this;
@@ -30,11 +33,41 @@
                 var tab = $(this).data('tab');
                 if (tab) {
                     self.currentTab = tab;
+                    self.currentPage = 1;
                     window.location.hash = tab;
                     $('.ptbs-tab-btn').removeClass('active');
                     $(this).addClass('active');
                     self.loadTabContent(tab);
                 }
+            });
+
+            // Pagination Click
+            $(document).on('click', '.ptbs-page-btn', function(e) {
+                e.preventDefault();
+                if ($(this).is(':disabled')) return;
+                var page = $(this).data('page');
+                if (page) {
+                    self.currentPage = parseInt(page, 10);
+                    self.loadTabContent(self.currentTab);
+                }
+            });
+
+            // Per Page Change
+            $(document).on('change', '#ptbs_per_page_select', function() {
+                self.perPage = parseInt($(this).val(), 10);
+                self.currentPage = 1;
+                self.loadTabContent(self.currentTab);
+            });
+
+            // Search Filter Debounced
+            $(document).on('input', '#ptbs_table_search', function() {
+                var val = $(this).val();
+                clearTimeout(self.searchTimer);
+                self.searchTimer = setTimeout(function() {
+                    self.searchQuery = val;
+                    self.currentPage = 1;
+                    self.loadTabContent(self.currentTab);
+                }, 400);
             });
 
             // Open Add Drawer
@@ -82,12 +115,6 @@
                     self.deleteItem(id, type);
                 }
             });
-
-            // Search Filter
-            $(document).on('input', '#ptbs_table_search', function() {
-                self.searchQuery = $(this).val().toLowerCase();
-                self.filterTableRows();
-            });
         },
 
         loadTabContent: function(tab) {
@@ -118,7 +145,10 @@
                 data: {
                     action: 'ptbs_get_diagnostic_tab_data',
                     nonce: ptbsAdminSettings.nonce,
-                    tab: tab
+                    tab: tab,
+                    paged: self.currentPage,
+                    per_page: self.perPage,
+                    search: self.searchQuery
                 },
                 success: function(res) {
                     if (res.success) {
