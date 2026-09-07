@@ -32,6 +32,7 @@ require_header_classes();
 
 function require_header_classes() {
     require_once PTBS_DIR_PATH . 'includes/class-ptbs-db.php';
+    require_once PTBS_DIR_PATH . 'includes/class-ptbs-importer.php';
     require_once PTBS_DIR_PATH . 'includes/class-ptbs-cpt.php';
     require_once PTBS_DIR_PATH . 'includes/class-ptbs-auth.php';
     require_once PTBS_DIR_PATH . 'includes/class-ptbs-booking.php';

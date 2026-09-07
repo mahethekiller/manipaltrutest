@@ -18,17 +18,23 @@ if ( ! is_array( $linked_tests ) ) $linked_tests = array();
 ?>
 <input type="hidden" name="ptbs_action_type" value="save_package">
 
+<?php
+$selected_cats    = $post ? wp_get_post_terms( $post->ID, 'ptbs_category', array( 'fields' => 'ids' ) ) : array();
+$selected_subcats = $post ? wp_get_post_terms( $post->ID, 'ptbs_subcategory', array( 'fields' => 'ids' ) ) : array();
+if ( ! is_array( $selected_cats ) ) $selected_cats = array();
+if ( ! is_array( $selected_subcats ) ) $selected_subcats = array();
+?>
+
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-bottom:20px;">
     <div>
         <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Package Name', 'pathology-booking-system' ); ?></label>
         <input type="text" name="package_name" value="<?php echo esc_attr( $post ? $post->post_title : '' ); ?>" placeholder="<?php esc_attr_e( 'Enter here', 'pathology-booking-system' ); ?>" required style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
     </div>
     <div>
-        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Select Category', 'pathology-booking-system' ); ?></label>
-        <select name="category_id" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
-            <option value=""><?php esc_html_e( 'Select', 'pathology-booking-system' ); ?></option>
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Select Categories (Multi-Select)', 'pathology-booking-system' ); ?></label>
+        <select name="category_ids[]" class="ptbs-select2-multi" multiple="multiple" style="width:100%;">
             <?php if ( ! empty( $categories ) && ! is_wp_error( $categories ) ) : foreach ( $categories as $c ) : ?>
-                <option value="<?php echo esc_attr( $c->term_id ); ?>"><?php echo esc_html( $c->name ); ?></option>
+                <option value="<?php echo esc_attr( $c->term_id ); ?>" <?php selected( in_array( $c->term_id, $selected_cats ) ); ?>><?php echo esc_html( $c->name ); ?></option>
             <?php endforeach; endif; ?>
         </select>
     </div>
@@ -37,7 +43,7 @@ if ( ! is_array( $linked_tests ) ) $linked_tests = array();
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-bottom:20px;">
     <div>
         <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Tests Involved', 'pathology-booking-system' ); ?></label>
-        <select name="linked_test_ids[]" id="ptbs_package_tests_select2" multiple="multiple" class="regular-text" style="width:100%;">
+        <select name="linked_test_ids[]" class="ptbs-select2-multi" multiple="multiple" style="width:100%;">
             <?php if ( ! empty( $all_tests ) ) : foreach ( $all_tests as $t ) : ?>
                 <option value="<?php echo esc_attr( $t->ID ); ?>" <?php selected( in_array( $t->ID, $linked_tests ) ); ?>>
                     <?php echo esc_html( $t->post_title ); ?>
@@ -46,11 +52,10 @@ if ( ! is_array( $linked_tests ) ) $linked_tests = array();
         </select>
     </div>
     <div>
-        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Select Sub Category', 'pathology-booking-system' ); ?></label>
-        <select name="subcategory_id" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
-            <option value=""><?php esc_html_e( 'Select', 'pathology-booking-system' ); ?></option>
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Select Sub Categories (Multi-Select)', 'pathology-booking-system' ); ?></label>
+        <select name="subcategory_ids[]" class="ptbs-select2-multi" multiple="multiple" style="width:100%;">
             <?php if ( ! empty( $subcategories ) && ! is_wp_error( $subcategories ) ) : foreach ( $subcategories as $sc ) : ?>
-                <option value="<?php echo esc_attr( $sc->term_id ); ?>"><?php echo esc_html( $sc->name ); ?></option>
+                <option value="<?php echo esc_attr( $sc->term_id ); ?>" <?php selected( in_array( $sc->term_id, $selected_subcats ) ); ?>><?php echo esc_html( $sc->name ); ?></option>
             <?php endforeach; endif; ?>
         </select>
     </div>
