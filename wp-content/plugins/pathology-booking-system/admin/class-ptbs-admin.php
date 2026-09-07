@@ -31,6 +31,7 @@ class PTBS_Admin {
         add_action( 'wp_ajax_ptbs_save_diagnostic_item', array( $this, 'ajax_save_diagnostic_item' ) );
         add_action( 'wp_ajax_ptbs_toggle_diagnostic_status', array( $this, 'ajax_toggle_diagnostic_status' ) );
         add_action( 'wp_ajax_ptbs_delete_diagnostic_item', array( $this, 'ajax_delete_diagnostic_item' ) );
+        add_action( 'wp_ajax_ptbs_run_catalog_sync', array( $this, 'ajax_run_catalog_sync' ) );
     }
 
     public function register_admin_menus() {
@@ -530,5 +531,26 @@ class PTBS_Admin {
         }
 
         wp_send_json_error( array( 'message' => 'Invalid delete request.' ) );
+    }
+
+    public function ajax_run_catalog_sync() {
+        check_ajax_referer( 'ptbs_diag_ajax_nonce', 'nonce' );
+
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_send_json_error( array( 'message' => 'Unauthorized' ) );
+        }
+
+        $fresh = ! empty( $_POST['clean_existing'] );
+
+        if ( class_exists( 'PTBS_Importer' ) ) {
+            $result = PTBS_Importer::run( $fresh );
+            if ( ! empty( $result['success'] ) ) {
+                wp_send_json_success( array( 'message' => $result['message'] ) );
+            } else {
+                wp_send_json_error( array( 'message' => $result['message'] ?? 'Sync failed.' ) );
+            }
+        } else {
+            wp_send_json_error( array( 'message' => 'PTBS_Importer class not found.' ) );
+        }
     }
 }

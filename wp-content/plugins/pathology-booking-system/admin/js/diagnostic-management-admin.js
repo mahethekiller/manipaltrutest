@@ -115,6 +115,33 @@
                     self.deleteItem(id, type);
                 }
             });
+
+            // Run Catalog Sync via AJAX
+            $(document).on('submit', '#ptbs_sync_catalog_form', function(e) {
+                e.preventDefault();
+                var $btn = $('#ptbs_run_sync_btn');
+                var formData = $(this).serialize();
+                $btn.prop('disabled', true).text('⏳ Running Sync... Please wait...');
+
+                $.ajax({
+                    url: ptbsAdminSettings.ajaxurl,
+                    type: 'POST',
+                    data: formData + '&action=ptbs_run_catalog_sync&nonce=' + ptbsAdminSettings.nonce,
+                    success: function(res) {
+                        $btn.prop('disabled', false).text('⚡ Run High-Performance Catalog Sync Now');
+                        if (res.success) {
+                            self.showToast('success', res.data.message);
+                            self.loadTabContent('sync');
+                        } else {
+                            self.showToast('error', res.data.message || 'Sync failed.');
+                        }
+                    },
+                    error: function() {
+                        $btn.prop('disabled', false).text('⚡ Run High-Performance Catalog Sync Now');
+                        self.showToast('error', 'Server timeout or error during catalog sync.');
+                    }
+                });
+            });
         },
 
         loadTabContent: function(tab) {
