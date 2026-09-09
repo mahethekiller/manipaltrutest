@@ -16,3 +16,7 @@
   - Enforce nonces (`wp_verify_nonce()`, `check_ajax_referer()`) and capability checks (`current_user_can()`).
   - Use `$wpdb->prepare()` for dynamic SQL queries.
 - **Prohibited Practices**: No code obfuscation, no `eval()`, no dynamic external code execution, and no non-consensual telemetry.
+
+## 3. UI Iconography Directive
+- **FontAwesome Iconography**: NEVER use generic Unicode emojis or raw text arrows/symbols in frontend or admin UI elements (e.g. 🩺, 🛒, 👁️, ↗, ‹, ›). ALWAYS use standard FontAwesome icons (`<i class="fas fa-..."></i>` or `<i class="far fa-..."></i>`).
+

@@ -63,6 +63,7 @@ class PTBS_Public {
 
     public function enqueue_frontend_assets() {
         wp_enqueue_style( 'ptbs-public-css', PTBS_DIR_URL . 'public/css/ptbs-public.css', array(), time() );
+        wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0' );
         wp_enqueue_style( 'slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1' );
         wp_enqueue_style( 'slick-carousel-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array( 'slick-carousel' ), '1.8.1' );
 
@@ -1288,7 +1289,7 @@ class PTBS_Public {
                 <?php if ( 'yes' === $atts['show_view_all'] ) : ?>
                     <div>
                         <a href="<?php echo esc_url( $atts['view_all_url'] ); ?>" style="border:1px solid #cbd5e1; border-radius:20px; padding:8px 20px; font-size:12px; font-weight:800; color:#0f172a; text-decoration:none; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px; background:#fff; transition:all 0.2s;">
-                            VIEW ALL ↗
+                            VIEW ALL <i class="fas fa-arrow-right" style="font-size:11px;"></i>
                         </a>
                     </div>
                 <?php endif; ?>
@@ -1326,7 +1327,7 @@ class PTBS_Public {
                                     <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $pkg->post_title ); ?>" style="width:100%; height:100%; object-fit:cover;">
                                 <?php else : ?>
                                     <div style="width:100%; height:100%; background:linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); display:flex; align-items:center; justify-content:center; font-size:48px; color:#0284c7;">
-                                        🩺
+                                        <i class="fas fa-notes-medical"></i>
                                     </div>
                                 <?php endif; ?>
 
@@ -1367,11 +1368,11 @@ class PTBS_Public {
                                     </div>
 
                                     <div style="display:flex; gap:10px;">
-                                        <button type="button" class="ptbs-add-to-cart-btn" data-id="<?php echo esc_attr( $pid ); ?>" data-type="package" data-title="<?php echo esc_attr( $pkg->post_title ); ?>" data-price="<?php echo esc_attr( $price ); ?>" style="flex:1; background:#0284c7; color:#fff; border:none; padding:12px 14px; border-radius:10px; font-size:13px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; transition:background 0.2s;">
-                                            🛒 ADD TO CART
+                                        <button type="button" class="ptbs-add-to-cart-btn" data-id="<?php echo esc_attr( $pid ); ?>" data-type="package" data-title="<?php echo esc_attr( $pkg->post_title ); ?>" data-price="<?php echo esc_attr( $price ); ?>" style="flex:1; background:#0284c7; color:#fff; border:none; padding:12px 14px; border-radius:10px; font-size:13px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; transition:background 0.2s;">
+                                            <i class="fas fa-shopping-cart"></i> ADD TO CART
                                         </button>
                                         <a href="<?php echo esc_url( $permalink ); ?>" style="background:#f1f5f9; color:#0f172a; padding:12px 16px; border-radius:10px; font-size:13px; font-weight:800; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px;">
-                                            👁️ VIEW
+                                            <i class="fas fa-eye"></i> VIEW
                                         </a>
                                     </div>
                                 </div>
@@ -1399,8 +1400,8 @@ class PTBS_Public {
                     $('#<?php echo esc_js( $slider_id ); ?>').slick({
                         dots: false,
                         arrows: true,
-                        prevArrow: '<button type="button" class="slick-prev ptbs-slick-arrow" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>',
-                        nextArrow: '<button type="button" class="slick-next ptbs-slick-arrow" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>',
+                        prevArrow: '<button type="button" class="slick-prev ptbs-slick-arrow" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>',
+                        nextArrow: '<button type="button" class="slick-next ptbs-slick-arrow" aria-label="Next"><i class="fas fa-chevron-right"></i></button>',
                         infinite: true,
                         speed: 500,
                         slidesToShow: <?php echo esc_js( $cols ); ?>,
