@@ -84,5 +84,50 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <li>The patient will immediately see the <strong>Download PDF Report</strong> button inside their Patient Portal (`[pathology_patient_dashboard]`).</li>
             </ol>
         </div>
+
+        <!-- Step 6: Overriding Default Page Templates -->
+        <div class="ptbs-card ptbs-card-full">
+            <h2>6. 🎨 Overriding Default Page Templates in Themes / Child Themes</h2>
+            <p><?php esc_html_e( 'You can easily customize and override any default page template by copying template files into your active theme or child theme (e.g. ekko-child/pathology-booking-system/):', 'pathology-booking-system' ); ?></p>
+            <table class="widefat striped" style="margin-top:12px;">
+                <thead>
+                    <tr>
+                        <th><?php esc_html_e( 'Template File Name', 'pathology-booking-system' ); ?></th>
+                        <th><?php esc_html_e( 'Child Theme Override Path', 'pathology-booking-system' ); ?></th>
+                        <th><?php esc_html_e( 'Purpose', 'pathology-booking-system' ); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>single-ptbs_test.php</code></td>
+                        <td><code>ekko-child/pathology-booking-system/single-ptbs_test.php</code></td>
+                        <td><?php esc_html_e( 'Single Pathology Test detail page', 'pathology-booking-system' ); ?></td>
+                    </tr>
+                    <tr>
+                        <td><code>single-ptbs_package.php</code></td>
+                        <td><code>ekko-child/pathology-booking-system/single-ptbs_package.php</code></td>
+                        <td><?php esc_html_e( 'Single Health Package detail page', 'pathology-booking-system' ); ?></td>
+                    </tr>
+                    <tr>
+                        <td><code>single-ptbs_center_location.php</code></td>
+                        <td><code>ekko-child/pathology-booking-system/single-ptbs_center_location.php</code></td>
+                        <td><?php esc_html_e( 'Single Lab Center Location page with address, hours, and available tests', 'pathology-booking-system' ); ?></td>
+                    </tr>
+                    <tr>
+                        <td><code>taxonomy-ptbs_category.php</code></td>
+                        <td><code>ekko-child/pathology-booking-system/taxonomy-ptbs_category.php</code></td>
+                        <td><?php esc_html_e( 'Category & Subcategory archive pages', 'pathology-booking-system' ); ?></td>
+                    </tr>
+                    <tr>
+                        <td><code>archive-ptbs_test.php</code></td>
+                        <td><code>ekko-child/pathology-booking-system/archive-ptbs_test.php</code></td>
+                        <td><?php esc_html_e( 'Main Lab Tests & Packages catalog archive page', 'pathology-booking-system' ); ?></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top:16px; font-size:13px; color:#64748b;">
+                💡 <strong>Developer Filter Hook</strong>: You can also intercept template location dynamically using <code>add_filter('ptbs_locate_template', 'my_custom_template_fn', 10, 3);</code>.
+            </p>
+        </div>
     </div>
 </div>

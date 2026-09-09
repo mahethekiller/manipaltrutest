@@ -43,24 +43,15 @@ class PTBS_Public {
         global $post;
 
         if ( $post && 'ptbs_test' === $post->post_type ) {
-            $template_file = PTBS_DIR_PATH . 'public/templates/single-ptbs_test.php';
-            if ( file_exists( $template_file ) ) {
-                return $template_file;
-            }
+            return PTBS_Template_Loader::locate_template( 'single-ptbs_test.php' );
         }
 
         if ( $post && 'ptbs_package' === $post->post_type ) {
-            $template_file = PTBS_DIR_PATH . 'public/templates/single-ptbs_package.php';
-            if ( file_exists( $template_file ) ) {
-                return $template_file;
-            }
+            return PTBS_Template_Loader::locate_template( 'single-ptbs_package.php' );
         }
 
         if ( $post && 'ptbs_center_location' === $post->post_type ) {
-            $template_file = PTBS_DIR_PATH . 'public/templates/single-ptbs_center_location.php';
-            if ( file_exists( $template_file ) ) {
-                return $template_file;
-            }
+            return PTBS_Template_Loader::locate_template( 'single-ptbs_center_location.php' );
         }
 
         return $single_template;
