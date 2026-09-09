@@ -518,7 +518,7 @@
     border-color: #e2e8f0 !important;
 }
 
-.ptbs-cat-card:hover .ptbs-cat-circle-icon {
+.ptbs-cat-card:hover .ptbs-cat-icon-wrap {
     transform: scale(1.08);
 }
 

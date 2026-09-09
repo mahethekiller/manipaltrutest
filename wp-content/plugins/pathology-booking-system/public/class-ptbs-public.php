@@ -1536,10 +1536,10 @@ class PTBS_Public {
                     <div style="<?php echo ( 'carousel' === $mode ) ? 'padding:0 10px;' : ''; ?>">
                         <a href="<?php echo esc_url( $tlink ); ?>" class="ptbs-cat-card" style="background:#ffffff; border:1px solid #f1f5f9; border-radius:20px; box-shadow:0 4px 18px rgba(0,0,0,0.03); padding:32px 18px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; transition:all 0.25s ease; text-decoration:none;">
                             
-                            <!-- Circle Image/SVG Badge -->
-                            <div class="ptbs-cat-circle-icon" style="width:86px; height:86px; border-radius:50%; background:<?php echo esc_attr( $bg_color ); ?>; display:flex; align-items:center; justify-content:center; margin-bottom:20px; border:2px solid #ffffff; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:transform 0.25s ease; overflow:hidden;">
+                            <!-- Direct Image / SVG Icon (No Outer Circle Div) -->
+                            <div class="ptbs-cat-icon-wrap" style="width:76px; height:76px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; transition:transform 0.25s ease;">
                                 <?php if ( ! empty( $img_url ) ) : ?>
-                                    <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $tname ); ?>" style="width:48px; height:48px; object-fit:contain;">
+                                    <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $tname ); ?>" style="max-width:100%; max-height:100%; object-fit:contain;">
                                 <?php else : ?>
                                     <?php echo $svg_icon; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                 <?php endif; ?>
