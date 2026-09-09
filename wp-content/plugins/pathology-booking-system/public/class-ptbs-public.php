@@ -1272,24 +1272,24 @@ class PTBS_Public {
             <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:28px; flex-wrap:wrap; gap:16px;">
                 <div>
                     <?php if ( ! empty( $atts['sub_heading'] ) ) : ?>
-                        <span style="color:#0284c7; font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; display:block; margin-bottom:4px;">
+                        <span style="color:#0056b3; font-size:13px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; display:block; margin-bottom:6px;">
                             <?php echo esc_html( $atts['sub_heading'] ); ?>
                         </span>
                     <?php endif; ?>
                     <?php if ( ! empty( $atts['title'] ) ) : ?>
-                        <h2 style="font-size:32px; font-weight:800; color:#0f172a; margin:0 0 6px 0; line-height:1.2;">
+                        <h2 style="font-size:36px; font-weight:800; color:#0b192c; margin:0 0 6px 0; line-height:1.2;">
                             <?php echo esc_html( $atts['title'] ); ?>
                         </h2>
                     <?php endif; ?>
                     <?php if ( ! empty( $atts['description'] ) ) : ?>
-                        <p style="font-size:15px; color:#64748b; margin:0;"><?php echo esc_html( $atts['description'] ); ?></p>
+                        <p style="font-size:14px; color:#64748b; margin:0;"><?php echo esc_html( $atts['description'] ); ?></p>
                     <?php endif; ?>
                 </div>
 
                 <?php if ( 'yes' === $atts['show_view_all'] ) : ?>
                     <div>
-                        <a href="<?php echo esc_url( $atts['view_all_url'] ); ?>" style="border:1px solid #cbd5e1; border-radius:20px; padding:8px 20px; font-size:12px; font-weight:800; color:#0f172a; text-decoration:none; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px; background:#fff; transition:all 0.2s;">
-                            VIEW ALL <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+                        <a href="<?php echo esc_url( $atts['view_all_url'] ); ?>" style="border:1px solid #cbd5e1; border-radius:20px; padding:8px 20px; font-size:11px; font-weight:800; color:#334155; text-decoration:none; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px; background:#fff; transition:all 0.2s;">
+                            VIEW ALL <i class="fas fa-arrow-up-right-from-square" style="font-size:10px;"></i>
                         </a>
                     </div>
                 <?php endif; ?>
@@ -1307,24 +1307,34 @@ class PTBS_Public {
                     $pid            = $pkg->ID;
                     $price          = get_post_meta( $pid, '_ptbs_price', true );
                     $mrp            = get_post_meta( $pid, '_ptbs_mrp', true );
-                    $badge_text     = get_post_meta( $pid, '_ptbs_badge_text', true ) ?: ( ( $price < 1500 ) ? 'MOST POPULAR' : ( ( $price < 3000 ) ? 'BEST VALUE' : 'ADVANCED' ) );
-                    $badge_color    = get_post_meta( $pid, '_ptbs_badge_color', true ) ?: '#22c55e';
-                    $subtitle       = get_post_meta( $pid, '_ptbs_subtitle', true ) ?: 'Complete Wellness Package';
+                    $badge_text     = get_post_meta( $pid, '_ptbs_badge_text', true );
+                    if ( empty( $badge_text ) ) {
+                        $badge_text = ( $price < 1200 ) ? 'MOST POPULAR' : ( ( $price < 2000 ) ? 'BEST VALUE' : ( ( $price < 3000 ) ? 'ESSENTIAL' : 'ADVANCED' ) );
+                    }
+                    $badge_color    = get_post_meta( $pid, '_ptbs_badge_color', true );
+                    if ( empty( $badge_color ) ) {
+                        if ( 'MOST POPULAR' === strtoupper( $badge_text ) )     { $badge_color = '#34d399'; }
+                        elseif ( 'BEST VALUE' === strtoupper( $badge_text ) )  { $badge_color = '#3b82f6'; }
+                        elseif ( 'ESSENTIAL' === strtoupper( $badge_text ) )   { $badge_color = '#f59e0b'; }
+                        elseif ( 'ADVANCED' === strtoupper( $badge_text ) )    { $badge_color = '#8b5cf6'; }
+                        else { $badge_color = '#0056b3'; }
+                    }
+                    $subtitle       = get_post_meta( $pid, '_ptbs_subtitle', true ) ?: 'Complete Health Checkup';
                     $gender_rec     = get_post_meta( $pid, '_ptbs_gender_recommendation', true ) ?: 'Recommended for Male & Female';
-                    $params_count   = get_post_meta( $pid, '_ptbs_parameters_count', true ) ?: 50;
+                    $params_count   = get_post_meta( $pid, '_ptbs_parameters_count', true ) ?: 54;
                     $linked_tests   = get_post_meta( $pid, '_ptbs_linked_test_ids', true );
                     if ( ! is_array( $linked_tests ) ) $linked_tests = @unserialize( $linked_tests );
-                    $tests_count    = is_array( $linked_tests ) ? count( $linked_tests ) : 20;
+                    $tests_count    = is_array( $linked_tests ) ? count( $linked_tests ) : 21;
                     $img_url        = get_the_post_thumbnail_url( $pid, 'medium_large' );
                     $permalink      = get_permalink( $pid );
                 ?>
                     <div style="<?php echo ( 'carousel' === $mode ) ? 'padding:0 10px;' : ''; ?>">
-                        <div class="ptbs-pkg-card" style="background:#fff; border:1px solid #e2e8f0; border-radius:18px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.04); display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                        <div class="ptbs-pkg-card" style="background:#fff; border:1px solid #e2e8f0; border-radius:20px; overflow:hidden; box-shadow:0 4px 18px rgba(0,0,0,0.03); display:flex; flex-direction:column; justify-content:space-between; height:100%;">
                             
                             <!-- Card Header Image & Badge -->
-                            <div style="position:relative; width:100%; height:190px; background:#f1f5f9; overflow:hidden;">
+                            <div style="position:relative; width:100%; height:200px; background:#f1f5f9; overflow:hidden;">
                                 <?php if ( $img_url ) : ?>
-                                    <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $pkg->post_title ); ?>" style="width:100%; height:100%; object-fit:cover;">
+                                    <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $pkg->post_title ); ?>" style="width:100%; height:100%; object-fit:cover; border-top-left-radius:20px; border-top-right-radius:20px;">
                                 <?php else : ?>
                                     <div style="width:100%; height:100%; background:linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); display:flex; align-items:center; justify-content:center; font-size:48px; color:#0284c7;">
                                         <i class="fas fa-notes-medical"></i>
@@ -1332,27 +1342,27 @@ class PTBS_Public {
                                 <?php endif; ?>
 
                                 <?php if ( ! empty( $badge_text ) ) : ?>
-                                    <div style="position:absolute; top:14px; left:14px; background:<?php echo esc_attr( $badge_color ); ?>; color:#fff; font-size:11px; font-weight:800; padding:5px 12px; border-radius:12px; text-transform:uppercase; letter-spacing:0.5px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+                                    <div style="position:absolute; top:14px; left:14px; background:<?php echo esc_attr( $badge_color ); ?>; color:#fff; font-size:10px; font-weight:800; padding:6px 14px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
                                         <?php echo esc_html( $badge_text ); ?>
                                     </div>
                                 <?php endif; ?>
                             </div>
 
                             <!-- Card Body Content -->
-                            <div style="padding:20px; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+                            <div style="padding:22px 20px; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
                                 <div>
-                                    <h3 style="font-size:18px; font-weight:800; color:#0f172a; margin:0 0 4px 0; line-height:1.3;">
+                                    <h3 style="font-size:19px; font-weight:800; color:#0b192c; margin:0 0 4px 0; line-height:1.3;">
                                         <a href="<?php echo esc_url( $permalink ); ?>" style="color:inherit; text-decoration:none;"><?php echo esc_html( $pkg->post_title ); ?></a>
                                     </h3>
-                                    <p style="font-size:13px; color:#64748b; margin:0 0 16px 0;"><?php echo esc_html( $subtitle ); ?></p>
+                                    <p style="font-size:13px; color:#94a3b8; margin:0 0 16px 0;"><?php echo esc_html( $subtitle ); ?></p>
                                 </div>
 
                                 <div>
-                                    <div style="border-top:1px solid #f1f5f9; padding-top:12px; margin-bottom:12px;">
+                                    <div style="border-top:1px solid #f1f5f9; padding-top:14px; margin-bottom:14px;">
                                         <div style="font-size:13px; font-weight:700; color:#1e293b;">
                                             <?php echo esc_html( $params_count ); ?> Parameters • <?php echo esc_html( $tests_count ); ?> Tests
                                         </div>
-                                        <div style="font-size:12px; font-weight:600; color:#0284c7; margin-top:4px;">
+                                        <div style="font-size:12px; font-weight:600; color:#2563eb; margin-top:4px;">
                                             <?php echo esc_html( $gender_rec ); ?>
                                         </div>
                                     </div>
@@ -1360,19 +1370,19 @@ class PTBS_Public {
                                     <!-- Price & CTA Buttons -->
                                     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
                                         <div>
-                                            <span style="font-size:22px; font-weight:800; color:#0f172a;">₹ <?php echo esc_html( number_format( floatval( $price ) ) ); ?></span>
+                                            <span style="font-size:24px; font-weight:800; color:#0056b3;">₹ <?php echo esc_html( number_format( floatval( $price ) ) ); ?></span>
                                             <?php if ( $mrp > $price ) : ?>
-                                                <span style="font-size:13px; color:#94a3b8; text-decoration:line-through; margin-left:6px;">₹ <?php echo esc_html( number_format( floatval( $mrp ) ) ); ?></span>
+                                                <span style="font-size:13px; color:#cbd5e1; text-decoration:line-through; margin-left:8px;">₹ <?php echo esc_html( number_format( floatval( $mrp ) ) ); ?></span>
                                             <?php endif; ?>
                                         </div>
                                     </div>
 
                                     <div style="display:flex; gap:10px;">
-                                        <button type="button" class="ptbs-add-to-cart-btn" data-id="<?php echo esc_attr( $pid ); ?>" data-type="package" data-title="<?php echo esc_attr( $pkg->post_title ); ?>" data-price="<?php echo esc_attr( $price ); ?>" style="flex:1; background:#0284c7; color:#fff; border:none; padding:12px 14px; border-radius:10px; font-size:13px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; transition:background 0.2s;">
-                                            <i class="fas fa-shopping-cart"></i> ADD TO CART
+                                        <button type="button" class="ptbs-add-to-cart-btn ptbs-add-to-cart" data-id="<?php echo esc_attr( $pid ); ?>" data-type="package" data-title="<?php echo esc_attr( $pkg->post_title ); ?>" data-price="<?php echo esc_attr( $price ); ?>" style="flex:1.2; background:#0056b3; color:#fff; border:none; padding:12px 14px; border-radius:10px; font-size:12px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; transition:background 0.2s;">
+                                            <i class="fas fa-shopping-bag"></i> ADD TO CART
                                         </button>
-                                        <a href="<?php echo esc_url( $permalink ); ?>" style="background:#f1f5f9; color:#0f172a; padding:12px 16px; border-radius:10px; font-size:13px; font-weight:800; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px;">
-                                            <i class="fas fa-eye"></i> VIEW
+                                        <a href="<?php echo esc_url( $permalink ); ?>" class="ptbs-view-btn" style="background:#f1f5f9; color:#334155; padding:12px 18px; border-radius:10px; font-size:12px; font-weight:800; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px;">
+                                            <i class="far fa-dot-circle"></i> VIEW
                                         </a>
                                     </div>
                                 </div>
@@ -1400,8 +1410,8 @@ class PTBS_Public {
                     $('#<?php echo esc_js( $slider_id ); ?>').slick({
                         dots: false,
                         arrows: true,
-                        prevArrow: '<button type="button" class="slick-prev ptbs-slick-arrow" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>',
-                        nextArrow: '<button type="button" class="slick-next ptbs-slick-arrow" aria-label="Next"><i class="fas fa-chevron-right"></i></button>',
+                        prevArrow: '<button type="button" class="slick-prev ptbs-slick-arrow" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>',
+                        nextArrow: '<button type="button" class="slick-next ptbs-slick-arrow" aria-label="Next"><i class="fas fa-arrow-right"></i></button>',
                         infinite: true,
                         speed: 500,
                         slidesToShow: <?php echo esc_js( $cols ); ?>,

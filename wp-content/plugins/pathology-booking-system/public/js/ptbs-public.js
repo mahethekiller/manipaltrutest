@@ -374,21 +374,23 @@ jQuery(document).ready(function($) {
     }
 
     // Add To Cart Handler for pre-rendered and AJAX cards
-    $(document).on('click', '.ptbs-add-to-cart', function() {
+    $(document).on('click', '.ptbs-add-to-cart, .ptbs-add-to-cart-btn', function(e) {
+        e.preventDefault();
+        const $btn = $(this);
         const item = {
-            id: $(this).data('id'),
-            type: $(this).data('type'),
-            title: $(this).data('title'),
-            price: parseFloat($(this).data('price'))
+            id: $btn.data('id'),
+            type: $btn.data('type') || 'package',
+            title: $btn.data('title'),
+            price: parseFloat($btn.data('price'))
         };
 
-        const index = cart.findIndex(i => i.id === item.id && i.type === item.type);
+        const index = cart.findIndex(i => i.id == item.id && i.type === item.type);
         if (index === -1) {
             cart.push(item);
-            $(this).text(item.type === 'package' ? 'Package Added ✓' : 'Added ✓').removeClass('ptbs-btn-primary').addClass('ptbs-btn-outline');
+            $btn.html('<i class="fas fa-check"></i> ADDED ✓').css('background', '#16a34a');
         } else {
             cart.splice(index, 1);
-            $(this).text(item.type === 'package' ? 'Add Package' : 'Add').removeClass('ptbs-btn-outline').addClass('ptbs-btn-primary');
+            $btn.html('<i class="fas fa-shopping-bag"></i> ADD TO CART').css('background', '#0056b3');
         }
         updateCartBadge();
     });
