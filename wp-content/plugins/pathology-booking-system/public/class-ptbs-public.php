@@ -1321,12 +1321,12 @@ class PTBS_Public {
                         elseif ( 'ADVANCED' === strtoupper( $badge_text ) )    { $badge_color = '#8b5cf6'; }
                         else { $badge_color = '#0056b3'; }
                     }
-                    $subtitle       = get_post_meta( $pid, '_ptbs_subtitle', true ) ?: 'Complete Health Checkup';
-                    $gender_rec     = get_post_meta( $pid, '_ptbs_gender_recommendation', true ) ?: 'Recommended for Male & Female';
-                    $params_count   = get_post_meta( $pid, '_ptbs_parameters_count', true ) ?: 54;
+                    $subtitle       = get_post_meta( $pid, '_ptbs_subtitle', true );
+                    $gender_rec     = get_post_meta( $pid, '_ptbs_gender_recommendation', true );
+                    $params_count   = get_post_meta( $pid, '_ptbs_parameters_count', true );
                     $linked_tests   = get_post_meta( $pid, '_ptbs_linked_test_ids', true );
-                    if ( ! is_array( $linked_tests ) ) $linked_tests = @unserialize( $linked_tests );
-                    $tests_count    = is_array( $linked_tests ) ? count( $linked_tests ) : 21;
+                    if ( ! is_array( $linked_tests ) ) { $linked_tests = @unserialize( $linked_tests ); }
+                    $tests_count    = is_array( $linked_tests ) && ! empty( $linked_tests ) ? count( $linked_tests ) : 0;
                     $img_url        = get_the_post_thumbnail_url( $pid, 'medium_large' );
                     $permalink      = get_permalink( $pid );
                 ?>
@@ -1356,18 +1356,35 @@ class PTBS_Public {
                                     <h3 style="font-size:19px; font-weight:800; color:#0b192c; margin:0 0 4px 0; line-height:1.3;">
                                         <a href="<?php echo esc_url( $permalink ); ?>" style="color:inherit; text-decoration:none;"><?php echo esc_html( $pkg->post_title ); ?></a>
                                     </h3>
-                                    <p style="font-size:13px; color:#94a3b8; margin:0 0 16px 0;"><?php echo esc_html( $subtitle ); ?></p>
+                                    <?php if ( ! empty( $subtitle ) ) : ?>
+                                        <p style="font-size:13px; color:#94a3b8; margin:0 0 16px 0;"><?php echo esc_html( $subtitle ); ?></p>
+                                    <?php endif; ?>
                                 </div>
 
                                 <div>
-                                    <div style="border-top:1px solid #f1f5f9; padding-top:14px; margin-bottom:14px;">
-                                        <div style="font-size:13px; font-weight:700; color:#1e293b;">
-                                            <?php echo esc_html( $params_count ); ?> Parameters • <?php echo esc_html( $tests_count ); ?> Tests
+                                    <?php 
+                                    $meta_parts = array();
+                                    if ( ! empty( $params_count ) ) {
+                                        $meta_parts[] = absint( $params_count ) . ' Parameters';
+                                    }
+                                    if ( $tests_count > 0 ) {
+                                        $meta_parts[] = $tests_count . ' Tests';
+                                    }
+                                    ?>
+                                    <?php if ( ! empty( $meta_parts ) || ! empty( $gender_rec ) ) : ?>
+                                        <div style="border-top:1px solid #f1f5f9; padding-top:14px; margin-bottom:14px;">
+                                            <?php if ( ! empty( $meta_parts ) ) : ?>
+                                                <div style="font-size:13px; font-weight:700; color:#1e293b;">
+                                                    <?php echo esc_html( implode( ' • ', $meta_parts ) ); ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if ( ! empty( $gender_rec ) ) : ?>
+                                                <div style="font-size:12px; font-weight:600; color:#2563eb; margin-top:4px;">
+                                                    <?php echo esc_html( $gender_rec ); ?>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
-                                        <div style="font-size:12px; font-weight:600; color:#2563eb; margin-top:4px;">
-                                            <?php echo esc_html( $gender_rec ); ?>
-                                        </div>
-                                    </div>
+                                    <?php endif; ?>
 
                                     <!-- Price & CTA Buttons -->
                                     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
