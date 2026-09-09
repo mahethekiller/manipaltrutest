@@ -1464,13 +1464,26 @@ class PTBS_Public {
 
         $slider_id = 'ptbs-cat-slider-' . uniqid();
 
-        // Default icon presets matching reference image
+        // Default medical SVG presets matching reference image
+        $fallback_svgs = array(
+            // Heart Test
+            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5v14"/><path d="M8 11h8"/></svg>',
+            // Kidney Test
+            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 0 9-9c0-2.5-1-4-2.5-4.5S15.5 9 14 9c-1.5 0-2.5 1-2.5 2.5s1 2.5 2.5 2.5c2 0 3-1 3-3"/><path d="M12 21a9 9 0 0 1-9-9c0-2.5 1-4 2.5-4.5S8.5 9 10 9c1.5 0 2.5 1 2.5 2.5s-1 2.5-2.5 2.5c-2 0-3-1-3-3"/></svg>',
+            // Vitamin D
+            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M10 10 6.5 6.5"/><path d="m14 10 3.5-3.5"/><path d="m14 14 3.5 3.5"/><path d="M10 14 6.5 17.5"/></svg>',
+            // Thyroid Profile
+            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a6 6 0 0 0 12 0V3"/><path d="M4 6h16"/><path d="M12 15v6"/></svg>',
+            // Liver Function
+            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="12" r="3"/></svg>',
+        );
+
         $fallback_presets = array(
-            array( 'icon' => 'fas fa-heartbeat',     'bg' => '#e0f2fe', 'color' => '#0284c7', 'sub' => 'ECG, Troponin, CK-MB' ),
-            array( 'icon' => 'fas fa-vial',          'bg' => '#dcfce7', 'color' => '#16a34a', 'sub' => 'Creatinine, Urea, eGFR' ),
-            array( 'icon' => 'fas fa-atom',          'bg' => '#f3e8ff', 'color' => '#9333ea', 'sub' => '25 OH Vitamin D' ),
-            array( 'icon' => 'fas fa-notes-medical', 'bg' => '#fce7f3', 'color' => '#db2777', 'sub' => 'T3, T4, TSH' ),
-            array( 'icon' => 'fas fa-dna',           'bg' => '#ffedd5', 'color' => '#ea580c', 'sub' => 'LFT, SGOT, SGPT' ),
+            array( 'bg' => '#e0f2fe', 'sub' => 'ECG, Troponin, CK-MB' ),
+            array( 'bg' => '#dcfce7', 'sub' => 'Creatinine, Urea, eGFR' ),
+            array( 'bg' => '#f3e8ff', 'sub' => '25 OH Vitamin D' ),
+            array( 'bg' => '#fce7f3', 'sub' => 'T3, T4, TSH' ),
+            array( 'bg' => '#ffedd5', 'sub' => 'LFT, SGOT, SGPT' ),
         );
 
         ob_start();
@@ -1508,22 +1521,28 @@ class PTBS_Public {
                         if ( is_wp_error( $tlink ) ) { $tlink = '#'; }
                         
                         $preset    = $fallback_presets[ $idx % count( $fallback_presets ) ];
-                        $meta_icon = get_term_meta( $tid, '_ptbs_term_icon', true );
+                        $svg_icon  = $fallback_svgs[ $idx % count( $fallback_svgs ) ];
+                        
+                        $image_id  = get_term_meta( $tid, '_ptbs_image_id', true );
+                        $img_url   = $image_id ? wp_get_attachment_image_url( $image_id, 'medium' ) : '';
+
                         $meta_sub  = get_term_meta( $tid, '_ptbs_term_subtitle', true );
                         $meta_bg   = get_term_meta( $tid, '_ptbs_term_color', true );
 
-                        $icon_class = ! empty( $meta_icon ) ? $meta_icon : $preset['icon'];
-                        $subtitle   = ! empty( $meta_sub )  ? $meta_sub  : $preset['sub'];
-                        $bg_color   = ! empty( $meta_bg )   ? $meta_bg   : $preset['bg'];
-                        $icon_color = $preset['color'];
+                        $subtitle   = ! empty( $meta_sub ) ? $meta_sub : $preset['sub'];
+                        $bg_color   = ! empty( $meta_bg )  ? $meta_bg  : $preset['bg'];
                         $idx++;
                 ?>
                     <div style="<?php echo ( 'carousel' === $mode ) ? 'padding:0 10px;' : ''; ?>">
                         <a href="<?php echo esc_url( $tlink ); ?>" class="ptbs-cat-card" style="background:#ffffff; border:1px solid #f1f5f9; border-radius:20px; box-shadow:0 4px 18px rgba(0,0,0,0.03); padding:32px 18px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; transition:all 0.25s ease; text-decoration:none;">
                             
-                            <!-- Circle Icon Badge -->
-                            <div class="ptbs-cat-circle-icon" style="width:86px; height:86px; border-radius:50%; background:<?php echo esc_attr( $bg_color ); ?>; color:<?php echo esc_attr( $icon_color ); ?>; display:flex; align-items:center; justify-content:center; font-size:34px; margin-bottom:20px; border:2px solid #ffffff; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:transform 0.25s ease;">
-                                <i class="<?php echo esc_attr( $icon_class ); ?>"></i>
+                            <!-- Circle Image/SVG Badge -->
+                            <div class="ptbs-cat-circle-icon" style="width:86px; height:86px; border-radius:50%; background:<?php echo esc_attr( $bg_color ); ?>; display:flex; align-items:center; justify-content:center; margin-bottom:20px; border:2px solid #ffffff; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:transform 0.25s ease; overflow:hidden;">
+                                <?php if ( ! empty( $img_url ) ) : ?>
+                                    <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $tname ); ?>" style="width:48px; height:48px; object-fit:contain;">
+                                <?php else : ?>
+                                    <?php echo $svg_icon; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                <?php endif; ?>
                             </div>
 
                             <!-- Term Title & Subtitle -->
