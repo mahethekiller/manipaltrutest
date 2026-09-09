@@ -1562,12 +1562,17 @@ class PTBS_Public {
                     <div style="<?php echo ( 'carousel' === $mode ) ? 'padding:0 10px;' : ''; ?>">
                         <a href="<?php echo esc_url( $tlink ); ?>" class="ptbs-cat-card" style="background:#ffffff; border:1px solid #f1f5f9; border-radius:20px; box-shadow:0 4px 18px rgba(0,0,0,0.03); padding:32px 18px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; transition:all 0.25s ease; text-decoration:none;">
                             
-                            <!-- Direct Image / SVG Icon (Pure Icon, No Circle Background) -->
+                            <!-- Direct Image or Missing Image Placeholder (No Icon) -->
                             <div class="ptbs-cat-icon-wrap" style="width:76px; height:76px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; transition:transform 0.25s ease;">
                                 <?php if ( ! empty( $img_url ) ) : ?>
                                     <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $tname ); ?>" style="max-width:100%; max-height:100%; object-fit:contain;">
                                 <?php else : ?>
-                                    <?php echo $auto_svg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                    <!-- Missing Image Placeholder Icon -->
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" title="No Image Uploaded">
+                                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                                        <circle cx="9" cy="9" r="2"/>
+                                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                                    </svg>
                                 <?php endif; ?>
                             </div>
 
