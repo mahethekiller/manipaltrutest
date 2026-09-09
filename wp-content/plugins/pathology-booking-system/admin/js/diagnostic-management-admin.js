@@ -247,6 +247,29 @@
                 });
             }
 
+            if ($('#ptbs_center_state_select').length && $('#ptbs_center_city_select').length) {
+                $('#ptbs_center_state_select').on('change', function() {
+                    var selectedStates = $(this).val() || [];
+                    var $citySelect = $('#ptbs_center_city_select');
+
+                    $citySelect.find('option').each(function() {
+                        var stId = String($(this).data('state-id') || '');
+                        if (!stId || selectedStates.length === 0 || selectedStates.indexOf(stId) !== -1) {
+                            $(this).prop('disabled', false);
+                        } else {
+                            $(this).prop('disabled', true);
+                        }
+                    });
+
+                    $citySelect.select2({
+                        placeholder: 'Search and select options...',
+                        allowClear: true,
+                        width: '100%',
+                        dropdownParent: $('#ptbs_drawer_body')
+                    });
+                });
+            }
+
             // Image Media Uploader
             $('#ptbs_cat_img_btn').off('click').on('click', function(e) {
                 e.preventDefault();

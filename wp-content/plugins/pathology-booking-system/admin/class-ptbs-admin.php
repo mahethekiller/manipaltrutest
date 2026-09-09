@@ -515,6 +515,7 @@ class PTBS_Admin {
             $hours       = sanitize_text_field( wp_unslash( $_POST['hours'] ?? '' ) );
             $address     = sanitize_textarea_field( wp_unslash( $_POST['address'] ?? '' ) );
             $status      = sanitize_text_field( wp_unslash( $_POST['status'] ?? 'Active' ) );
+            $state_ids   = isset( $_POST['state_ids'] ) && is_array( $_POST['state_ids'] ) ? array_map( 'absint', $_POST['state_ids'] ) : array();
             $city_ids    = isset( $_POST['city_ids'] ) && is_array( $_POST['city_ids'] ) ? array_map( 'absint', $_POST['city_ids'] ) : array();
 
             $post_data = array(
@@ -537,7 +538,15 @@ class PTBS_Admin {
                 update_post_meta( $post_id, '_ptbs_address', $address );
                 update_post_meta( $post_id, '_ptbs_status', $status );
 
+                wp_set_post_terms( $post_id, $state_ids, 'ptbs_state' );
                 wp_set_post_terms( $post_id, $city_ids, 'ptbs_city' );
+
+                if ( ! empty( $state_ids ) && ! empty( $city_ids ) ) {
+                    $first_state = reset( $state_ids );
+                    foreach ( $city_ids as $cid ) {
+                        update_term_meta( $cid, '_ptbs_state_id', $first_state );
+                    }
+                }
 
                 wp_send_json_success( array( 'message' => 'Center Location saved successfully.' ) );
             }

@@ -12,6 +12,10 @@ $email      = $post ? get_post_meta( $post->ID, '_ptbs_email', true ) : '';
 $address    = $post ? get_post_meta( $post->ID, '_ptbs_address', true ) : '';
 $hours      = $post ? get_post_meta( $post->ID, '_ptbs_hours', true ) : '';
 $status     = $post ? get_post_meta( $post->ID, '_ptbs_status', true ) : 'Active';
+$states     = get_terms( array( 'taxonomy' => 'ptbs_state', 'hide_empty' => false ) );
+$sel_states = $post ? wp_get_post_terms( $post->ID, 'ptbs_state', array( 'fields' => 'ids' ) ) : array();
+if ( ! is_array( $sel_states ) ) $sel_states = array();
+
 $cities     = get_terms( array( 'taxonomy' => 'ptbs_city', 'hide_empty' => false ) );
 $sel_cities = $post ? wp_get_post_terms( $post->ID, 'ptbs_city', array( 'fields' => 'ids' ) ) : array();
 if ( ! is_array( $sel_cities ) ) $sel_cities = array();
@@ -36,17 +40,28 @@ if ( ! is_array( $sel_cities ) ) $sel_cities = array();
 
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-bottom:20px;">
     <div>
-        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Operating Hours', 'pathology-booking-system' ); ?></label>
-        <input type="text" name="hours" value="<?php echo esc_attr( $hours ); ?>" placeholder="Mon - Sat: 07:00 AM - 08:00 PM" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
-    </div>
-    <div>
-        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'City Location', 'pathology-booking-system' ); ?></label>
-        <select name="city_ids[]" class="ptbs-select2-multi" multiple="multiple" style="width:100%;">
-            <?php if ( ! empty( $cities ) && ! is_wp_error( $cities ) ) : foreach ( $cities as $c ) : ?>
-                <option value="<?php echo esc_attr( $c->term_id ); ?>" <?php selected( in_array( $c->term_id, $sel_cities ) ); ?>><?php echo esc_html( $c->name ); ?></option>
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'State Location', 'pathology-booking-system' ); ?></label>
+        <select id="ptbs_center_state_select" name="state_ids[]" class="ptbs-select2-multi" multiple="multiple" style="width:100%;">
+            <?php if ( ! empty( $states ) && ! is_wp_error( $states ) ) : foreach ( $states as $st ) : ?>
+                <option value="<?php echo esc_attr( $st->term_id ); ?>" <?php selected( in_array( $st->term_id, $sel_states ) ); ?>><?php echo esc_html( $st->name ); ?></option>
             <?php endforeach; endif; ?>
         </select>
     </div>
+    <div>
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'City Location', 'pathology-booking-system' ); ?></label>
+        <select id="ptbs_center_city_select" name="city_ids[]" class="ptbs-select2-multi" multiple="multiple" style="width:100%;">
+            <?php if ( ! empty( $cities ) && ! is_wp_error( $cities ) ) : foreach ( $cities as $c ) : 
+                $state_id = get_term_meta( $c->term_id, '_ptbs_state_id', true ) ?: $c->parent;
+            ?>
+                <option value="<?php echo esc_attr( $c->term_id ); ?>" data-state-id="<?php echo esc_attr( $state_id ); ?>" <?php selected( in_array( $c->term_id, $sel_cities ) ); ?>><?php echo esc_html( $c->name ); ?></option>
+            <?php endforeach; endif; ?>
+        </select>
+    </div>
+</div>
+
+<div style="margin-bottom:20px;">
+    <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Operating Hours', 'pathology-booking-system' ); ?></label>
+    <input type="text" name="hours" value="<?php echo esc_attr( $hours ); ?>" placeholder="Mon - Sat: 07:00 AM - 08:00 PM" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
 </div>
 
 <div style="margin-bottom:20px;">

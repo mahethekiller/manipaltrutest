@@ -160,6 +160,21 @@ class PTBS_Importer {
 
                     $center_name_to_post_id[$ckey] = $cid;
                     $center_count++;
+
+                    // Assign State & City terms if available
+                    $state_id_created = 0;
+                    if ( ! empty( $center['state'] ) ) {
+                        list( $stid, $sttid ) = $create_term( $center['state'], '', 'ptbs_state', 0 );
+                        $state_id_created = $stid;
+                        $wpdb->query( $wpdb->prepare( "INSERT IGNORE INTO {$table_prefix}term_relationships (object_id, term_taxonomy_id, term_order) VALUES (%d, %d, 0)", $cid, $sttid ) );
+                    }
+                    if ( ! empty( $center['city'] ) ) {
+                        list( $ctid, $cttid ) = $create_term( $center['city'], '', 'ptbs_city', 0 );
+                        if ( $state_id_created > 0 ) {
+                            update_term_meta( $ctid, '_ptbs_state_id', (string)$state_id_created );
+                        }
+                        $wpdb->query( $wpdb->prepare( "INSERT IGNORE INTO {$table_prefix}term_relationships (object_id, term_taxonomy_id, term_order) VALUES (%d, %d, 0)", $cid, $cttid ) );
+                    }
                 }
             }
         }

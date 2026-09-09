@@ -125,7 +125,16 @@ $total_pages = 1;
                             <td style="text-align:center; font-weight:700; color:#94a3b8;"><?php echo esc_html( $i++ ); ?></td>
                             <td style="font-weight:700; color:#0f172a;">
                                 <?php the_title(); ?>
-                                <?php if ( 'center_location' === $tab ) : ?>
+                                <?php if ( 'center_location' === $tab ) : 
+                                    $st_names     = wp_get_post_terms( $pid, 'ptbs_state', array( 'fields' => 'names' ) );
+                                    $ct_names     = wp_get_post_terms( $pid, 'ptbs_city', array( 'fields' => 'names' ) );
+                                    $st_str       = ( ! empty( $st_names ) && ! is_wp_error( $st_names ) ) ? implode( ', ', $st_names ) : '';
+                                    $ct_str       = ( ! empty( $ct_names ) && ! is_wp_error( $ct_names ) ) ? implode( ', ', $ct_names ) : '';
+                                    $location_str = implode( ', ', array_filter( array( $ct_str, $st_str ) ) );
+                                ?>
+                                    <div style="font-size:12px; color:#64748b; margin-top:2px;">
+                                        📍 <?php echo esc_html( $location_str ?: 'Location Not Set' ); ?>
+                                    </div>
                                     <div style="font-size:12px; margin-top:4px;">
                                         <a href="<?php echo esc_url( $permalink ); ?>" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">🔗 View Page: <?php echo esc_url( $permalink ); ?></a>
                                     </div>

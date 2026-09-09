@@ -16,8 +16,11 @@ $phone     = get_post_meta( $center_id, '_ptbs_phone', true ) ?: '+91 1800-123-4
 $email     = get_post_meta( $center_id, '_ptbs_email', true ) ?: 'info@manipaltrutest.com';
 $address   = get_post_meta( $center_id, '_ptbs_address', true ) ?: '123 Health Care Avenue, Main City';
 $hours     = get_post_meta( $center_id, '_ptbs_hours', true ) ?: 'Mon - Sat: 07:00 AM - 08:00 PM';
-$cities    = wp_get_post_terms( $center_id, 'ptbs_city', array( 'fields' => 'names' ) );
-$city_name = ! empty( $cities ) && ! is_wp_error( $cities ) ? $cities[0] : '';
+$cities        = wp_get_post_terms( $center_id, 'ptbs_city', array( 'fields' => 'names' ) );
+$city_name     = ! empty( $cities ) && ! is_wp_error( $cities ) ? $cities[0] : '';
+$states        = wp_get_post_terms( $center_id, 'ptbs_state', array( 'fields' => 'names' ) );
+$state_name    = ! empty( $states ) && ! is_wp_error( $states ) ? $states[0] : '';
+$location_badge = implode( ', ', array_filter( array( $city_name, $state_name ) ) );
 
 // Find all tests linked to this center location
 $all_tests = get_posts( array(
@@ -62,7 +65,7 @@ foreach ( $all_pkgs as $p ) {
     <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; padding:60px 20px; text-align:center;">
         <div style="max-width:1100px; margin:0 auto;">
             <span style="background:rgba(2,132,199,0.2); color:#38bdf8; font-weight:700; font-size:13px; padding:6px 16px; border-radius:20px; text-transform:uppercase; letter-spacing:1px; display:inline-block; margin-bottom:12px;">
-                📍 <?php echo esc_html( $city_name ? $city_name . ' Diagnostic Center' : 'Diagnostic Lab Center' ); ?>
+                📍 <?php echo esc_html( $location_badge ? $location_badge . ' Diagnostic Center' : 'Diagnostic Lab Center' ); ?>
             </span>
             <h1 style="font-size:36px; font-weight:800; color:#fff; margin:0 0 16px 0;"><?php echo esc_html( $center_title ); ?></h1>
             <p style="font-size:16px; color:#94a3b8; max-width:700px; margin:0 auto 24px auto;">
