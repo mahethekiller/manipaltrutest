@@ -1449,6 +1449,7 @@ class PTBS_Public {
             'cta_text'      => __( 'VIEW ALL TESTS ↗', 'pathology-booking-system' ),
             'cta_url'       => '#',
             'autoplay'      => 'no',
+            'extra_class'   => '',
         ), $atts, 'pathology_categories_slider' );
 
         $tax_type = in_array( $atts['taxonomy_type'], array( 'ptbs_category', 'ptbs_subcategory', 'ptbs_condition' ), true ) ? $atts['taxonomy_type'] : 'ptbs_condition';
@@ -1462,11 +1463,12 @@ class PTBS_Public {
             'number'     => $limit,
         ) );
 
-        $slider_id = 'ptbs-cat-slider-' . uniqid();
+        $slider_id   = 'ptbs-cat-slider-' . uniqid();
+        $extra_class = ! empty( $atts['extra_class'] ) ? ' ' . sanitize_html_class( $atts['extra_class'] ) : '';
 
         ob_start();
         ?>
-        <div class="ptbs-categories-slider-section" style="margin:40px 0; background:#f0f7ff; padding:44px 28px; border-radius:28px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; text-align:center;">
+        <div class="ptbs-categories-slider-section<?php echo esc_attr( $extra_class ); ?>" style="margin:40px 0; background:#f0f7ff; padding:44px 28px; border-radius:28px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; text-align:center;">
             
             <!-- Section Header -->
             <div style="margin-bottom:32px;">

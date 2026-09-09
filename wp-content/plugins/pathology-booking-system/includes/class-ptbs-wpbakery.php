@@ -392,6 +392,13 @@ class PTBS_WPBakery {
                     ),
                     'std'         => 'no',
                 ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Extra CSS Class', 'pathology-booking-system' ),
+                    'param_name'  => 'extra_class',
+                    'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'pathology-booking-system' ),
+                    'value'       => '',
+                ),
             ),
         ) );
     }
