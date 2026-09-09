@@ -401,6 +401,95 @@ class PTBS_WPBakery {
                 ),
             ),
         ) );
+
+        // 6. Most Booked Lab Tests Slider Element
+        vc_map( array(
+            'name'        => __( 'Most Booked Lab Tests Slider', 'pathology-booking-system' ),
+            'base'        => 'pathology_lab_tests_slider',
+            'description' => __( 'Carousel or Grid slider of individual lab tests matching reference design', 'pathology-booking-system' ),
+            'category'    => $category_name,
+            'icon'        => 'dashicons-format-aside',
+            'params'      => array(
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Section Sub-Heading', 'pathology-booking-system' ),
+                    'param_name'  => 'sub_heading',
+                    'value'       => __( 'POPULAR TEST', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Section Main Title', 'pathology-booking-system' ),
+                    'param_name'  => 'title',
+                    'value'       => __( 'Most Booked Lab Tests', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by Category', 'pathology-booking-system' ),
+                    'param_name'  => 'category_id',
+                    'value'       => $cat_options,
+                    'description' => __( 'Optional: Select a category to display tests from', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by Subcategory', 'pathology-booking-system' ),
+                    'param_name'  => 'subcategory_id',
+                    'value'       => $subcat_options,
+                    'description' => __( 'Optional: Select a subcategory to display tests from', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by Health Risk / Condition', 'pathology-booking-system' ),
+                    'param_name'  => 'condition_id',
+                    'value'       => $cond_options,
+                    'description' => __( 'Optional: Select a condition/health risk to display tests from', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Display Layout Mode', 'pathology-booking-system' ),
+                    'param_name'  => 'layout_mode',
+                    'value'       => array(
+                        __( 'Slick Carousel Slider', 'pathology-booking-system' ) => 'carousel',
+                        __( 'Responsive Grid Layout', 'pathology-booking-system' ) => 'grid',
+                    ),
+                    'std'         => 'carousel',
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Columns per Row / Slide', 'pathology-booking-system' ),
+                    'param_name'  => 'columns',
+                    'value'       => array(
+                        __( '2 Columns', 'pathology-booking-system' ) => '2',
+                        __( '3 Columns', 'pathology-booking-system' ) => '3',
+                        __( '4 Columns', 'pathology-booking-system' ) => '4',
+                        __( '5 Columns', 'pathology-booking-system' ) => '5',
+                    ),
+                    'std'         => '4',
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Maximum Lab Tests to Display', 'pathology-booking-system' ),
+                    'param_name'  => 'limit',
+                    'value'       => '10',
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Carousel Autoplay', 'pathology-booking-system' ),
+                    'param_name'  => 'autoplay',
+                    'value'       => array(
+                        __( 'No', 'pathology-booking-system' )  => 'no',
+                        __( 'Yes', 'pathology-booking-system' ) => 'yes',
+                    ),
+                    'std'         => 'no',
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Extra CSS Class', 'pathology-booking-system' ),
+                    'param_name'  => 'extra_class',
+                    'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'pathology-booking-system' ),
+                    'value'       => '',
+                ),
+            ),
+        ) );
     }
 }
 

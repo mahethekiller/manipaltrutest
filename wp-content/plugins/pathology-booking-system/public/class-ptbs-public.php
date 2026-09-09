@@ -32,6 +32,7 @@ class PTBS_Public {
         add_shortcode( 'pathology_health_packages', array( $this, 'render_health_packages_shortcode' ) );
         add_shortcode( 'pathology_health_packages_slider', array( $this, 'render_health_packages_slider_shortcode' ) );
         add_shortcode( 'pathology_categories_slider', array( $this, 'render_categories_slider_shortcode' ) );
+        add_shortcode( 'pathology_lab_tests_slider', array( $this, 'render_lab_tests_slider_shortcode' ) );
         add_shortcode( 'pathology_center_locations', array( $this, 'render_center_locations_shortcode' ) );
 
         // Catalog & Time Slots AJAX
@@ -1572,6 +1573,199 @@ class PTBS_Public {
                         responsive: [
                             { breakpoint: 1200, settings: { slidesToShow: 4 } },
                             { breakpoint: 992,  settings: { slidesToShow: 3 } },
+                            { breakpoint: 768,  settings: { slidesToShow: 2 } },
+                            { breakpoint: 480,  settings: { slidesToShow: 1 } }
+                        ]
+                    });
+                }
+            });
+            </script>
+        <?php endif; ?>
+
+        <?php
+        return ob_get_clean();
+    }
+
+    /**
+     * Shortcode Callback: Most Booked Lab Tests Slider/Grid
+     * [pathology_lab_tests_slider sub_heading="POPULAR TEST" title="Most Booked Lab Tests" category_id="" subcategory_id="" condition_id="" layout_mode="carousel" columns="4" limit="10" autoplay="no" extra_class=""]
+     */
+    public function render_lab_tests_slider_shortcode( $atts ) {
+        $atts = shortcode_atts( array(
+            'sub_heading'    => __( 'POPULAR TEST', 'pathology-booking-system' ),
+            'title'          => __( 'Most Booked Lab Tests', 'pathology-booking-system' ),
+            'category_id'    => '',
+            'subcategory_id' => '',
+            'condition_id'   => '',
+            'layout_mode'    => 'carousel',
+            'columns'        => '4',
+            'limit'          => '10',
+            'autoplay'       => 'no',
+            'extra_class'    => '',
+        ), $atts, 'pathology_lab_tests_slider' );
+
+        $mode  = in_array( $atts['layout_mode'], array( 'carousel', 'grid' ), true ) ? $atts['layout_mode'] : 'carousel';
+        $cols  = max( 1, min( 6, absint( $atts['columns'] ) ) );
+        $limit = max( 1, absint( $atts['limit'] ) );
+
+        $args = array(
+            'post_type'      => 'ptbs_test',
+            'post_status'    => 'publish',
+            'posts_per_page' => $limit,
+            'orderby'        => 'menu_order title',
+            'order'          => 'ASC',
+        );
+
+        // Build Tax Query if filtering parameters are passed
+        $tax_query = array();
+        if ( ! empty( $atts['category_id'] ) ) {
+            $tax_query[] = array(
+                'taxonomy' => 'ptbs_category',
+                'field'    => 'term_id',
+                'terms'    => absint( $atts['category_id'] ),
+            );
+        }
+        if ( ! empty( $atts['subcategory_id'] ) ) {
+            $tax_query[] = array(
+                'taxonomy' => 'ptbs_subcategory',
+                'field'    => 'term_id',
+                'terms'    => absint( $atts['subcategory_id'] ),
+            );
+        }
+        if ( ! empty( $atts['condition_id'] ) ) {
+            $tax_query[] = array(
+                'taxonomy' => 'ptbs_condition',
+                'field'    => 'term_id',
+                'terms'    => absint( $atts['condition_id'] ),
+            );
+        }
+
+        if ( count( $tax_query ) > 1 ) {
+            $tax_query['relation'] = 'AND';
+        }
+
+        if ( ! empty( $tax_query ) ) {
+            $args['tax_query'] = $tax_query;
+        }
+
+        $tests = get_posts( $args );
+
+        $slider_id   = 'ptbs-lab-tests-slider-' . uniqid();
+        $extra_class = ! empty( $atts['extra_class'] ) ? ' ' . sanitize_html_class( $atts['extra_class'] ) : '';
+
+        ob_start();
+        ?>
+        <div class="ptbs-lab-tests-slider-section<?php echo esc_attr( $extra_class ); ?>" style="margin:40px 0; background:transparent; padding:20px 0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+            
+            <!-- Section Header -->
+            <div style="text-align:center; margin-bottom:32px;">
+                <?php if ( ! empty( $atts['sub_heading'] ) ) : ?>
+                    <span style="color:#0056b3; font-size:13px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; display:block; margin-bottom:6px;">
+                        <?php echo esc_html( $atts['sub_heading'] ); ?>
+                    </span>
+                <?php endif; ?>
+                <?php if ( ! empty( $atts['title'] ) ) : ?>
+                    <h2 style="font-size:36px; font-weight:800; color:#0b192c; margin:0; line-height:1.2;">
+                        <?php echo esc_html( $atts['title'] ); ?>
+                    </h2>
+                <?php endif; ?>
+            </div>
+
+            <!-- Content Deck (Carousel or Grid) -->
+            <?php if ( 'carousel' === $mode ) : ?>
+                <div class="ptbs-packages-slick-wrapper">
+                    <div id="<?php echo esc_attr( $slider_id ); ?>" class="ptbs-lab-tests-slick-carousel" style="margin:0 -10px;">
+            <?php else : ?>
+                <div style="display:grid; grid-template-columns: repeat(<?php echo esc_attr( $cols ); ?>, 1fr); gap:20px;">
+            <?php endif; ?>
+
+                <?php if ( ! empty( $tests ) ) : 
+                    foreach ( $tests as $test ) :
+                        $tid       = $test->ID;
+                        $tname     = $test->post_title;
+                        $price     = get_post_meta( $tid, '_ptbs_price', true );
+                        if ( empty( $price ) ) { $price = 0; }
+                        $formatted_price = 'Rs.' . number_format( floatval( $price ), 0 );
+
+                        // Check image meta or thumbnail
+                        $image_id  = get_term_meta( $tid, '_ptbs_image_id', true );
+                        $img_url   = $image_id ? wp_get_attachment_image_url( $image_id, 'medium' ) : get_the_post_thumbnail_url( $tid, 'medium' );
+                        $tlink     = get_permalink( $tid );
+                ?>
+                    <div style="<?php echo ( 'carousel' === $mode ) ? 'padding:10px;' : ''; ?>">
+                        <div class="ptbs-test-card" style="background:#ffffff; border:1px solid #f1f5f9; border-radius:20px; box-shadow:0 6px 20px rgba(0,0,0,0.03); padding:24px 20px; display:flex; flex-direction:column; justify-content:space-between; height:100%; transition:transform 0.25s ease, box-shadow 0.25s ease;">
+                            
+                            <!-- Top Header: Icon + Title -->
+                            <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px; min-height:64px;">
+                                <div style="width:52px; height:52px; border-radius:50%; background:#e6f7f5; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                    <?php if ( ! empty( $img_url ) ) : ?>
+                                        <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $tname ); ?>" style="width:28px; height:28px; object-fit:contain;">
+                                    <?php else : ?>
+                                        <!-- Mint Green Test Tube Flask Icon -->
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55A2 2 0 0 0 6.508 23h10.984a2 2 0 0 0 1.788-2.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/>
+                                            <path d="M8.5 2h7"/>
+                                            <path d="M7 16h10"/>
+                                        </svg>
+                                    <?php endif; ?>
+                                </div>
+                                <h3 style="font-size:15px; font-weight:700; color:#0b192c; margin:0; line-height:1.35; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">
+                                    <a href="<?php echo esc_url( $tlink ); ?>" style="color:inherit; text-decoration:none;">
+                                        <?php echo esc_html( $tname ); ?>
+                                    </a>
+                                </h3>
+                            </div>
+
+                            <!-- Subtle Divider Line -->
+                            <div style="border-top:1px solid #f1f5f9; margin-bottom:18px;"></div>
+
+                            <!-- Bottom Section: Price + Action Buttons -->
+                            <div>
+                                <div style="font-size:18px; font-weight:800; color:#0b192c; margin-bottom:14px;">
+                                    <?php echo esc_html( $formatted_price ); ?>
+                                </div>
+
+                                <div style="display:flex; gap:8px;">
+                                    <button type="button" class="ptbs-add-to-cart-btn ptbs-add-to-cart" data-id="<?php echo esc_attr( $tid ); ?>" data-type="test" data-title="<?php echo esc_attr( $tname ); ?>" data-price="<?php echo esc_attr( $price ); ?>" style="flex:1.4; background:#0056b3; color:#fff; border:none; padding:10px 8px; border-radius:10px; font-size:11px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:6px; white-space:nowrap; transition:background 0.2s;">
+                                        <i class="fas fa-shopping-bag"></i> ADD TO CART
+                                    </button>
+                                    <a href="<?php echo esc_url( $tlink ); ?>" class="ptbs-view-btn" style="flex:0.8; background:#f1f5f9; color:#334155; padding:10px 8px; border-radius:10px; font-size:11px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:5px; white-space:nowrap;">
+                                        <i class="far fa-dot-circle"></i> VIEW
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php endforeach; else : ?>
+                    <p style="color:#94a3b8; text-align:center; grid-column: 1 / -1;">No lab tests found.</p>
+                <?php endif; ?>
+
+            <?php if ( 'carousel' === $mode ) : ?>
+                    </div>
+                </div>
+            <?php else : ?>
+                </div>
+            <?php endif; ?>
+
+        </div>
+
+        <?php if ( 'carousel' === $mode ) : ?>
+            <script>
+            jQuery(document).ready(function($) {
+                if (typeof $.fn.slick === 'function') {
+                    $('#<?php echo esc_js( $slider_id ); ?>').slick({
+                        dots: false,
+                        arrows: true,
+                        prevArrow: '<button type="button" class="slick-prev ptbs-slick-arrow" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>',
+                        nextArrow: '<button type="button" class="slick-next ptbs-slick-arrow" aria-label="Next"><i class="fas fa-arrow-right"></i></button>',
+                        infinite: true,
+                        speed: 500,
+                        slidesToShow: <?php echo esc_js( $cols ); ?>,
+                        slidesToScroll: 1,
+                        autoplay: <?php echo ( 'yes' === $atts['autoplay'] ) ? 'true' : 'false'; ?>,
+                        responsive: [
+                            { breakpoint: 1200, settings: { slidesToShow: 3 } },
                             { breakpoint: 768,  settings: { slidesToShow: 2 } },
                             { breakpoint: 480,  settings: { slidesToShow: 1 } }
                         ]

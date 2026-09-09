@@ -136,6 +136,33 @@ if ( ! defined( 'ABSPATH' ) ) {
             </ul>
         </div>
 
+        <!-- Element 6 -->
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:24px; box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                <h3 style="margin:0; font-size:18px; font-weight:800; color:#0f172a;">
+                    6. Most Booked Lab Tests Slider Element
+                </h3>
+                <div>
+                    <span style="font-size:12px; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:4px; font-family:monospace; margin-right:8px;">[pathology_lab_tests_slider]</span>
+                    <span style="font-size:12px; font-weight:700; color:#9333ea; background:#faf5ff; padding:2px 8px; border-radius:4px; text-transform:uppercase;">WPBakery Premium Element</span>
+                </div>
+            </div>
+            <p style="color:#64748b; font-size:14px; margin-bottom:16px;">
+                Displays individual lab tests in clean white cards featuring a circular mint-green test tube flask icon, bold price, <strong>ADD TO CART</strong> button, <strong>VIEW</strong> button, and optional taxonomy filters.
+            </p>
+            <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; font-family:monospace; font-size:13px; color:#0f172a; margin-bottom:16px;">
+                [pathology_lab_tests_slider sub_heading="POPULAR TEST" title="Most Booked Lab Tests" columns="4" limit="10" extra_class="my-custom-slider"]
+            </div>
+            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls & Options:</h4>
+            <ul style="margin:0; padding-left:20px; font-size:13px; color:#475569;">
+                <li><strong>Taxonomy Filters</strong>: Filter lab tests by <strong>Category</strong>, <strong>Subcategory</strong>, or <strong>Health Risk / Condition</strong>.</li>
+                <li><strong>Display Layout Mode</strong>: Choose between <strong>Slick Carousel Slider</strong> or <strong>Responsive Grid</strong>.</li>
+                <li><strong>Section Sub-Heading & Title</strong>: Customize header texts.</li>
+                <li><strong>Columns & Limit</strong>: 2, 3, 4, or 5 columns per slide/row and maximum items to display.</li>
+                <li><strong>Extra CSS Class</strong>: Attach custom CSS class name to the element container.</li>
+            </ul>
+        </div>
+
     </div>
 </div>
 
