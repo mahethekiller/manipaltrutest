@@ -1377,11 +1377,11 @@ class PTBS_Public {
                                         </div>
                                     </div>
 
-                                    <div style="display:flex; gap:10px;">
-                                        <button type="button" class="ptbs-add-to-cart-btn ptbs-add-to-cart" data-id="<?php echo esc_attr( $pid ); ?>" data-type="package" data-title="<?php echo esc_attr( $pkg->post_title ); ?>" data-price="<?php echo esc_attr( $price ); ?>" style="flex:1.2; background:#0056b3; color:#fff; border:none; padding:12px 14px; border-radius:10px; font-size:12px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; transition:background 0.2s;">
+                                    <div style="display:flex; gap:8px;">
+                                        <button type="button" class="ptbs-add-to-cart-btn ptbs-add-to-cart" data-id="<?php echo esc_attr( $pid ); ?>" data-type="package" data-title="<?php echo esc_attr( $pkg->post_title ); ?>" data-price="<?php echo esc_attr( $price ); ?>" style="flex:1.4; background:#0056b3; color:#fff; border:none; padding:12px 10px; border-radius:10px; font-size:11px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:6px; white-space:nowrap; transition:background 0.2s;">
                                             <i class="fas fa-shopping-bag"></i> ADD TO CART
                                         </button>
-                                        <a href="<?php echo esc_url( $permalink ); ?>" class="ptbs-view-btn" style="background:#f1f5f9; color:#334155; padding:12px 18px; border-radius:10px; font-size:12px; font-weight:800; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px;">
+                                        <a href="<?php echo esc_url( $permalink ); ?>" class="ptbs-view-btn" style="flex:0.8; background:#f1f5f9; color:#334155; padding:12px 12px; border-radius:10px; font-size:11px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:5px; white-space:nowrap;">
                                             <i class="far fa-dot-circle"></i> VIEW
                                         </a>
                                     </div>

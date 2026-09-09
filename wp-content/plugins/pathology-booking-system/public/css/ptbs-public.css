@@ -492,6 +492,12 @@
     box-shadow: 0 6px 18px rgba(0,86,179,0.25) !important;
 }
 
+.ptbs-slick-arrow::before,
+.ptbs-slick-arrow::after {
+    display: none !important;
+    content: "" !important;
+}
+
 .ptbs-slick-arrow.slick-prev {
     left: 0px !important;
 }
