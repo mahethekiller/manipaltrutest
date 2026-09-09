@@ -456,3 +456,49 @@
         max-height: 94vh;
     }
 }
+
+/* Slick Carousel Custom Arrows & Layout */
+.ptbs-packages-slick-wrapper {
+    position: relative;
+    padding: 0 20px;
+}
+
+.ptbs-slick-arrow {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 15 !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background: #0f172a !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18) !important;
+    transition: all 0.2s ease !important;
+    padding: 0 !important;
+}
+
+.ptbs-slick-arrow:hover {
+    background: #0284c7 !important;
+    color: #ffffff !important;
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+.ptbs-slick-arrow.slick-prev {
+    left: -12px !important;
+}
+
+.ptbs-slick-arrow.slick-next {
+    right: -12px !important;
+}
+
+.ptbs-slick-arrow.slick-disabled {
+    opacity: 0.3 !important;
+    cursor: not-allowed !important;
+}
+

@@ -1296,7 +1296,8 @@ class PTBS_Public {
 
             <!-- Content Container (Carousel or Grid) -->
             <?php if ( 'carousel' === $mode ) : ?>
-                <div id="<?php echo esc_attr( $slider_id ); ?>" class="ptbs-packages-slick-carousel" style="margin:0 -10px;">
+                <div class="ptbs-packages-slick-wrapper">
+                    <div id="<?php echo esc_attr( $slider_id ); ?>" class="ptbs-packages-slick-carousel" style="margin:0 -10px;">
             <?php else : ?>
                 <div style="display:grid; grid-template-columns: repeat(<?php echo esc_attr( $cols ); ?>, 1fr); gap:20px;">
             <?php endif; ?>
@@ -1382,7 +1383,12 @@ class PTBS_Public {
                     <p style="color:#94a3b8; text-align:center; grid-column: 1 / -1;">No health packages available.</p>
                 <?php endif; ?>
 
-            </div>
+            <?php if ( 'carousel' === $mode ) : ?>
+                    </div>
+                </div>
+            <?php else : ?>
+                </div>
+            <?php endif; ?>
 
         </div>
 
@@ -1393,6 +1399,8 @@ class PTBS_Public {
                     $('#<?php echo esc_js( $slider_id ); ?>').slick({
                         dots: false,
                         arrows: true,
+                        prevArrow: '<button type="button" class="slick-prev ptbs-slick-arrow" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>',
+                        nextArrow: '<button type="button" class="slick-next ptbs-slick-arrow" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>',
                         infinite: true,
                         speed: 500,
                         slidesToShow: <?php echo esc_js( $cols ); ?>,
