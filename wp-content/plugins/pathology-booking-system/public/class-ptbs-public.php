@@ -31,6 +31,7 @@ class PTBS_Public {
         add_shortcode( 'pathology_featured_tests', array( $this, 'render_featured_tests_shortcode' ) );
         add_shortcode( 'pathology_health_packages', array( $this, 'render_health_packages_shortcode' ) );
         add_shortcode( 'pathology_health_packages_slider', array( $this, 'render_health_packages_slider_shortcode' ) );
+        add_shortcode( 'pathology_categories_slider', array( $this, 'render_categories_slider_shortcode' ) );
         add_shortcode( 'pathology_center_locations', array( $this, 'render_center_locations_shortcode' ) );
 
         // Catalog & Time Slots AJAX
@@ -1419,6 +1420,161 @@ class PTBS_Public {
                         autoplay: <?php echo ( 'yes' === $atts['autoplay'] ) ? 'true' : 'false'; ?>,
                         responsive: [
                             { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                            { breakpoint: 768,  settings: { slidesToShow: 2 } },
+                            { breakpoint: 480,  settings: { slidesToShow: 1 } }
+                        ]
+                    });
+                }
+            });
+            </script>
+        <?php endif; ?>
+
+        <?php
+        return ob_get_clean();
+    }
+
+    /**
+     * Shortcode Callback: Categories & Health Risks Slider/Grid
+     * [pathology_categories_slider taxonomy_type="ptbs_condition" layout_mode="carousel" columns="5" limit="10"]
+     */
+    public function render_categories_slider_shortcode( $atts ) {
+        $atts = shortcode_atts( array(
+            'taxonomy_type' => 'ptbs_condition',
+            'layout_mode'   => 'carousel',
+            'sub_heading'   => __( 'HEALTH RISKS', 'pathology-booking-system' ),
+            'title'         => __( 'Tests Based on Health Risks', 'pathology-booking-system' ),
+            'columns'       => '5',
+            'limit'         => '10',
+            'show_cta'      => 'yes',
+            'cta_text'      => __( 'VIEW ALL TESTS ↗', 'pathology-booking-system' ),
+            'cta_url'       => '#',
+            'autoplay'      => 'no',
+        ), $atts, 'pathology_categories_slider' );
+
+        $tax_type = in_array( $atts['taxonomy_type'], array( 'ptbs_category', 'ptbs_subcategory', 'ptbs_condition' ), true ) ? $atts['taxonomy_type'] : 'ptbs_condition';
+        $mode     = in_array( $atts['layout_mode'], array( 'carousel', 'grid' ), true ) ? $atts['layout_mode'] : 'carousel';
+        $cols     = max( 1, min( 6, absint( $atts['columns'] ) ) );
+        $limit    = max( 1, absint( $atts['limit'] ) );
+
+        $terms = get_terms( array(
+            'taxonomy'   => $tax_type,
+            'hide_empty' => false,
+            'number'     => $limit,
+        ) );
+
+        $slider_id = 'ptbs-cat-slider-' . uniqid();
+
+        // Default icon presets matching reference image
+        $fallback_presets = array(
+            array( 'icon' => 'fas fa-heartbeat',     'bg' => '#e0f2fe', 'color' => '#0284c7', 'sub' => 'ECG, Troponin, CK-MB' ),
+            array( 'icon' => 'fas fa-vial',          'bg' => '#dcfce7', 'color' => '#16a34a', 'sub' => 'Creatinine, Urea, eGFR' ),
+            array( 'icon' => 'fas fa-atom',          'bg' => '#f3e8ff', 'color' => '#9333ea', 'sub' => '25 OH Vitamin D' ),
+            array( 'icon' => 'fas fa-notes-medical', 'bg' => '#fce7f3', 'color' => '#db2777', 'sub' => 'T3, T4, TSH' ),
+            array( 'icon' => 'fas fa-dna',           'bg' => '#ffedd5', 'color' => '#ea580c', 'sub' => 'LFT, SGOT, SGPT' ),
+        );
+
+        ob_start();
+        ?>
+        <div class="ptbs-categories-slider-section" style="margin:40px 0; background:#f0f7ff; padding:44px 28px; border-radius:28px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; text-align:center;">
+            
+            <!-- Section Header -->
+            <div style="margin-bottom:32px;">
+                <?php if ( ! empty( $atts['sub_heading'] ) ) : ?>
+                    <span style="color:#0056b3; font-size:13px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; display:block; margin-bottom:6px;">
+                        <?php echo esc_html( $atts['sub_heading'] ); ?>
+                    </span>
+                <?php endif; ?>
+                <?php if ( ! empty( $atts['title'] ) ) : ?>
+                    <h2 style="font-size:36px; font-weight:800; color:#0b192c; margin:0; line-height:1.2;">
+                        <?php echo esc_html( $atts['title'] ); ?>
+                    </h2>
+                <?php endif; ?>
+            </div>
+
+            <!-- Content Deck (Carousel or Grid) -->
+            <?php if ( 'carousel' === $mode ) : ?>
+                <div class="ptbs-packages-slick-wrapper">
+                    <div id="<?php echo esc_attr( $slider_id ); ?>" class="ptbs-categories-slick-carousel" style="margin:0 -10px;">
+            <?php else : ?>
+                <div style="display:grid; grid-template-columns: repeat(<?php echo esc_attr( $cols ); ?>, 1fr); gap:20px;">
+            <?php endif; ?>
+
+                <?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : 
+                    $idx = 0;
+                    foreach ( $terms as $term ) :
+                        $tid       = $term->term_id;
+                        $tname     = $term->name;
+                        $tlink     = get_term_link( $term );
+                        if ( is_wp_error( $tlink ) ) { $tlink = '#'; }
+                        
+                        $preset    = $fallback_presets[ $idx % count( $fallback_presets ) ];
+                        $meta_icon = get_term_meta( $tid, '_ptbs_term_icon', true );
+                        $meta_sub  = get_term_meta( $tid, '_ptbs_term_subtitle', true );
+                        $meta_bg   = get_term_meta( $tid, '_ptbs_term_color', true );
+
+                        $icon_class = ! empty( $meta_icon ) ? $meta_icon : $preset['icon'];
+                        $subtitle   = ! empty( $meta_sub )  ? $meta_sub  : $preset['sub'];
+                        $bg_color   = ! empty( $meta_bg )   ? $meta_bg   : $preset['bg'];
+                        $icon_color = $preset['color'];
+                        $idx++;
+                ?>
+                    <div style="<?php echo ( 'carousel' === $mode ) ? 'padding:0 10px;' : ''; ?>">
+                        <a href="<?php echo esc_url( $tlink ); ?>" class="ptbs-cat-card" style="background:#ffffff; border:1px solid #f1f5f9; border-radius:20px; box-shadow:0 4px 18px rgba(0,0,0,0.03); padding:32px 18px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; transition:all 0.25s ease; text-decoration:none;">
+                            
+                            <!-- Circle Icon Badge -->
+                            <div class="ptbs-cat-circle-icon" style="width:86px; height:86px; border-radius:50%; background:<?php echo esc_attr( $bg_color ); ?>; color:<?php echo esc_attr( $icon_color ); ?>; display:flex; align-items:center; justify-content:center; font-size:34px; margin-bottom:20px; border:2px solid #ffffff; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:transform 0.25s ease;">
+                                <i class="<?php echo esc_attr( $icon_class ); ?>"></i>
+                            </div>
+
+                            <!-- Term Title & Subtitle -->
+                            <h3 style="font-size:18px; font-weight:800; color:#0b192c; margin:0 0 6px 0; line-height:1.3;">
+                                <?php echo esc_html( $tname ); ?>
+                            </h3>
+                            <p style="font-size:12px; color:#64748b; margin:0; line-height:1.4;">
+                                <?php echo esc_html( $subtitle ); ?>
+                            </p>
+
+                        </a>
+                    </div>
+                <?php endforeach; else : ?>
+                    <p style="color:#94a3b8; text-align:center; grid-column: 1 / -1;">No categories found.</p>
+                <?php endif; ?>
+
+            <?php if ( 'carousel' === $mode ) : ?>
+                    </div>
+                </div>
+            <?php else : ?>
+                </div>
+            <?php endif; ?>
+
+            <!-- Bottom Centered CTA Button -->
+            <?php if ( 'yes' === $atts['show_cta'] && ! empty( $atts['cta_text'] ) ) : ?>
+                <div style="margin-top:36px;">
+                    <a href="<?php echo esc_url( $atts['cta_url'] ); ?>" class="ptbs-categories-cta-btn" style="background:#0d9488; color:#ffffff; font-size:12px; font-weight:800; padding:12px 28px; border-radius:12px; text-decoration:none; text-transform:uppercase; letter-spacing:0.5px; display:inline-flex; align-items:center; gap:8px; box-shadow:0 4px 14px rgba(13,148,136,0.25); transition:all 0.2s ease;">
+                        <?php echo esc_html( $atts['cta_text'] ); ?> <i class="fas fa-arrow-up-right-from-square" style="font-size:11px;"></i>
+                    </a>
+                </div>
+            <?php endif; ?>
+
+        </div>
+
+        <?php if ( 'carousel' === $mode ) : ?>
+            <script>
+            jQuery(document).ready(function($) {
+                if (typeof $.fn.slick === 'function') {
+                    $('#<?php echo esc_js( $slider_id ); ?>').slick({
+                        dots: false,
+                        arrows: true,
+                        prevArrow: '<button type="button" class="slick-prev ptbs-slick-arrow" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>',
+                        nextArrow: '<button type="button" class="slick-next ptbs-slick-arrow" aria-label="Next"><i class="fas fa-arrow-right"></i></button>',
+                        infinite: true,
+                        speed: 500,
+                        slidesToShow: <?php echo esc_js( $cols ); ?>,
+                        slidesToScroll: 1,
+                        autoplay: <?php echo ( 'yes' === $atts['autoplay'] ) ? 'true' : 'false'; ?>,
+                        responsive: [
+                            { breakpoint: 1200, settings: { slidesToShow: 4 } },
+                            { breakpoint: 992,  settings: { slidesToShow: 3 } },
                             { breakpoint: 768,  settings: { slidesToShow: 2 } },
                             { breakpoint: 480,  settings: { slidesToShow: 1 } }
                         ]

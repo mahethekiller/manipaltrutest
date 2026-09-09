@@ -300,6 +300,100 @@ class PTBS_WPBakery {
                 ),
             ),
         ) );
+
+        // 5. Categories & Health Risks Slider Element
+        vc_map( array(
+            'name'        => __( 'Categories & Health Risks Slider', 'pathology-booking-system' ),
+            'base'        => 'pathology_categories_slider',
+            'description' => __( 'Carousel or Grid slider of test categories, subcategories, or health risks matching reference design', 'pathology-booking-system' ),
+            'category'    => $category_name,
+            'icon'        => 'dashicons-category',
+            'params'      => array(
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Taxonomy to Display', 'pathology-booking-system' ),
+                    'param_name'  => 'taxonomy_type',
+                    'value'       => array(
+                        __( 'Health Risks / Conditions (ptbs_condition)', 'pathology-booking-system' ) => 'ptbs_condition',
+                        __( 'Main Categories (ptbs_category)', 'pathology-booking-system' )          => 'ptbs_category',
+                        __( 'Subcategories (ptbs_subcategory)', 'pathology-booking-system' )         => 'ptbs_subcategory',
+                    ),
+                    'std'         => 'ptbs_condition',
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Display Layout Mode', 'pathology-booking-system' ),
+                    'param_name'  => 'layout_mode',
+                    'value'       => array(
+                        __( 'Slick Carousel Slider', 'pathology-booking-system' ) => 'carousel',
+                        __( 'Responsive Grid Layout', 'pathology-booking-system' ) => 'grid',
+                    ),
+                    'std'         => 'carousel',
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Section Sub-Heading', 'pathology-booking-system' ),
+                    'param_name'  => 'sub_heading',
+                    'value'       => __( 'HEALTH RISKS', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Section Main Title', 'pathology-booking-system' ),
+                    'param_name'  => 'title',
+                    'value'       => __( 'Tests Based on Health Risks', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Columns per Row / Slide', 'pathology-booking-system' ),
+                    'param_name'  => 'columns',
+                    'value'       => array(
+                        __( '3 Columns', 'pathology-booking-system' ) => '3',
+                        __( '4 Columns', 'pathology-booking-system' ) => '4',
+                        __( '5 Columns', 'pathology-booking-system' ) => '5',
+                        __( '6 Columns', 'pathology-booking-system' ) => '6',
+                    ),
+                    'std'         => '5',
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Maximum Categories/Conditions to Display', 'pathology-booking-system' ),
+                    'param_name'  => 'limit',
+                    'value'       => '10',
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Show Bottom Centered Button?', 'pathology-booking-system' ),
+                    'param_name'  => 'show_cta',
+                    'value'       => array(
+                        __( 'Yes', 'pathology-booking-system' ) => 'yes',
+                        __( 'No', 'pathology-booking-system' )  => 'no',
+                    ),
+                    'std'         => 'yes',
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Bottom Button Label', 'pathology-booking-system' ),
+                    'param_name'  => 'cta_text',
+                    'value'       => __( 'VIEW ALL TESTS ↗', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Bottom Button URL', 'pathology-booking-system' ),
+                    'param_name'  => 'cta_url',
+                    'value'       => '#',
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Carousel Autoplay', 'pathology-booking-system' ),
+                    'param_name'  => 'autoplay',
+                    'value'       => array(
+                        __( 'No', 'pathology-booking-system' )  => 'no',
+                        __( 'Yes', 'pathology-booking-system' ) => 'yes',
+                    ),
+                    'std'         => 'no',
+                ),
+            ),
+        ) );
     }
 }
 

@@ -511,4 +511,22 @@
     cursor: not-allowed !important;
 }
 
+/* Category & Health Risks Card Slider Styles */
+.ptbs-cat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.07) !important;
+    border-color: #e2e8f0 !important;
+}
+
+.ptbs-cat-card:hover .ptbs-cat-circle-icon {
+    transform: scale(1.08);
+}
+
+.ptbs-categories-cta-btn:hover {
+    background: #0f766e !important;
+    box-shadow: 0 6px 20px rgba(13,148,136,0.38) !important;
+    transform: translateY(-2px);
+}
+
+
 

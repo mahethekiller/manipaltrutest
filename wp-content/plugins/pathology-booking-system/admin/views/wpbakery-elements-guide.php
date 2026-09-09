@@ -111,7 +111,31 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <li><strong>Filter by State</strong> (<code>state_id</code>): Show lab centers located in a specific State.</li>
                 <li><strong>Filter by City</strong> (<code>city_id</code>): Show lab centers located in a specific City.</li>
             </ul>
+        <!-- Element 5: Categories & Health Risks Slider -->
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:24px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+                <div style="background:#f3e8ff; color:#9333ea; width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:22px;">🏷️</div>
+                <div>
+                    <h2 style="font-size:18px; font-weight:800; color:#0f172a; margin:0;">Categories & Health Risks Slider</h2>
+                    <span style="font-size:12px; font-weight:700; color:#9333ea; background:#faf5ff; padding:2px 8px; border-radius:4px; text-transform:uppercase;">WPBakery Premium Element</span>
+                </div>
+            </div>
+            <p style="color:#64748b; font-size:14px; margin-bottom:16px;">
+                Displays test categories, subcategories, or health risk conditions in white cards with soft pastel circle icons, titles, taglines, and a bottom centered CTA button (e.g. <code>VIEW ALL TESTS ↗</code>) matching the reference design.
+            </p>
+            <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; font-family:monospace; font-size:13px; color:#0f172a; margin-bottom:16px;">
+                [pathology_categories_slider taxonomy_type="ptbs_condition" sub_heading="HEALTH RISKS" title="Tests Based on Health Risks" columns="5" limit="10"]
+            </div>
+            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls & Options:</h4>
+            <ul style="margin:0; padding-left:20px; font-size:13px; color:#475569;">
+                <li><strong>Taxonomy to Display</strong>: Choose <strong>Health Risks / Conditions</strong> (<code>ptbs_condition</code>), <strong>Main Categories</strong> (<code>ptbs_category</code>), or <strong>Subcategories</strong> (<code>ptbs_subcategory</code>).</li>
+                <li><strong>Display Layout Mode</strong>: Toggle between <strong>Slick Carousel Slider</strong> and <strong>Responsive Grid</strong> layout.</li>
+                <li><strong>Section Sub-Heading & Title</strong>: Custom header titles.</li>
+                <li><strong>Columns & Limit</strong>: 3, 4, 5, or 6 columns per slide/row.</li>
+                <li><strong>Bottom Centered Button</strong>: Toggle bottom CTA button label (e.g. <code>VIEW ALL TESTS ↗</code>) and target link.</li>
+            </ul>
         </div>
 
     </div>
 </div>
+

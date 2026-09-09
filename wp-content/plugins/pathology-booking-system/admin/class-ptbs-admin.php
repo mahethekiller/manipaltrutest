@@ -372,6 +372,9 @@ class PTBS_Admin {
             if ( $term_id > 0 ) {
                 update_term_meta( $term_id, '_ptbs_image_id', $image_id );
                 update_term_meta( $term_id, '_ptbs_status', $status );
+                if ( isset( $_POST['term_icon'] ) )     { update_term_meta( $term_id, '_ptbs_term_icon', sanitize_text_field( wp_unslash( $_POST['term_icon'] ) ) ); }
+                if ( isset( $_POST['term_subtitle'] ) ) { update_term_meta( $term_id, '_ptbs_term_subtitle', sanitize_text_field( wp_unslash( $_POST['term_subtitle'] ) ) ); }
+                if ( isset( $_POST['term_color'] ) )    { update_term_meta( $term_id, '_ptbs_term_color', sanitize_hex_color( $_POST['term_color'] ) ); }
                 wp_send_json_success( array( 'message' => 'Category saved successfully.' ) );
             }
         } elseif ( 'save_subcategory' === $action_type ) {
@@ -396,6 +399,9 @@ class PTBS_Admin {
                 update_term_meta( $term_id, '_ptbs_image_id', $image_id );
                 update_term_meta( $term_id, '_ptbs_status', $status );
                 update_term_meta( $term_id, '_ptbs_parent_category_id', $parent_id );
+                if ( isset( $_POST['term_icon'] ) )     { update_term_meta( $term_id, '_ptbs_term_icon', sanitize_text_field( wp_unslash( $_POST['term_icon'] ) ) ); }
+                if ( isset( $_POST['term_subtitle'] ) ) { update_term_meta( $term_id, '_ptbs_term_subtitle', sanitize_text_field( wp_unslash( $_POST['term_subtitle'] ) ) ); }
+                if ( isset( $_POST['term_color'] ) )    { update_term_meta( $term_id, '_ptbs_term_color', sanitize_hex_color( $_POST['term_color'] ) ); }
                 wp_send_json_success( array( 'message' => 'Sub Category saved successfully.' ) );
             }
         } elseif ( 'save_condition' === $action_type ) {
@@ -418,6 +424,9 @@ class PTBS_Admin {
             if ( $term_id > 0 ) {
                 update_term_meta( $term_id, '_ptbs_image_id', $image_id );
                 update_term_meta( $term_id, '_ptbs_status', $status );
+                if ( isset( $_POST['term_icon'] ) )     { update_term_meta( $term_id, '_ptbs_term_icon', sanitize_text_field( wp_unslash( $_POST['term_icon'] ) ) ); }
+                if ( isset( $_POST['term_subtitle'] ) ) { update_term_meta( $term_id, '_ptbs_term_subtitle', sanitize_text_field( wp_unslash( $_POST['term_subtitle'] ) ) ); }
+                if ( isset( $_POST['term_color'] ) )    { update_term_meta( $term_id, '_ptbs_term_color', sanitize_hex_color( $_POST['term_color'] ) ); }
                 wp_send_json_success( array( 'message' => 'Condition saved successfully.' ) );
             }
         } elseif ( 'save_test' === $action_type ) {
