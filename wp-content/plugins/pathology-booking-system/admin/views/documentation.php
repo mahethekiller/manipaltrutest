@@ -129,5 +129,20 @@ if ( ! defined( 'ABSPATH' ) ) {
                 💡 <strong>Developer Filter Hook</strong>: You can also intercept template location dynamically using <code>add_filter('ptbs_locate_template', 'my_custom_template_fn', 10, 3);</code>.
             </p>
         </div>
+
+        <!-- Step 7: WPBakery Page Builder Elements -->
+        <div class="ptbs-card ptbs-card-full">
+            <h2>7. 🧩 WPBakery Page Builder Drag-and-Drop Elements</h2>
+            <p><?php esc_html_e( 'If you are using WPBakery Page Builder (or Ekko Theme Builder), 4 custom drag-and-drop elements are registered under the "Pathology Booking" category tab in the element picker dialog:', 'pathology-booking-system' ); ?></p>
+            <ol style="margin-top:8px;">
+                <li><strong>Pathology Catalog App</strong> (<code>[pathology_booking]</code>): Full interactive booking application.</li>
+                <li><strong>Featured Pathology Tests</strong> (<code>[pathology_featured_tests]</code>): Grid/list of top lab tests.</li>
+                <li><strong>Featured Health Packages</strong> (<code>[pathology_health_packages]</code>): Discounted health package cards with MRP comparison.</li>
+                <li><strong>Lab Center Locations</strong> (<code>[pathology_center_locations]</code>): Lab centers grid with operating hours & direct view links.</li>
+            </ol>
+            <p style="margin-top:12px;">
+                👉 Visit <a href="<?php echo esc_url( admin_url( 'admin.php?page=ptbs-wpbakery-elements' ) ); ?>" style="font-weight:700; color:#0284c7;">Pathology Booking > WPBakery Elements</a> for complete control parameters and copyable shortcodes.
+            </p>
+        </div>
     </div>
 </div>

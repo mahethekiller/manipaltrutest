@@ -28,6 +28,9 @@ class PTBS_Public {
         // Shortcodes
         add_shortcode( 'pathology_booking', array( $this, 'render_booking_shortcode' ) );
         add_shortcode( 'pathology_patient_dashboard', array( $this, 'render_patient_dashboard_shortcode' ) );
+        add_shortcode( 'pathology_featured_tests', array( $this, 'render_featured_tests_shortcode' ) );
+        add_shortcode( 'pathology_health_packages', array( $this, 'render_health_packages_shortcode' ) );
+        add_shortcode( 'pathology_center_locations', array( $this, 'render_center_locations_shortcode' ) );
 
         // Catalog & Time Slots AJAX
         add_action( 'wp_ajax_ptbs_get_city_catalog', array( $this, 'ajax_get_city_catalog' ) );
@@ -960,4 +963,182 @@ class PTBS_Public {
 
         wp_send_json_success( array( 'slots' => $slots_data ) );
     }
+
+    /**
+     * Render Featured Tests Shortcode Callback
+     */
+    public function render_featured_tests_shortcode( $atts ) {
+        $atts = shortcode_atts( array(
+            'title'   => __( 'Popular Diagnostic Tests', 'pathology-booking-system' ),
+            'limit'   => 6,
+            'columns' => 3,
+        ), $atts );
+
+        $limit   = absint( $atts['limit'] );
+        $cols    = absint( $atts['columns'] );
+        $tests   = get_posts( array(
+            'post_type'      => 'ptbs_test',
+            'posts_per_page' => $limit,
+            'post_status'    => 'publish',
+        ) );
+
+        ob_start();
+        ?>
+        <div class="ptbs-featured-tests-wrap" style="margin:30px 0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+            <?php if ( ! empty( $atts['title'] ) ) : ?>
+                <h2 style="font-size:24px; font-weight:800; color:#0f172a; margin-bottom:20px; text-align:center;"><?php echo esc_html( $atts['title'] ); ?></h2>
+            <?php endif; ?>
+
+            <div style="display:grid; grid-template-columns: repeat(<?php echo esc_attr( $cols ); ?>, 1fr); gap:20px;">
+                <?php if ( ! empty( $tests ) ) : foreach ( $tests as $t ) : 
+                    $price     = get_post_meta( $t->ID, '_ptbs_price', true );
+                    $code      = get_post_meta( $t->ID, '_ptbs_code', true );
+                    $permalink = get_permalink( $t->ID );
+                ?>
+                    <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.03); display:flex; flex-direction:column; justify-content:space-between;">
+                        <div>
+                            <span style="background:#e0f2fe; color:#0284c7; font-size:11px; font-weight:700; padding:4px 10px; border-radius:12px; display:inline-block; margin-bottom:8px;">
+                                🧪 <?php echo esc_html( $code ?: 'LAB TEST' ); ?>
+                            </span>
+                            <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin:0 0 10px 0; line-height:1.4;">
+                                <a href="<?php echo esc_url( $permalink ); ?>" style="color:inherit; text-decoration:none;"><?php echo esc_html( $t->post_title ); ?></a>
+                            </h3>
+                        </div>
+                        <div style="margin-top:16px; ptbs-border-top:1px solid #f1f5f9; padding-top:12px; display:flex; align-items:center; justify-content:space-between;">
+                            <span style="font-size:18px; font-weight:800; color:#0284c7;">₹<?php echo esc_html( number_format( floatval( $price ), 2 ) ); ?></span>
+                            <a href="<?php echo esc_url( $permalink ); ?>" style="background:#0f172a; color:#fff; font-size:12px; font-weight:700; padding:8px 16px; border-radius:6px; text-decoration:none;">View Details</a>
+                        </div>
+                    </div>
+                <?php endforeach; endif; ?>
+            </div>
+        </div>
+        <?php
+        return ob_get_clean();
+    }
+
+    /**
+     * Render Featured Health Packages Shortcode Callback
+     */
+    public function render_health_packages_shortcode( $atts ) {
+        $atts = shortcode_atts( array(
+            'title'   => __( 'Comprehensive Health Checkup Packages', 'pathology-booking-system' ),
+            'limit'   => 3,
+            'columns' => 3,
+        ), $atts );
+
+        $limit    = absint( $atts['limit'] );
+        $cols     = absint( $atts['columns'] );
+        $packages = get_posts( array(
+            'post_type'      => 'ptbs_package',
+            'posts_per_page' => $limit,
+            'post_status'    => 'publish',
+        ) );
+
+        ob_start();
+        ?>
+        <div class="ptbs-health-packages-wrap" style="margin:30px 0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+            <?php if ( ! empty( $atts['title'] ) ) : ?>
+                <h2 style="font-size:24px; font-weight:800; color:#0f172a; margin-bottom:20px; text-align:center;"><?php echo esc_html( $atts['title'] ); ?></h2>
+            <?php endif; ?>
+
+            <div style="display:grid; grid-template-columns: repeat(<?php echo esc_attr( $cols ); ?>, 1fr); gap:20px;">
+                <?php if ( ! empty( $packages ) ) : foreach ( $packages as $p ) : 
+                    $price     = get_post_meta( $p->ID, '_ptbs_price', true );
+                    $mrp       = get_post_meta( $p->ID, '_ptbs_mrp', true );
+                    $permalink = get_permalink( $p->ID );
+                    $discount  = ( $mrp > $price ) ? round( ( ( $mrp - $price ) / $mrp ) * 100 ) : 0;
+                ?>
+                    <div style="background:#fff; border:2px solid #0d9488; border-radius:12px; padding:24px; box-shadow:0 4px 15px rgba(13,148,136,0.08); position:relative; display:flex; flex-direction:column; justify-content:space-between;">
+                        <?php if ( $discount > 0 ) : ?>
+                            <div style="position:absolute; top:-12px; right:20px; background:#ef4444; color:#fff; font-size:11px; font-weight:800; padding:4px 12px; border-radius:12px; text-transform:uppercase;">
+                                <?php echo esc_html( $discount ); ?>% OFF
+                            </div>
+                        <?php endif; ?>
+
+                        <div>
+                            <span style="background:#ccfbf1; color:#0d9488; font-size:11px; font-weight:700; padding:4px 10px; border-radius:12px; display:inline-block; margin-bottom:8px;">
+                                📦 HEALTH PACKAGE
+                            </span>
+                            <h3 style="font-size:18px; font-weight:800; color:#0f172a; margin:0 0 10px 0; line-height:1.4;">
+                                <a href="<?php echo esc_url( $permalink ); ?>" style="color:inherit; text-decoration:none;"><?php echo esc_html( $p->post_title ); ?></a>
+                            </h3>
+                        </div>
+
+                        <div style="margin-top:20px; border-top:1px solid #f1f5f9; padding-top:16px; display:flex; align-items:center; justify-content:space-between;">
+                            <div>
+                                <span style="font-size:20px; font-weight:800; color:#0d9488;">₹<?php echo esc_html( number_format( floatval( $price ), 2 ) ); ?></span>
+                                <?php if ( $mrp > $price ) : ?>
+                                    <span style="font-size:13px; color:#94a3b8; text-decoration:line-through; margin-left:6px;">₹<?php echo esc_html( number_format( floatval( $mrp ), 2 ) ); ?></span>
+                                <?php endif; ?>
+                            </div>
+                            <a href="<?php echo esc_url( $permalink ); ?>" style="background:#0d9488; color:#fff; font-size:13px; font-weight:700; padding:10px 18px; border-radius:6px; text-decoration:none;">Book Package</a>
+                        </div>
+                    </div>
+                <?php endforeach; endif; ?>
+            </div>
+        </div>
+        <?php
+        return ob_get_clean();
+    }
+
+    /**
+     * Render Center Locations Shortcode Callback
+     */
+    public function render_center_locations_shortcode( $atts ) {
+        $atts = shortcode_atts( array(
+            'title'   => __( 'Our Lab Center Locations', 'pathology-booking-system' ),
+            'limit'   => 6,
+            'columns' => 3,
+        ), $atts );
+
+        $limit   = absint( $atts['limit'] );
+        $cols    = absint( $atts['columns'] );
+        $centers = get_posts( array(
+            'post_type'      => 'ptbs_center_location',
+            'posts_per_page' => $limit,
+            'post_status'    => 'publish',
+        ) );
+
+        ob_start();
+        ?>
+        <div class="ptbs-center-locations-wrap" style="margin:30px 0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+            <?php if ( ! empty( $atts['title'] ) ) : ?>
+                <h2 style="font-size:24px; font-weight:800; color:#0f172a; margin-bottom:20px; text-align:center;"><?php echo esc_html( $atts['title'] ); ?></h2>
+            <?php endif; ?>
+
+            <div style="display:grid; grid-template-columns: repeat(<?php echo esc_attr( $cols ); ?>, 1fr); gap:20px;">
+                <?php if ( ! empty( $centers ) ) : foreach ( $centers as $c ) : 
+                    $phone     = get_post_meta( $c->ID, '_ptbs_phone', true );
+                    $address   = get_post_meta( $c->ID, '_ptbs_address', true );
+                    $hours     = get_post_meta( $c->ID, '_ptbs_hours', true );
+                    $permalink = get_permalink( $c->ID );
+                    $cities    = wp_get_post_terms( $c->ID, 'ptbs_city', array( 'fields' => 'names' ) );
+                    $city_name = ! empty( $cities ) && ! is_wp_error( $cities ) ? $cities[0] : '';
+                ?>
+                    <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.03); display:flex; flex-direction:column; justify-content:space-between;">
+                        <div>
+                            <span style="background:#f1f5f9; color:#475569; font-size:11px; font-weight:700; padding:4px 10px; border-radius:12px; display:inline-block; margin-bottom:8px;">
+                                📍 <?php echo esc_html( $city_name ?: 'LAB CENTER' ); ?>
+                            </span>
+                            <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin:0 0 10px 0; line-height:1.4;">
+                                <a href="<?php echo esc_url( $permalink ); ?>" style="color:inherit; text-decoration:none;"><?php echo esc_html( $c->post_title ); ?></a>
+                            </h3>
+                            <p style="font-size:13px; color:#64748b; margin:0 0 8px 0;"><?php echo esc_html( $address ); ?></p>
+                            <?php if ( $hours ) : ?>
+                                <div style="font-size:12px; color:#94a3b8;">⏰ <?php echo esc_html( $hours ); ?></div>
+                            <?php endif; ?>
+                        </div>
+
+                        <div style="margin-top:16px; border-top:1px solid #f1f5f9; padding-top:12px; display:flex; align-items:center; justify-content:space-between;">
+                            <span style="font-size:13px; font-weight:600; color:#0f172a;">📞 <?php echo esc_html( $phone ?: '1800-123-4567' ); ?></span>
+                            <a href="<?php echo esc_url( $permalink ); ?>" style="background:#0284c7; color:#fff; font-size:12px; font-weight:700; padding:8px 14px; border-radius:6px; text-decoration:none;">View Center Page</a>
+                        </div>
+                    </div>
+                <?php endforeach; endif; ?>
+            </div>
+        </div>
+        <?php
+        return ob_get_clean();
+    }
 }
+

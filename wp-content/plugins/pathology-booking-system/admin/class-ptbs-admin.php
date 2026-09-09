@@ -83,12 +83,25 @@ class PTBS_Admin {
 
         add_submenu_page(
             'ptbs-dashboard',
+            __( 'WPBakery Elements Guide', 'pathology-booking-system' ),
+            __( 'WPBakery Elements', 'pathology-booking-system' ),
+            'manage_options',
+            'ptbs-wpbakery-elements',
+            array( $this, 'render_wpbakery_elements_page' )
+        );
+
+        add_submenu_page(
+            'ptbs-dashboard',
             __( 'Documentation & Setup', 'pathology-booking-system' ),
             __( 'Documentation', 'pathology-booking-system' ),
             'manage_options',
             'ptbs-documentation',
             array( $this, 'render_documentation_page' )
         );
+    }
+
+    public function render_wpbakery_elements_page() {
+        include PTBS_DIR_PATH . 'admin/views/wpbakery-elements-guide.php';
     }
 
     public function register_settings() {
