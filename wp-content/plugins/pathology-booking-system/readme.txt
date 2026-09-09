@@ -1,5 +1,5 @@
 === Pathology Test & Package Booking System ===
-Contributors: labtechsystems
+Contributors: mahethekiller
 Donate link: https://example.com/donate
 Tags: pathology, lab-booking, health-checkup, razorpay, phonepe
 Requires at least: 6.0
