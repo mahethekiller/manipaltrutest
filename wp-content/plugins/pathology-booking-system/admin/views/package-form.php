@@ -103,12 +103,34 @@ if ( ! is_array( $selected_centers ) ) $selected_centers = array();
 
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-bottom:20px;">
     <div>
-        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Price', 'pathology-booking-system' ); ?></label>
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Price (₹)', 'pathology-booking-system' ); ?></label>
         <input type="number" step="0.01" name="price" value="<?php echo esc_attr( $post ? get_post_meta( $post->ID, '_ptbs_price', true ) : '' ); ?>" placeholder="<?php esc_attr_e( 'Enter here', 'pathology-booking-system' ); ?>" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
     </div>
     <div>
-        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Parameters', 'pathology-booking-system' ); ?></label>
-        <input type="number" name="parameters" value="<?php echo esc_attr( $post ? get_post_meta( $post->ID, '_ptbs_parameters_count', true ) : '' ); ?>" placeholder="<?php esc_attr_e( 'Enter here', 'pathology-booking-system' ); ?>" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Parameters Count', 'pathology-booking-system' ); ?></label>
+        <input type="number" name="parameters" value="<?php echo esc_attr( $post ? get_post_meta( $post->ID, '_ptbs_parameters_count', true ) : '' ); ?>" placeholder="<?php esc_attr_e( 'Enter here e.g. 53', 'pathology-booking-system' ); ?>" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
+    </div>
+</div>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-bottom:20px;">
+    <div>
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Package Subtitle / Tagline', 'pathology-booking-system' ); ?></label>
+        <input type="text" name="subtitle" value="<?php echo esc_attr( $post ? get_post_meta( $post->ID, '_ptbs_subtitle', true ) : '' ); ?>" placeholder="<?php esc_attr_e( 'e.g. Care for Mother and Baby', 'pathology-booking-system' ); ?>" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
+    </div>
+    <div>
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Gender Recommendation', 'pathology-booking-system' ); ?></label>
+        <input type="text" name="gender_recommendation" value="<?php echo esc_attr( $post ? get_post_meta( $post->ID, '_ptbs_gender_recommendation', true ) : '' ); ?>" placeholder="<?php esc_attr_e( 'e.g. Recommended for Male & Female', 'pathology-booking-system' ); ?>" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
+    </div>
+</div>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-bottom:20px;">
+    <div>
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Badge Text', 'pathology-booking-system' ); ?></label>
+        <input type="text" name="badge_text" value="<?php echo esc_attr( $post ? get_post_meta( $post->ID, '_ptbs_badge_text', true ) : '' ); ?>" placeholder="<?php esc_attr_e( 'e.g. MOST POPULAR, BEST VALUE', 'pathology-booking-system' ); ?>" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;">
+    </div>
+    <div>
+        <label style="display:block; font-weight:600; margin-bottom:8px; color:#334155;"><?php esc_html_e( 'Badge Color', 'pathology-booking-system' ); ?></label>
+        <input type="color" name="badge_color" value="<?php echo esc_attr( $post ? ( get_post_meta( $post->ID, '_ptbs_badge_color', true ) ?: '#22c55e' ) : '#22c55e' ); ?>" style="width:100%; height:42px; border:1px solid #cbd5e1; border-radius:6px; cursor:pointer;">
     </div>
 </div>
 

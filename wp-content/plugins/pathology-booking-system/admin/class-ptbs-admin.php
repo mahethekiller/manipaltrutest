@@ -467,6 +467,10 @@ class PTBS_Admin {
             }
         } elseif ( 'save_package' === $action_type ) {
             $pkg_title    = sanitize_text_field( wp_unslash( $_POST['package_name'] ?? '' ) );
+            $badge_text   = sanitize_text_field( wp_unslash( $_POST['badge_text'] ?? '' ) );
+            $badge_color  = sanitize_hex_color( wp_unslash( $_POST['badge_color'] ?? '' ) ) ?: '#22c55e';
+            $subtitle     = sanitize_text_field( wp_unslash( $_POST['subtitle'] ?? '' ) );
+            $gender_rec   = sanitize_text_field( wp_unslash( $_POST['gender_recommendation'] ?? '' ) );
             $price        = floatval( $_POST['price'] ?? 0 );
             $mrp          = floatval( $_POST['mrp'] ?? 0 );
             $code         = sanitize_text_field( wp_unslash( $_POST['test_code'] ?? '' ) );
@@ -503,6 +507,10 @@ class PTBS_Admin {
                 update_post_meta( $post_id, '_ptbs_mrp', $mrp );
                 update_post_meta( $post_id, '_ptbs_code', $code );
                 update_post_meta( $post_id, '_ptbs_parameters_count', $params_count );
+                update_post_meta( $post_id, '_ptbs_badge_text', $badge_text );
+                update_post_meta( $post_id, '_ptbs_badge_color', $badge_color );
+                update_post_meta( $post_id, '_ptbs_subtitle', $subtitle );
+                update_post_meta( $post_id, '_ptbs_gender_recommendation', $gender_rec );
                 update_post_meta( $post_id, '_ptbs_meta_title', $meta_title );
                 update_post_meta( $post_id, '_ptbs_meta_keywords', $meta_kw );
                 update_post_meta( $post_id, '_ptbs_meta_description', $meta_desc );

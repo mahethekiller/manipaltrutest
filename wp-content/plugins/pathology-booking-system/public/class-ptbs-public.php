@@ -62,13 +62,17 @@ class PTBS_Public {
 
     public function enqueue_frontend_assets() {
         wp_enqueue_style( 'ptbs-public-css', PTBS_DIR_URL . 'public/css/ptbs-public.css', array(), time() );
+        wp_enqueue_style( 'slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1' );
+        wp_enqueue_style( 'slick-carousel-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array( 'slick-carousel' ), '1.8.1' );
 
         // Google OAuth SDK script
         wp_enqueue_script( 'google-one-tap-js', 'https://accounts.google.com/gsi/client', array(), null, true );
         // Razorpay Checkout JS
         wp_enqueue_script( 'razorpay-checkout-js', 'https://checkout.razorpay.com/v1/checkout.js', array(), null, true );
+        // Slick Carousel JS
+        wp_enqueue_script( 'slick-carousel-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.8.1', true );
 
-        wp_enqueue_script( 'ptbs-public-js', PTBS_DIR_URL . 'public/js/ptbs-public.js', array( 'jquery' ), time(), true );
+        wp_enqueue_script( 'ptbs-public-js', PTBS_DIR_URL . 'public/js/ptbs-public.js', array( 'jquery', 'slick-carousel-js' ), time(), true );
 
         $settings  = get_option( 'ptbs_settings', array() );
         $cities    = get_terms( array( 'taxonomy' => 'ptbs_city', 'hide_empty' => false ) );
@@ -1209,5 +1213,204 @@ class PTBS_Public {
         <?php
         return ob_get_clean();
     }
+
+    /**
+     * Render Premium Health Packages Slider & Grid Shortcode Callback
+     */
+    public function render_health_packages_slider_shortcode( $atts ) {
+        $atts = shortcode_atts( array(
+            'sub_heading'    => __( 'HEALTH CHECKUPS', 'pathology-booking-system' ),
+            'title'          => __( 'Keep your family TRUly healthy.', 'pathology-booking-system' ),
+            'description'    => __( 'Choose a package. Get tested TODAY!', 'pathology-booking-system' ),
+            'show_view_all'  => 'yes',
+            'view_all_url'   => '#',
+            'layout_mode'    => 'carousel', // 'carousel' or 'grid'
+            'limit'          => 8,
+            'columns'        => 4,
+            'autoplay'       => 'no',
+            'category_id'    => '',
+            'condition_id'   => '',
+            'city_id'        => '',
+        ), $atts );
+
+        $limit     = absint( $atts['limit'] );
+        $cols      = absint( $atts['columns'] );
+        $mode      = ( 'grid' === $atts['layout_mode'] ) ? 'grid' : 'carousel';
+        $slider_id = 'ptbs_packages_slider_' . wp_rand( 100, 999 );
+
+        $args = array(
+            'post_type'      => 'ptbs_package',
+            'posts_per_page' => $limit,
+            'post_status'    => 'publish',
+        );
+
+        $tax_query = array();
+        if ( ! empty( $atts['category_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_category', 'field' => 'term_id', 'terms' => absint( $atts['category_id'] ) );
+        }
+        if ( ! empty( $atts['condition_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_condition', 'field' => 'term_id', 'terms' => absint( $atts['condition_id'] ) );
+        }
+        if ( ! empty( $atts['city_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_city', 'field' => 'term_id', 'terms' => absint( $atts['city_id'] ) );
+        }
+
+        if ( ! empty( $tax_query ) ) {
+            $tax_query['relation'] = 'AND';
+            $args['tax_query']     = $tax_query;
+        }
+
+        $packages = get_posts( $args );
+
+        ob_start();
+        ?>
+        <div class="ptbs-premium-packages-section" style="margin:40px 0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+            
+            <!-- Section Header -->
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:28px; flex-wrap:wrap; gap:16px;">
+                <div>
+                    <?php if ( ! empty( $atts['sub_heading'] ) ) : ?>
+                        <span style="color:#0284c7; font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; display:block; margin-bottom:4px;">
+                            <?php echo esc_html( $atts['sub_heading'] ); ?>
+                        </span>
+                    <?php endif; ?>
+                    <?php if ( ! empty( $atts['title'] ) ) : ?>
+                        <h2 style="font-size:32px; font-weight:800; color:#0f172a; margin:0 0 6px 0; line-height:1.2;">
+                            <?php echo esc_html( $atts['title'] ); ?>
+                        </h2>
+                    <?php endif; ?>
+                    <?php if ( ! empty( $atts['description'] ) ) : ?>
+                        <p style="font-size:15px; color:#64748b; margin:0;"><?php echo esc_html( $atts['description'] ); ?></p>
+                    <?php endif; ?>
+                </div>
+
+                <?php if ( 'yes' === $atts['show_view_all'] ) : ?>
+                    <div>
+                        <a href="<?php echo esc_url( $atts['view_all_url'] ); ?>" style="border:1px solid #cbd5e1; border-radius:20px; padding:8px 20px; font-size:12px; font-weight:800; color:#0f172a; text-decoration:none; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px; background:#fff; transition:all 0.2s;">
+                            VIEW ALL ↗
+                        </a>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+            <!-- Content Container (Carousel or Grid) -->
+            <?php if ( 'carousel' === $mode ) : ?>
+                <div id="<?php echo esc_attr( $slider_id ); ?>" class="ptbs-packages-slick-carousel" style="margin:0 -10px;">
+            <?php else : ?>
+                <div style="display:grid; grid-template-columns: repeat(<?php echo esc_attr( $cols ); ?>, 1fr); gap:20px;">
+            <?php endif; ?>
+
+                <?php if ( ! empty( $packages ) ) : foreach ( $packages as $pkg ) : 
+                    $pid            = $pkg->ID;
+                    $price          = get_post_meta( $pid, '_ptbs_price', true );
+                    $mrp            = get_post_meta( $pid, '_ptbs_mrp', true );
+                    $badge_text     = get_post_meta( $pid, '_ptbs_badge_text', true ) ?: ( ( $price < 1500 ) ? 'MOST POPULAR' : ( ( $price < 3000 ) ? 'BEST VALUE' : 'ADVANCED' ) );
+                    $badge_color    = get_post_meta( $pid, '_ptbs_badge_color', true ) ?: '#22c55e';
+                    $subtitle       = get_post_meta( $pid, '_ptbs_subtitle', true ) ?: 'Complete Wellness Package';
+                    $gender_rec     = get_post_meta( $pid, '_ptbs_gender_recommendation', true ) ?: 'Recommended for Male & Female';
+                    $params_count   = get_post_meta( $pid, '_ptbs_parameters_count', true ) ?: 50;
+                    $linked_tests   = get_post_meta( $pid, '_ptbs_linked_test_ids', true );
+                    if ( ! is_array( $linked_tests ) ) $linked_tests = @unserialize( $linked_tests );
+                    $tests_count    = is_array( $linked_tests ) ? count( $linked_tests ) : 20;
+                    $img_url        = get_the_post_thumbnail_url( $pid, 'medium_large' );
+                    $permalink      = get_permalink( $pid );
+                ?>
+                    <div style="<?php echo ( 'carousel' === $mode ) ? 'padding:0 10px;' : ''; ?>">
+                        <div class="ptbs-pkg-card" style="background:#fff; border:1px solid #e2e8f0; border-radius:18px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.04); display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            
+                            <!-- Card Header Image & Badge -->
+                            <div style="position:relative; width:100%; height:190px; background:#f1f5f9; overflow:hidden;">
+                                <?php if ( $img_url ) : ?>
+                                    <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $pkg->post_title ); ?>" style="width:100%; height:100%; object-fit:cover;">
+                                <?php else : ?>
+                                    <div style="width:100%; height:100%; background:linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); display:flex; align-items:center; justify-content:center; font-size:48px; color:#0284c7;">
+                                        🩺
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if ( ! empty( $badge_text ) ) : ?>
+                                    <div style="position:absolute; top:14px; left:14px; background:<?php echo esc_attr( $badge_color ); ?>; color:#fff; font-size:11px; font-weight:800; padding:5px 12px; border-radius:12px; text-transform:uppercase; letter-spacing:0.5px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+                                        <?php echo esc_html( $badge_text ); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+
+                            <!-- Card Body Content -->
+                            <div style="padding:20px; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+                                <div>
+                                    <h3 style="font-size:18px; font-weight:800; color:#0f172a; margin:0 0 4px 0; line-height:1.3;">
+                                        <a href="<?php echo esc_url( $permalink ); ?>" style="color:inherit; text-decoration:none;"><?php echo esc_html( $pkg->post_title ); ?></a>
+                                    </h3>
+                                    <p style="font-size:13px; color:#64748b; margin:0 0 16px 0;"><?php echo esc_html( $subtitle ); ?></p>
+                                </div>
+
+                                <div>
+                                    <div style="border-top:1px solid #f1f5f9; padding-top:12px; margin-bottom:12px;">
+                                        <div style="font-size:13px; font-weight:700; color:#1e293b;">
+                                            <?php echo esc_html( $params_count ); ?> Parameters • <?php echo esc_html( $tests_count ); ?> Tests
+                                        </div>
+                                        <div style="font-size:12px; font-weight:600; color:#0284c7; margin-top:4px;">
+                                            <?php echo esc_html( $gender_rec ); ?>
+                                        </div>
+                                    </div>
+
+                                    <!-- Price & CTA Buttons -->
+                                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+                                        <div>
+                                            <span style="font-size:22px; font-weight:800; color:#0f172a;">₹ <?php echo esc_html( number_format( floatval( $price ) ) ); ?></span>
+                                            <?php if ( $mrp > $price ) : ?>
+                                                <span style="font-size:13px; color:#94a3b8; text-decoration:line-through; margin-left:6px;">₹ <?php echo esc_html( number_format( floatval( $mrp ) ) ); ?></span>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+
+                                    <div style="display:flex; gap:10px;">
+                                        <button type="button" class="ptbs-add-to-cart-btn" data-id="<?php echo esc_attr( $pid ); ?>" data-type="package" data-title="<?php echo esc_attr( $pkg->post_title ); ?>" data-price="<?php echo esc_attr( $price ); ?>" style="flex:1; background:#0284c7; color:#fff; border:none; padding:12px 14px; border-radius:10px; font-size:13px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; transition:background 0.2s;">
+                                            🛒 ADD TO CART
+                                        </button>
+                                        <a href="<?php echo esc_url( $permalink ); ?>" style="background:#f1f5f9; color:#0f172a; padding:12px 16px; border-radius:10px; font-size:13px; font-weight:800; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px;">
+                                            👁️ VIEW
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php endforeach; else : ?>
+                    <p style="color:#94a3b8; text-align:center; grid-column: 1 / -1;">No health packages available.</p>
+                <?php endif; ?>
+
+            </div>
+
+        </div>
+
+        <?php if ( 'carousel' === $mode ) : ?>
+            <script>
+            jQuery(document).ready(function($) {
+                if (typeof $.fn.slick === 'function') {
+                    $('#<?php echo esc_js( $slider_id ); ?>').slick({
+                        dots: false,
+                        arrows: true,
+                        infinite: true,
+                        speed: 500,
+                        slidesToShow: <?php echo esc_js( $cols ); ?>,
+                        slidesToScroll: 1,
+                        autoplay: <?php echo ( 'yes' === $atts['autoplay'] ) ? 'true' : 'false'; ?>,
+                        responsive: [
+                            { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                            { breakpoint: 768,  settings: { slidesToShow: 2 } },
+                            { breakpoint: 480,  settings: { slidesToShow: 1 } }
+                        ]
+                    });
+                }
+            });
+            </script>
+        <?php endif; ?>
+
+        <?php
+        return ob_get_clean();
+    }
 }
+
 

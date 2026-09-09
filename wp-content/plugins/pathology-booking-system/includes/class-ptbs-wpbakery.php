@@ -154,36 +154,86 @@ class PTBS_WPBakery {
             ),
         ) );
 
-        // 3. Featured Health Packages Grid Element
+        // 3. Featured Health Packages Slider & Grid Element (Premium Card Layout)
         vc_map( array(
-            'name'        => __( 'Featured Health Packages', 'pathology-booking-system' ),
-            'base'        => 'pathology_health_packages',
-            'description' => __( 'Card grid of discounted health checkup packages with MRP badges', 'pathology-booking-system' ),
+            'name'        => __( 'Health Packages Slider & Grid', 'pathology-booking-system' ),
+            'base'        => 'pathology_health_packages_slider',
+            'description' => __( 'Premium Health Checkups Slider & Grid with Slick Carousel, View All button, Badges & Cart Actions', 'pathology-booking-system' ),
             'category'    => $category_name,
             'icon'        => 'dashicons-welcome-widgets-menus',
             'params'      => array(
                 array(
                     'type'        => 'textfield',
-                    'heading'     => __( 'Section Title', 'pathology-booking-system' ),
+                    'heading'     => __( 'Sub Title / Kicker Tag', 'pathology-booking-system' ),
+                    'param_name'  => 'sub_heading',
+                    'value'       => __( 'HEALTH CHECKUPS', 'pathology-booking-system' ),
+                    'description' => __( 'Small uppercase badge text above title (e.g. HEALTH CHECKUPS)', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Main Title', 'pathology-booking-system' ),
                     'param_name'  => 'title',
-                    'value'       => __( 'Comprehensive Health Checkup Packages', 'pathology-booking-system' ),
+                    'value'       => __( 'Keep your family TRUly healthy.', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'Description / Subheading Text', 'pathology-booking-system' ),
+                    'param_name'  => 'description',
+                    'value'       => __( 'Choose a package. Get tested TODAY!', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Display Layout Mode', 'pathology-booking-system' ),
+                    'param_name'  => 'layout_mode',
+                    'value'       => array(
+                        __( 'Slick Carousel Slider (Touch Swipe + Arrows)', 'pathology-booking-system' ) => 'carousel',
+                        __( 'Responsive Grid Layout', 'pathology-booking-system' )                     => 'grid',
+                    ),
+                    'std'         => 'carousel',
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Show Top Right "VIEW ALL ↗" Button?', 'pathology-booking-system' ),
+                    'param_name'  => 'show_view_all',
+                    'value'       => array(
+                        __( 'Yes', 'pathology-booking-system' ) => 'yes',
+                        __( 'No', 'pathology-booking-system' )  => 'no',
+                    ),
+                    'std'         => 'yes',
+                ),
+                array(
+                    'type'        => 'textfield',
+                    'heading'     => __( 'View All Button Target URL', 'pathology-booking-system' ),
+                    'param_name'  => 'view_all_url',
+                    'value'       => '#',
+                    'description' => __( 'URL where View All button directs visitors', 'pathology-booking-system' ),
                 ),
                 array(
                     'type'        => 'textfield',
                     'heading'     => __( 'Number of Packages to Display', 'pathology-booking-system' ),
                     'param_name'  => 'limit',
-                    'value'       => '3',
+                    'value'       => '8',
                 ),
                 array(
                     'type'        => 'dropdown',
-                    'heading'     => __( 'Grid Columns', 'pathology-booking-system' ),
+                    'heading'     => __( 'Columns per Slide / Row', 'pathology-booking-system' ),
                     'param_name'  => 'columns',
                     'value'       => array(
                         __( '2 Columns', 'pathology-booking-system' ) => '2',
                         __( '3 Columns', 'pathology-booking-system' ) => '3',
                         __( '4 Columns', 'pathology-booking-system' ) => '4',
                     ),
-                    'std'         => '3',
+                    'std'         => '4',
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Carousel Autoplay', 'pathology-booking-system' ),
+                    'param_name'  => 'autoplay',
+                    'value'       => array(
+                        __( 'No', 'pathology-booking-system' )  => 'no',
+                        __( 'Yes', 'pathology-booking-system' ) => 'yes',
+                    ),
+                    'std'         => 'no',
                 ),
                 array(
                     'type'        => 'dropdown',

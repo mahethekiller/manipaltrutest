@@ -335,12 +335,16 @@ class PTBS_Importer {
             $pkg_metas = array(
                 '_ptbs_code'                => $pkg['code'] ?? '',
                 '_ptbs_price'               => (string)($pkg['price'] ?? 0),
-                '_ptbs_mrp'              => (string)($pkg['mrp'] ?? 0),
-                '_ptbs_parameters_count' => (string)$pkg['tests_count'],
-                '_ptbs_status'           => $pkg['status'] ?? 'Active',
-                '_ptbs_linked_test_ids'  => serialize( $linked_post_ids ),
+                '_ptbs_mrp'                 => (string)($pkg['mrp'] ?? 0),
+                '_ptbs_parameters_count'    => (string)($pkg['tests_count'] ?? 0),
+                '_ptbs_subtitle'            => $pkg['subtitle'] ?? ( $pkg['name'] . ' Care' ),
+                '_ptbs_gender_recommendation'=> $pkg['gender_recommendation'] ?? 'Recommended for Male & Female',
+                '_ptbs_badge_text'          => $pkg['badge_text'] ?? ( ( $pkg['price'] < 1500 ) ? 'MOST POPULAR' : ( ( $pkg['price'] < 3000 ) ? 'BEST VALUE' : 'ADVANCED' ) ),
+                '_ptbs_badge_color'         => $pkg['badge_color'] ?? ( ( $pkg['price'] < 1500 ) ? '#22c55e' : ( ( $pkg['price'] < 3000 ) ? '#0284c7' : '#a855f7' ) ),
+                '_ptbs_status'              => $pkg['status'] ?? 'Active',
+                '_ptbs_linked_test_ids'     => serialize( $linked_post_ids ),
                 '_ptbs_center_location_ids' => serialize( $pkg_center_ids ),
-                '_ptbs_excel_id'         => $pkg['id'] ?? ''
+                '_ptbs_excel_id'            => $pkg['id'] ?? ''
             );
 
             if ( ! empty( $pkg['image'] ) ) {

@@ -63,28 +63,29 @@ if ( ! defined( 'ABSPATH' ) ) {
             </ul>
         </div>
 
-        <!-- Element 3: Featured Health Packages -->
+        <!-- Element 3: Premium Health Packages Slider & Grid -->
         <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:24px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
                 <div style="background:#ccfbf1; color:#0d9488; width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:22px;">📦</div>
                 <div>
-                    <h2 style="font-size:18px; font-weight:800; color:#0f172a; margin:0;">Featured Health Packages</h2>
-                    <span style="font-size:12px; font-weight:700; color:#0d9488; background:#f0fdf4; padding:2px 8px; border-radius:4px; text-transform:uppercase;">WPBakery Element</span>
+                    <h2 style="font-size:18px; font-weight:800; color:#0f172a; margin:0;">Health Packages Slider & Grid</h2>
+                    <span style="font-size:12px; font-weight:700; color:#0d9488; background:#f0fdf4; padding:2px 8px; border-radius:4px; text-transform:uppercase;">WPBakery Premium Element</span>
                 </div>
             </div>
             <p style="color:#64748b; font-size:14px; margin-bottom:16px;">
-                Displays discounted health checkup packages with calculated % OFF discount badges, strike-through MRP prices, and booking CTA buttons.
+                Displays premium health checkup package cards in <strong>Slick Carousel Slider</strong> or <strong>Grid</strong> mode with sub-heading kicker tags, main title, description, top right "VIEW ALL ↗" button, overlay badges (MOST POPULAR, BEST VALUE), parameter counts, gender recommendations, and interactive Add to Cart / View buttons.
             </p>
             <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; font-family:monospace; font-size:13px; color:#0f172a; margin-bottom:16px;">
-                [pathology_health_packages category_id="12" condition_id="3" limit="3" columns="3"]
+                [pathology_health_packages_slider sub_heading="HEALTH CHECKUPS" title="Keep your family TRUly healthy." layout_mode="carousel" columns="4" limit="8"]
             </div>
-            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls & Taxonomy Filters:</h4>
+            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls & Options:</h4>
             <ul style="margin:0; padding-left:20px; font-size:13px; color:#475569;">
-                <li><strong>Section Title</strong>: Custom section title.</li>
-                <li><strong>Limit & Columns</strong>: Control grid count and column span (2, 3, or 4).</li>
-                <li><strong>Filter by Category</strong> (<code>category_id</code>): Filter packages by Category.</li>
-                <li><strong>Filter by Condition</strong> (<code>condition_id</code>): Filter packages by Health Condition.</li>
-                <li><strong>Filter by City</strong> (<code>city_id</code>): Filter packages by City.</li>
+                <li><strong>Sub Title / Kicker Tag</strong>: Small uppercase kicker tag (e.g. <code>HEALTH CHECKUPS</code>).</li>
+                <li><strong>Main Title & Description</strong>: Section title and subheading description.</li>
+                <li><strong>Display Layout Mode</strong>: Toggle between <strong>Slick Carousel Slider</strong> (touch swipe + arrows) and <strong>Grid</strong> layout.</li>
+                <li><strong>View All Button</strong>: Show top right "VIEW ALL ↗" button with custom link.</li>
+                <li><strong>Columns & Limit</strong>: 2, 3, or 4 columns per slide/row.</li>
+                <li><strong>Taxonomy Filters</strong>: Filter packages by Category, Health Condition, or City.</li>
             </ul>
         </div>
 
