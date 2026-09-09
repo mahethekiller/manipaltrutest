@@ -969,18 +969,43 @@ class PTBS_Public {
      */
     public function render_featured_tests_shortcode( $atts ) {
         $atts = shortcode_atts( array(
-            'title'   => __( 'Popular Diagnostic Tests', 'pathology-booking-system' ),
-            'limit'   => 6,
-            'columns' => 3,
+            'title'          => __( 'Popular Diagnostic Tests', 'pathology-booking-system' ),
+            'limit'          => 6,
+            'columns'        => 3,
+            'category_id'    => '',
+            'subcategory_id' => '',
+            'condition_id'   => '',
+            'city_id'        => '',
         ), $atts );
 
-        $limit   = absint( $atts['limit'] );
-        $cols    = absint( $atts['columns'] );
-        $tests   = get_posts( array(
+        $limit     = absint( $atts['limit'] );
+        $cols      = absint( $atts['columns'] );
+        $args      = array(
             'post_type'      => 'ptbs_test',
             'posts_per_page' => $limit,
             'post_status'    => 'publish',
-        ) );
+        );
+
+        $tax_query = array();
+        if ( ! empty( $atts['category_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_category', 'field' => 'term_id', 'terms' => absint( $atts['category_id'] ) );
+        }
+        if ( ! empty( $atts['subcategory_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_subcategory', 'field' => 'term_id', 'terms' => absint( $atts['subcategory_id'] ) );
+        }
+        if ( ! empty( $atts['condition_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_condition', 'field' => 'term_id', 'terms' => absint( $atts['condition_id'] ) );
+        }
+        if ( ! empty( $atts['city_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_city', 'field' => 'term_id', 'terms' => absint( $atts['city_id'] ) );
+        }
+
+        if ( ! empty( $tax_query ) ) {
+            $tax_query['relation'] = 'AND';
+            $args['tax_query']     = $tax_query;
+        }
+
+        $tests = get_posts( $args );
 
         ob_start();
         ?>
@@ -1004,12 +1029,14 @@ class PTBS_Public {
                                 <a href="<?php echo esc_url( $permalink ); ?>" style="color:inherit; text-decoration:none;"><?php echo esc_html( $t->post_title ); ?></a>
                             </h3>
                         </div>
-                        <div style="margin-top:16px; ptbs-border-top:1px solid #f1f5f9; padding-top:12px; display:flex; align-items:center; justify-content:space-between;">
+                        <div style="margin-top:16px; border-top:1px solid #f1f5f9; padding-top:12px; display:flex; align-items:center; justify-content:space-between;">
                             <span style="font-size:18px; font-weight:800; color:#0284c7;">₹<?php echo esc_html( number_format( floatval( $price ), 2 ) ); ?></span>
                             <a href="<?php echo esc_url( $permalink ); ?>" style="background:#0f172a; color:#fff; font-size:12px; font-weight:700; padding:8px 16px; border-radius:6px; text-decoration:none;">View Details</a>
                         </div>
                     </div>
-                <?php endforeach; endif; ?>
+                <?php endforeach; else : ?>
+                    <p style="color:#94a3b8; text-align:center; grid-column: 1 / -1;">No matching pathology tests found.</p>
+                <?php endif; ?>
             </div>
         </div>
         <?php
@@ -1021,18 +1048,39 @@ class PTBS_Public {
      */
     public function render_health_packages_shortcode( $atts ) {
         $atts = shortcode_atts( array(
-            'title'   => __( 'Comprehensive Health Checkup Packages', 'pathology-booking-system' ),
-            'limit'   => 3,
-            'columns' => 3,
+            'title'        => __( 'Comprehensive Health Checkup Packages', 'pathology-booking-system' ),
+            'limit'        => 3,
+            'columns'      => 3,
+            'category_id'  => '',
+            'condition_id' => '',
+            'city_id'      => '',
         ), $atts );
 
-        $limit    = absint( $atts['limit'] );
-        $cols     = absint( $atts['columns'] );
-        $packages = get_posts( array(
+        $limit     = absint( $atts['limit'] );
+        $cols      = absint( $atts['columns'] );
+        $args      = array(
             'post_type'      => 'ptbs_package',
             'posts_per_page' => $limit,
             'post_status'    => 'publish',
-        ) );
+        );
+
+        $tax_query = array();
+        if ( ! empty( $atts['category_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_category', 'field' => 'term_id', 'terms' => absint( $atts['category_id'] ) );
+        }
+        if ( ! empty( $atts['condition_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_condition', 'field' => 'term_id', 'terms' => absint( $atts['condition_id'] ) );
+        }
+        if ( ! empty( $atts['city_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_city', 'field' => 'term_id', 'terms' => absint( $atts['city_id'] ) );
+        }
+
+        if ( ! empty( $tax_query ) ) {
+            $tax_query['relation'] = 'AND';
+            $args['tax_query']     = $tax_query;
+        }
+
+        $packages = get_posts( $args );
 
         ob_start();
         ?>
@@ -1074,7 +1122,9 @@ class PTBS_Public {
                             <a href="<?php echo esc_url( $permalink ); ?>" style="background:#0d9488; color:#fff; font-size:13px; font-weight:700; padding:10px 18px; border-radius:6px; text-decoration:none;">Book Package</a>
                         </div>
                     </div>
-                <?php endforeach; endif; ?>
+                <?php endforeach; else : ?>
+                    <p style="color:#94a3b8; text-align:center; grid-column: 1 / -1;">No matching health packages found.</p>
+                <?php endif; ?>
             </div>
         </div>
         <?php
@@ -1086,18 +1136,35 @@ class PTBS_Public {
      */
     public function render_center_locations_shortcode( $atts ) {
         $atts = shortcode_atts( array(
-            'title'   => __( 'Our Lab Center Locations', 'pathology-booking-system' ),
-            'limit'   => 6,
-            'columns' => 3,
+            'title'    => __( 'Our Lab Center Locations', 'pathology-booking-system' ),
+            'limit'    => 6,
+            'columns'  => 3,
+            'state_id' => '',
+            'city_id'  => '',
         ), $atts );
 
-        $limit   = absint( $atts['limit'] );
-        $cols    = absint( $atts['columns'] );
-        $centers = get_posts( array(
+        $limit     = absint( $atts['limit'] );
+        $cols      = absint( $atts['columns'] );
+        $args      = array(
             'post_type'      => 'ptbs_center_location',
             'posts_per_page' => $limit,
             'post_status'    => 'publish',
-        ) );
+        );
+
+        $tax_query = array();
+        if ( ! empty( $atts['state_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_state', 'field' => 'term_id', 'terms' => absint( $atts['state_id'] ) );
+        }
+        if ( ! empty( $atts['city_id'] ) ) {
+            $tax_query[] = array( 'taxonomy' => 'ptbs_city', 'field' => 'term_id', 'terms' => absint( $atts['city_id'] ) );
+        }
+
+        if ( ! empty( $tax_query ) ) {
+            $tax_query['relation'] = 'AND';
+            $args['tax_query']     = $tax_query;
+        }
+
+        $centers = get_posts( $args );
 
         ob_start();
         ?>
@@ -1134,7 +1201,9 @@ class PTBS_Public {
                             <a href="<?php echo esc_url( $permalink ); ?>" style="background:#0284c7; color:#fff; font-size:12px; font-weight:700; padding:8px 14px; border-radius:6px; text-decoration:none;">View Center Page</a>
                         </div>
                     </div>
-                <?php endforeach; endif; ?>
+                <?php endforeach; else : ?>
+                    <p style="color:#94a3b8; text-align:center; grid-column: 1 / -1;">No matching lab centers found.</p>
+                <?php endif; ?>
             </div>
         </div>
         <?php

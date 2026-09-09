@@ -50,13 +50,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                 Displays a responsive grid or list of popular diagnostic lab tests with test codes, prices (₹), and direct view links.
             </p>
             <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; font-family:monospace; font-size:13px; color:#0f172a; margin-bottom:16px;">
-                [pathology_featured_tests title="Popular Lab Tests" limit="6" columns="3"]
+                [pathology_featured_tests category_id="12" city_id="5" limit="6" columns="3"]
             </div>
-            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls:</h4>
+            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls & Taxonomy Filters:</h4>
             <ul style="margin:0; padding-left:20px; font-size:13px; color:#475569;">
                 <li><strong>Section Title</strong>: Custom section title.</li>
-                <li><strong>Limit</strong>: Number of tests to show (default: 6).</li>
-                <li><strong>Columns</strong>: 2, 3, or 4 columns.</li>
+                <li><strong>Limit & Columns</strong>: Control grid count and column span (2, 3, or 4).</li>
+                <li><strong>Filter by Category</strong> (<code>category_id</code>): Show tests in a specific Category.</li>
+                <li><strong>Filter by Subcategory</strong> (<code>subcategory_id</code>): Show tests in a Subcategory.</li>
+                <li><strong>Filter by Condition</strong> (<code>condition_id</code>): Show tests for a Health Condition.</li>
+                <li><strong>Filter by City</strong> (<code>city_id</code>): Show tests available in a specific City.</li>
             </ul>
         </div>
 
@@ -73,13 +76,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                 Displays discounted health checkup packages with calculated % OFF discount badges, strike-through MRP prices, and booking CTA buttons.
             </p>
             <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; font-family:monospace; font-size:13px; color:#0f172a; margin-bottom:16px;">
-                [pathology_health_packages title="Full Body Packages" limit="3" columns="3"]
+                [pathology_health_packages category_id="12" condition_id="3" limit="3" columns="3"]
             </div>
-            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls:</h4>
+            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls & Taxonomy Filters:</h4>
             <ul style="margin:0; padding-left:20px; font-size:13px; color:#475569;">
                 <li><strong>Section Title</strong>: Custom section title.</li>
-                <li><strong>Limit</strong>: Number of packages to show.</li>
-                <li><strong>Columns</strong>: 2, 3, or 4 columns.</li>
+                <li><strong>Limit & Columns</strong>: Control grid count and column span (2, 3, or 4).</li>
+                <li><strong>Filter by Category</strong> (<code>category_id</code>): Filter packages by Category.</li>
+                <li><strong>Filter by Condition</strong> (<code>condition_id</code>): Filter packages by Health Condition.</li>
+                <li><strong>Filter by City</strong> (<code>city_id</code>): Filter packages by City.</li>
             </ul>
         </div>
 
@@ -96,13 +101,14 @@ if ( ! defined( 'ABSPATH' ) ) {
                 Displays lab center location cards showing city badges, full addresses, operating hours, contact numbers, and direct view center page links.
             </p>
             <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; font-family:monospace; font-size:13px; color:#0f172a; margin-bottom:16px;">
-                [pathology_center_locations title="Our Lab Centers" limit="6" columns="3"]
+                [pathology_center_locations state_id="2" city_id="5" limit="6" columns="3"]
             </div>
-            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls:</h4>
+            <h4 style="font-size:14px; font-weight:700; color:#334155; margin-bottom:8px;">WPBakery Controls & Taxonomy Filters:</h4>
             <ul style="margin:0; padding-left:20px; font-size:13px; color:#475569;">
                 <li><strong>Section Title</strong>: Custom section title.</li>
-                <li><strong>Limit</strong>: Number of centers to show.</li>
-                <li><strong>Columns</strong>: 2 or 3 columns.</li>
+                <li><strong>Limit & Columns</strong>: Control grid count and column span (2 or 3).</li>
+                <li><strong>Filter by State</strong> (<code>state_id</code>): Show lab centers located in a specific State.</li>
+                <li><strong>Filter by City</strong> (<code>city_id</code>): Show lab centers located in a specific City.</li>
             </ul>
         </div>
 

@@ -45,6 +45,24 @@ class PTBS_WPBakery {
 
         $category_name = __( 'Pathology Booking', 'pathology-booking-system' );
 
+        // Helper: Get term options array for WPBakery dropdown
+        $get_taxonomy_options = function( $taxonomy ) {
+            $options = array( __( 'All / Any', 'pathology-booking-system' ) => '' );
+            $terms   = get_terms( array( 'taxonomy' => $taxonomy, 'hide_empty' => false ) );
+            if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+                foreach ( $terms as $term ) {
+                    $options[$term->name] = (string) $term->term_id;
+                }
+            }
+            return $options;
+        };
+
+        $cat_options    = $get_taxonomy_options( 'ptbs_category' );
+        $subcat_options = $get_taxonomy_options( 'ptbs_subcategory' );
+        $cond_options   = $get_taxonomy_options( 'ptbs_condition' );
+        $city_options   = $get_taxonomy_options( 'ptbs_city' );
+        $state_options  = $get_taxonomy_options( 'ptbs_state' );
+
         // 1. Pathology Booking Catalog App Element
         vc_map( array(
             'name'        => __( 'Pathology Catalog App', 'pathology-booking-system' ),
@@ -105,6 +123,34 @@ class PTBS_WPBakery {
                     ),
                     'std'         => '3',
                 ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by Category', 'pathology-booking-system' ),
+                    'param_name'  => 'category_id',
+                    'value'       => $cat_options,
+                    'description' => __( 'Show tests belonging to a specific category', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by Subcategory', 'pathology-booking-system' ),
+                    'param_name'  => 'subcategory_id',
+                    'value'       => $subcat_options,
+                    'description' => __( 'Show tests belonging to a specific subcategory', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by Health Condition', 'pathology-booking-system' ),
+                    'param_name'  => 'condition_id',
+                    'value'       => $cond_options,
+                    'description' => __( 'Show tests associated with a specific health condition', 'pathology-booking-system' ),
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by City', 'pathology-booking-system' ),
+                    'param_name'  => 'city_id',
+                    'value'       => $city_options,
+                    'description' => __( 'Show tests available in a specific city', 'pathology-booking-system' ),
+                ),
             ),
         ) );
 
@@ -139,6 +185,24 @@ class PTBS_WPBakery {
                     ),
                     'std'         => '3',
                 ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by Category', 'pathology-booking-system' ),
+                    'param_name'  => 'category_id',
+                    'value'       => $cat_options,
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by Health Condition', 'pathology-booking-system' ),
+                    'param_name'  => 'condition_id',
+                    'value'       => $cond_options,
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by City', 'pathology-booking-system' ),
+                    'param_name'  => 'city_id',
+                    'value'       => $city_options,
+                ),
             ),
         ) );
 
@@ -171,6 +235,18 @@ class PTBS_WPBakery {
                         __( '3 Columns', 'pathology-booking-system' ) => '3',
                     ),
                     'std'         => '3',
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by State', 'pathology-booking-system' ),
+                    'param_name'  => 'state_id',
+                    'value'       => $state_options,
+                ),
+                array(
+                    'type'        => 'dropdown',
+                    'heading'     => __( 'Filter by City', 'pathology-booking-system' ),
+                    'param_name'  => 'city_id',
+                    'value'       => $city_options,
                 ),
             ),
         ) );
