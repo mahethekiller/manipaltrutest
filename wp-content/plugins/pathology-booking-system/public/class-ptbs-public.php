@@ -30,6 +30,7 @@ class PTBS_Public {
         add_shortcode( 'pathology_patient_dashboard', array( $this, 'render_patient_dashboard_shortcode' ) );
         add_shortcode( 'pathology_featured_tests', array( $this, 'render_featured_tests_shortcode' ) );
         add_shortcode( 'pathology_health_packages', array( $this, 'render_health_packages_shortcode' ) );
+        add_shortcode( 'pathology_health_packages_slider', array( $this, 'render_health_packages_slider_shortcode' ) );
         add_shortcode( 'pathology_center_locations', array( $this, 'render_center_locations_shortcode' ) );
 
         // Catalog & Time Slots AJAX
