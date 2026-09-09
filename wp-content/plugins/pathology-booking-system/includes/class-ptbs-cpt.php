@@ -23,6 +23,31 @@ class PTBS_CPT {
         add_action( 'init', array( __CLASS__, 'register_taxonomies' ) );
         add_action( 'add_meta_boxes', array( $this, 'register_meta_boxes' ) );
         add_action( 'save_post', array( $this, 'save_meta_boxes' ) );
+        add_action( 'template_redirect', array( $this, 'handle_legacy_permalink_redirects' ) );
+    }
+
+    /**
+     * Handle 301 Permanent Redirects for Old Permalink Slugs
+     */
+    public function handle_legacy_permalink_redirects() {
+        if ( is_admin() || is_404() ) {
+            return;
+        }
+
+        $old_slugs = get_option( 'ptbs_previous_permalink_slugs', array() );
+        if ( empty( $old_slugs ) || ! is_array( $old_slugs ) ) {
+            return;
+        }
+
+        $request_uri = $_SERVER['REQUEST_URI'] ?? '';
+        foreach ( $old_slugs as $old_slug ) {
+            if ( ! empty( $old_slug ) && false !== strpos( $request_uri, '/' . trim( $old_slug, '/' ) . '/' ) ) {
+                if ( is_singular( array( 'ptbs_test', 'ptbs_package', 'ptbs_center_location' ) ) ) {
+                    wp_safe_redirect( get_permalink(), 301 );
+                    exit;
+                }
+            }
+        }
     }
 
     /**
@@ -32,6 +57,7 @@ class PTBS_CPT {
         $settings     = get_option( 'ptbs_settings', array() );
         $test_slug    = ! empty( $settings['test_permalink_slug'] ) ? sanitize_title( $settings['test_permalink_slug'] ) : 'test';
         $package_slug = ! empty( $settings['package_permalink_slug'] ) ? sanitize_title( $settings['package_permalink_slug'] ) : 'package';
+        $center_slug  = ! empty( $settings['center_location_permalink_slug'] ) ? sanitize_title( $settings['center_location_permalink_slug'] ) : 'center-location';
 
         // 1. Pathology Test CPT
         $labels_test = array(
@@ -106,14 +132,16 @@ class PTBS_CPT {
 
         $args_center = array(
             'labels'             => $labels_center,
-            'public'             => false,
-            'publicly_queryable' => false,
+            'public'             => true,
+            'publicly_queryable' => true,
             'show_ui'            => true,
             'show_in_menu'       => 'ptbs-dashboard',
             'query_var'          => true,
+            'rewrite'            => array( 'slug' => $center_slug, 'with_front' => true ),
             'capability_type'    => 'post',
+            'has_archive'        => true,
             'hierarchical'       => false,
-            'supports'           => array( 'title' ),
+            'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
         );
 
         register_post_type( 'ptbs_center_location', $args_center );

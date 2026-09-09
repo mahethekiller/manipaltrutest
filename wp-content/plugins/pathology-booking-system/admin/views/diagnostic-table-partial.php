@@ -96,7 +96,7 @@ $total_pages = 1;
                 } else {
                     echo '<tr><td colspan="4" style="text-align:center; padding:30px; color:#94a3b8;">No items found.</td></tr>';
                 }
-            } elseif ( 'test' === $tab || 'package' === $tab ) {
+            } elseif ( 'test' === $tab || 'package' === $tab || 'center_location' === $tab ) {
                 $cpt = 'ptbs_' . $tab;
                 $query_args = array(
                     'post_type'      => $cpt,
@@ -117,14 +117,24 @@ $total_pages = 1;
                         $price     = get_post_meta( $pid, '_ptbs_price', true );
                         $status    = get_post_meta( $pid, '_ptbs_status', true ) ?: 'Active';
                         $is_active = ( 'Inactive' !== $status );
+                        $permalink = get_permalink( $pid );
                         $cats      = wp_get_post_terms( $pid, 'ptbs_category', array( 'fields' => 'names' ) );
                         $cat_list  = ! empty( $cats ) && ! is_wp_error( $cats ) ? implode( ', ', $cats ) : '—';
                         ?>
                         <tr>
                             <td style="text-align:center; font-weight:700; color:#94a3b8;"><?php echo esc_html( $i++ ); ?></td>
-                            <td style="font-weight:700; color:#0f172a;"><?php the_title(); ?></td>
-                            <td style="font-weight:700; color:<?php echo 'test' === $tab ? '#0284c7' : '#0d9488'; ?>;">₹<?php echo esc_html( number_format( floatval( $price ), 2 ) ); ?></td>
-                            <td style="color:#64748b; font-size:13px;"><?php echo esc_html( $cat_list ); ?></td>
+                            <td style="font-weight:700; color:#0f172a;">
+                                <?php the_title(); ?>
+                                <?php if ( 'center_location' === $tab ) : ?>
+                                    <div style="font-size:12px; margin-top:4px;">
+                                        <a href="<?php echo esc_url( $permalink ); ?>" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">🔗 View Page: <?php echo esc_url( $permalink ); ?></a>
+                                    </div>
+                                <?php endif; ?>
+                            </td>
+                            <?php if ( 'center_location' !== $tab ) : ?>
+                                <td style="font-weight:700; color:<?php echo 'test' === $tab ? '#0284c7' : '#0d9488'; ?>;">₹<?php echo esc_html( number_format( floatval( $price ), 2 ) ); ?></td>
+                                <td style="color:#64748b; font-size:13px;"><?php echo esc_html( $cat_list ); ?></td>
+                            <?php endif; ?>
                             <td style="text-align:center;">
                                 <label class="ptbs-switch">
                                     <input type="checkbox" class="ptbs-status-toggle-input" data-id="<?php echo esc_attr( $pid ); ?>" data-type="<?php echo esc_attr( $tab ); ?>" <?php checked( $is_active ); ?>>

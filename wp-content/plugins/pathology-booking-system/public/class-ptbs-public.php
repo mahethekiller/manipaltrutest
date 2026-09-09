@@ -56,6 +56,13 @@ class PTBS_Public {
             }
         }
 
+        if ( $post && 'ptbs_center_location' === $post->post_type ) {
+            $template_file = PTBS_DIR_PATH . 'public/templates/single-ptbs_center_location.php';
+            if ( file_exists( $template_file ) ) {
+                return $template_file;
+            }
+        }
+
         return $single_template;
     }
 

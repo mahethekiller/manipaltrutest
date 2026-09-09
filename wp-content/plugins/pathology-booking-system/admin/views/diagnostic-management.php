@@ -69,6 +69,7 @@ $c_conds = wp_count_terms( array( 'taxonomy' => 'ptbs_condition', 'hide_empty' =
             <button class="ptbs-tab-btn" data-tab="condition">🩺 Conditions</button>
             <button class="ptbs-tab-btn" data-tab="test">🧪 Tests</button>
             <button class="ptbs-tab-btn" data-tab="package">📦 Packages</button>
+            <button class="ptbs-tab-btn" data-tab="center_location">📍 Center Locations</button>
             <button class="ptbs-tab-btn" data-tab="sync" style="color:#0284c7; font-weight:700;">⚡ Catalog Sync & Import</button>
         </div>
     </div>

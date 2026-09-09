@@ -48,6 +48,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </td>
                 </tr>
                 <tr>
+                    <th scope="row"><label for="center_location_permalink_slug"><?php esc_html_e( 'Center Location URL Slug:', 'pathology-booking-system' ); ?></label></th>
+                    <td>
+                        <code><?php echo esc_url( home_url( '/' ) ); ?></code>
+                        <input type="text" id="center_location_permalink_slug" name="center_location_permalink_slug" value="<?php echo esc_attr( isset( $settings['center_location_permalink_slug'] ) ? $settings['center_location_permalink_slug'] : 'center-location' ); ?>" class="regular-text" placeholder="center-location">
+                        <code>/delhi-main-lab/</code>
+                        <p class="description"><?php esc_html_e( 'Customize the URL base for single Center Location pages (e.g. "center-location" or "lab-center").', 'pathology-booking-system' ); ?></p>
+                    </td>
+                </tr>
+                <tr>
                     <th scope="row"><label for="booking_page_url"><?php esc_html_e( 'Main Pathology Booking Page URL:', 'pathology-booking-system' ); ?></label></th>
                     <td>
                         <input type="url" id="booking_page_url" name="booking_page_url" value="<?php echo esc_url( isset( $settings['booking_page_url'] ) ? $settings['booking_page_url'] : home_url( '/lab/' ) ); ?>" class="large-text" placeholder="https://example.com/lab/">

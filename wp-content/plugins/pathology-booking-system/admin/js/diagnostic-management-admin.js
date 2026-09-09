@@ -16,7 +16,7 @@
 
             // Load initial tab from hash or default
             var hash = window.location.hash.replace('#', '');
-            if (hash && ['category', 'subcategory', 'condition', 'test', 'package', 'sync'].indexOf(hash) !== -1) {
+            if (hash && ['category', 'subcategory', 'condition', 'test', 'package', 'center_location', 'sync'].indexOf(hash) !== -1) {
                 self.currentTab = hash;
             }
 
@@ -156,6 +156,7 @@
             else if (tab === 'condition') addBtnLabel = '+ Add New Condition';
             else if (tab === 'test') addBtnLabel = '+ Add New Test';
             else if (tab === 'package') addBtnLabel = '+ Add New Package';
+            else if (tab === 'center_location') addBtnLabel = '+ Add New Center Location';
 
             $('#ptbs_btn_add_item').text(addBtnLabel);
             if (tab === 'sync') {

@@ -174,20 +174,41 @@ class PTBS_Admin {
             }
         }
 
+        $old_settings = get_option( 'ptbs_settings', array() );
+        $prev_slugs   = get_option( 'ptbs_previous_permalink_slugs', array() );
+        if ( ! is_array( $prev_slugs ) ) $prev_slugs = array();
+
+        $new_test_slug   = isset( $_POST['test_permalink_slug'] ) ? sanitize_title( wp_unslash( $_POST['test_permalink_slug'] ) ) : 'test';
+        $new_pkg_slug    = isset( $_POST['package_permalink_slug'] ) ? sanitize_title( wp_unslash( $_POST['package_permalink_slug'] ) ) : 'package';
+        $new_center_slug = isset( $_POST['center_location_permalink_slug'] ) ? sanitize_title( wp_unslash( $_POST['center_location_permalink_slug'] ) ) : 'center-location';
+
+        // Track legacy slugs if modified
+        if ( ! empty( $old_settings['test_permalink_slug'] ) && $old_settings['test_permalink_slug'] !== $new_test_slug ) {
+            $prev_slugs[] = $old_settings['test_permalink_slug'];
+        }
+        if ( ! empty( $old_settings['package_permalink_slug'] ) && $old_settings['package_permalink_slug'] !== $new_pkg_slug ) {
+            $prev_slugs[] = $old_settings['package_permalink_slug'];
+        }
+        if ( ! empty( $old_settings['center_location_permalink_slug'] ) && $old_settings['center_location_permalink_slug'] !== $new_center_slug ) {
+            $prev_slugs[] = $old_settings['center_location_permalink_slug'];
+        }
+        update_option( 'ptbs_previous_permalink_slugs', array_values( array_unique( $prev_slugs ) ) );
+
         $settings = array(
-            'test_permalink_slug'    => isset( $_POST['test_permalink_slug'] ) ? sanitize_title( wp_unslash( $_POST['test_permalink_slug'] ) ) : 'test',
-            'package_permalink_slug' => isset( $_POST['package_permalink_slug'] ) ? sanitize_title( wp_unslash( $_POST['package_permalink_slug'] ) ) : 'package',
-            'booking_page_url'       => isset( $_POST['booking_page_url'] ) ? esc_url_raw( wp_unslash( $_POST['booking_page_url'] ) ) : home_url( '/lab/' ),
-            'dashboard_page_url'     => isset( $_POST['dashboard_page_url'] ) ? esc_url_raw( wp_unslash( $_POST['dashboard_page_url'] ) ) : '',
-            'city_trigger_mode'      => isset( $_POST['city_trigger_mode'] ) ? sanitize_text_field( wp_unslash( $_POST['city_trigger_mode'] ) ) : 'lab_page',
-            'time_slots'             => $time_slots,
-            'enable_mock_payment'    => isset( $_POST['enable_mock_payment'] ) ? '1' : '0',
-            'razorpay_key_id'        => isset( $_POST['razorpay_key_id'] ) ? sanitize_text_field( wp_unslash( $_POST['razorpay_key_id'] ) ) : '',
-            'razorpay_key_secret'    => isset( $_POST['razorpay_key_secret'] ) ? sanitize_text_field( wp_unslash( $_POST['razorpay_key_secret'] ) ) : '',
-            'phonepe_merchant_id'    => isset( $_POST['phonepe_merchant_id'] ) ? sanitize_text_field( wp_unslash( $_POST['phonepe_merchant_id'] ) ) : '',
-            'phonepe_salt_key'       => isset( $_POST['phonepe_salt_key'] ) ? sanitize_text_field( wp_unslash( $_POST['phonepe_salt_key'] ) ) : '',
-            'phonepe_salt_index'     => isset( $_POST['phonepe_salt_index'] ) ? sanitize_text_field( wp_unslash( $_POST['phonepe_salt_index'] ) ) : '1',
-            'google_client_id'       => isset( $_POST['google_client_id'] ) ? sanitize_text_field( wp_unslash( $_POST['google_client_id'] ) ) : '',
+            'test_permalink_slug'            => $new_test_slug,
+            'package_permalink_slug'         => $new_pkg_slug,
+            'center_location_permalink_slug' => $new_center_slug,
+            'booking_page_url'               => isset( $_POST['booking_page_url'] ) ? esc_url_raw( wp_unslash( $_POST['booking_page_url'] ) ) : home_url( '/lab/' ),
+            'dashboard_page_url'             => isset( $_POST['dashboard_page_url'] ) ? esc_url_raw( wp_unslash( $_POST['dashboard_page_url'] ) ) : '',
+            'city_trigger_mode'              => isset( $_POST['city_trigger_mode'] ) ? sanitize_text_field( wp_unslash( $_POST['city_trigger_mode'] ) ) : 'lab_page',
+            'time_slots'                     => $time_slots,
+            'enable_mock_payment'            => isset( $_POST['enable_mock_payment'] ) ? '1' : '0',
+            'razorpay_key_id'                => isset( $_POST['razorpay_key_id'] ) ? sanitize_text_field( wp_unslash( $_POST['razorpay_key_id'] ) ) : '',
+            'razorpay_key_secret'            => isset( $_POST['razorpay_key_secret'] ) ? sanitize_text_field( wp_unslash( $_POST['razorpay_key_secret'] ) ) : '',
+            'phonepe_merchant_id'            => isset( $_POST['phonepe_merchant_id'] ) ? sanitize_text_field( wp_unslash( $_POST['phonepe_merchant_id'] ) ) : '',
+            'phonepe_salt_key'               => isset( $_POST['phonepe_salt_key'] ) ? sanitize_text_field( wp_unslash( $_POST['phonepe_salt_key'] ) ) : '',
+            'phonepe_salt_index'             => isset( $_POST['phonepe_salt_index'] ) ? sanitize_text_field( wp_unslash( $_POST['phonepe_salt_index'] ) ) : '1',
+            'google_client_id'               => isset( $_POST['google_client_id'] ) ? sanitize_text_field( wp_unslash( $_POST['google_client_id'] ) ) : '',
         );
 
         update_option( 'ptbs_settings', $settings );
@@ -290,6 +311,8 @@ class PTBS_Admin {
             include PTBS_DIR_PATH . 'admin/views/test-form.php';
         } elseif ( 'package' === $tab ) {
             include PTBS_DIR_PATH . 'admin/views/package-form.php';
+        } elseif ( 'center_location' === $tab ) {
+            include PTBS_DIR_PATH . 'admin/views/center-location-form.php';
         }
 
         echo '<div style="margin-top:24px; display:flex; justify-content:flex-end; gap:12px;">';
@@ -485,6 +508,39 @@ class PTBS_Admin {
 
                 wp_send_json_success( array( 'message' => 'Package details saved successfully.' ) );
             }
+        } elseif ( 'save_center_location' === $action_type ) {
+            $center_name = sanitize_text_field( wp_unslash( $_POST['center_name'] ?? '' ) );
+            $phone       = sanitize_text_field( wp_unslash( $_POST['phone'] ?? '' ) );
+            $email       = sanitize_email( wp_unslash( $_POST['email'] ?? '' ) );
+            $hours       = sanitize_text_field( wp_unslash( $_POST['hours'] ?? '' ) );
+            $address     = sanitize_textarea_field( wp_unslash( $_POST['address'] ?? '' ) );
+            $status      = sanitize_text_field( wp_unslash( $_POST['status'] ?? 'Active' ) );
+            $city_ids    = isset( $_POST['city_ids'] ) && is_array( $_POST['city_ids'] ) ? array_map( 'absint', $_POST['city_ids'] ) : array();
+
+            $post_data = array(
+                'post_title'  => $center_name,
+                'post_type'   => 'ptbs_center_location',
+                'post_status' => 'publish',
+            );
+
+            if ( $item_id > 0 ) {
+                $post_data['ID'] = $item_id;
+                $post_id = wp_update_post( $post_data );
+            } else {
+                $post_id = wp_insert_post( $post_data );
+            }
+
+            if ( $post_id && ! is_wp_error( $post_id ) ) {
+                update_post_meta( $post_id, '_ptbs_phone', $phone );
+                update_post_meta( $post_id, '_ptbs_email', $email );
+                update_post_meta( $post_id, '_ptbs_hours', $hours );
+                update_post_meta( $post_id, '_ptbs_address', $address );
+                update_post_meta( $post_id, '_ptbs_status', $status );
+
+                wp_set_post_terms( $post_id, $city_ids, 'ptbs_city' );
+
+                wp_send_json_success( array( 'message' => 'Center Location saved successfully.' ) );
+            }
         }
 
         wp_send_json_error( array( 'message' => 'Invalid save request.' ) );
@@ -504,7 +560,7 @@ class PTBS_Admin {
         if ( in_array( $type, array( 'category', 'subcategory', 'condition' ), true ) ) {
             update_term_meta( $id, '_ptbs_status', $status );
             wp_send_json_success( array( 'message' => 'Status updated.' ) );
-        } elseif ( in_array( $type, array( 'test', 'package' ), true ) ) {
+        } elseif ( in_array( $type, array( 'test', 'package', 'center_location' ), true ) ) {
             update_post_meta( $id, '_ptbs_status', $status );
             wp_send_json_success( array( 'message' => 'Status updated.' ) );
         }
@@ -531,9 +587,9 @@ class PTBS_Admin {
         } elseif ( 'condition' === $type ) {
             wp_delete_term( $id, 'ptbs_condition' );
             wp_send_json_success( array( 'message' => 'Condition deleted.' ) );
-        } elseif ( 'test' === $type || 'package' === $type ) {
+        } elseif ( in_array( $type, array( 'test', 'package', 'center_location' ), true ) ) {
             wp_delete_post( $id, true );
-            wp_send_json_success( array( 'message' => ucfirst( $type ) . ' deleted.' ) );
+            wp_send_json_success( array( 'message' => ucfirst( str_replace( '_', ' ', $type ) ) . ' deleted.' ) );
         }
 
         wp_send_json_error( array( 'message' => 'Invalid delete request.' ) );
