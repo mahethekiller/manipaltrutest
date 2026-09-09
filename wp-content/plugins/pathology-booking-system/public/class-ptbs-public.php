@@ -1464,28 +1464,6 @@ class PTBS_Public {
 
         $slider_id = 'ptbs-cat-slider-' . uniqid();
 
-        // Default medical SVG presets matching reference image
-        $fallback_svgs = array(
-            // Heart Test
-            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5v14"/><path d="M8 11h8"/></svg>',
-            // Kidney Test
-            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 0 9-9c0-2.5-1-4-2.5-4.5S15.5 9 14 9c-1.5 0-2.5 1-2.5 2.5s1 2.5 2.5 2.5c2 0 3-1 3-3"/><path d="M12 21a9 9 0 0 1-9-9c0-2.5 1-4 2.5-4.5S8.5 9 10 9c1.5 0 2.5 1 2.5 2.5s-1 2.5-2.5 2.5c-2 0-3-1-3-3"/></svg>',
-            // Vitamin D
-            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M10 10 6.5 6.5"/><path d="m14 10 3.5-3.5"/><path d="m14 14 3.5 3.5"/><path d="M10 14 6.5 17.5"/></svg>',
-            // Thyroid Profile
-            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a6 6 0 0 0 12 0V3"/><path d="M4 6h16"/><path d="M12 15v6"/></svg>',
-            // Liver Function
-            '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="12" r="3"/></svg>',
-        );
-
-        $fallback_presets = array(
-            array( 'bg' => '#e0f2fe', 'sub' => 'ECG, Troponin, CK-MB' ),
-            array( 'bg' => '#dcfce7', 'sub' => 'Creatinine, Urea, eGFR' ),
-            array( 'bg' => '#f3e8ff', 'sub' => '25 OH Vitamin D' ),
-            array( 'bg' => '#fce7f3', 'sub' => 'T3, T4, TSH' ),
-            array( 'bg' => '#ffedd5', 'sub' => 'LFT, SGOT, SGPT' ),
-        );
-
         ob_start();
         ?>
         <div class="ptbs-categories-slider-section" style="margin:40px 0; background:#f0f7ff; padding:44px 28px; border-radius:28px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; text-align:center;">
@@ -1513,51 +1491,16 @@ class PTBS_Public {
             <?php endif; ?>
 
                 <?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : 
-                    $idx = 0;
                     foreach ( $terms as $term ) :
                         $tid       = $term->term_id;
                         $tname     = $term->name;
                         $tlink     = get_term_link( $term );
                         if ( is_wp_error( $tlink ) ) { $tlink = '#'; }
                         
-                        // Smart term title matching for exact reference design icons & taglines
-                        $tname_lower = strtolower( $tname );
-                        if ( false !== strpos( $tname_lower, 'heart' ) || false !== strpos( $tname_lower, 'cardiac' ) ) {
-                            $auto_svg = '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5v14"/><path d="M8 11h8"/></svg>';
-                            $auto_bg  = '#e0f2fe';
-                            $auto_sub = 'ECG, Troponin, CK-MB';
-                        } elseif ( false !== strpos( $tname_lower, 'kidney' ) || false !== strpos( $tname_lower, 'renal' ) ) {
-                            $auto_svg = '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 0 9-9c0-2.5-1-4-2.5-4.5S15.5 9 14 9c-1.5 0-2.5 1-2.5 2.5s1 2.5 2.5 2.5c2 0 3-1 3-3"/><path d="M12 21a9 9 0 0 1-9-9c0-2.5 1-4 2.5-4.5S8.5 9 10 9c1.5 0 2.5 1 2.5 2.5s-1 2.5-2.5 2.5c-2 0-3-1-3-3"/></svg>';
-                            $auto_bg  = '#dcfce7';
-                            $auto_sub = 'Creatinine, Urea, eGFR';
-                        } elseif ( false !== strpos( $tname_lower, 'vitamin' ) || false !== strpos( $tname_lower, 'mineral' ) ) {
-                            $auto_svg = '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M10 10 6.5 6.5"/><path d="m14 10 3.5-3.5"/><path d="m14 14 3.5 3.5"/><path d="M10 14 6.5 17.5"/></svg>';
-                            $auto_bg  = '#f3e8ff';
-                            $auto_sub = '25 OH Vitamin D';
-                        } elseif ( false !== strpos( $tname_lower, 'thyroid' ) || false !== strpos( $tname_lower, 'hormone' ) ) {
-                            $auto_svg = '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a6 6 0 0 0 12 0V3"/><path d="M4 6h16"/><path d="M12 15v6"/></svg>';
-                            $auto_bg  = '#fce7f3';
-                            $auto_sub = 'T3, T4, TSH';
-                        } elseif ( false !== strpos( $tname_lower, 'liver' ) || false !== strpos( $tname_lower, 'hepatic' ) ) {
-                            $auto_svg = '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="12" r="3"/></svg>';
-                            $auto_bg  = '#ffedd5';
-                            $auto_sub = 'LFT, SGOT, SGPT';
-                        } else {
-                            $preset   = $fallback_presets[ $idx % count( $fallback_presets ) ];
-                            $auto_svg = $fallback_svgs[ $idx % count( $fallback_svgs ) ];
-                            $auto_bg  = $preset['bg'];
-                            $auto_sub = $preset['sub'];
-                        }
-                        
                         $image_id  = get_term_meta( $tid, '_ptbs_image_id', true );
                         $img_url   = $image_id ? wp_get_attachment_image_url( $image_id, 'medium' ) : '';
 
-                        $meta_sub  = get_term_meta( $tid, '_ptbs_term_subtitle', true );
-                        $meta_bg   = get_term_meta( $tid, '_ptbs_term_color', true );
-
-                        $subtitle   = ! empty( $meta_sub ) ? $meta_sub : $auto_sub;
-                        $bg_color   = ! empty( $meta_bg )  ? $meta_bg  : $auto_bg;
-                        $idx++;
+                        $subtitle = get_term_meta( $tid, '_ptbs_term_subtitle', true );
                 ?>
                     <div style="<?php echo ( 'carousel' === $mode ) ? 'padding:0 10px;' : ''; ?>">
                         <a href="<?php echo esc_url( $tlink ); ?>" class="ptbs-cat-card" style="background:#ffffff; border:1px solid #f1f5f9; border-radius:20px; box-shadow:0 4px 18px rgba(0,0,0,0.03); padding:32px 18px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; transition:all 0.25s ease; text-decoration:none;">
@@ -1580,9 +1523,11 @@ class PTBS_Public {
                             <h3 style="font-size:18px; font-weight:800; color:#0b192c; margin:0 0 6px 0; line-height:1.3;">
                                 <?php echo esc_html( $tname ); ?>
                             </h3>
-                            <p style="font-size:12px; color:#64748b; margin:0; line-height:1.4;">
-                                <?php echo esc_html( $subtitle ); ?>
-                            </p>
+                            <?php if ( ! empty( $subtitle ) ) : ?>
+                                <p style="font-size:12px; color:#64748b; margin:0; line-height:1.4;">
+                                    <?php echo esc_html( $subtitle ); ?>
+                                </p>
+                            <?php endif; ?>
 
                         </a>
                     </div>
